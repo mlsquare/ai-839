@@ -54,7 +54,7 @@
     "href": "course.html#discussions",
     "title": "Course",
     "section": "Discussions",
-    "text": "Discussions\nJoin this discord channel. Use - as id (no anonymous handles, please).",
+    "text": "Discussions\nJoin this discord channel. Use uid-first-name as id (no anonymous handles, please).",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
     ]
@@ -115,7 +115,7 @@
     "href": "lectures/w01-l01.html#materials",
     "title": "01:Grounding MLOps",
     "section": "",
-    "text": "Pre-read:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible for free here\n\n\n\nIn-Class\n\nWe will go over this deck from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\nML Model is a DAG\nML Life Cycle CRISP-ML9(Q): blog, paper",
+    "text": "Pre-read:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible for free here\n\n\n\nIn-Class\n\nWe will go over this deck from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\nML Model is a DAG\nML Life Cycle CRISP-ML9(Q): blog, paper\n\nW01-L01-Deck",
     "crumbs": [
       "Lectures",
       "01:Grounding MLOps"
@@ -135,34 +135,12 @@
   {
     "objectID": "lectures/w02-l01.html",
     "href": "lectures/w02-l01.html",
-    "title": "01:Grounding MLOps",
+    "title": "02:Data Engineering",
     "section": "",
-    "text": "Materials:",
+    "text": "tbd",
     "crumbs": [
       "Lectures",
-      "01:Grounding MLOps"
-    ]
-  },
-  {
-    "objectID": "lectures/w02-l01.html#materials",
-    "href": "lectures/w02-l01.html#materials",
-    "title": "01:Grounding MLOps",
-    "section": "",
-    "text": "Pre-read:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible for free here\n\n\n\nIn-Class\n\nWe will go over this deck from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\nML Model is a DAG\nML Life Cycle CRISP-ML9(Q): blog, paper",
-    "crumbs": [
-      "Lectures",
-      "01:Grounding MLOps"
-    ]
-  },
-  {
-    "objectID": "lectures/w02-l01.html#scribed",
-    "href": "lectures/w02-l01.html#scribed",
-    "title": "01:Grounding MLOps",
-    "section": "Scribed:\n",
-    "text": "Scribed:",
-    "crumbs": [
-      "Lectures",
-      "01:Grounding MLOps"
+      "02:Data Engineering"
     ]
   },
   {
@@ -193,6 +171,16 @@
     "text": "Tabular Models\ntbd\n\n\nNL2SQL\ntbd",
     "crumbs": [
       "Projects"
+    ]
+  },
+  {
+    "objectID": "tutorials.html",
+    "href": "tutorials.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "tbd",
+    "crumbs": [
+      "Tutorials"
     ]
   }
 ]

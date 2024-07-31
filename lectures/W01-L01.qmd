@@ -12,5 +12,7 @@
 3. ML Model is a DAG 
 4. ML Life Cycle CRISP-ML9(Q): [blog](https://ml-ops.org/content/crisp-ml), [paper](https://arxiv.org/abs/2003.05155)
 
+[W01-L01-Deck](https://docs.google.com/presentation/d/1G2aMDawcGXl-yY3z72emIZ-5PRFsWTEjASBOUGo8MHs/edit?usp=sharing)
+
 ## Scribed: \
 

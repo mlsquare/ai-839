@@ -8,7 +8,7 @@
 
 <meta name="author" content="mlsquare">
 
-<title>01:Grounding MLOps – AI-839</title>
+<title>02:Data Engineering – AI-839</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w02-l01.html">01:Grounding MLOps</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w02-l01.html">02:Data Engineering</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/w02-l01.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">01:Grounding MLOps</span></a>
+ <span class="menu-text">02:Data Engineering</span></a>
   </div>
 </li>
       </ul>
@@ -179,28 +179,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#materials" id="toc-materials" class="nav-link active" data-scroll-target="#materials">Materials:<br>
-  </a>
-  <ul class="collapse">
-  <li><a href="#pre-read" id="toc-pre-read" class="nav-link" data-scroll-target="#pre-read">Pre-read:</a></li>
-  <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-Class</a></li>
-  </ul></li>
-  <li><a href="#scribed" id="toc-scribed" class="nav-link" data-scroll-target="#scribed">Scribed:<br>
-  </a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w02-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w02-l01.html">01:Grounding MLOps</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w02-l01.html">02:Data Engineering</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">01:Grounding MLOps</h1>
+<h1 class="title">02:Data Engineering</h1>
 </div>
 
 
@@ -217,32 +204,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="materials" class="level2">
-<h2 class="anchored" data-anchor-id="materials">Materials:<br>
-</h2>
-<section id="pre-read" class="level3">
-<h3 class="anchored" data-anchor-id="pre-read">Pre-read:</h3>
-<ol type="1">
-<li>Refresh ML foundations.</li>
-<li>Read “The 100 page ML book” by Andiry Burkov. Chapters accessible for free <a href="https://themlbook.com/wiki/doku.php">here</a></li>
-</ol>
-</section>
-<section id="in-class" class="level3">
-<h3 class="anchored" data-anchor-id="in-class">In-Class</h3>
-<ol type="1">
-<li>We will go over this <a href="https://docs.google.com/presentation/d/1bhjgRelQ0O5FnYCOGiCVWg_SkfRcZ9bffQsgk6yAaL0/edit#slide=id.gb3e5cf682f_0_261">deck</a> from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford</li>
-<li>Software 1.0 vs Software 2.0. See this <a href="./data/newton2.png">Figure</a></li>
-<li>ML Model is a DAG</li>
-<li>ML Life Cycle CRISP-ML9(Q): <a href="https://ml-ops.org/content/crisp-ml">blog</a>, <a href="https://arxiv.org/abs/2003.05155">paper</a></li>
-</ol>
-</section>
-</section>
-<section id="scribed" class="level2">
-<h2 class="anchored" data-anchor-id="scribed">Scribed:<br>
-</h2>
+<p>tbd</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -685,7 +649,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w02-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w02-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This course material was built with <a href="https://quarto.org/">Quarto</a> with <a href="https://github.com/hadley/r4ds">r4ds</a> theme.</p>
 </div>
