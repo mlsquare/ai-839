@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI-839",
+    "section": "",
+    "text": "Welcome\nHello Students of AI 839.\nSee the course page for recent information on Lectures, Homeworks, Projects, etc..",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#announcements",
+    "href": "index.html#announcements",
+    "title": "AI-839",
+    "section": "Announcements",
+    "text": "Announcements\n\n[01-August-2023] Course website up",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "AI-839",
+    "section": "Overview",
+    "text": "Overview\nPrereqs\n\nExposure and skill in data handling, building models in Python, PyTorch\nExposure and skill in developing code using Python, Git, IDEs like VS Code\nA foundation course in Machine Learning, Deep Learning, Data Modeling, working with (Big) Data\n\nPart-1: Essentials\n\nTopics\n\nbasic principles and MLOps with Open Source Software\nthree assignments\n\nLearning Outcomes: students will be able to\n\ndeploy models with logging, documentation, unit tests, and APIs\nunderstand a conceptual framework to approach MLOps holistically\n\n\nPart-2: Full Stack MLOps\n\nTopics\n\nholistic understanding of ML development, beyond chasing typical performance metrics\none assignment, one mini project and a midterm\n\nLearning Outcomes: students will be able to\n\ndeploy models, observe their performance, make improvements, redeploy them.\n\nensure that the ML pipeline is reproducible.\nincorporate principles from Responsible AI and build ML systems which can consist of many models and tools.\n\n\nPart-3: Intro to LLMOps & Application\n\nTopics\n\npractice, cloud solutions\ncapstone project and presentations\ninvited lectures from Industry\n\nLearning Outcomes: students will be able to\n\nframe, discover, develop, deploy, monitor, improve, re-deploy and maintain an ML Application\napproach the problem holistically, optimize RoI",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "preface.html",
+    "href": "preface.html",
+    "title": "Preface",
+    "section": "",
+    "text": "Why MLOps?\nFirst and foremost, let us swallow the bitter pill - ML is just a piece of technology like any other to solve a business problem for which somebody needs to pay for. It means that unless people use it and pay for this technology (models), no matter how sophisticated and cool do they sound, they byte the dust like most ML initiatives do.\nNot just that - industry needs and loves determinism, accountability and reliability, which is the antithesis on which ML lives and thrives. MLOps is about addressing this inherent design challenge using a combination of tools and processes. Without which one has to appeal to luck to achieve the desirable. And we know from experience that luck favors the prepared.\nThis collection of notes on MLOps is about that preparation to manage the entire life cycle of an ML product, holistically and comprehensively. That is, for example, the ML system must be performant, explainable, reliable, fair and transparent, responsive and responsible, controllable, cost effective, collaborative, and many others, all which will discussed in detail later in the course.\n\n\nWhy A course on MLOps?\n\nUnderestimation of Technical Debt\n\nDeveloping ML systems involves significant technical complexities that are often underestimated, chiefly arising out of model-centric pedagogy.\nUnlike traditional software development, ML systems require continuous monitoring and iteration of the situated environment\n\nFundamental Differences from Traditional Software Development\n\nTraditional software development assumes a stable environment and known requirements.\nML systems, however, must adapt to changing environments and data, making it impossible to assume a perfect product at deployment.\n\nUncertain Data Environment\n\nAI systems inherently make mistakes and must be designed to handle continuous change and evolution.\nA good model in the lab does not guarantee performance in production, necessitating robust MLOps practices.\nThe deployment and monitoring of ML systems differ fundamentally from traditional software.\nContinuous monitoring and iteration are essential for maintaining model performance and relevance.\n\nOperationalizing ML\n\nOperationalizing ML is crucial for deriving value from AI systems, aligning them with business objectives and real-world applications. This can be a non-trivial activity, if not impossible in some cases.\nThis mindset is essential for understanding the practical aspects of ML deployment and maintenance.\n\n\nA course on MLOps exposes the developer or system designer to this varying challenges in the life cycle of ML (which is perpetual). This is entirely different from how one could solve an ML problem in academic settings where, more often than not, model novelty is incentivized over utility.\n\n\nWhy THIS course on MLOps?\nThere are many great resources available on the web in terms of books, blogs, courses, and tool documentation. Why yet another one? A legit question.\nAt a philosophical level - there are two objectives:\n\nFight the SOTA syndrome:\nLet me explain.\nThanks to chatGPT, it all seems to be about LLMs - building new models, spinning new shiny applications built around those LLMs both open and closed included. These new shiny objects exacerbated an already sick situation - a situation where building models (model.train) showing 0.01% (or even less) increase in accuracy is chased and cherished – all about State-of-the-Art (SOTA).\nWhile we must work hard and smart to move the needle, and it might be satisfying and fulfilling intellectually – unfortunately, it (chasing SOTA) is neither necessary nor sufficient to build reliable systems consisting of at least one ML component. There is lot more one has to consider in building and managing such systems.\nPrioritizes utility over novelty:\nAdmittedly, it is a boring job to be done. However, contrary to the prejudice, in the due course, you will learn that, indeed, solving for utility and overcoming the challenges along the way, is a rewarding journey in itself. Give no cult status to SOTA.\n\nMore concretely, there are some limitations of current MLOps Resources - they are notably:\n\nPractitioner-Focused Literature\n\nMost current MLOps books and resources are aimed at practitioners.\nThese resources focus heavily on tools and practices without structured assessment components.\nOften they anchor on specific framework/tool set.\n\nNeed for Academic Assessment\n\nIn academia, assessments are a crucial part of the learning process.\nThis material should not only teach concepts but also include tests to evaluate understanding.\nTesting is fundamental to learning and ensures that students grasp and can apply MLOps concepts effectively.\n\nComprehensive Curriculum\n\nThe course should cover not only MLOps but also ML system design and the operationalization of models.\nIntegrating these elements ensures a holistic understanding of both the development and deployment aspects of ML projects.\n\n\nSo the chief difference is - most of the resources are meant for practitioners. But this set of notes is meant both for students who can learn the tools and processes, and apply them and also for practitioners (who can learn the principles). But some of the challenges are more systemic and pervasive outlined below:\n\nVariability in MLOps Practices\n\nMLOps processes and practices vary significantly between individuals and organizations.\nUnlike DevOps in the software industry, which has become a mainstream discipline with standardized practices, MLOps is still relatively young.\n\nAbsence of Standard Vocabulary\n\nThere is no non-denominational vocabulary in MLOps, leading to inconsistencies in terminology and practices.\nStandardizing terminology and processes is crucial for effective communication and collaboration within and between organizations.\n\nKnowledge Diffusion and Skill Gap\n\nTraditional academic institutions typically propagate certain ideas and knowledge that get absorbed and amplified in the industry. But the reverse diffusion is often delayed.\nThere can be a lag between what academia offers and what the industry needs, especially in rapidly evolving fields like ML.\nset of templates (of code bases and also of materialized principles) that anybody can use in the Industry which improves the overall employee productivity of the employee\n\nNo Institutionalized MLOps Thinking\n\nInstitutionalizing MLOps in academic programs ensures that students are trained in industry-relevant skills from the start.\nThis approach can help standardize the quality and relevance of ML education, making graduates industry-ready.\nIntroduce a conceptual framework of models, actors and actions involved and a vocabulary to describe the complex ML dev cycle\nProvide a holistic view of ML - going beyond chasing performance metrics\npractice the principle theory-with-code and code-with-theory so that every principle is practicable, and every practice has a principle\ndevelop good (conceptual) models and principles which industry can adopt\n\n\n\n\nBenefits for Students\n\nIndustry Readiness\n\nInstead of learning these skills during internships or on the job, students will acquire them as part of their academic experience.\nThis prepares students to be industry-ready upon graduation, reducing the training burden on employers.\n\nHolistic Approach to Machine Learning\n\nThe course promotes a holistic view of ML, integrating model-centric and data-centric approaches.\nStudents will learn to consider all aspects of ML, including data quality, model robustness, and system integration.\n\nResponsible AI\n\nThe curriculum will cover aspects of responsible AI, ensuring that students are aware of ethical considerations and best practices in AI deployment.\nThis includes understanding biases, fairness, transparency, and accountability in ML models.\n\nComprehensive Skill Set\n\nStudents will gain a broad set of skills, from ML system design to operationalizing models.\nThis comprehensive skill set ensures that graduates are well-prepared to handle the full ML lifecycle in professional settings.\n\n\n\n\nBenefits for Academic Institutions\n\nPioneering Course Offering in India\n\nThis course is likely the first of its kind being offered in India, positioning the institution as a leader in ML education.\nBuilding on existing curricula such as Introduction to Machine Learning, Deep Learning, and Introduction to DevOps.\n\nIndustry-Relevant Education\n\nBy incorporating industry perspectives, including guest lectures and hands-on projects, the course aligns academic training with real-world needs.\nFold industry needs into the curriculum: students often gain experience in developing models and ML system design through internships, and this is transactional by design. This experiential knowledge has to be scaled with backward integration into the curriculum\nThis practitioner-oriented approach ensures students gain practical experience.\n\nEnhanced Employability\n\nAcademic institutions benefit by producing graduates who are immediately employable.\nStrong industry partnerships and placement opportunities can be developed, enhancing the institution’s reputation and appeal to prospective students.\nEquip students with essential skills: in ML lifecycle management, including deployment, monitoring, and automation\nPrepares students for roles such as ML engineer, MLOps engineer, and data scientist with operations expertise\nFamiliarize students with MLOps tools and platforms (e.g., Kubeflow, MLflow, TFX).\nEnhance the overall learning experience: By providing practical, hands-on experience with industry-relevant tools and practices\n\nCater to new market: As there is growing demand for MLOps skills in the industry due to the increasing adoption of AI and ML technologies. Organizations are looking for professionals who can manage the end-to-end ML lifecycle\n\n\n\nBenefits for Industry\n\nReducing Ad-Hoc Practices\n\nThe course aims to reduce the ad-hoc nature of MLOps practices and bring consistency to tooling choices.\nSimilar to how standardized practices in software development (e.g., Java build tools, POM) have streamlined processes, this course seeks to standardize MLOps practices.\n\nBuilding a Talent Pool\n\nThe industry will benefit from a pool of talent that is job-ready, reducing the onboarding time and training costs.\nGraduates will be proficient in MLOps practices, making them productive and profitable employees from the start.\n\nConceptual Frameworks for MLOps\n\nWhile the tools and techniques for implementing MLOps may vary, the course will provide students with robust frameworks and methodologies.\nThese frameworks will help students understand and apply MLOps principles in various contexts and adapt to new technologies as they emerge.\n\n\n\nThis course aims to introduce concepts that will stand the test of time, despite the rapid evolution of tools and techniques.\n\nBy focusing on foundational principles, the course provides a framework for thinking about MLOps that remains relevant as the field evolves.\n\n\n\nConsistency and Knowledge Transfer\n\nStandardized MLOps training ensures that professionals can move between projects with ease, facilitating better knowledge transfer and collaboration.\nThis reduces the time and effort needed to get new hires up to speed on MLOps practices within the organization.\n\n\n\n\nStyle\nContent will be presented in the form of take-away points, rather than main take-aways embedded in long winding paragraphs. Nuances etc will be added in the due course of time or video recordings will be made available.\n\n\nDisclaimer\nThis course is by no means a replacement of any other resources available. Hopefully, the content and views presented complement the current practice of MLOps, readers and students benefit from it.\nopenly,\nThe Saddle Point",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "course.html",
+    "href": "course.html",
+    "title": "Course",
+    "section": "",
+    "text": "Syllabus & Schedule",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
+    ]
+  },
+  {
+    "objectID": "course.html#discussions",
+    "href": "course.html#discussions",
+    "title": "Course",
+    "section": "Discussions",
+    "text": "Discussions\nJoin this discord channel. Use - as id (no anonymous handles, please).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
+    ]
+  },
+  {
+    "objectID": "course.html#references",
+    "href": "course.html#references",
+    "title": "Course",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
+    ]
+  },
+  {
+    "objectID": "course.html#grading",
+    "href": "course.html#grading",
+    "title": "Course",
+    "section": "Grading",
+    "text": "Grading\n\n10%: Scribe lecture notes\n30%: Four assignments\n15%: Midterm mini project\n20%: In-class midterm\n25%: Capstone project",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
+    ]
+  },
+  {
+    "objectID": "course.html#additional-resources",
+    "href": "course.html#additional-resources",
+    "title": "Course",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\n[Book] Writing for clarity",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
+    ]
+  },
+  {
+    "objectID": "course.html#policies",
+    "href": "course.html#policies",
+    "title": "Course",
+    "section": "Policies",
+    "text": "Policies\n\nLate Submissions:  All deadlines are due at on the date and time indicated on the course page. The penalties for late submission are as follows:\n\nless than a day : 25% penalty\nmore than a day, less than two days: 50% penalty\n75% penalty otherwise.\n\nMake-up Exam/Submission Policy: As per institute policy\nCitation Policy for Papers: Always mention the source, give full attribution and credits to citations, and as per institute policy\nAcademic Dishonesty/Plagiarism: As per institute policy\nAccommodation of Divyangs: As per institute policy\n\nSoma S Dhavala\nCourse Instructor",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/w01-l01.html",
+    "href": "lectures/w01-l01.html",
+    "title": "01:Grounding MLOps",
+    "section": "",
+    "text": "Materials:",
+    "crumbs": [
+      "Lectures",
+      "01:Grounding MLOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w01-l01.html#materials",
+    "href": "lectures/w01-l01.html#materials",
+    "title": "01:Grounding MLOps",
+    "section": "",
+    "text": "Pre-read:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible for free here\n\n\n\nIn-Class\n\nWe will go over this deck from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\nML Model is a DAG\nML Life Cycle CRISP-ML9(Q): blog, paper",
+    "crumbs": [
+      "Lectures",
+      "01:Grounding MLOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w01-l01.html#scribed",
+    "href": "lectures/w01-l01.html#scribed",
+    "title": "01:Grounding MLOps",
+    "section": "Scribed:\n",
+    "text": "Scribed:",
+    "crumbs": [
+      "Lectures",
+      "01:Grounding MLOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w02-l01.html",
+    "href": "lectures/w02-l01.html",
+    "title": "01:Grounding MLOps",
+    "section": "",
+    "text": "Materials:",
+    "crumbs": [
+      "Lectures",
+      "01:Grounding MLOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w02-l01.html#materials",
+    "href": "lectures/w02-l01.html#materials",
+    "title": "01:Grounding MLOps",
+    "section": "",
+    "text": "Pre-read:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible for free here\n\n\n\nIn-Class\n\nWe will go over this deck from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\nML Model is a DAG\nML Life Cycle CRISP-ML9(Q): blog, paper",
+    "crumbs": [
+      "Lectures",
+      "01:Grounding MLOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w02-l01.html#scribed",
+    "href": "lectures/w02-l01.html#scribed",
+    "title": "01:Grounding MLOps",
+    "section": "Scribed:\n",
+    "text": "Scribed:",
+    "crumbs": [
+      "Lectures",
+      "01:Grounding MLOps"
+    ]
+  },
+  {
+    "objectID": "homeworks.html",
+    "href": "homeworks.html",
+    "title": "Homeworks",
+    "section": "",
+    "text": "HW-01",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "homeworks.html#hw-01",
+    "href": "homeworks.html#hw-01",
+    "title": "Homeworks",
+    "section": "",
+    "text": "Read the paper Towards CRISP-ML(Q): A Machine Learning Process Model with QA Methedology here\nRead about Project Canvas here\nRead this lecture notes from CS329S’F22\nPick your favorite problem. Complete the information required in the Project Canvas.\nSubmit your response in this Google Form tbd\nDue by 11.59PM IST, 13th August, 2024.",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Tabular Models\ntbd\n\n\nNL2SQL\ntbd",
+    "crumbs": [
+      "Projects"
+    ]
+  }
+]

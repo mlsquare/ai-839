@@ -1,0 +1,143 @@
+# Preface {.unnumbered}
+
+### Why MLOps?
+
+First and foremost, let us swallow the bitter pill - ML is *just* a piece of technology like any other to solve a business problem for which somebody needs to pay for. It means that unless people *use* it and *pay* for this technology (models), no matter how sophisticated and cool do they sound, they byte the dust like most ML initiatives do. 
+
+Not just that - industry needs and loves determinism, accountability and reliability, which is the antithesis on which ML lives and thrives. MLOps is about addressing this inherent design challenge using a combination of tools and processes. Without which one has to appeal to luck to achieve the desirable. And we know from experience that luck favors the prepared. 
+
+This collection of notes on MLOps is about that preparation to manage the entire life cycle of an ML product, holistically and comprehensively. That is, for example, the ML system must be performant, explainable, reliable, fair and transparent, responsive and responsible, controllable, cost effective, collaborative, and many others, all which will discussed in detail later in the course.
+
+### Why *A* course on MLOps?
+1. Underestimation of Technical Debt
+    - Developing ML systems involves significant technical complexities that are often underestimated, chiefly arising out of model-centric pedagogy.
+    - Unlike traditional software development, ML systems require continuous monitoring and iteration of the situated environment
+2. Fundamental Differences from Traditional Software Development
+    - Traditional software development assumes a stable environment and known requirements.
+    - ML systems, however, must adapt to changing environments and data, making it impossible to assume a perfect product at deployment.
+3. Uncertain Data Environment
+    - AI systems inherently make mistakes and must be designed to handle continuous change and evolution.
+    - A good model in the lab does not guarantee performance in production, necessitating robust MLOps practices.
+    - The deployment and monitoring of ML systems differ fundamentally from traditional software.
+    - Continuous monitoring and iteration are essential for maintaining model performance and relevance.
+4. Operationalizing ML
+    - Operationalizing ML is crucial for deriving value from AI systems, aligning them with business objectives and real-world applications. This can be a non-trivial activity, if not impossible in some cases.
+    - This mindset is essential for understanding the practical aspects of ML deployment and maintenance.
+    
+A course on MLOps exposes the developer or system designer to this varying challenges in the life cycle of ML (which is perpetual). This is entirely different from how one could solve an ML problem in academic settings where, more often than not, model novelty is incentivized over utility.
+
+### Why *THIS* course on MLOps?
+
+There are many great resources available on the web in terms of books, blogs, courses, and tool documentation. Why yet another one? A legit question.  
+
+At a philosophical level - there are two objectives:
+
+1. Fight the SOTA syndrome:
+
+    Let me explain.
+
+    Thanks to chatGPT, it all seems to be about LLMs - building new models, spinning new shiny applications built around those LLMs both open and closed included. These new shiny objects exacerbated an already sick situation - a situation where building models (model.train) showing 0.01% (or even less) increase in accuracy is chased and cherished -- all about State-of-the-Art (SOTA).
+
+    While we must work hard and smart to move the needle, and it might be satisfying and fulfilling intellectually -- unfortunately, it (chasing SOTA) is neither necessary nor sufficient to build *reliable* systems consisting of at least one ML component. There is lot more one has to consider in building and managing such systems.
+
+2. Prioritizes utility over novelty:
+
+    Admittedly, it is a boring job to be done. However, contrary to the prejudice, in the due course, you will learn that, indeed, solving for utility and overcoming the challenges along the way, is a rewarding journey in itself. Give no cult status to SOTA.
+
+More concretely, there are some limitations of current MLOps Resources - they are notably:
+
+1. Practitioner-Focused Literature
+    - Most current MLOps books and resources are aimed at practitioners.
+    - These resources focus heavily on tools and practices without structured assessment components. 
+    - Often they anchor on specific framework/tool set.
+2. Need for Academic Assessment
+    - In academia, assessments are a crucial part of the learning process.
+    - This material should not only teach concepts but also include tests to evaluate understanding.
+    - Testing is fundamental to learning and ensures that students grasp and can apply MLOps concepts effectively.
+3. Comprehensive Curriculum
+    - The course should cover not only MLOps but also ML system design and the operationalization of models.
+    - Integrating these elements ensures a holistic understanding of both the development and deployment aspects of ML projects.
+
+So the chief difference is - most of the resources are meant for practitioners. But this set of notes is meant both for students who can learn the tools and processes, and apply them and also for practitioners (who can learn the principles). But some of the challenges are more systemic and pervasive outlined below:
+
+1. Variability in MLOps Practices
+    - MLOps processes and practices vary significantly between individuals and organizations.
+    - Unlike DevOps in the software industry, which has become a mainstream discipline with standardized practices, MLOps is still relatively young.
+2. Absence of Standard Vocabulary
+    - There is no non-denominational vocabulary in MLOps, leading to inconsistencies in terminology and practices.
+    - Standardizing terminology and processes is crucial for effective communication and collaboration within and between organizations.
+3. Knowledge Diffusion and Skill Gap
+    - Traditional academic institutions typically propagate certain ideas and knowledge that get absorbed and amplified in the industry. But the reverse diffusion is often delayed.
+    - There can be a lag between what academia offers and what the industry needs, especially in rapidly evolving fields like ML.
+    - set of templates (of code bases and also of materialized principles) that anybody can use in the Industry which improves the overall employee productivity of the employee
+4. No Institutionalized MLOps Thinking
+    - Institutionalizing MLOps in academic programs ensures that students are trained in industry-relevant skills from the start.
+    - This approach can help standardize the quality and relevance of ML education, making graduates industry-ready.
+    - Introduce a conceptual framework of models, actors and actions involved and a vocabulary to describe the complex ML dev cycle
+    - Provide a holistic view of ML - going beyond chasing performance metrics
+    - practice the principle *theory-with-code and code-with-theory*  so that every principle is practicable, and every practice has a principle
+    - develop good (conceptual) models and *principles* which industry can adopt
+    
+
+### Benefits for Students
+
+1. Industry Readiness
+    - Instead of learning these skills during internships or on the job, students will acquire them as part of their academic experience.
+    - This prepares students to be industry-ready upon graduation, reducing the training burden on employers.
+2. Holistic Approach to Machine Learning
+    - The course promotes a holistic view of ML, integrating model-centric and data-centric approaches.
+    - Students will learn to consider all aspects of ML, including data quality, model robustness, and system integration.
+3. Responsible AI
+    - The curriculum will cover aspects of responsible AI, ensuring that students are aware of ethical considerations and best practices in AI deployment.
+    - This includes understanding biases, fairness, transparency, and accountability in ML models.
+4. Comprehensive Skill Set
+    - Students will gain a broad set of skills, from ML system design to operationalizing models.
+    - This comprehensive skill set ensures that graduates are well-prepared to handle the full ML lifecycle in professional settings.
+
+
+### Benefits for Academic Institutions
+
+1. Pioneering Course Offering in India
+    - This course is likely the first of its kind being offered in India, positioning the institution as a leader in ML education.
+    - Building on existing curricula such as Introduction to Machine Learning, Deep Learning, and Introduction to DevOps.
+2. Industry-Relevant Education
+    - By incorporating industry perspectives, including guest lectures and hands-on projects, the course aligns academic training with real-world needs.
+    - Fold industry needs into the curriculum: students often gain experience in developing models and ML system design through internships, and this is transactional by design. This experiential knowledge has to be scaled with backward integration into the curriculum
+    - This practitioner-oriented approach ensures students gain practical experience.
+3. Enhanced Employability
+    - Academic institutions benefit by producing graduates who are immediately employable.
+    - Strong industry partnerships and placement opportunities can be developed, enhancing the institution's reputation and appeal to prospective students.
+    - Equip students with essential skills:  in ML lifecycle management, including deployment, monitoring, and automation
+    - Prepares students for roles such as ML engineer, MLOps engineer, and data scientist with operations expertise
+    - *Familiarize students with MLOps* tools and platforms (e.g., Kubeflow, MLflow, TFX).
+    - Enhance the overall learning experience:  By providing practical, hands-on experience with industry-relevant tools and practices
+4. Cater to new market: As there is growing demand for MLOps skills in the industry due to the increasing adoption of AI and ML technologies. Organizations are looking for professionals who can manage the end-to-end ML lifecycle
+    
+
+### Benefits for Industry
+
+1. Reducing Ad-Hoc Practices
+    - The course aims to reduce the ad-hoc nature of MLOps practices and bring consistency to tooling choices.
+    - Similar to how standardized practices in software development (e.g., Java build tools, POM) have streamlined processes, this course seeks to standardize MLOps practices.
+2. Building a Talent Pool
+    - The industry will benefit from a pool of talent that is job-ready, reducing the onboarding time and training costs.
+    - Graduates will be proficient in MLOps practices, making them productive and profitable employees from the start.
+3. Conceptual Frameworks for MLOps
+    - While the tools and techniques for implementing MLOps may vary, the course will provide students with robust frameworks and methodologies.
+    - These frameworks will help students understand and apply MLOps principles in various contexts and adapt to new technologies as they emerge.
+  - This course aims to introduce concepts that will stand the test of time, despite the rapid evolution of tools and techniques.
+    - By focusing on foundational principles, the course provides a framework for thinking about MLOps that remains relevant as the field evolves.
+4. Consistency and Knowledge Transfer
+    - Standardized MLOps training ensures that professionals can move between projects with ease, facilitating better knowledge transfer and collaboration.
+    - This reduces the time and effort needed to get new hires up to speed on MLOps practices within the organization.
+
+### Style
+Content will be presented in the form of take-away points, rather than main take-aways embedded in long winding paragraphs.
+Nuances etc will be added in the due course of time or video recordings will be made available.
+
+### Disclaimer
+This course is by no means a replacement of any other resources available. Hopefully, the content and views presented complement the current practice of MLOps, readers and students benefit from it. 
+
+
+openly, \
+The Saddle Point

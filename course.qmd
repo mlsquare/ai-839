@@ -1,0 +1,63 @@
+---
+title: "Course"
+bibliography: references.bib
+csl: ieee.csl
+link-citations: true
+
+---
+
+You will find below course syallabus and schedule for _AI-839: ML Production Engineering_ course offered at [IIIT-B](https://www.iiitb.ac.in/) in the Fall of 2024. This will evolve as the course progress.
+
+
+### Syllabus & Schedule
+
+::: {style="font-size: 80%;"}
+
+| Wk | Dt | Topics | Resources |
+| :- | :- | :------- | :------- |
+| 01 | 30-Jul <br> 01-Aug | **Discovery** <br> 1. Course Intro <br> 2. ML Lifecycle, Fullstack ML Infrastructure <br> 3. DAGs, Software 1.0 vs 2.0, Tool Ecosystem, Project Setup <br>  4. Project Canvas & Human-centered Design | 0. [W01-01](./lectures/W01-L01.qmd)  <br> 1. Ch1-2:  @andiryp-burkov  <br> 2. Ch1: @ville-tuulos <br> 3.  Ch1: @chip-orielly  <br> 4. Lecture Notes @chip-lec01 <br> 5. [Project Canvas](https://madewithml.com/courses/mlops/product-design/#template): @mlops-gokul   |
+&nbsp; | | **HW-01** |  Due 13th, August, 2024, 11.59 IST |
+: Part-0: Essentials {.striped}
+
+:::
+
+
+## Discussions
+Join [this](https://discord.gg/5gTQ3St2) discord channel. Use  <uid>-<first-name> as id (no anonymous handles, please).
+
+
+## References
+
+::: {#refs}
+:::
+
+
+## Grading
+
+- 10%: Scribe lecture notes 
+- 30%: Four assignments
+- 15%: Midterm mini project
+- 20%: In-class midterm
+- 25%: Capstone project
+
+## Additional Resources
+- [Book] Writing for clarity 
+
+
+## Policies
+
+- _Late Submissions_: \ All deadlines are due at on the date and time indicated on the course page. The penalties for late submission
+are as follows:
+    - less than a day : 25% penalty
+    - more than a day, less than two days: 50% penalty
+    - 75% penalty otherwise.
+
+- _Make-up Exam/Submission Policy_: As per institute [policy](https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf)
+- _Citation Policy for Papers_: Always mention the source, give full attribution and credits to citations, and as per institute [policy](https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf)
+- _Academic Dishonesty/Plagiarism_: As per institute [policy](https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf)
+- _Accommodation of Divyangs_: As per institute [policy](https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf)
+
+
+
+[Soma S Dhavala](https://www.linkedin.com/in/somasdhavala/) \
+Course Instructor

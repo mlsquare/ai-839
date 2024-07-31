@@ -1,0 +1,52 @@
+# Welcome {.unnumbered}
+
+
+Hello Students of AI 839.
+
+See the [course](./course.qmd) page for recent information on Lectures, Homeworks, Projects, etc.. 
+
+## Announcements
+- [01-August-2023] Course website up
+
+
+## Overview
+
+**Prereqs**
+
+- Exposure and skill in data handling, building models in Python, PyTorch
+- Exposure and skill in developing code using Python, Git, IDEs like VS Code
+- A foundation course in Machine Learning, Deep Learning, Data Modeling, working with (Big) Data
+
+
+**Part-1: Essentials**
+
+- Topics
+    - basic principles and MLOps with Open Source Software
+    - three assignments
+- Learning Outcomes: students will be able to
+    - deploy models with logging, documentation, unit tests, and APIs
+    - understand a conceptual framework to approach MLOps holistically 
+
+**Part-2: Full Stack MLOps**
+
+- Topics
+    - holistic understanding of ML development, beyond chasing typical performance metrics
+    - one assignment, one mini project and a midterm
+- Learning Outcomes: students will be able to
+    - deploy models, observe their performance, make improvements, redeploy them.  
+    - ensure that the ML pipeline is reproducible. 
+    - incorporate principles from Responsible AI and build ML systems which can consist of many models and tools.    
+
+**Part-3: Intro to LLMOps & Application**
+
+- Topics
+    - practice, cloud solutions
+    - capstone project and presentations
+    - invited lectures from Industry
+- Learning Outcomes: students will be able to
+    - frame, discover, develop, deploy, monitor, improve, re-deploy and maintain an ML Application
+    - approach the problem holistically, optimize RoI
+
+
+
+

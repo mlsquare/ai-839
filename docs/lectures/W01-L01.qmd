@@ -1,0 +1,16 @@
+# 01:Grounding MLOps {.unnumbered}
+
+## Materials: \
+
+### Pre-read:
+1. Refresh ML foundations.
+2. Read "The 100 page ML book" by Andiry Burkov. Chapters accessible for free [here](https://themlbook.com/wiki/doku.php)
+
+### In-Class
+1. We will go over this [deck](https://docs.google.com/presentation/d/1bhjgRelQ0O5FnYCOGiCVWg_SkfRcZ9bffQsgk6yAaL0/edit#slide=id.gb3e5cf682f_0_261) from Chip Huyen's CS329S: ML System Design Fall'22 @ Stanford
+2. Software 1.0 vs Software 2.0. See this [Figure](./data/newton2.png)
+3. ML Model is a DAG 
+4. ML Life Cycle CRISP-ML9(Q): [blog](https://ml-ops.org/content/crisp-ml), [paper](https://arxiv.org/abs/2003.05155)
+
+## Scribed: \
+

@@ -1,0 +1,9 @@
+# Homeworks {.unnumbered}
+
+## HW-01 {}
+1. Read the paper **Towards CRISP-ML(Q)**: A Machine Learning Process Model  with QA Methedology [here](https://arxiv.org/pdf/2003.05155)
+2. Read about **Project Canvas** [here](https://madewithml.com/courses/mlops/product-design/#template)
+3. Read [this](https://docs.google.com/document/d/1C3dlLmFdYHJmACVkz99lSTUPF4XQbWb_Ah7mPE12Igo/edit#heading=h.a8w2b79yy875) lecture notes from [CS329S'F22](https://stanford-cs329s.github.io/)
+3. Pick your favorite problem. Complete the information required in the Project Canvas.
+4. Submit your response in this Google Form [tbd]() 
+5. Due by 11.59PM IST, 13th August, 2024.

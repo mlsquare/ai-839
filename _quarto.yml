@@ -1,0 +1,53 @@
+project:
+  type: book
+  output-dir: docs
+
+navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Preface"
+        href: preface.qmd
+book:
+  title: "AI-839"
+  subtitle: "ML Production Engineering"
+  reader-mode: true
+
+  page-footer:
+    left: |
+      course under prep.
+    right: |
+      This course material was built with <a href="https://quarto.org/">Quarto</a> with <a href="https://github.com/hadley/r4ds">r4ds</a> theme.
+  
+  cover-image: crisp-ml-process.jpg
+  favicon: crisp-ml-process.jpg
+  site-url: https://mlsquare.github.io/ai-839
+  repo-url: https://github.com/mlsquare/ai-839
+  repo-branch: main
+  repo-actions: [edit, issue]
+  
+  chapters:
+  - preface.qmd
+  - index.qmd
+  - course.qmd        
+  - part: Lectures
+    chapters:
+    - ./lectures/w01-l01.qmd
+    - ./lectures/w02-l01.qmd
+  - homeworks.qmd
+  - projects.qmd
+  - tutorials.qmd
+  
+format:
+  html:
+    theme:
+    - pulse
+    - mlops.scss
+    code-link: true
+    author-meta: "mlsquare"
+    callout-appearance: simple
+    number-sections: false
+editor: visual
+
