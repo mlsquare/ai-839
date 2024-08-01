@@ -148,7 +148,17 @@
     "href": "homeworks.html",
     "title": "Homeworks",
     "section": "",
-    "text": "HW-01\nReading 1. Chip Huyen’s Lecture Notes on ML in Production Intro here 5. AI Canvas\nTask 1. Pick your favorite problem. Complete the information required in the Project Canvas. 2. Submit your response in this Google Form tbd or GradeScope 3. Due by 11.59PM IST, 13th August, 2024.",
+    "text": "HW-01\nReading\nTask\nDue by\n11.59PM IST, 13th August, 2024.",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "homeworks.html#hw-01",
+    "href": "homeworks.html#hw-01",
+    "title": "Homeworks",
+    "section": "",
+    "text": "Chip Huyen’s Lecture Notes on ML in Production. Intro here\nPhase Zero of MLOps from ml-ops.org blogs. Very useful and nicely done\nTowards CRISP-ML(Q): A Machine Learning Process Model with QA Methodology\nProject Canvas from Gokul Mohandas’s course\nAI Canvas\n\n\n\nPick your favorite problem. Complete the information required in the Project Canvas.\nSubmit your response in this Google Form tbd or GradeScope",
     "crumbs": [
       "Homeworks"
     ]
