@@ -94,7 +94,7 @@
     "href": "course.html#policies",
     "title": "Course",
     "section": "Policies",
-    "text": "Policies\n\nLate Submissions:  All deadlines are due at on the date and time indicated on the course page. The penalties for late submission are as follows:\n\nless than a day : 25% penalty\nmore than a day, less than two days: 50% penalty\n75% penalty otherwise.\n\nMake-up Exam/Submission Policy: As per institute policy\nCitation Policy for Papers: Always mention the source, give full attribution and credits to citations, and as per institute policy\nAcademic Dishonesty/Plagiarism: As per institute policy\nAccommodation of Divyangs: As per institute policy\n\nSoma S Dhavala\nCourse Instructor",
+    "text": "Policies\n\nLate Submissions:  All deadlines are due at on the date and time indicated on the course page. The penalties for late submission are as follows:\n\nLate submissions not allowed (incur a zero) - except with prior approval or in valid exceptional cases\n\nMake-up Exam/Submission Policy: As per institute policy\nCitation Policy for Papers: Always mention the source, give full attribution and credits to citations, and as per institute policy\nAcademic Dishonesty/Plagiarism: As per institute policy\nAccommodation of Divyangs: As per institute policy\n\nSoma S Dhavala\nCourse Instructor",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
     ]
@@ -115,7 +115,7 @@
     "href": "lectures/w01-l01.html#materials",
     "title": "01:Grounding MLOps",
     "section": "",
-    "text": "Pre-read:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible for free here\n\n\n\nIn-Class\n\nWe will go over this deck from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\nML Model is a DAG\nML Life Cycle CRISP-ML9(Q): blog, paper\n\nW01-L01-Deck",
+    "text": "Pre-work:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible here\n\n\n\nIn-Class\n\nWe will go over W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\n\n\n\nPost-class:\n\nRead the motivation for MLOps from this blog.\nML Life Cycle CRISP-ML9(Q): blog, paper\nCh1-2 of AB, Ch1 of VT, Ch1 of CH1\n\n\n\nSpillover/ Next Class\n\nML Model is a DAG\nMLOps LifeCycle, Architecture, Tool Landscape\nWhat we are going to build, Setup\n\n\n\nReferences\n\nAB: Andiry Burkov, ML Engineering, LeanPub\nVT: Vile Tuulos, Effective Data Science Infrastructure, Manning\nCH1 Chip Hyuen, ML System Design, O’Reilly",
     "crumbs": [
       "Lectures",
       "01:Grounding MLOps"
@@ -148,17 +148,7 @@
     "href": "homeworks.html",
     "title": "Homeworks",
     "section": "",
-    "text": "HW-01",
-    "crumbs": [
-      "Homeworks"
-    ]
-  },
-  {
-    "objectID": "homeworks.html#hw-01",
-    "href": "homeworks.html#hw-01",
-    "title": "Homeworks",
-    "section": "",
-    "text": "Read the paper Towards CRISP-ML(Q): A Machine Learning Process Model with QA Methedology here\nRead about Project Canvas here\nRead this lecture notes from CS329S’F22\nPick your favorite problem. Complete the information required in the Project Canvas.\nSubmit your response in this Google Form tbd\nDue by 11.59PM IST, 13th August, 2024.",
+    "text": "HW-01\nReading 1. Chip Huyen’s Lecture Notes on ML in Production Intro here 5. AI Canvas\nTask 1. Pick your favorite problem. Complete the information required in the Project Canvas. 2. Submit your response in this Google Form tbd or GradeScope 3. Due by 11.59PM IST, 13th August, 2024.",
     "crumbs": [
       "Homeworks"
     ]
