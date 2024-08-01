@@ -6,7 +6,7 @@ link-citations: true
 
 ---
 
-You will find below course syallabus and schedule for _AI-839: ML Production Engineering_ course offered at [IIIT-B](https://www.iiitb.ac.in/) in the Fall of 2024. This will evolve as the course progress.
+You will find below course syllabus and schedule for _AI-839: ML Production Engineering_ course offered at [IIIT-B](https://www.iiitb.ac.in/) in the Fall of 2024. This will evolve as the course progress.
 
 
 ### Syllabus & Schedule
@@ -15,7 +15,7 @@ You will find below course syallabus and schedule for _AI-839: ML Production Eng
 
 | Wk | Dt | Topics | Resources |
 | :- | :- | :------- | :------- |
-| 01 | 30-Jul <br> 01-Aug | **Discovery** <br> 1. Course Intro <br> 2. ML Lifecycle, Fullstack ML Infrastructure <br> 3. DAGs, Software 1.0 vs 2.0, Tool Ecosystem, Project Setup <br>  4. Project Canvas & Human-centered Design | 0. [W01-01](./lectures/W01-L01.qmd)  <br> 1. Ch1-2:  @andiryp-burkov  <br> 2. Ch1: @ville-tuulos <br> 3.  Ch1: @chip-orielly  <br> 4. Lecture Notes @chip-lec01 <br> 5. [Project Canvas](https://madewithml.com/courses/mlops/product-design/#template): @mlops-gokul   |
+| 01 | 30-Jul <br> 01-Aug | **Discovery** <br> 1. Course Intro <br> 2. ML in Production - Intro <br> 3. Software 1.0 vs 2.0 <br> 4. Project Canvas & Human-centered Design | [W01-L01](./lectures/w01-l01.qmd) |
 &nbsp; | | **HW-01** |  Due 13th, August, 2024, 11.59 IST |
 : Part-0: Essentials {.striped}
 
@@ -23,7 +23,7 @@ You will find below course syallabus and schedule for _AI-839: ML Production Eng
 
 
 ## Discussions
-Join [this](https://discord.gg/5gTQ3St2) discord channel. Use  <uid>-<first-name> as id (no anonymous handles, please).
+Join [this](https://discord.gg/5gTQ3St2) discord channel. Use  uid-first-name as id (no anonymous handles, please).
 
 
 ## References
@@ -48,9 +48,7 @@ Join [this](https://discord.gg/5gTQ3St2) discord channel. Use  <uid>-<first-name
 
 - _Late Submissions_: \ All deadlines are due at on the date and time indicated on the course page. The penalties for late submission
 are as follows:
-    - less than a day : 25% penalty
-    - more than a day, less than two days: 50% penalty
-    - 75% penalty otherwise.
+    - Late submissions not allowed (incur a zero) - except with prior approval or in valid exceptional cases
 
 - _Make-up Exam/Submission Policy_: As per institute [policy](https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf)
 - _Citation Policy for Papers_: Always mention the source, give full attribution and credits to citations, and as per institute [policy](https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf)
