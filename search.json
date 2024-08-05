@@ -14,7 +14,7 @@
     "href": "index.html#announcements",
     "title": "AI-839",
     "section": "Announcements",
-    "text": "Announcements\n\n[01-August-2023] Course website up",
+    "text": "Announcements\n\n[06-August-2023] Lecture Page W02-L01 added\n[01-August-2023] Course website up, Lecture Page W01-L01 added. Homework-01 added.",
     "crumbs": [
       "Welcome"
     ]
@@ -102,45 +102,67 @@
   {
     "objectID": "lectures/w01-l01.html",
     "href": "lectures/w01-l01.html",
-    "title": "01:Grounding MLOps",
+    "title": "01A:Grounding MLOps",
     "section": "",
     "text": "Materials:",
     "crumbs": [
       "Lectures",
-      "01:Grounding MLOps"
+      "01A:Grounding MLOps"
     ]
   },
   {
     "objectID": "lectures/w01-l01.html#materials",
     "href": "lectures/w01-l01.html#materials",
-    "title": "01:Grounding MLOps",
+    "title": "01A:Grounding MLOps",
     "section": "",
     "text": "Pre-work:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible here\n\n\n\nIn-Class\n\nWe will go over W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\n\n\n\nPost-class:\n\nRead the motivation for MLOps from this blog.\nML Life Cycle CRISP-ML9(Q): blog, paper\nCh1-2 of AB, Ch1 of VT, Ch1 of CH1\n\n\n\nSpillover/ Next Class\n\nML Model is a DAG\nMLOps LifeCycle, Architecture, Tool Landscape\nWhat we are going to build, Setup\n\n\n\nReferences\n\nAB: Andiry Burkov, ML Engineering, LeanPub\nVT: Vile Tuulos, Effective Data Science Infrastructure, Manning\nCH1 Chip Hyuen, ML System Design, O’Reilly",
     "crumbs": [
       "Lectures",
-      "01:Grounding MLOps"
+      "01A:Grounding MLOps"
     ]
   },
   {
     "objectID": "lectures/w01-l01.html#scribed",
     "href": "lectures/w01-l01.html#scribed",
-    "title": "01:Grounding MLOps",
+    "title": "01A:Grounding MLOps",
     "section": "Scribed:\n",
     "text": "Scribed:",
     "crumbs": [
       "Lectures",
-      "01:Grounding MLOps"
+      "01A:Grounding MLOps"
     ]
   },
   {
     "objectID": "lectures/w02-l01.html",
     "href": "lectures/w02-l01.html",
-    "title": "02:Data Engineering",
+    "title": "01B:Grounding MLOps",
     "section": "",
-    "text": "tbd",
+    "text": "Materials:",
     "crumbs": [
       "Lectures",
-      "02:Data Engineering"
+      "01B:Grounding MLOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w02-l01.html#materials",
+    "href": "lectures/w02-l01.html#materials",
+    "title": "01B:Grounding MLOps",
+    "section": "",
+    "text": "Pre-work:\n\nRead the motivation for MLOps from this blog.\nReview W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\n\n\n\nIn-Class\n\nML Production Myths W01-L01-Deck\nSoftware 1.0 vs Software 2.0. See this W01-L02-Deck\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\n\n\n\nPost-class:\n\n[blog] A simple Tool to Start Making Decisions with the Help of AI\n[book, optional] Prediction Machines: The Simple Economics of AI, Ajay Agrawal, Joshua Gans, Avi Goldfare\n[blog] Why Metaflow\n[blog] Building and Managing Data Science Pipelines with Kedro from neptune.ai\n\n\n\nSpillover/ Next Class\n\nMLOps LifeCycle, Architecture, Tool Landscape\nWhat we are going to build, Setup\nKedro Overview",
+    "crumbs": [
+      "Lectures",
+      "01B:Grounding MLOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w02-l01.html#scribed",
+    "href": "lectures/w02-l01.html#scribed",
+    "title": "01B:Grounding MLOps",
+    "section": "Scribed:\n",
+    "text": "Scribed:",
+    "crumbs": [
+      "Lectures",
+      "01B:Grounding MLOps"
     ]
   },
   {
@@ -178,7 +200,17 @@
     "href": "tutorials.html",
     "title": "Tutorials",
     "section": "",
-    "text": "tbd",
+    "text": "GIT",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#git",
+    "href": "tutorials.html#git",
+    "title": "Tutorials",
+    "section": "",
+    "text": "[video] Git Tutorial for Beginners by Code-With-Mosh.\n[Paid Course] Ultimate Git by Code-with-Mosh is very good. Covers, additional topics like Collaboration, Advanced Branching strategies, etc.\n[video] Git and Github for Beginners - Crash Course from freeCodeCamp.org\n[book] Pro Git\n[web] Learn Git Branching - an interactive way to learn git branching",
     "crumbs": [
       "Tutorials"
     ]
