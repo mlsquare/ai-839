@@ -1,0 +1,11 @@
+# ML Documentation
+Google published [Model Cards for Model Reporting](https://arxiv.org/abs/1810.03993) to improve transparency in model reporting. Idea is very similar to how information related to the nutritional content is published on the packaging. See their [blog](https://modelcards.withgoogle.com/about) for details. Similar efforts were made to document the details about the data too. See [Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI](https://arxiv.org/abs/2204.01075) for details and the accompanying blog with playbook [here](https://research.google/blog/the-data-cards-playbook-a-toolkit-for-transparency-in-dataset-documentation/) from Google Research.
+
+Both Model Card and Data Card only capture "_an_" aspect of the entire problem but at a greater depth. Both of them are reporting aspects most useful in _post_ deployment scenarios. But what about _during_ development? In particular, given the exploratory and iterative nature of ML model and system development, how do we give structure to this process as well as document it?
+
+# AI Canvas
+[AI-Canvas](https://hbr.org/2018/04/a-simple-tool-to-start-making-decisions-with-the-help-of-ai) fills the gap on the business side during the _Design_ phase of the development. However, the terminology is used somewhat OOD for ML folks and is not easy to get it right in first pass :).
+
+[Project Canvas](https://madewithml.com/courses/mlops/product-design/#template) is more elaborate and easier to understand than _AI Canvas_. But again, the terming _Project_ can made specific and unambiguous. 
+
+That leads to [Project Cards](./resources/project-card.ipynb)
