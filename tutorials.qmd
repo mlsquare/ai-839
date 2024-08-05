@@ -1,3 +1,9 @@
 # Tutorials {.unnumbered}
 
-tbd
+## GIT
+
+1. \[video\] [Git Tutorial for Beginners](https://www.youtube.com/watch?v=8JJ101D3knE) by Code-With-Mosh.
+2. \[Paid Course\] [Ultimate Git](https://codewithmosh.com/p/the-ultimate-git-course) by Code-with-Mosh is very good. Covers, additional topics like Collaboration, Advanced Branching strategies, etc.
+3. \[video\] [Git and Github for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk) from freeCodeCamp.org
+4. \[book\] [Pro Git ](https://git-scm.com/book/en/v2)
+5. \[web\] [Learn Git Branching](https://learngitbranching.js.org/) - an interactive way to learn git branching

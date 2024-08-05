@@ -15,8 +15,11 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 
 | Wk | Dt | Topics | Resources |
 | :- | :- | :------- | :------- |
-| 01 | 30-Jul <br> 01-Aug | **Discovery** <br> 1. Course Intro <br> 2. ML in Production - Intro <br> 3. Software 1.0 vs 2.0 <br> 4. Project Canvas & Human-centered Design | [W01-L01](./lectures/w01-l01.qmd) |
+| 01 | 30-Jul <br> 01-Aug | **Discovery** <br> 1. Course Intro <br> 2. ML in Production - Intro <br> | [W01-L01](./lectures/w01-l01.qmd) |
 &nbsp; | | **HW-01** |  Due 13th, August, 2024, 11.59 IST |
+| 02 | 06-Aug <br> 08-Aug | **Discovery** <br> 1. Contd.  _ML in Production - Intro_ <br> 2. Software 1.0 vs 2.0 <br> 3. Project Canvas & Human-centered Design | [W01-L02](./lectures/w01-l02.qmd) |
+&nbsp; | |  |  |
+
 : Part-0: Essentials {.striped}
 
 :::
