@@ -1,5 +1,170 @@
 [
   {
+    "objectID": "resources/project-card.html",
+    "href": "resources/project-card.html",
+    "title": "Project Card",
+    "section": "",
+    "text": "Business View",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#background",
+    "href": "resources/project-card.html#background",
+    "title": "Project Card",
+    "section": "Background",
+    "text": "Background\nProvide succinct background to the problem so that the reader can empathize with the problem.",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#problem",
+    "href": "resources/project-card.html#problem",
+    "title": "Project Card",
+    "section": "Problem",
+    "text": "Problem\nWhat is the problem being solved?",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#customer",
+    "href": "resources/project-card.html#customer",
+    "title": "Project Card",
+    "section": "Customer",
+    "text": "Customer\nWho it is for? Is that a user or a beneficiary? What is the problem being solved? Who it is for?",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#value-proposition",
+    "href": "resources/project-card.html#value-proposition",
+    "title": "Project Card",
+    "section": "Value Proposition",
+    "text": "Value Proposition\nWhy it needs to be solved?",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#product",
+    "href": "resources/project-card.html#product",
+    "title": "Project Card",
+    "section": "Product",
+    "text": "Product\nHow does the solution look like? It is more of the experience, rather how it will be developed.",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#objectives",
+    "href": "resources/project-card.html#objectives",
+    "title": "Project Card",
+    "section": "Objectives",
+    "text": "Objectives\nBreakdown the product into key (business) objectives that need to be delivered? SMART Goals is useful to frame",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#risks-challenges",
+    "href": "resources/project-card.html#risks-challenges",
+    "title": "Project Card",
+    "section": "Risks & Challenges",
+    "text": "Risks & Challenges\nWhat are the challenges one can face and ways to overcome?",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#task",
+    "href": "resources/project-card.html#task",
+    "title": "Project Card",
+    "section": "Task",
+    "text": "Task\nWhat type of prediction problem is this? Link Model Card when sufficient details become available (start small but early)",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#metrics",
+    "href": "resources/project-card.html#metrics",
+    "title": "Project Card",
+    "section": "Metrics",
+    "text": "Metrics\nHow will the solution be evaluated - What are the ML metrics? What are the business metrics? Link Model Card when sufficient details become available (start small but early)",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#evaluation",
+    "href": "resources/project-card.html#evaluation",
+    "title": "Project Card",
+    "section": "Evaluation",
+    "text": "Evaluation\nHow will the solution be evaluated (process)? Link Model Card when sufficient details become available (start small but early)",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#data",
+    "href": "resources/project-card.html#data",
+    "title": "Project Card",
+    "section": "Data",
+    "text": "Data\nWhat type of data is needed? How will it be collected - for training and for continuous improvement? Link Data Cards when sufficient details become available (start small but early)",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#plan-roadmap",
+    "href": "resources/project-card.html#plan-roadmap",
+    "title": "Project Card",
+    "section": "Plan/ Roadmap",
+    "text": "Plan/ Roadmap\nProvide problem break-up, tentative timelines and deliverables? Use PACT formate if SMART is not suitable.",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#continous-improvement",
+    "href": "resources/project-card.html#continous-improvement",
+    "title": "Project Card",
+    "section": "Continous Improvement",
+    "text": "Continous Improvement\nHow will the system/model will improve? Provide a plan and means.",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
+    "objectID": "resources/project-card.html#resources",
+    "href": "resources/project-card.html#resources",
+    "title": "Project Card",
+    "section": "Resources",
+    "text": "Resources\n\nHuman Resources\nwhat type of team and strength needed?\n\n\nCompute Resources\nwhat type of compute resources needed to train and serve?",
+    "crumbs": [
+      "ML Documentation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "AI-839",
@@ -14,7 +179,7 @@
     "href": "index.html#announcements",
     "title": "AI-839",
     "section": "Announcements",
-    "text": "Announcements\n\n[06-August-2023] Lecture Page W02-L01 added\n[01-August-2023] Course website up, Lecture Page W01-L01 added. Homework-01 added.",
+    "text": "Announcements\n\n[06-August-2023] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2023] Course website up, Lecture Page W01-L01 added. Homework-01 added.",
     "crumbs": [
       "Welcome"
     ]
@@ -213,6 +378,16 @@
     "text": "[video] Git Tutorial for Beginners by Code-With-Mosh.\n[Paid Course] Ultimate Git by Code-with-Mosh is very good. Covers, additional topics like Collaboration, Advanced Branching strategies, etc.\n[video] Git and Github for Beginners - Crash Course from freeCodeCamp.org\n[book] Pro Git\n[web] Learn Git Branching - an interactive way to learn git branching",
     "crumbs": [
       "Tutorials"
+    ]
+  },
+  {
+    "objectID": "documentation.html",
+    "href": "documentation.html",
+    "title": "ML Documentation",
+    "section": "",
+    "text": "Google published Model Cards for Model Reporting to improve transparency in model reporting. Idea is very similar to how information related to the nutritional content is published on the packaging. See their blog for details. Similar efforts were made to document the details about the data too. See Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI for details and the accompanying blog with playbook here from Google Research.\nBoth Model Card and Data Card only capture “an” aspect of the entire problem but at a greater depth. Both of them are reporting aspects most useful in post deployment scenarios. But what about during development? In particular, given the exploratory and iterative nature of ML model and system development, how do we give structure to this process as well as document it?\n\nAI Canvas\nAI-Canvas fills the gap on the business side during the Design phase of the development. However, the terminology is used somewhat OOD for ML folks and is not easy to get it right in first pass :).\nProject Canvas is more elaborate and easier to understand than AI Canvas. But again, the terming Project can made specific and unambiguous.\nThat leads to Project Cards",
+    "crumbs": [
+      "ML Documentation"
     ]
   }
 ]

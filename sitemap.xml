@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://mlsquare.github.io/ai-839/resources/project-card.html</loc>
+    <lastmod>2024-08-05T18:46:40.328Z</lastmod>
+  </url>
+  <url>
     <loc>https://mlsquare.github.io/ai-839/index.html</loc>
-    <lastmod>2024-08-05T15:40:16.425Z</lastmod>
+    <lastmod>2024-08-05T16:46:16.736Z</lastmod>
   </url>
   <url>
     <loc>https://mlsquare.github.io/ai-839/preface.html</loc>
@@ -10,11 +14,11 @@
   </url>
   <url>
     <loc>https://mlsquare.github.io/ai-839/course.html</loc>
-    <lastmod>2024-08-05T15:43:00.806Z</lastmod>
+    <lastmod>2024-08-05T18:48:35.493Z</lastmod>
   </url>
   <url>
     <loc>https://mlsquare.github.io/ai-839/lectures/w01-l01.html</loc>
-    <lastmod>2024-08-05T15:09:53.763Z</lastmod>
+    <lastmod>2024-08-05T16:34:30.131Z</lastmod>
   </url>
   <url>
     <loc>https://mlsquare.github.io/ai-839/lectures/w02-l01.html</loc>
@@ -31,5 +35,9 @@
   <url>
     <loc>https://mlsquare.github.io/ai-839/tutorials.html</loc>
     <lastmod>2024-08-05T15:29:16.369Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mlsquare.github.io/ai-839/documentation.html</loc>
+    <lastmod>2024-08-05T17:35:03.953Z</lastmod>
   </url>
 </urlset>
