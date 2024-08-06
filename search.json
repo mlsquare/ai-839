@@ -15,7 +15,7 @@
     "href": "resources/project-card.html#background",
     "title": "Project Card",
     "section": "Background",
-    "text": "Background\nProvide succinct background to the problem so that the reader can empathize with the problem.",
+    "text": "Background\nProvide succinct background to the problem so that the reader can empathize with the problem.\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -26,7 +26,7 @@
     "href": "resources/project-card.html#problem",
     "title": "Project Card",
     "section": "Problem",
-    "text": "Problem\nWhat is the problem being solved?",
+    "text": "Problem\nWhat is the problem being solved?\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -37,7 +37,7 @@
     "href": "resources/project-card.html#customer",
     "title": "Project Card",
     "section": "Customer",
-    "text": "Customer\nWho it is for? Is that a user or a beneficiary? What is the problem being solved? Who it is for?",
+    "text": "Customer\nWho it is for? Is that a user or a beneficiary? What is the problem being solved? Who it is for?\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -48,7 +48,7 @@
     "href": "resources/project-card.html#value-proposition",
     "title": "Project Card",
     "section": "Value Proposition",
-    "text": "Value Proposition\nWhy it needs to be solved?",
+    "text": "Value Proposition\nWhy it needs to be solved?\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -59,7 +59,7 @@
     "href": "resources/project-card.html#product",
     "title": "Project Card",
     "section": "Product",
-    "text": "Product\nHow does the solution look like? It is more of the experience, rather how it will be developed.",
+    "text": "Product\nHow does the solution look like? It is more of the experience, rather how it will be developed.\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -70,7 +70,7 @@
     "href": "resources/project-card.html#objectives",
     "title": "Project Card",
     "section": "Objectives",
-    "text": "Objectives\nBreakdown the product into key (business) objectives that need to be delivered? SMART Goals is useful to frame",
+    "text": "Objectives\nBreakdown the product into key (business) objectives that need to be delivered? SMART Goals is useful to frame\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -81,7 +81,7 @@
     "href": "resources/project-card.html#risks-challenges",
     "title": "Project Card",
     "section": "Risks & Challenges",
-    "text": "Risks & Challenges\nWhat are the challenges one can face and ways to overcome?",
+    "text": "Risks & Challenges\nWhat are the challenges one can face and ways to overcome?\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -92,7 +92,7 @@
     "href": "resources/project-card.html#task",
     "title": "Project Card",
     "section": "Task",
-    "text": "Task\nWhat type of prediction problem is this? Link Model Card when sufficient details become available (start small but early)",
+    "text": "Task\nWhat type of prediction problem is this? Link Model Card when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -103,7 +103,7 @@
     "href": "resources/project-card.html#metrics",
     "title": "Project Card",
     "section": "Metrics",
-    "text": "Metrics\nHow will the solution be evaluated - What are the ML metrics? What are the business metrics? Link Model Card when sufficient details become available (start small but early)",
+    "text": "Metrics\nHow will the solution be evaluated - What are the ML metrics? What are the business metrics? Link Model Card when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -114,7 +114,7 @@
     "href": "resources/project-card.html#evaluation",
     "title": "Project Card",
     "section": "Evaluation",
-    "text": "Evaluation\nHow will the solution be evaluated (process)? Link Model Card when sufficient details become available (start small but early)",
+    "text": "Evaluation\nHow will the solution be evaluated (process)? Link Model Card when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -125,7 +125,7 @@
     "href": "resources/project-card.html#data",
     "title": "Project Card",
     "section": "Data",
-    "text": "Data\nWhat type of data is needed? How will it be collected - for training and for continuous improvement? Link Data Cards when sufficient details become available (start small but early)",
+    "text": "Data\nWhat type of data is needed? How will it be collected - for training and for continuous improvement? Link Data Cards when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -136,18 +136,18 @@
     "href": "resources/project-card.html#plan-roadmap",
     "title": "Project Card",
     "section": "Plan/ Roadmap",
-    "text": "Plan/ Roadmap\nProvide problem break-up, tentative timelines and deliverables? Use PACT formate if SMART is not suitable.",
+    "text": "Plan/ Roadmap\nProvide problem break-up, tentative timelines and deliverables? Use PACT formate if SMART is not suitable.\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
-    "objectID": "resources/project-card.html#continous-improvement",
-    "href": "resources/project-card.html#continous-improvement",
+    "objectID": "resources/project-card.html#continuous-improvement",
+    "href": "resources/project-card.html#continuous-improvement",
     "title": "Project Card",
-    "section": "Continous Improvement",
-    "text": "Continous Improvement\nHow will the system/model will improve? Provide a plan and means.",
+    "section": "Continuous Improvement",
+    "text": "Continuous Improvement\nHow will the system/model will improve? Provide a plan and means.\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -158,7 +158,7 @@
     "href": "resources/project-card.html#resources",
     "title": "Project Card",
     "section": "Resources",
-    "text": "Resources\n\nHuman Resources\nwhat type of team and strength needed?\n\n\nCompute Resources\nwhat type of compute resources needed to train and serve?",
+    "text": "Resources\nWhat resources are needed? Estimate the cost!\nyour response\n\nHuman Resources\nwhat type of team and strength needed?\nyour response\n\n\nCompute Resources\nWhat type of compute resources needed to train and serve?\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -335,7 +335,7 @@
     "href": "homeworks.html",
     "title": "Homeworks",
     "section": "",
-    "text": "HW-01\nReading\nTask\nDue by\n11.59PM IST, 13th August, 2024.",
+    "text": "HW-01\nReading - Chip Huyen’s Lecture Notes on ML in Production. Intro here\nTask\nDue by\n11.59PM IST, 13th August, 2024.",
     "crumbs": [
       "Homeworks"
     ]
@@ -345,7 +345,7 @@
     "href": "homeworks.html#hw-01",
     "title": "Homeworks",
     "section": "",
-    "text": "Chip Huyen’s Lecture Notes on ML in Production. Intro here\nPhase Zero of MLOps from ml-ops.org blogs. Very useful and nicely done\nTowards CRISP-ML(Q): A Machine Learning Process Model with QA Methodology\nProject Canvas from Gokul Mohandas’s course\nAI Canvas\n\n\n\nPick your favorite problem. Complete the information required in the Project Canvas.\nSubmit your response in this Google Form tbd or GradeScope",
+    "text": "Phase Zero of MLOps from ml-ops.org blogs. Very useful and nicely done\nTowards CRISP-ML(Q): A Machine Learning Process Model with QA Methodology\nProject Canvas from Gokul Mohandas’s course\nAI Canvas\n\n\n\nPick your favorite problem. Complete the information required in the project card template\nCreate a new kedro project with name “your first name-ai-839”\nPush it to github. Give read read/write acces to git handle dhavala\nCreate a branch “hw01”. Under notebooks folder, copy project card template\nComplete the Project Card, commit and push the notebook to your github (remote) repo.",
     "crumbs": [
       "Homeworks"
     ]
