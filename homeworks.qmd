@@ -3,7 +3,6 @@
 ## HW-01 {}
 
 **Reading**
-
 - Chip Huyen's Lecture Notes on ML in Production. Intro [here](https://docs.google.com/document/d/1C3dlLmFdYHJmACVkz99lSTUPF4XQbWb_Ah7mPE12Igo/edit#heading=h.a8w2b79yy875)
 
 - [Phase Zero](https://ml-ops.org/content/phase-zero) of MLOps from [ml-ops.org](https://ml-ops.org) blogs. Very useful and nicely done
@@ -16,9 +15,16 @@
 
 **Task** 
 
-- Pick your favorite problem. Complete the information required in the Project Canvas.
+- Pick your favorite problem. Complete the information required in the [project card template](./resources/project-card.ipynb)
 
-- Submit your response in this Google Form [tbd]() or GradeScope 
+- Create a new kedro project with name "your first name-ai-839"
+
+- Push it to github. Give read read/write acces to git handle _dhavala_
+
+- Create a branch "hw01". Under notebooks folder, copy  [project card template](./resources/project-card.ipynb)
+
+- Complete the Project Card, commit and push the notebook to your github (remote) repo.
+
 
 **Due by** 
 
