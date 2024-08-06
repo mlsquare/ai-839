@@ -17,7 +17,7 @@
 
 - Pick your favorite problem. Complete the information required in the [project card template](./resources/project-card.ipynb)
 
-- Create a new kedro project with name "your first name-ai-839"
+- Create a new kedro project with _repo name_ "your first name-ai-839". Documentation [here](https://docs.kedro.org/en/stable/get_started/new_project.html)
 
 - Push it to github. Give read read/write acces to git handle _dhavala_
 
