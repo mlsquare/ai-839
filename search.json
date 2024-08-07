@@ -136,7 +136,7 @@
     "href": "resources/project-card.html#plan-roadmap",
     "title": "Project Card",
     "section": "Plan/ Roadmap",
-    "text": "Plan/ Roadmap\nProvide problem break-up, tentative timelines and deliverables? Use PACT formate if SMART is not suitable.\nyour response",
+    "text": "Plan/ Roadmap\nProvide problem break-up, tentative timelines and deliverables? Use PACT format if SMART is not suitable.\nyour response",
     "crumbs": [
       "ML Documentation",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
@@ -345,7 +345,7 @@
     "href": "homeworks.html#hw-01",
     "title": "Homeworks",
     "section": "",
-    "text": "Phase Zero of MLOps from ml-ops.org blogs. Very useful and nicely done\nTowards CRISP-ML(Q): A Machine Learning Process Model with QA Methodology\nProject Canvas from Gokul Mohandas’s course\nAI Canvas\n\n\n\nPick your favorite problem. Complete the information required in the project card template\nCreate a new kedro project with name “your first name-ai-839”\nPush it to github. Give read read/write acces to git handle dhavala\nCreate a branch “hw01”. Under notebooks folder, copy project card template\nComplete the Project Card, commit and push the notebook to your github (remote) repo.",
+    "text": "Phase Zero of MLOps from ml-ops.org blogs. Very useful and nicely done\nTowards CRISP-ML(Q): A Machine Learning Process Model with QA Methodology\nProject Canvas from Gokul Mohandas’s course\nAI Canvas\n\n\n\nPick your favorite problem. Complete the information required in the project card template\nCreate a new kedro project with repo name “your first name-ai-839”. Documentation here\nPush it to github. Give read read/write acces to git handle dhavala\nCreate a branch “hw01”. Under notebooks folder, copy project card template\nComplete the Project Card, commit and push the notebook to your github (remote) repo.",
     "crumbs": [
       "Homeworks"
     ]
