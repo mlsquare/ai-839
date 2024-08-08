@@ -6,8 +6,9 @@ Hello Students of AI 839.
 See the [course](./course.qmd) page for recent information on Lectures, Homeworks, Projects, etc.. 
 
 ## Announcements
+- [09-August-2023] Lecture Page [W02-L02](/lectures/w02-l02.qmd) added. Course pages updated. @sec-hw-02 added
 - [06-August-2023] Lecture Page [W02-L01](/lectures/w02-l01.qmd) added. [Project Card](./resources/project-card.ipynb), as a jupyter notebook is added.
-- [01-August-2023] Course website up, Lecture Page [W01-L01](/lectures/w01-l01.qmd) added. [Homework-01](/homeworks.qmd) added.
+- [01-August-2023] Course website up, Lecture Page [W01-L01](/lectures/w01-l01.qmd) added. @sec-hw-01 added.
 
 
 ## Overview

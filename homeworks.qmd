@@ -1,31 +1,40 @@
 # Homeworks {.unnumbered}
 
-## HW-01 {}
+## HW-01 {#sec-hw-01}
 
 **Reading**
+
 - Chip Huyen's Lecture Notes on ML in Production. Intro [here](https://docs.google.com/document/d/1C3dlLmFdYHJmACVkz99lSTUPF4XQbWb_Ah7mPE12Igo/edit#heading=h.a8w2b79yy875)
-
 - [Phase Zero](https://ml-ops.org/content/phase-zero) of MLOps from [ml-ops.org](https://ml-ops.org) blogs. Very useful and nicely done
-
 - [Towards CRISP-ML(Q)](https://arxiv.org/pdf/2003.05155): A Machine Learning Process Model  with QA Methodology
-
 - [Project Canvas](https://madewithml.com/courses/mlops/product-design/#template) from Gokul Mohandas's [course](https://github.com/GokuMohandas/mlops-course)
-
 - [AI Canvas](https://hbr.org/2018/04/a-simple-tool-to-start-making-decisions-with-the-help-of-ai)
 
-**Task** 
+**Task**
 
 - Pick your favorite problem. Complete the information required in the [project card template](./resources/project-card.ipynb)
-
 - Create a new kedro project with _repo name_ "your first name-ai-839". Documentation [here](https://docs.kedro.org/en/stable/get_started/new_project.html)
-
 - Push it to github. Give read read/write acces to git handle _dhavala_
-
 - Create a branch "hw01". Under notebooks folder, copy  [project card template](./resources/project-card.ipynb)
-
 - Complete the Project Card, commit and push the notebook to your github (remote) repo.
 
+**Due by** \
+11.59PM IST, Tuesday, 13th August, 2024.
 
-**Due by** 
 
-11.59PM IST, 13th August, 2024.
+## HW-02 {#sec-hw-02}
+
+**Reading**
+
+- Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI[paper](https://arxiv.org/abs/2204.01075) [blog](https://research.google/blog/the-data-cards-playbook-a-toolkit-for-transparency-in-dataset-documentation/) from Google Research.
+
+**Task**
+
+- Download the [soybean](https://www.openml.org/search?type=data&status=active&id=1023) tabular dataset with dataset id 1023 from [openML](https://www.openml.org/search?type=data&status=active). 
+- Make sure that a repo is already created (as you would have done in HW-01) with _repo name_ "your first name-ai-839" and git handle _dhavala_ is given read and write access.  
+- Create a new branch name _hw02_
+- Under notebooks folder, create a new notebook with markdown and cell tags to implement Data Cards.
+- Using [pymfe](https://github.com/ealcobaca/pymfe), include some useful properties of the dataset in the Data Card Make sure that when any changes in the dataset get reflected automatically and the Data Card is updated automatically.
+
+**Due by** \
+11.59PM IST, Friday, 23rd August, 2024.

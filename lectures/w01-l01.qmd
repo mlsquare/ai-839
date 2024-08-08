@@ -1,6 +1,7 @@
 # 01A:Grounding MLOps {.unnumbered}
 
-## Materials: \
+## Materials:
+Date: Thursday, 01-Aug-2024.
 
 ### Pre-work:
 
@@ -20,15 +21,7 @@
 
 ### Spillover/ Next Class
 
-1. ML Model is a DAG 
-2. MLOps LifeCycle, Architecture, Tool Landscape
-3. What we are going to build, Setup
-
-### References
-
-1. [AB](https://www.mlebook.com/wiki/doku.php): Andiry Burkov, ML Engineering, LeanPub
-2. [VT](https://www.manning.com/books/effective-data-science-infrastructure): Vile Tuulos, Effective Data Science Infrastructure, Manning
-3. [CH1](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) Chip Hyuen, ML System Design, O'Reilly
+1. Myths in ML Production
 
 ## Scribed: \
 

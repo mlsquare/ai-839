@@ -1,0 +1,33 @@
+# 01C:Grounding MLOps {.unnumbered}
+
+## Materials:
+Date: Friday, 09-Aug-2024.
+
+### Pre-work:
+
+1. MLOps [Motivation](https://ml-ops.org/content/motivation)
+2. AI/ML Canvas from ml-ops.org [Phase-Zero](https://ml-ops.org/content/phase-zero), Gokul Mohandas's [Project Canvas](https://madewithml.com/courses/mlops/product-design/#template)
+3. ML Life Cycle CRISP-ML9(Q): [blog](https://ml-ops.org/content/crisp-ml), [paper](https://arxiv.org/abs/2003.05155)
+
+
+
+### In-Class
+
+1. [Design Thinking](https://web.stanford.edu/~mshanks/MichaelShanks/files/509554.pdf) from Stanford Design School. It is a useful ideation tool to formulate a problem and develop a solution.
+2. [Project Cards](./../resources/project-card.ipynb) a Jupyter Notebook template for Project Cards. It touches the aspects of data-driven documentation and maintaining single source of truth for any document containing data. A WIP document on [Data-driven ML Documentation](./../documentation.qmd). This also forms an important aspect of _Transparency_
+3. [W02-L02 deck](https://docs.google.com/presentation/d/1_ShGywdAF3_PDzF2GTWk-yf_cxo4HSoW9WQvc_nsoIM/edit?usp=sharing)
+
+
+### Post-class:
+
+1. \[tool\] [JupDoc](https://pypi.org/project/jupdoc/) - render different views of Jupyter notebook markdown based on cell tags
+2. \[blog\] [MLOps Tech Stack](https://ml-ops.org/content/mlops-stack-canvas)
+3. \[canvas\] [MLOps Canvas](https://miro.com/app/board/o9J_lfoc4Hg=/)
+4. \[site\] [Data Nutrition Project](https://datanutrition.org/), CLeAR Framework [paper](https://shorensteincenter.org/clear-documentation-framework-ai-transparency-recommendations-practitioners-context-policymakers/), Data Nutrition Label [paper](https://arxiv.org/abs/1805.03677)
+
+### Spillover/ Next Class
+
+1. to-be-seen
+
+## Scribed: \
+

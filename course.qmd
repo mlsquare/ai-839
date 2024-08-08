@@ -15,24 +15,27 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 
 | Wk | Dt | Topics | Resources |
 | :- | :- | :------- | :------- |
-| 01 | 30-Jul <br> 01-Aug | **Introduction** <br> 1. Course Intro <br> 2. ML in Production - Intro <br> | [W01-L01](./lectures/w01-l01.qmd) |
-&nbsp; | | [HW-01](./homeworks.qmd) |  Due 13th, August, 2024, 11.59 IST |
-| 02 | 06-Aug <br> 08-Aug | **Discovery** <br> 1. Contd.  _ML in Production - Intro_ <br> 2. Software 1.0 vs 2.0 <br> 3. Project Canvas & Human-centered Design | [W01-L02](./lectures/w02-l01.qmd) |
-&nbsp; | |  |  |
+| 01 | 01-Aug | **Introduction** <br> 1. Course Intro <br> 2. ML in Production - Intro <br> | [W01-L01](./lectures/w01-l01.qmd) |
+&nbsp; | | @sec-hw-01 |  Due Tue, 13th, August, 2024, 11.59pm IST |
+| 02 | 06-Aug <br> 09-Aug | **Discovery** <br> 1. Contd.  _ML in Production - Intro_ <br> 2. Software 1.0 vs 2.0 <br> 3. Design Thinking, Project Cards <br> 4. MLOps Canvas & Tool Landscape | [W02-L01](./lectures/w02-l01.qmd) <br> [W02-L02](./lectures/w02-l02.qmd)  |
+&nbsp; |   | @sec-hw-02 | Due Fri, 23rd, August, 2024, 11.59pm IST  |
 
-: Part-0: Essentials {.striped}
+: Part-1: Essentials {.striped}
 
 :::
 
 
 ## Discussions
-Join [this](https://discord.gg/5gTQ3St2) discord channel. Use  uid-first-name as id (no anonymous handles, please).
+We will use WhatsApp group for (informal)discussions and alerts.
 
 
 ## References
+1. \[book\] [ML Engineering](https://www.mlebook.com/wiki/doku.php), Andiry Burkov, 2019, LeanPub
+2. \[book\] [Effective Data Science Infrastructure](https://www.manning.com/books/effective-data-science-infrastructure), Vile Tuulos, 2023, Manning
+3. \[book\] [ML System Design](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/), Chip Huyen, 2023, O'Reilly
+4. \[course\] [CS329S @ Stanford:  ML Systems Design](https://stanford-cs329s.github.io/), Chip Huyen, 2022
+5. \[course\] [MLOps](https://github.com/GokuMohandas/mlops-course), Chip Huyen, 2024
 
-::: {#refs}
-:::
 
 
 ## Grading
