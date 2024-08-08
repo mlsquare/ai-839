@@ -1,0 +1,36 @@
+# 01C:Grounding MLOps {.unnumbered}
+
+## Materials:
+Date: Friday, 09-Aug-2024.
+
+### Pre-work:
+
+1. MLOps [Motivation](https://ml-ops.org/content/motivation)
+2. AI/ML Canvas from ml-ops.org [Phase-Zero](https://ml-ops.org/content/phase-zero), Gokul Mohandas's [Project Canvas][Project Canvas](https://madewithml.com/courses/mlops/product-design/#template)
+
+
+
+### In-Class
+
+1. ML Production Myths [W01-L01-Deck](https://docs.google.com/presentation/d/1G2aMDawcGXl-yY3z72emIZ-5PRFsWTEjASBOUGo8MHs/edit?usp=sharing) 
+2. Software 1.0 vs Software 2.0. See this [W01-L02-Deck](https://docs.google.com/presentation/d/1FLQmzEf2F2zp7ykysChGMKYAOHZbRSh_FDROgYWORwQ/edit?usp=sharing)
+3. MLOps [Motivation](https://ml-ops.org/content/motivation)
+4. AI/ML Canvas from ml-ops.org [Phase-Zero](https://ml-ops.org/content/phase-zero), Gokul Mohandas's [Project Canvas]([Project Canvas](https://madewithml.com/courses/mlops/product-design/#template)
+
+
+### Post-class:
+
+1. \[blog\] [A simple Tool to Start Making Decisions with the Help of AI](https://hbr.org/2018/04/a-simple-tool-to-start-making-decisions-with-the-help-of-ai)
+2. \[book, optional\] [Prediction Machines: The Simple Economics of AI](https://www.amazon.in/Prediction-Machines-Economics-Artificial-Intelligence/dp/1633695670),  Ajay Agrawal, Joshua Gans, Avi Goldfare
+2. \[blog\] [Why Metaflow](https://docs.metaflow.org/introduction/why-metaflow)
+3. \[blog\] [Building and Managing Data Science Pipelines with Kedro](https://neptune.ai/blog/data-science-pipelines-with-kedro#:~:text=Kedro%20is%20an%20open%2Dsource,prototyping%2C%20and%20promote%20pipeline%20reproducibility.) from neptune.ai
+
+### Spillover/ Next Class
+
+1. MLOps LifeCycle, Architecture, Tool Landscape
+2. What we are going to build, Setup
+3. Kedro Overview
+
+
+## Scribed: \
+

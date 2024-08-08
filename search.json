@@ -179,7 +179,7 @@
     "href": "index.html#announcements",
     "title": "AI-839",
     "section": "Announcements",
-    "text": "Announcements\n\n[06-August-2023] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2023] Course website up, Lecture Page W01-L01 added. Homework-01 added.",
+    "text": "Announcements\n\n[09-August-2023] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2023] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2023] Course website up, Lecture Page W01-L01 added. HW-01 added.",
     "crumbs": [
       "Welcome"
     ]
@@ -219,7 +219,7 @@
     "href": "course.html#discussions",
     "title": "Course",
     "section": "Discussions",
-    "text": "Discussions\nJoin this discord channel. Use uid-first-name as id (no anonymous handles, please).",
+    "text": "Discussions\nWe will use WhatsApp group for (informal)discussions and alerts.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
     ]
@@ -229,7 +229,7 @@
     "href": "course.html#references",
     "title": "Course",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n[book] ML Engineering, Andiry Burkov, 2019, LeanPub\n[book] Effective Data Science Infrastructure, Vile Tuulos, 2023, Manning\n[book] ML System Design, Chip Huyen, 2023, O’Reilly\n[course] CS329S @ Stanford: ML Systems Design, Chip Huyen, 2022\n[course] MLOps, Chip Huyen, 2024",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
     ]
@@ -269,7 +269,7 @@
     "href": "lectures/w01-l01.html",
     "title": "01A:Grounding MLOps",
     "section": "",
-    "text": "Materials:",
+    "text": "Materials:\nDate: Thursday, 01-Aug-2024.",
     "crumbs": [
       "Lectures",
       "01A:Grounding MLOps"
@@ -280,7 +280,7 @@
     "href": "lectures/w01-l01.html#materials",
     "title": "01A:Grounding MLOps",
     "section": "",
-    "text": "Pre-work:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible here\n\n\n\nIn-Class\n\nWe will go over W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\n\n\n\nPost-class:\n\nRead the motivation for MLOps from this blog.\nML Life Cycle CRISP-ML9(Q): blog, paper\nCh1-2 of AB, Ch1 of VT, Ch1 of CH1\n\n\n\nSpillover/ Next Class\n\nML Model is a DAG\nMLOps LifeCycle, Architecture, Tool Landscape\nWhat we are going to build, Setup\n\n\n\nReferences\n\nAB: Andiry Burkov, ML Engineering, LeanPub\nVT: Vile Tuulos, Effective Data Science Infrastructure, Manning\nCH1 Chip Hyuen, ML System Design, O’Reilly",
+    "text": "Pre-work:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible here\n\n\n\nIn-Class\n\nWe will go over W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\n\n\n\nPost-class:\n\nRead the motivation for MLOps from this blog.\nML Life Cycle CRISP-ML9(Q): blog, paper\nCh1-2 of AB, Ch1 of VT, Ch1 of CH1\n\n\n\nSpillover/ Next Class\n\nMyths in ML Production",
     "crumbs": [
       "Lectures",
       "01A:Grounding MLOps"
@@ -302,7 +302,7 @@
     "href": "lectures/w02-l01.html",
     "title": "01B:Grounding MLOps",
     "section": "",
-    "text": "Materials:",
+    "text": "Materials:\nDate: Tuesday, 06-Aug-2024.",
     "crumbs": [
       "Lectures",
       "01B:Grounding MLOps"
@@ -313,7 +313,7 @@
     "href": "lectures/w02-l01.html#materials",
     "title": "01B:Grounding MLOps",
     "section": "",
-    "text": "Pre-work:\n\nRead the motivation for MLOps from this blog.\nReview W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\n\n\n\nIn-Class\n\nML Production Myths W01-L01-Deck\nSoftware 1.0 vs Software 2.0. See this W01-L02-Deck\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\n\n\n\nPost-class:\n\n[blog] A simple Tool to Start Making Decisions with the Help of AI\n[book, optional] Prediction Machines: The Simple Economics of AI, Ajay Agrawal, Joshua Gans, Avi Goldfare\n[blog] Why Metaflow\n[blog] Building and Managing Data Science Pipelines with Kedro from neptune.ai\n\n\n\nSpillover/ Next Class\n\nMLOps LifeCycle, Architecture, Tool Landscape\nWhat we are going to build, Setup\nKedro Overview",
+    "text": "Pre-work:\n\nRead the motivation for MLOps from this blog.\nReview W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\n\n\n\nIn-Class\n\nML Production Myths W01-L01-Deck\nSoftware 1.0 vs Software 2.0. See this W01-L02-Deck\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s [Project Canvas][Project Canvas](https://madewithml.com/courses/mlops/product-design/#template)\n\n\n\nPost-class:\n\n[blog] A simple Tool to Start Making Decisions with the Help of AI\n[book, optional] Prediction Machines: The Simple Economics of AI, Ajay Agrawal, Joshua Gans, Avi Goldfare\n[blog] Why Metaflow\n[blog] Building and Managing Data Science Pipelines with Kedro from neptune.ai\n\n\n\nSpillover/ Next Class\n\nMLOps LifeCycle, Architecture, Tool Landscape\nWhat we are going to build, Setup\nKedro Overview",
     "crumbs": [
       "Lectures",
       "01B:Grounding MLOps"
@@ -331,21 +331,64 @@
     ]
   },
   {
+    "objectID": "lectures/w02-l02.html",
+    "href": "lectures/w02-l02.html",
+    "title": "01C:Grounding MLOps",
+    "section": "",
+    "text": "Materials:\nDate: Friday, 09-Aug-2024.",
+    "crumbs": [
+      "Lectures",
+      "01C:Grounding MLOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w02-l02.html#materials",
+    "href": "lectures/w02-l02.html#materials",
+    "title": "01C:Grounding MLOps",
+    "section": "",
+    "text": "Pre-work:\n\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\nML Life Cycle CRISP-ML9(Q): blog, paper\n\n\n\nIn-Class\n\nDesign Thinking from Stanford Design School. It is a useful ideation tool to formulate a problem and develop a solution.\nProject Cards a Jupyter Notebook template for Project Cards. It touches the aspects of data-driven documentation and maintaining single source of truth for any document containing data. A WIP document on Data-driven ML Documentation. This also forms an important aspect of Transparency\nW02-L02 deck\n\n\n\nPost-class:\n\n[tool] JupDoc - render different views of Jupyter notebook markdown based on cell tags\n[blog] MLOps Tech Stack\n[canvas] MLOps Canvas\n[site] Data Nutrition Project, CLeAR Framework paper, Data Nutrition Label paper\n\n\n\nSpillover/ Next Class\n\nto-be-seen",
+    "crumbs": [
+      "Lectures",
+      "01C:Grounding MLOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w02-l02.html#scribed",
+    "href": "lectures/w02-l02.html#scribed",
+    "title": "01C:Grounding MLOps",
+    "section": "Scribed:\n",
+    "text": "Scribed:",
+    "crumbs": [
+      "Lectures",
+      "01C:Grounding MLOps"
+    ]
+  },
+  {
     "objectID": "homeworks.html",
     "href": "homeworks.html",
     "title": "Homeworks",
     "section": "",
-    "text": "HW-01\nReading - Chip Huyen’s Lecture Notes on ML in Production. Intro here\nTask\nDue by\n11.59PM IST, 13th August, 2024.",
+    "text": "HW-01\nReading\nTask\nDue by\n11.59PM IST, Tuesday, 13th August, 2024.",
     "crumbs": [
       "Homeworks"
     ]
   },
   {
-    "objectID": "homeworks.html#hw-01",
-    "href": "homeworks.html#hw-01",
+    "objectID": "homeworks.html#sec-hw-01",
+    "href": "homeworks.html#sec-hw-01",
     "title": "Homeworks",
     "section": "",
-    "text": "Phase Zero of MLOps from ml-ops.org blogs. Very useful and nicely done\nTowards CRISP-ML(Q): A Machine Learning Process Model with QA Methodology\nProject Canvas from Gokul Mohandas’s course\nAI Canvas\n\n\n\nPick your favorite problem. Complete the information required in the project card template\nCreate a new kedro project with repo name “your first name-ai-839”. Documentation here\nPush it to github. Give read read/write acces to git handle dhavala\nCreate a branch “hw01”. Under notebooks folder, copy project card template\nComplete the Project Card, commit and push the notebook to your github (remote) repo.",
+    "text": "Chip Huyen’s Lecture Notes on ML in Production. Intro here\nPhase Zero of MLOps from ml-ops.org blogs. Very useful and nicely done\nTowards CRISP-ML(Q): A Machine Learning Process Model with QA Methodology\nProject Canvas from Gokul Mohandas’s course\nAI Canvas\n\n\n\nPick your favorite problem. Complete the information required in the project card template\nCreate a new kedro project with repo name “your first name-ai-839”. Documentation here\nPush it to github. Give read read/write acces to git handle dhavala\nCreate a branch “hw01”. Under notebooks folder, copy project card template\nComplete the Project Card, commit and push the notebook to your github (remote) repo.",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "homeworks.html#sec-hw-02",
+    "href": "homeworks.html#sec-hw-02",
+    "title": "Homeworks",
+    "section": "HW-02",
+    "text": "HW-02\nReading\n\nData Cards: Purposeful and Transparent Dataset Documentation for Responsible AIpaper blog from Google Research.\n\nTask\n\nDownload the soybean tabular dataset with dataset id 1023 from openML.\nMake sure that a repo is already created (as you would have done in HW-01) with repo name “your first name-ai-839” and git handle dhavala is given read and write access.\n\nCreate a new branch name hw02\nUnder notebooks folder, create a new notebook with markdown and cell tags to implement Data Cards.\nUsing pymfe, include some useful properties of the dataset in the Data Card Make sure that when any changes in the dataset get reflected automatically and the Data Card is updated automatically.\n\nDue by\n11.59PM IST, Friday, 23rd August, 2024.",
     "crumbs": [
       "Homeworks"
     ]
@@ -385,7 +428,77 @@
     "href": "documentation.html",
     "title": "ML Documentation",
     "section": "",
-    "text": "Google published Model Cards for Model Reporting to improve transparency in model reporting. Idea is very similar to how information related to the nutritional content is published on the packaging. See their blog for details. Similar efforts were made to document the details about the data too. See Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI for details and the accompanying blog with playbook here from Google Research.\nBoth Model Card and Data Card only capture “an” aspect of the entire problem but at a greater depth. Both of them are reporting aspects most useful in post deployment scenarios. But what about during development? In particular, given the exploratory and iterative nature of ML model and system development, how do we give structure to this process as well as document it?\n\nAI Canvas\nAI-Canvas fills the gap on the business side during the Design phase of the development. However, the terminology is used somewhat OOD for ML folks and is not easy to get it right in first pass :).\nProject Canvas is more elaborate and easier to understand than AI Canvas. But again, the terming Project can made specific and unambiguous.\nThat leads to Project Cards",
+    "text": "AI Canvas\nAI-Canvas fills the gap on the business side during the Design phase of the development. However, the terminology is used somewhat OOD for ML folks and is not easy to get it right in first pass :).\nProject Canvas is more elaborate and easier to understand than AI Canvas. But again, the terming Project can made specific and unambiguous.\nThat leads to project cards.",
+    "crumbs": [
+      "ML Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation.html#business-view",
+    "href": "documentation.html#business-view",
+    "title": "ML Documentation",
+    "section": "Business View",
+    "text": "Business View\nIt focusses on the following questions:\n\nWhat is the problem being solved?\nWho is the customer?\nWhy it needs to be solved?\nHow does the solution like - a mental or a conceptual model or a mock of the product?\nWhat objectives does it achieve?\nWhat are the risks and challenges?",
+    "crumbs": [
+      "ML Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation.html#ml-view",
+    "href": "documentation.html#ml-view",
+    "title": "ML Documentation",
+    "section": "ML view",
+    "text": "ML view\nIt is bit more in-depth focussing on the execution will have the following questions:\n\nWhat is the prediction problem?\nHow the objective will be measured?\nHow will it be tested?\nData: What kind, how and how much and what for?\nWhat is the roadmap/plan?\nWhat resources are needed - both human, compute and admin?\n\nAbove points are put in a Project Card Template which is Jupyter notebook.",
+    "crumbs": [
+      "ML Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation.html#solution",
+    "href": "documentation.html#solution",
+    "title": "ML Documentation",
+    "section": "Solution",
+    "text": "Solution\n\nSurprisingly simple. Just tag a notebook cell - who is it for?\nAnd take benefit of modern document publishing tools and workflows like Quarto, GitHub, GitHub actions",
+    "crumbs": [
+      "ML Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation.html#core-tenets",
+    "href": "documentation.html#core-tenets",
+    "title": "ML Documentation",
+    "section": "Core tenets",
+    "text": "Core tenets\n\nOne content - many views\nData + Code + Content &gt; should drive the documentation (format, style, purpose)\nEach stakeholder’s documentation need is just a view or a content rendering problem\nPublishing documentation = Publishing code\nUse the same tools and mental models both for code and documents\nSingle source of truth for any derived document\nFix in only one place and only once.\nPhysical and mental distance between Documentation and Code should be (close to) ZERO\nSet up once and automate subsequently\nAutomate the publishing process\nNo human oversight should be necessary for process compliance\nCommit code + documentation content &gt; rendering must be automated",
+    "crumbs": [
+      "ML Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation.html#features",
+    "href": "documentation.html#features",
+    "title": "ML Documentation",
+    "section": "Features",
+    "text": "Features\n\nDefine views using cell tags.\nConvert Jupyter Notebooks to docx, PDF, HTML, and more.\nGenerate separate documents for each view.",
+    "crumbs": [
+      "ML Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation.html#benefits",
+    "href": "documentation.html#benefits",
+    "title": "ML Documentation",
+    "section": "Benefits",
+    "text": "Benefits\nData-driven documents enable - reproducibility, auditing, versioning, accuracy,\n\nWhen code blocks read data (e.g., ground truth vs. predictions), documents can be up to date also.",
+    "crumbs": [
+      "ML Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation.html#a-new-mindset",
+    "href": "documentation.html#a-new-mindset",
+    "title": "ML Documentation",
+    "section": "A new mindset",
+    "text": "A new mindset\n\nWriting documents is the same as writing code in the same place, space, and time.\nThe stakeholder needs can be arranged in a hierarchy while authoring content via content inheritance. Executive Summary &lt; Model Card &lt; Solution Card &lt; Full Report!\nTo drive reports and visualization (of evaluation metrics), read data, and run code - so that whenever models/data are updated, metrics are also updated automatically!\n\nNote: 1. The conversion of .ipynb is based on Quarto, and custom rending can be done by adding yaml config specific to notebooks as raw cells. 2. All cells in the notebook should have tags (including markdown cells), and the tags should be a part of the config used to export. 3. Quarto cheat sheet can be refered from here. Details can be provided in the raw cell for customizations on reports.\n.",
     "crumbs": [
       "ML Documentation"
     ]
