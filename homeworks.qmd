@@ -34,8 +34,8 @@
 - Make sure that a repo is already created (as you would have done in HW-01) with _repo name_ "your first name-ai-839" and git handle _dhavala_ is given read and write access.  
 - Create a new branch name _hw02_
 - Under notebooks folder, create a new notebook with markdown and cell tags to implement Data Cards.
-- Using [pymfe](https://github.com/ealcobaca/pymfe), include some useful properties of the dataset in the Data Card Make sure that when any changes in the dataset get reflected automatically and the Data Card is updated automatically. Specifically, if the dataset id 1023 refers to its version v2 
-- The [CLeAR](https://shorensteincenter.org/clear-documentation-framework-ai-transparency-recommendations-practitioners-context-policymakers/) has some really nice goals for a document to be 1) comparable 2) legible 3) actionable and 4) robust - to achieve an aspect of AI Transparency. Here we are talking about documenting Data, Models, and AI Systems.
+- Using [pymfe](https://github.com/ealcobaca/pymfe), include some useful properties of the dataset in the Data Card - - Make sure that any changes in the dataset get reflected automatically in the Data Card. Specifically, if the dataset id 1023 (refers to its version v2), Data Card should reflect any changes in the new version of the data. 
+- The [CLeAR](https://shorensteincenter.org/clear-documentation-framework-ai-transparency-recommendations-practitioners-context-policymakers/) framework has some really nice goals for a document. A document must be 1) comparable 2) legible 3) actionable and 4) robust to achieve an aspect of AI Transparency. Here we are talking about documenting Data, Models, and AI Systems.
 
 **Due by** \
 11.59PM IST, Friday, 23rd August, 2024.
