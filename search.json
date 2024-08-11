@@ -388,7 +388,7 @@
     "href": "homeworks.html#sec-hw-02",
     "title": "Homeworks",
     "section": "HW-02",
-    "text": "HW-02\nReading\n\nData Cards: Purposeful and Transparent Dataset Documentation for Responsible AIpaper blog from Google Research.\n\nTask\n\nDownload the soybean tabular dataset version v1 with dataset id 42 from openML.\nMake sure that a repo is already created (as you would have done in HW-01) with repo name “your first name-ai-839” and git handle dhavala is given read and write access.\n\nCreate a new branch name hw02\nUnder notebooks folder, create a new notebook with markdown and cell tags to implement Data Cards.\nUsing pymfe, include some useful properties of the dataset in the Data Card Make sure that when any changes in the dataset get reflected automatically and the Data Card is updated automatically. Specifically, if the dataset id 1023 refers to its version v2\nThe CLeAR has some really nice goals for a document to be 1) comparable 2) legible 3) actionable and 4) robust - to achieve an aspect of AI Transparency. Here we are talking about documenting Data, Models, and AI Systems.\n\nDue by\n11.59PM IST, Friday, 23rd August, 2024.",
+    "text": "HW-02\nReading\n\nData Cards: Purposeful and Transparent Dataset Documentation for Responsible AIpaper blog from Google Research.\n\nTask\n\nDownload the soybean tabular dataset version v1 with dataset id 42 from openML.\nMake sure that a repo is already created (as you would have done in HW-01) with repo name “your first name-ai-839” and git handle dhavala is given read and write access.\n\nCreate a new branch name hw02\nUnder notebooks folder, create a new notebook with markdown and cell tags to implement Data Cards.\nUsing pymfe, include some useful properties of the dataset in the Data Card - - Make sure that any changes in the dataset get reflected automatically in the Data Card. Specifically, if the dataset id 1023 (refers to its version v2), Data Card should reflect any changes in the new version of the data.\nThe CLeAR framework has some really nice goals for a document. A document must be 1) comparable 2) legible 3) actionable and 4) robust to achieve an aspect of AI Transparency. Here we are talking about documenting Data, Models, and AI Systems.\n\nDue by\n11.59PM IST, Friday, 23rd August, 2024.",
     "crumbs": [
       "Homeworks"
     ]
@@ -448,57 +448,7 @@
     "href": "documentation.html#ml-view",
     "title": "ML Documentation",
     "section": "ML view",
-    "text": "ML view\nIt is bit more in-depth focussing on the execution will have the following questions:\n\nWhat is the prediction problem?\nHow the objective will be measured?\nHow will it be tested?\nData: What kind, how and how much and what for?\nWhat is the roadmap/plan?\nWhat resources are needed - both human, compute and admin?\n\nAbove points are put in a Project Card Template which is Jupyter notebook.",
-    "crumbs": [
-      "ML Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation.html#solution",
-    "href": "documentation.html#solution",
-    "title": "ML Documentation",
-    "section": "Solution",
-    "text": "Solution\n\nSurprisingly simple. Just tag a notebook cell - who is it for?\nAnd take benefit of modern document publishing tools and workflows like Quarto, GitHub, GitHub actions",
-    "crumbs": [
-      "ML Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation.html#core-tenets",
-    "href": "documentation.html#core-tenets",
-    "title": "ML Documentation",
-    "section": "Core tenets",
-    "text": "Core tenets\n\nOne content - many views\nData + Code + Content &gt; should drive the documentation (format, style, purpose)\nEach stakeholder’s documentation need is just a view or a content rendering problem\nPublishing documentation = Publishing code\nUse the same tools and mental models both for code and documents\nSingle source of truth for any derived document\nFix in only one place and only once.\nPhysical and mental distance between Documentation and Code should be (close to) ZERO\nSet up once and automate subsequently\nAutomate the publishing process\nNo human oversight should be necessary for process compliance\nCommit code + documentation content &gt; rendering must be automated",
-    "crumbs": [
-      "ML Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation.html#features",
-    "href": "documentation.html#features",
-    "title": "ML Documentation",
-    "section": "Features",
-    "text": "Features\n\nDefine views using cell tags.\nConvert Jupyter Notebooks to docx, PDF, HTML, and more.\nGenerate separate documents for each view.",
-    "crumbs": [
-      "ML Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation.html#benefits",
-    "href": "documentation.html#benefits",
-    "title": "ML Documentation",
-    "section": "Benefits",
-    "text": "Benefits\nData-driven documents enable - reproducibility, auditing, versioning, accuracy,\n\nWhen code blocks read data (e.g., ground truth vs. predictions), documents can be up to date also.",
-    "crumbs": [
-      "ML Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation.html#a-new-mindset",
-    "href": "documentation.html#a-new-mindset",
-    "title": "ML Documentation",
-    "section": "A new mindset",
-    "text": "A new mindset\n\nWriting documents is the same as writing code in the same place, space, and time.\nThe stakeholder needs can be arranged in a hierarchy while authoring content via content inheritance. Executive Summary &lt; Model Card &lt; Solution Card &lt; Full Report!\nTo drive reports and visualization (of evaluation metrics), read data, and run code - so that whenever models/data are updated, metrics are also updated automatically!\n\nNote: 1. The conversion of .ipynb is based on Quarto, and custom rending can be done by adding yaml config specific to notebooks as raw cells. 2. All cells in the notebook should have tags (including markdown cells), and the tags should be a part of the config used to export. 3. Quarto cheat sheet can be refered from here. Details can be provided in the raw cell for customizations on reports.\n.",
+    "text": "ML view\nIt is bit more in-depth focussing on the execution will have the following questions:\n\nWhat is the prediction problem?\nHow the objective will be measured?\nHow will it be tested?\nData: What kind, how and how much and what for?\nWhat is the roadmap/plan?\nWhat resources are needed - both human, compute and admin?\n\nAbove points are put in a Project Card Template which is Jupyter notebook.\n.",
     "crumbs": [
       "ML Documentation"
     ]
