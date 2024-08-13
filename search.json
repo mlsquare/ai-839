@@ -179,7 +179,7 @@
     "href": "index.html#announcements",
     "title": "AI-839",
     "section": "Announcements",
-    "text": "Announcements\n\n[09-August-2023] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2023] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2023] Course website up, Lecture Page W01-L01 added. HW-01 added.",
+    "text": "Announcements\n\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
     "crumbs": [
       "Welcome"
     ]
@@ -364,21 +364,44 @@
     ]
   },
   {
+    "objectID": "lectures/w03-l01.html",
+    "href": "lectures/w03-l01.html",
+    "title": "02A:ML Project Structure",
+    "section": "",
+    "text": "Materials:\nDate: Tuesday, 13-Aug-2024.",
+    "crumbs": [
+      "Lectures",
+      "02A:ML Project Structure"
+    ]
+  },
+  {
+    "objectID": "lectures/w03-l01.html#materials",
+    "href": "lectures/w03-l01.html#materials",
+    "title": "02A:ML Project Structure",
+    "section": "",
+    "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nML model pipelines are Directed Acyclic Graphs. ML Workbench developed at EkStep was one of the early implementations of this primitive.\nW03-L01 deck\nKedro Tutorial: Part-0 and Part-1. Hands-on and commentary\n\n\n\nPost-class:\n\n[blog]Shreya Shankar on some MLOps Principles\n[git template] MLOps cookiecutter template for another opinionated project str\n\n\n\nSpillover/ Next Class\n\nto-be-seen",
+    "crumbs": [
+      "Lectures",
+      "02A:ML Project Structure"
+    ]
+  },
+  {
+    "objectID": "lectures/w03-l01.html#scribed",
+    "href": "lectures/w03-l01.html#scribed",
+    "title": "02A:ML Project Structure",
+    "section": "Scribed:\n",
+    "text": "Scribed:",
+    "crumbs": [
+      "Lectures",
+      "02A:ML Project Structure"
+    ]
+  },
+  {
     "objectID": "homeworks.html",
     "href": "homeworks.html",
     "title": "Homeworks",
     "section": "",
-    "text": "HW-01\nReading\nTask\nDue by\n11.59PM IST, Tuesday, 13th August, 2024.",
-    "crumbs": [
-      "Homeworks"
-    ]
-  },
-  {
-    "objectID": "homeworks.html#sec-hw-01",
-    "href": "homeworks.html#sec-hw-01",
-    "title": "Homeworks",
-    "section": "",
-    "text": "Chip Huyen’s Lecture Notes on ML in Production. Intro here\nPhase Zero of MLOps from ml-ops.org blogs. Very useful and nicely done\nTowards CRISP-ML(Q): A Machine Learning Process Model with QA Methodology\nProject Canvas from Gokul Mohandas’s course\nAI Canvas\n\n\n\nPick your favorite problem. Complete the information required in the project card template\nCreate a new kedro project with repo name “your first name-ai-839”. Documentation here\nPush it to github. Give read read/write acces to git handle dhavala\nCreate a branch “hw01”. Under notebooks folder, copy project card template\nComplete the Project Card, commit and push the notebook to your github (remote) repo.",
+    "text": "HW-02\nReading\nTask\nDue by\n11.59PM IST, Friday, 23rd August, 2024.",
     "crumbs": [
       "Homeworks"
     ]
@@ -387,8 +410,18 @@
     "objectID": "homeworks.html#sec-hw-02",
     "href": "homeworks.html#sec-hw-02",
     "title": "Homeworks",
-    "section": "HW-02",
-    "text": "HW-02\nReading\n\nData Cards: Purposeful and Transparent Dataset Documentation for Responsible AIpaper blog from Google Research.\n\nTask\n\nDownload the soybean tabular dataset version v1 with dataset id 42 from openML.\nMake sure that a repo is already created (as you would have done in HW-01) with repo name “your first name-ai-839” and git handle dhavala is given read and write access.\n\nCreate a new branch name hw02\nUnder notebooks folder, create a new notebook with markdown and cell tags to implement Data Cards.\nUsing pymfe, include some useful properties of the dataset in the Data Card - - Make sure that any changes in the dataset get reflected automatically in the Data Card. Specifically, if the dataset id 1023 (refers to its version v2), Data Card should reflect any changes in the new version of the data.\nThe CLeAR framework has some really nice goals for a document. A document must be 1) comparable 2) legible 3) actionable and 4) robust to achieve an aspect of AI Transparency. Here we are talking about documenting Data, Models, and AI Systems.\n\nDue by\n11.59PM IST, Friday, 23rd August, 2024.",
+    "section": "",
+    "text": "Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AIpaper blog from Google Research.\n\n\n\nDownload the soybean tabular dataset version v1 with dataset id 42 from openML.\nMake sure that a repo is already created (as you would have done in HW-01) with repo name “your first name-ai-839” and git handle dhavala is given read and write access.\n\nCreate a new branch name hw02\nUnder notebooks folder, create a new notebook with markdown and cell tags to implement Data Cards.\nUsing pymfe, include some useful properties of the dataset in the Data Card - - Make sure that any changes in the dataset get reflected automatically in the Data Card. Specifically, if the dataset id 1023 (refers to its version v2), Data Card should reflect any changes in the new version of the data.\nThe CLeAR framework has some really nice goals for a document. A document must be 1) comparable 2) legible 3) actionable and 4) robust to achieve an aspect of AI Transparency. Here we are talking about documenting Data, Models, and AI Systems.",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "homeworks.html#sec-hw-01",
+    "href": "homeworks.html#sec-hw-01",
+    "title": "Homeworks",
+    "section": "HW-01",
+    "text": "HW-01\nReading\n\nChip Huyen’s Lecture Notes on ML in Production. Intro here\nPhase Zero of MLOps from ml-ops.org blogs. Very useful and nicely done\nTowards CRISP-ML(Q): A Machine Learning Process Model with QA Methodology\nProject Canvas from Gokul Mohandas’s course\nAI Canvas\n\nTask\n\nPick your favorite problem. Complete the information required in the project card template\nCreate a new kedro project with repo name “your first name-ai-839”. Documentation here\nPush it to github. Give read read/write acces to git handle dhavala\nCreate a branch “hw01”. Under notebooks folder, copy project card template\nComplete the Project Card, commit and push the notebook to your github (remote) repo.\n\nDue by\n11.59PM IST, Tuesday, 13th August, 2024.",
     "crumbs": [
       "Homeworks"
     ]
