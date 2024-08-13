@@ -19,7 +19,7 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 &nbsp; | | @sec-hw-01 |  Due Tue, 13th, August, 2024, 11.59pm IST |
 | 02 | 06-Aug <br> 09-Aug | **Discovery** <br> 1. Contd.  _ML in Production - Intro_ <br> 2. Software 1.0 vs 2.0 <br> 3. Design Thinking, Project Cards <br> 4. MLOps Canvas & Tool Landscape | [W02-L01](./lectures/w02-l01.qmd) <br> [W02-L02](./lectures/w02-l02.qmd)  |
 &nbsp; |   | @sec-hw-02 | Due Fri, 23rd, August, 2024, 11.59pm IST  |
-| 03 | 13-Aug <br> 16-Aug | **Tutorials** <br> 1. Code with batteries included   <br>  2. DevOps  | [kedro](https://kedro.org/) <br> Git, Docker, k8s, Git actions |
+| 03 | 13-Aug <br> 16-Aug | **Tutorials** <br> 1. kedro   <br>  2. DevOps  | [W03-L01](./lectures/w03-l01.qmd) <br> Git, Docker, k8s, Git actions |
 &nbsp; | Note:| 16-Aug | DevOps guest lecture by [Ravi](https://www.linkedin.com/in/ravismula/)   |
 
 

@@ -1,0 +1,30 @@
+# 02A:ML Project Structure {.unnumbered}
+
+## Materials:
+Date: Tuesday, 13-Aug-2024.
+
+### Pre-work:
+
+1. MLOps Platforms [some goals](https://kedro.org/blog/development-principles-for-opinionated-teams)
+2. [Convention over Configuration](https://en.wikipedia.org/wiki/Convention_over_configuration)
+3. [Data Flow Paradigm](https://en.wikipedia.org/wiki/Dataflow_programming)
+
+
+### In-Class
+
+1. ML model pipelines are Directed Acyclic Graphs. [ML Workbench](https://github.com/project-sunbird/sunbird-ml-workbench) developed at EkStep was one of the early implementations of this primitive.
+2. [W03-L01 deck](https://docs.google.com/presentation/d/1S3gyY_IJTSfxpOOhIQJkhEMpocn6rq5a1q4Z4l4tEZc/edit?usp=sharing)
+3. Kedro [Tutorial](https://docs.kedro.org/en/stable/course/index.html): Part-0 and Part-1. Hands-on and commentary
+
+
+### Post-class:
+
+1. \[blog\][Shreya Shankar on some MLOps Principles](https://x.com/sh_reya/status/1521903041003225088)
+2. \[git template]\ [MLOps cookiecutter template](https://github.com/Chim-SO/cookiecutter-mlops) for another opinionated project str
+
+### Spillover/ Next Class
+
+1. to-be-seen
+
+## Scribed: \
+

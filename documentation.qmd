@@ -42,7 +42,4 @@ It is bit more in-depth focussing on the execution will have the following quest
 
 Above points are put in a [Project Card Template](./resources/project-card.ipynb) which is Jupyter notebook.
 
-
-
-
 . 
