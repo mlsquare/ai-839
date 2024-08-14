@@ -24,6 +24,17 @@ Date: Friday, 09-Aug-2024.
 2. \[blog\] [MLOps Tech Stack](https://ml-ops.org/content/mlops-stack-canvas)
 3. \[canvas\] [MLOps Canvas](https://miro.com/app/board/o9J_lfoc4Hg=/)
 4. \[site\] [Data Nutrition Project](https://datanutrition.org/), CLeAR Framework [paper](https://shorensteincenter.org/clear-documentation-framework-ai-transparency-recommendations-practitioners-context-policymakers/), Data Nutrition Label [paper](https://arxiv.org/abs/1805.03677)
+5. \[blog\] _10 Dimensions of making data science work_ by [Goda Ramkumar](https://www.linkedin.com/in/godaramkumar/)
+    - [Dimension 1: Expectation](https://medium.datadriveninvestor.com/10-dimensions-of-making-data-science-work-2057183f0770)
+    - [Dimension 2: Strategy](https://medium.datadriveninvestor.com/10-dimensions-of-making-data-science-work-3be4358a991d)
+    - [Dimension 3: Roles ](https://medium.datadriveninvestor.com/10-dimensions-of-making-data-science-work-part-3-cd628818de8c)
+    - [Dimension 4: Collaboration](https://medium.datadriveninvestor.com/10-dimensions-of-making-data-science-work-part-4-6ae8a7a3823)
+    - [Dimension 5: Culture](https://medium.datadriveninvestor.com/10-dimensions-of-making-data-science-work-79778a970498)
+    - [Dimension 6: Discovery and Access](https://medium.datadriveninvestor.com/10-dimensions-of-making-data-science-work-part-6-a34aa698bf6f)
+    - [Dimension 7: Platforms](https://medium.datadriveninvestor.com/10-dimensions-of-making-data-science-work-part-7-7f1fc08a4477)
+    - [Dimension 8: Scalability](https://medium.datadriveninvestor.com/10-dimensions-of-making-data-science-work-part-8-ff1d672b7571)
+    - [Dimension 9: Methodology and Practices](https://medium.datadriveninvestor.com/10-dimensions-of-making-data-science-work-part-9-db3fa63bb97c)
+    - Dimension 10: Quality and Governance [tbd]
 
 ### Spillover/ Next Class
 

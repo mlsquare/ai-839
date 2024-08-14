@@ -1,9 +1,31 @@
 # ML Documentation
-Google published [Model Cards for Model Reporting](https://arxiv.org/abs/1810.03993) to improve transparency in model reporting. Idea is very similar to how information related to the nutritional content is published on the packaging. See their [blog](https://modelcards.withgoogle.com/about) for details. Similar efforts were made to document the details about the data too. See [Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI](https://arxiv.org/abs/2204.01075) for details and the accompanying blog with playbook [here](https://research.google/blog/the-data-cards-playbook-a-toolkit-for-transparency-in-dataset-documentation/) from Google Research.
+
+Good documentation is a necessity for any organization to present and represent itself to the world via its products, services and people. Several bodies of work exist on written and oral communication. For example:
+
+1. [The ELement of Style](https://en.wikipedia.org/wiki/The_Elements_of_Style) for general communication
+2. [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi) a classic from Edward Tufte on conveying informaiton with data via rich visuals.
+3. [Clean Code](https://www.oreilly.com/library/view/clean-code-a/9780136083238/) and [Clean Coder](https://www.amazon.in/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073) and Uncle Bob's [wisdom](https://cleancoders.com/) on writing good (clean) code
+4. [Style Guide for Python](https://google.github.io/styleguide/pyguide.html) from Google to improve code readability 
+5. [Literate Programming](https://en.wikipedia.org/wiki/Literate_programming) conceived by Don Knuth, the God of computer science, a paradigm that combines documenting code along with code. 
+
+As one can imagine, the above cover the skills needed to write documents, codes, and reports, such that they can be understood by humans and computers, and in some cases by both simultaneously. But they fall short of expectations, particularly in regards to ML Documentation. Few differentiating factors that must be considered 
+
+1. Data is at the heart of all documentation.
+2. ML Lifecycle is very iterative - implying change is a constant and data changes (we can treat Model as a special type of data).
+3. _Anything changes, Everything changes_ - so change in data causes changes in all documents depending on that data and their derivatives.
+
+As a result, maintaining veracity of the documentation is very hard. Further, when different stakeholders need different type of results, format and at different periodicity, it is even more problematic.  Further, it is not entirely what to document. The [CLeAR](https://shorensteincenter.org clear-documentation-framework-ai-transparency-recommendations-practitioners-context-policymakers/) framework has some really nice (additional) goals for a document. A document must be 1) comparable 2) legible 3) actionable and 4) robust to achieve an aspect of AI Transparency. Just to be clear, here, we are talking about documenting Data, Models, and AI Systems. We can look at them individually.
+
+# Model Cards
+Google published [Model Cards for Model Reporting](https://arxiv.org/abs/1810.03993) to improve transparency in model reporting. Idea is very similar to how information related to the nutritional content is published on the packaging. See their [blog](https://modelcards.withgoogle.com/about) for details. 
+
+# Data Cards
+Similar efforts were made to document the details about the data too. See [Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI](https://arxiv.org/abs/2204.01075) for details and the accompanying blog with playbook [here](https://research.google/blog/the-data-cards-playbook-a-toolkit-for-transparency-in-dataset-documentation/) from Google Research.
 
 Both Model Card and Data Card only capture "_an_" aspect of the entire problem but at a greater depth. Both of them are reporting aspects most useful in _post_ deployment scenarios. But what about _during_ development? In particular, given the exploratory and iterative nature of ML model and system development, how do we give structure to this process as well as document it?
 
 # AI Canvas
+
 [AI-Canvas](https://hbr.org/2018/04/a-simple-tool-to-start-making-decisions-with-the-help-of-ai) fills the gap on the business side during the _Design_ phase of the development. However, the terminology is used somewhat OOD for ML folks and is not easy to get it right in first pass :).
 
 [Project Canvas](https://madewithml.com/courses/mlops/product-design/#template) is more elaborate and easier to understand than _AI Canvas_. But again, the terming _Project_ can made specific and unambiguous. 
@@ -40,6 +62,44 @@ It is bit more in-depth focussing on the execution will have the following quest
 - What is the roadmap/plan?
 - What resources are needed - both human, compute and admin?
 
-Above points are put in a [Project Card Template](./resources/project-card.ipynb) which is Jupyter notebook.
+# Data-driven Documentation
 
-. 
+The above cards define what is to be captured, and in part, certain goals mentioend in the CLeAR framework can be addressed. But what about the process to produce the documents? It begets the question: what qualities should an ML document should posses. We propose the following - A document must be:
+
+1. Accurate (and up to date)
+2. Available
+3. Accessible
+4. Reproducible
+5. Auditable
+6. Versioned
+7. Serves more than one audience at a time (eg: purpose of a document, and as a result, the content, form of a document will vary by the audience).
+
+But they are not easy to achieve. An ML Developer can only deliver on some fronts. Conventionally,
+- (code) Development and Documentation are not part of the same process. The toolset and mindset are different, even separated in time & space.
+- Even a simple edit or change request requires a copy-and-paste from somewhere. If data or ask or both change, one must redo the documentation repeatedly. This is neither repeatable nor reproducible and also not sustainable.
+
+As a result, a rigorous process oversight is needed for compliance. For example, a reporting manager may periodically check if the documentation is maintained and up to date as a part of the review processing. But this is not sustainable. We know it all too well.
+
+We have some pointers to realize those quality attributes.
+
+
+## What is the solution
+- Surprisingly simple. Just tag a notebook cell - who is it for?
+- And take benefit of modern document publishing tools and workflows like Quarto, GitHub, GitHub actions
+
+## Core tenets
+- One content - many views
+- Data + Code  + Content > should drive the documentation (format, style, purpose)
+- Each stakeholder’s documentation need is just a view or a content rendering problem
+- Publishing documentation =  Publishing code
+- Use the same tools and mental models both for code and documents
+- Single source of truth for any derived document
+- Fix in only one place and only once.
+- Physical and mental distance between Documentation and Code should be (close to) ZERO
+- Set up once and automate subsequently
+- Automate the publishing process
+- No human oversight should be necessary for process compliance
+- Commit code + documentation content > rendering must be automated
+
+
+Above points are put in a [Project Card Template](./resources/project-card.ipynb) which is a Jupyter notebook.
