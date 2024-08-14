@@ -346,7 +346,7 @@
     "href": "lectures/w02-l02.html#materials",
     "title": "01C:Grounding MLOps",
     "section": "",
-    "text": "Pre-work:\n\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\nML Life Cycle CRISP-ML9(Q): blog, paper\n\n\n\nIn-Class\n\nDesign Thinking from Stanford Design School. It is a useful ideation tool to formulate a problem and develop a solution.\nProject Cards a Jupyter Notebook template for Project Cards. It touches the aspects of data-driven documentation and maintaining single source of truth for any document containing data. A WIP document on Data-driven ML Documentation. This also forms an important aspect of Transparency\nW02-L02 deck\n\n\n\nPost-class:\n\n[tool] JupDoc - render different views of Jupyter notebook markdown based on cell tags\n[blog] MLOps Tech Stack\n[canvas] MLOps Canvas\n[site] Data Nutrition Project, CLeAR Framework paper, Data Nutrition Label paper\n\n\n\nSpillover/ Next Class\n\nto-be-seen",
+    "text": "Pre-work:\n\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\nML Life Cycle CRISP-ML9(Q): blog, paper\n\n\n\nIn-Class\n\nDesign Thinking from Stanford Design School. It is a useful ideation tool to formulate a problem and develop a solution.\nProject Cards a Jupyter Notebook template for Project Cards. It touches the aspects of data-driven documentation and maintaining single source of truth for any document containing data. A WIP document on Data-driven ML Documentation. This also forms an important aspect of Transparency\nW02-L02 deck\n\n\n\nPost-class:\n\n[tool] JupDoc - render different views of Jupyter notebook markdown based on cell tags\n[blog] MLOps Tech Stack\n[canvas] MLOps Canvas\n[site] Data Nutrition Project, CLeAR Framework paper, Data Nutrition Label paper\n[blog] 10 Dimensions of making data science work by Goda Ramkumar\n\nDimension 1: Expectation\nDimension 2: Strategy\nDimension 3: Roles\nDimension 4: Collaboration\nDimension 5: Culture\nDimension 6: Discovery and Access\nDimension 7: Platforms\nDimension 8: Scalability\nDimension 9: Methodology and Practices\nDimension 10: Quality and Governance [tbd]\n\n\n\n\nSpillover/ Next Class\n\nto-be-seen",
     "crumbs": [
       "Lectures",
       "01C:Grounding MLOps"
@@ -379,7 +379,7 @@
     "href": "lectures/w03-l01.html#materials",
     "title": "02A:ML Project Structure",
     "section": "",
-    "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nML model pipelines are Directed Acyclic Graphs. ML Workbench developed at EkStep was one of the early implementations of this primitive.\nW03-L01 deck\nKedro Tutorial: Part-0 and Part-1. Hands-on and commentary\n\n\n\nPost-class:\n\n[blog]Shreya Shankar on some MLOps Principles\n[git template] MLOps cookiecutter template for another opinionated project str\n\n\n\nSpillover/ Next Class\n\nto-be-seen",
+    "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nML model pipelines are Directed Acyclic Graphs. ML Workbench developed at EkStep was one of the early implementations of this primitive.\nW03-L01 deck\nKedro Tutorial: Part-0 and Part-1. Hands-on and commentary\n\n\n\nPost-class:\n\n[blog]Shreya Shankar on some MLOps Principles\n[git template] MLOps cookiecutter template for another opinionated project structure\n\n\n\nSpillover/ Next Class\n\nto-be-seen",
     "crumbs": [
       "Lectures",
       "02A:ML Project Structure"
@@ -461,7 +461,7 @@
     "href": "documentation.html",
     "title": "ML Documentation",
     "section": "",
-    "text": "AI Canvas\nAI-Canvas fills the gap on the business side during the Design phase of the development. However, the terminology is used somewhat OOD for ML folks and is not easy to get it right in first pass :).\nProject Canvas is more elaborate and easier to understand than AI Canvas. But again, the terming Project can made specific and unambiguous.\nThat leads to project cards.",
+    "text": "Model Cards\nGoogle published Model Cards for Model Reporting to improve transparency in model reporting. Idea is very similar to how information related to the nutritional content is published on the packaging. See their blog for details.",
     "crumbs": [
       "ML Documentation"
     ]
@@ -481,7 +481,27 @@
     "href": "documentation.html#ml-view",
     "title": "ML Documentation",
     "section": "ML view",
-    "text": "ML view\nIt is bit more in-depth focussing on the execution will have the following questions:\n\nWhat is the prediction problem?\nHow the objective will be measured?\nHow will it be tested?\nData: What kind, how and how much and what for?\nWhat is the roadmap/plan?\nWhat resources are needed - both human, compute and admin?\n\nAbove points are put in a Project Card Template which is Jupyter notebook.\n.",
+    "text": "ML view\nIt is bit more in-depth focussing on the execution will have the following questions:\n\nWhat is the prediction problem?\nHow the objective will be measured?\nHow will it be tested?\nData: What kind, how and how much and what for?\nWhat is the roadmap/plan?\nWhat resources are needed - both human, compute and admin?",
+    "crumbs": [
+      "ML Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation.html#what-is-the-solution",
+    "href": "documentation.html#what-is-the-solution",
+    "title": "ML Documentation",
+    "section": "What is the solution",
+    "text": "What is the solution\n\nSurprisingly simple. Just tag a notebook cell - who is it for?\nAnd take benefit of modern document publishing tools and workflows like Quarto, GitHub, GitHub actions",
+    "crumbs": [
+      "ML Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation.html#core-tenets",
+    "href": "documentation.html#core-tenets",
+    "title": "ML Documentation",
+    "section": "Core tenets",
+    "text": "Core tenets\n\nOne content - many views\nData + Code + Content &gt; should drive the documentation (format, style, purpose)\nEach stakeholder’s documentation need is just a view or a content rendering problem\nPublishing documentation = Publishing code\nUse the same tools and mental models both for code and documents\nSingle source of truth for any derived document\nFix in only one place and only once.\nPhysical and mental distance between Documentation and Code should be (close to) ZERO\nSet up once and automate subsequently\nAutomate the publishing process\nNo human oversight should be necessary for process compliance\nCommit code + documentation content &gt; rendering must be automated\n\nAbove points are put in a Project Card Template which is a Jupyter notebook.",
     "crumbs": [
       "ML Documentation"
     ]

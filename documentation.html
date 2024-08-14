@@ -212,11 +212,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#ai-canvas" id="toc-ai-canvas" class="nav-link active" data-scroll-target="#ai-canvas">AI Canvas</a></li>
+  <li><a href="#model-cards" id="toc-model-cards" class="nav-link active" data-scroll-target="#model-cards">Model Cards</a></li>
+  <li><a href="#data-cards" id="toc-data-cards" class="nav-link" data-scroll-target="#data-cards">Data Cards</a></li>
+  <li><a href="#ai-canvas" id="toc-ai-canvas" class="nav-link" data-scroll-target="#ai-canvas">AI Canvas</a></li>
   <li><a href="#project-cards" id="toc-project-cards" class="nav-link" data-scroll-target="#project-cards">Project Cards</a>
   <ul class="collapse">
   <li><a href="#business-view" id="toc-business-view" class="nav-link" data-scroll-target="#business-view">Business View</a></li>
   <li><a href="#ml-view" id="toc-ml-view" class="nav-link" data-scroll-target="#ml-view">ML view</a></li>
+  </ul></li>
+  <li><a href="#data-driven-documentation" id="toc-data-driven-documentation" class="nav-link" data-scroll-target="#data-driven-documentation">Data-driven Documentation</a>
+  <ul class="collapse">
+  <li><a href="#what-is-the-solution" id="toc-what-is-the-solution" class="nav-link" data-scroll-target="#what-is-the-solution">What is the solution</a></li>
+  <li><a href="#core-tenets" id="toc-core-tenets" class="nav-link" data-scroll-target="#core-tenets">Core tenets</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/documentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -243,8 +250,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Google published <a href="https://arxiv.org/abs/1810.03993">Model Cards for Model Reporting</a> to improve transparency in model reporting. Idea is very similar to how information related to the nutritional content is published on the packaging. See their <a href="https://modelcards.withgoogle.com/about">blog</a> for details. Similar efforts were made to document the details about the data too. See <a href="https://arxiv.org/abs/2204.01075">Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI</a> for details and the accompanying blog with playbook <a href="https://research.google/blog/the-data-cards-playbook-a-toolkit-for-transparency-in-dataset-documentation/">here</a> from Google Research.</p>
+<p>Good documentation is a necessity for any organization to present and represent itself to the world via its products, services and people. Several bodies of work exist on written and oral communication. For example:</p>
+<ol type="1">
+<li><a href="https://en.wikipedia.org/wiki/The_Elements_of_Style">The ELement of Style</a> for general communication</li>
+<li><a href="https://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a> a classic from Edward Tufte on conveying informaiton with data via rich visuals.</li>
+<li><a href="https://www.oreilly.com/library/view/clean-code-a/9780136083238/">Clean Code</a> and <a href="https://www.amazon.in/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073">Clean Coder</a> and Uncle Bob’s <a href="https://cleancoders.com/">wisdom</a> on writing good (clean) code</li>
+<li><a href="https://google.github.io/styleguide/pyguide.html">Style Guide for Python</a> from Google to improve code readability</li>
+<li><a href="https://en.wikipedia.org/wiki/Literate_programming">Literate Programming</a> conceived by Don Knuth, the God of computer science, a paradigm that combines documenting code along with code.</li>
+</ol>
+<p>As one can imagine, the above cover the skills needed to write documents, codes, and reports, such that they can be understood by humans and computers, and in some cases by both simultaneously. But they fall short of expectations, particularly in regards to ML Documentation. Few differentiating factors that must be considered</p>
+<ol type="1">
+<li>Data is at the heart of all documentation.</li>
+<li>ML Lifecycle is very iterative - implying change is a constant and data changes (we can treat Model as a special type of data).</li>
+<li><em>Anything changes, Everything changes</em> - so change in data causes changes in all documents depending on that data and their derivatives.</li>
+</ol>
+<p>As a result, maintaining veracity of the documentation is very hard. Further, when different stakeholders need different type of results, format and at different periodicity, it is even more problematic. Further, it is not entirely what to document. The <a href="https://shorensteincenter.org%20clear-documentation-framework-ai-transparency-recommendations-practitioners-context-policymakers/">CLeAR</a> framework has some really nice (additional) goals for a document. A document must be 1) comparable 2) legible 3) actionable and 4) robust to achieve an aspect of AI Transparency. Just to be clear, here, we are talking about documenting Data, Models, and AI Systems. We can look at them individually.</p>
+<section id="model-cards" class="level1">
+<h1>Model Cards</h1>
+<p>Google published <a href="https://arxiv.org/abs/1810.03993">Model Cards for Model Reporting</a> to improve transparency in model reporting. Idea is very similar to how information related to the nutritional content is published on the packaging. See their <a href="https://modelcards.withgoogle.com/about">blog</a> for details.</p>
+</section>
+<section id="data-cards" class="level1">
+<h1>Data Cards</h1>
+<p>Similar efforts were made to document the details about the data too. See <a href="https://arxiv.org/abs/2204.01075">Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI</a> for details and the accompanying blog with playbook <a href="https://research.google/blog/the-data-cards-playbook-a-toolkit-for-transparency-in-dataset-documentation/">here</a> from Google Research.</p>
 <p>Both Model Card and Data Card only capture “<em>an</em>” aspect of the entire problem but at a greater depth. Both of them are reporting aspects most useful in <em>post</em> deployment scenarios. But what about <em>during</em> development? In particular, given the exploratory and iterative nature of ML model and system development, how do we give structure to this process as well as document it?</p>
+</section>
 <section id="ai-canvas" class="level1">
 <h1>AI Canvas</h1>
 <p><a href="https://hbr.org/2018/04/a-simple-tool-to-start-making-decisions-with-the-help-of-ai">AI-Canvas</a> fills the gap on the business side during the <em>Design</em> phase of the development. However, the terminology is used somewhat OOD for ML folks and is not easy to get it right in first pass :).</p>
@@ -282,8 +311,47 @@ ul.task-list li input[type="checkbox"] {
 <li>What is the roadmap/plan?</li>
 <li>What resources are needed - both human, compute and admin?</li>
 </ul>
-<p>Above points are put in a <a href="./resources/project-card.html">Project Card Template</a> which is Jupyter notebook.</p>
-<p>.</p>
+</section>
+</section>
+<section id="data-driven-documentation" class="level1">
+<h1>Data-driven Documentation</h1>
+<p>The above cards define what is to be captured, and in part, certain goals mentioend in the CLeAR framework can be addressed. But what about the process to produce the documents? It begets the question: what qualities should an ML document should posses. We propose the following - A document must be:</p>
+<ol type="1">
+<li>Accurate (and up to date)</li>
+<li>Available</li>
+<li>Accessible</li>
+<li>Reproducible</li>
+<li>Auditable</li>
+<li>Versioned</li>
+<li>Serves more than one audience at a time (eg: purpose of a document, and as a result, the content, form of a document will vary by the audience).</li>
+</ol>
+<p>But they are not easy to achieve. An ML Developer can only deliver on some fronts. Conventionally, - (code) Development and Documentation are not part of the same process. The toolset and mindset are different, even separated in time &amp; space. - Even a simple edit or change request requires a copy-and-paste from somewhere. If data or ask or both change, one must redo the documentation repeatedly. This is neither repeatable nor reproducible and also not sustainable.</p>
+<p>As a result, a rigorous process oversight is needed for compliance. For example, a reporting manager may periodically check if the documentation is maintained and up to date as a part of the review processing. But this is not sustainable. We know it all too well.</p>
+<p>We have some pointers to realize those quality attributes.</p>
+<section id="what-is-the-solution" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-solution">What is the solution</h2>
+<ul>
+<li>Surprisingly simple. Just tag a notebook cell - who is it for?</li>
+<li>And take benefit of modern document publishing tools and workflows like Quarto, GitHub, GitHub actions</li>
+</ul>
+</section>
+<section id="core-tenets" class="level2">
+<h2 class="anchored" data-anchor-id="core-tenets">Core tenets</h2>
+<ul>
+<li>One content - many views</li>
+<li>Data + Code + Content &gt; should drive the documentation (format, style, purpose)</li>
+<li>Each stakeholder’s documentation need is just a view or a content rendering problem</li>
+<li>Publishing documentation = Publishing code</li>
+<li>Use the same tools and mental models both for code and documents</li>
+<li>Single source of truth for any derived document</li>
+<li>Fix in only one place and only once.</li>
+<li>Physical and mental distance between Documentation and Code should be (close to) ZERO</li>
+<li>Set up once and automate subsequently</li>
+<li>Automate the publishing process</li>
+<li>No human oversight should be necessary for process compliance</li>
+<li>Commit code + documentation content &gt; rendering must be automated</li>
+</ul>
+<p>Above points are put in a <a href="./resources/project-card.html">Project Card Template</a> which is a Jupyter notebook.</p>
 
 
 </section>
