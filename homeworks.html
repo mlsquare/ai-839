@@ -212,7 +212,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-hw-02" id="toc-sec-hw-02" class="nav-link active" data-scroll-target="#sec-hw-02">HW-02</a></li>
+  <li><a href="#sec-hw-04" id="toc-sec-hw-04" class="nav-link active" data-scroll-target="#sec-hw-04">HW-04</a></li>
+  <li><a href="#sec-hw-03" id="toc-sec-hw-03" class="nav-link" data-scroll-target="#sec-hw-03">HW-03</a></li>
+  <li><a href="#sec-hw-02" id="toc-sec-hw-02" class="nav-link" data-scroll-target="#sec-hw-02">HW-02</a></li>
   <li><a href="#sec-hw-01" id="toc-sec-hw-01" class="nav-link" data-scroll-target="#sec-hw-01">HW-01</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/homeworks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -239,6 +241,54 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="sec-hw-04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-hw-04">HW-04</h2>
+<p><strong>Reading</strong></p>
+<ul>
+<li><a href="https://mlflow.org/docs/latest/index.html">mlflow</a> Read <em>mlflow</em> documentation</li>
+<li><a href="https://kedro-mlflow.readthedocs.io/en/stable/">kedro-mlflow</a> Read <em>kedro-mlflow</em> plug-in documentation</li>
+</ul>
+<p><strong>Task</strong></p>
+<ul>
+<li>This HW focuses on Deployment and Monitoring.</li>
+<li>It builds on HW03. See instructions for <a href="#sec-hw-03" class="quarto-xref"><span>HW-03</span></a>.</li>
+<li>Create a branch named <em>hw04</em> of your private repo.</li>
+<li>Make sure that
+<ul>
+<li>Define the request and response structure of the API. Provide API documentation.</li>
+<li>Model is deployed and API is available via kedro-mlflow plug-in.</li>
+<li>Model usage is logged</li>
+</ul></li>
+</ul>
+<p><strong>Due by</strong><br>
+11.59PM IST, Friday, 13rd Sep, 2024.</p>
+</section>
+<section id="sec-hw-03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-hw-03">HW-03</h2>
+<p><strong>Reading</strong></p>
+<ul>
+<li><a href="https://docs.evidentlyai.com/">Evidently</a>: Read Evidently, an ML &amp; Data Quality and Monitoring tool.</li>
+<li>Ch 8 of <a href="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/">ML System Design</a></li>
+<li>Blogs from <a href="https://greatexpectations.io/">Great Expectations</a></li>
+</ul>
+<p><strong>Task</strong></p>
+<ul>
+<li>This HW focuses on Data-driven code structure, documentation, code hygiene, testing, and data quality assessment &amp; reporting.</li>
+<li>A Google Drive folder with your <em>github</em> handle is shared. This contains a dataset.</li>
+<li>Create a branch named <em>hw03</em> of your private repo.</li>
+<li>Similar to the Kedro spaceflights tutorial, write your data loading, model training, and testing, pipeline interms of nodes and pipelines.</li>
+<li>Make sure that
+<ul>
+<li>APIs are documented with <em>quartodoc</em></li>
+<li>Code is linted and formatted (with <em>ruff</em>)</li>
+<li>Nodes and Pipelines are Unit tested (with <em>PyTest</em>).</li>
+<li>Data Quality and Drift Detection Test suites using Evidently are run and the reports are represented as Plotly nodes in Kedro .</li>
+<li>Automated test to detect distribution drift of <em>target</em> variable(represented as <em>y</em> in the dataset) between Train and Test splits is run using Evidently. The pipeline fails if distribution drift is detected.</li>
+</ul></li>
+</ul>
+<p><strong>Due by</strong><br>
+11.59PM IST, Friday, 03rd Sep, 2024.</p>
+</section>
 <section id="sec-hw-02" class="level2">
 <h2 class="anchored" data-anchor-id="sec-hw-02">HW-02</h2>
 <p><strong>Reading</strong></p>
