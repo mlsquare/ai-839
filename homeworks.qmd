@@ -1,5 +1,49 @@
 # Homeworks {.unnumbered}
 
+## HW-04 {#sec-hw-04}
+
+**Reading**
+
+- [mlflow](https://mlflow.org/docs/latest/index.html) Read _mlflow_ documentation 
+- [kedro-mlflow](https://kedro-mlflow.readthedocs.io/en/stable/) Read _kedro-mlflow_ plug-in documentation
+
+**Task**
+
+- This HW focuses on Deployment and Monitoring.
+- It builds on HW03. See instructions for @sec-hw-03. 
+- Create a branch named _hw04_ of your private repo. 
+- Make sure that
+    - Define the request and response structure of the API. Provide API documentation.
+    - Model is deployed and API is available via kedro-mlflow plug-in.
+    - Model usage is logged
+
+**Due by** \
+11.59PM IST, Friday, 13rd Sep, 2024.
+
+## HW-03 {#sec-hw-03}
+
+**Reading**
+
+- [Evidently](https://docs.evidentlyai.com/): Read Evidently, an ML & Data Quality and Monitoring tool.
+- Ch 8 of [ML System Design](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/)
+- Blogs from [Great Expectations](https://greatexpectations.io/)
+
+**Task**
+
+- This HW focuses on Data-driven code structure, documentation, code hygiene, testing, and data quality assessment & reporting.
+- A Google Drive folder with your _github_ handle is shared. This contains a dataset.
+- Create a branch named _hw03_ of your private repo. 
+- Similar to the Kedro spaceflights tutorial, write your data loading, model training, and testing, pipeline interms of nodes and pipelines.
+ - Make sure that
+    - APIs are documented with _quartodoc_
+    - Code is linted and formatted (with _ruff_)
+    - Nodes and Pipelines are Unit tested (with _PyTest_). 
+    - Data Quality and Drift Detection Test suites using Evidently are run and the reports are represented as Plotly nodes in Kedro . 
+    - Automated test to detect distribution drift of _target_ variable(represented as _y_ in the dataset) between Train and Test splits is run using Evidently. The pipeline fails if distribution drift is detected.
+
+**Due by** \
+11.59PM IST, Friday, 03rd Sep, 2024.
+
 ## HW-02 {#sec-hw-02}
 
 **Reading**
