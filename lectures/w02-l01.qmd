@@ -1,4 +1,4 @@
-# 01B:Grounding MLOps {.unnumbered}
+# 02A: Grounding MLOps {.unnumbered}
 
 ## Materials:
 Date: Tuesday, 06-Aug-2024.
@@ -15,7 +15,7 @@ Date: Tuesday, 06-Aug-2024.
 1. ML Production Myths [W01-L01-Deck](https://docs.google.com/presentation/d/1G2aMDawcGXl-yY3z72emIZ-5PRFsWTEjASBOUGo8MHs/edit?usp=sharing) 
 2. Software 1.0 vs Software 2.0. See this [W01-L02-Deck](https://docs.google.com/presentation/d/1FLQmzEf2F2zp7ykysChGMKYAOHZbRSh_FDROgYWORwQ/edit?usp=sharing)
 3. MLOps [Motivation](https://ml-ops.org/content/motivation)
-4. AI/ML Canvas from ml-ops.org [Phase-Zero](https://ml-ops.org/content/phase-zero), Gokul Mohandas's [Project Canvas][Project Canvas](https://madewithml.com/courses/mlops/product-design/#template)
+4. AI/ML Canvas from ml-ops.org [Phase-Zero](https://ml-ops.org/content/phase-zero), Gokul Mohandas's [Project Canvas](https://madewithml.com/courses/mlops/product-design/#template)
 
 
 ### Post-class:

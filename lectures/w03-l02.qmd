@@ -1,4 +1,4 @@
-# 03B:DevOps {.unnumbered}
+# 03B: DevOps {.unnumbered}
 
 ## Materials:
 Date: Friday, 16-Aug-2024.

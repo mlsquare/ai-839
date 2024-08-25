@@ -1,4 +1,4 @@
-# 01A:Grounding MLOps {.unnumbered}
+# 01A: Grounding MLOps {.unnumbered}
 
 ## Materials:
 Date: Thursday, 01-Aug-2024.
