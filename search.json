@@ -267,111 +267,111 @@
   {
     "objectID": "lectures/w01-l01.html",
     "href": "lectures/w01-l01.html",
-    "title": "01A:Grounding MLOps",
+    "title": "01A: Grounding MLOps",
     "section": "",
     "text": "Materials:\nDate: Thursday, 01-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "01A:Grounding MLOps"
+      "01A: Grounding MLOps"
     ]
   },
   {
     "objectID": "lectures/w01-l01.html#materials",
     "href": "lectures/w01-l01.html#materials",
-    "title": "01A:Grounding MLOps",
+    "title": "01A: Grounding MLOps",
     "section": "",
     "text": "Pre-work:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible here\n\n\n\nIn-Class\n\nWe will go over W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\n\n\n\nPost-class:\n\nRead the motivation for MLOps from this blog.\nML Life Cycle CRISP-ML9(Q): blog, paper\nCh1-2 of AB, Ch1 of VT, Ch1 of CH1",
     "crumbs": [
       "Lectures",
-      "01A:Grounding MLOps"
+      "01A: Grounding MLOps"
     ]
   },
   {
     "objectID": "lectures/w02-l01.html",
     "href": "lectures/w02-l01.html",
-    "title": "01B:Grounding MLOps",
+    "title": "02A: Grounding MLOps",
     "section": "",
     "text": "Materials:\nDate: Tuesday, 06-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "01B:Grounding MLOps"
+      "02A: Grounding MLOps"
     ]
   },
   {
     "objectID": "lectures/w02-l01.html#materials",
     "href": "lectures/w02-l01.html#materials",
-    "title": "01B:Grounding MLOps",
+    "title": "02A: Grounding MLOps",
     "section": "",
-    "text": "Pre-work:\n\nRead the motivation for MLOps from this blog.\nReview W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\n\n\n\nIn-Class\n\nML Production Myths W01-L01-Deck\nSoftware 1.0 vs Software 2.0. See this W01-L02-Deck\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s [Project Canvas][Project Canvas](https://madewithml.com/courses/mlops/product-design/#template)\n\n\n\nPost-class:\n\n[blog] A simple Tool to Start Making Decisions with the Help of AI\n[book, optional] Prediction Machines: The Simple Economics of AI, Ajay Agrawal, Joshua Gans, Avi Goldfare\n[blog] Why Metaflow\n[blog] Building and Managing Data Science Pipelines with Kedro from neptune.ai",
+    "text": "Pre-work:\n\nRead the motivation for MLOps from this blog.\nReview W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\n\n\n\nIn-Class\n\nML Production Myths W01-L01-Deck\nSoftware 1.0 vs Software 2.0. See this W01-L02-Deck\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\n\n\n\nPost-class:\n\n[blog] A simple Tool to Start Making Decisions with the Help of AI\n[book, optional] Prediction Machines: The Simple Economics of AI, Ajay Agrawal, Joshua Gans, Avi Goldfare\n[blog] Why Metaflow\n[blog] Building and Managing Data Science Pipelines with Kedro from neptune.ai",
     "crumbs": [
       "Lectures",
-      "01B:Grounding MLOps"
+      "02A: Grounding MLOps"
     ]
   },
   {
     "objectID": "lectures/w02-l02.html",
     "href": "lectures/w02-l02.html",
-    "title": "01C:Grounding MLOps",
+    "title": "01C: Solution Thinking",
     "section": "",
     "text": "Materials:\nDate: Friday, 09-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "01C:Grounding MLOps"
+      "01C: Solution Thinking"
     ]
   },
   {
     "objectID": "lectures/w02-l02.html#materials",
     "href": "lectures/w02-l02.html#materials",
-    "title": "01C:Grounding MLOps",
+    "title": "01C: Solution Thinking",
     "section": "",
     "text": "Pre-work:\n\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\nML Life Cycle CRISP-ML9(Q): blog, paper\n\n\n\nIn-Class\n\nDesign Thinking from Stanford Design School. It is a useful ideation tool to formulate a problem and develop a solution.\nProject Cards a Jupyter Notebook template for Project Cards. It touches the aspects of data-driven documentation and maintaining single source of truth for any document containing data. A WIP document on Data-driven ML Documentation. This also forms an important aspect of Transparency\nW02-L02 deck\n\n\n\nPost-class:\n\n[tool] JupDoc - render different views of Jupyter notebook markdown based on cell tags\n[blog] MLOps Tech Stack\n[canvas] MLOps Canvas\n[site] Data Nutrition Project, CLeAR Framework paper, Data Nutrition Label paper\n[blog] 10 Dimensions of making data science work by Goda Ramkumar\n\nDimension 1: Expectation\nDimension 2: Strategy\nDimension 3: Roles\nDimension 4: Collaboration\nDimension 5: Culture\nDimension 6: Discovery and Access\nDimension 7: Platforms\nDimension 8: Scalability\nDimension 9: Methodology and Practices\nDimension 10: Quality and Governance [tbd]",
     "crumbs": [
       "Lectures",
-      "01C:Grounding MLOps"
+      "01C: Solution Thinking"
     ]
   },
   {
     "objectID": "lectures/w03-l01.html",
     "href": "lectures/w03-l01.html",
-    "title": "03A:ML Project Structure",
+    "title": "02B: ML Project Structure",
     "section": "",
     "text": "Materials:\nDate: Tuesday, 13-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "03A:ML Project Structure"
+      "02B: ML Project Structure"
     ]
   },
   {
     "objectID": "lectures/w03-l01.html#materials",
     "href": "lectures/w03-l01.html#materials",
-    "title": "03A:ML Project Structure",
+    "title": "02B: ML Project Structure",
     "section": "",
-    "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nML model pipelines are Directed Acyclic Graphs. ML Workbench developed at EkStep was one of the early implementations of this primitive.\nW03-L01 deck\nKedro Tutorial: Part-0 and Part-1. Hands-on and commentary\n\n\n\nPost-class:\n\n[blog]Shreya Shankar on some MLOps Principles\n[git template] MLOps cookiecutter template for another opinionated project structure",
+    "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nML model pipelines are Directed Acyclic Graphs. ML Workbench developed at EkStep was one of the early implementations of this primitive.\nW03-L01 deck\nKedro Tutorial: Part-0 and Part-1. Hands-on and commentary\n\n\n\nPost-class:\n\n[blog]Shreya Shankar on some MLOps Principles\n[git template] MLOps cookie cutter template for another opinionated project structure",
     "crumbs": [
       "Lectures",
-      "03A:ML Project Structure"
+      "02B: ML Project Structure"
     ]
   },
   {
     "objectID": "lectures/w03-l02.html",
     "href": "lectures/w03-l02.html",
-    "title": "03B:DevOps",
+    "title": "03B: DevOps",
     "section": "",
     "text": "Materials:\nDate: Friday, 16-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "03B:DevOps"
+      "03B: DevOps"
     ]
   },
   {
     "objectID": "lectures/w03-l02.html#materials",
     "href": "lectures/w03-l02.html#materials",
-    "title": "03B:DevOps",
+    "title": "03B: DevOps",
     "section": "",
     "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nGit, Docker, Docker Compose, MinIO Object Store\nGit Actions, CI/CD\nKedro Tutorial Hands-on: Kedro pipeline execusion via airflow\nW03-L02\n\n\n\nPost-class:\n\n[Doc] Kedro-Docker Deploy Kedro pipline using Docker via Kedro-Docker plug-in\n[blog]Git Flow a mental model of how to work with Git, branching process, and feature development\n[video] Git actions for Metrics tracking\nFew additional resources on Git, Git Actions, Docker in the Tutorials chapter.",
     "crumbs": [
       "Lectures",
-      "03B:DevOps"
+      "03B: DevOps"
     ]
   },
   {
