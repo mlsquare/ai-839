@@ -1,0 +1,26 @@
+# 04A: Dev in Kedro {.unnumbered}
+
+## Materials:
+Date: Tuesday, 20-Aug-2024.
+
+### Pre-work:
+1. Kedro [Tutorial](https://docs.kedro.org/en/stable/course/index.html) Part-0, Part-1.
+
+
+### In-Class
+
+1. A framework to think about metrics. For example, by focussing on _who_ the the solution is for, metrics such as affordability, availability, accessibility, become definable.
+2. Working with notebooks in Kedro (Kedro context magic) 
+3. API documentation with [_quartodoc_](https://machow.github.io/quartodoc/get-started/overview.html) based on [quarto](https://quarto.org/), an alternative to [sphinx](https://www.sphinx-doc.org/en/master/)
+4. Testing with [_PyTest_](https://docs.pytest.org/en/stable/). 
+5. Linting and formating with [_ruff_](https://docs.astral.sh/ruff/).
+6. [W04-L01](https://docs.google.com/presentation/d/1_ChCiyvrqWWicV-oF_9Rf50a94F6wEp_5Dkf3O07h_M/edit?usp=sharing) Metrics slides #35-38 (more on metrics section)
+
+
+### Post-class:
+
+1. \[Deck\] [W04-L01](https://docs.google.com/presentation/d/1_ChCiyvrqWWicV-oF_9Rf50a94F6wEp_5Dkf3O07h_M/edit?usp=sharing). Review the material. 
+2. \[Docs\] [Kedro-Docker](https://docs.kedro.org/en/stable/notebooks_and_ipython/kedro_and_notebooks.html) work with notebooks inside Kedro. 
+3. \[Docs\] [quartodoc](https://machow.github.io/quartodoc/get-started/overview.html) Turn your docstrings into documentation with _quartodoc_. Plus any other content (notebooks, qmd files) can be rendered using quarto of course.
+4. \[Docs\] [_PyTest_ in _Kedro_](See [Kedro docs](https://docs.kedro.org/en/stable/development/automated_testing.html))
+5. \[Docs\] [_ruff_ in _Kedro_](See [Kedro docs](https://docs.kedro.org/en/stable/development/linting.html)

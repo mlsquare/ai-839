@@ -1,0 +1,24 @@
+# 04B: Data Quality Tests {.unnumbered}
+
+## Materials:
+Date: Friday, 23-Aug-2024.
+
+### Pre-work:
+1. [See](https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/linear_model/tests/test_logistic.py) how [logistic regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) test cases were written in sklearn. In particular, see how the test was prepared which makes it possible to test the fitted coeffcients analytically.
+2. [See](https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/linear_model/tests/test_perceptron.py) how [Peceptron](https://scikit-learn.org/0.15/modules/generated/sklearn.linear_model.Perceptron.html) test cases were written on Iris data. 
+
+
+### In-Class
+
+1. QA for Data. It is all about asserting the statistical properties of the data.
+2. Discussion on extracting statistical quality features into a table for any modality (tabular, image, speech, text)
+3. Testing columnar data with _explicit_ conditions. [Great Expectations](https://greatexpectations.io/expectations/) defines them as _expectations_ and validates them given a new data. For example, an _expectation_ can be 
+    - a column can have at most 5% missing values
+    - the range of the columns can be between [-2,10]
+4. Testing columnar data with _implicit_ conditions. One dataset will be compared against a reference dataset. [Evidently](https://docs.evidentlyai.com/) comes with many tests for reporting, model comparison, data drift detection. For example, we can compare whether or not the label distribution is same between the Train set and the Test set. A question for all readers - how often have you "actually" ran any statistical test to see if the Train and Test set are actually similar in distribution. My guess, less than 10% would have done it. The remaining would have called sklearn's [train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) function :)
+
+### Post-class:
+
+1. \[Blog\] [ETL testing with Great Expectations](https://medium.com/snowflake/how-to-ensure-data-quality-with-great-expectations-271e3ca8b4b9)
+2. \[Docs\] [Great Expectations Documentation](https://docs.greatexpectations.io/docs/core/introduction/gx_overview). Please note that with version 1.0 released, even the examples from its repo are not working. Read them to understand what are typical tests on columnar data look like.
+3. \[Notebooks\] [Evidently examples](https://github.com/evidentlyai/evidently/tree/main/examples/sample_notebooks). Browse through and run how Evidently automates many test cases. Also see community examples [here](https://github.com/evidentlyai/community-examples)

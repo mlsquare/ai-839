@@ -17,11 +17,4 @@ Date: Thursday, 01-Aug-2024.
 
 1. Read the motivation for MLOps from this [blog](https://ml-ops.org/content/motivation).
 2. ML Life Cycle CRISP-ML9(Q): [blog](https://ml-ops.org/content/crisp-ml), [paper](https://arxiv.org/abs/2003.05155)
-3. Ch1-2 of [AB](https://www.mlebook.com/wiki/doku.php), Ch1 of [VT](https://www.manning.com/books/effective-data-science-infrastructure), Ch1 of [CH1](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/)   
-
-### Spillover/ Next Class
-
-1. Myths in ML Production
-
-## Scribed: \
-
+3. Ch1-2 of [AB](https://www.mlebook.com/wiki/doku.php), Ch1 of [VT](https://www.manning.com/books/effective-data-science-infrastructure), Ch1 of [CH1](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/)

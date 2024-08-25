@@ -36,9 +36,3 @@ Date: Friday, 09-Aug-2024.
     - [Dimension 9: Methodology and Practices](https://medium.datadriveninvestor.com/10-dimensions-of-making-data-science-work-part-9-db3fa63bb97c)
     - Dimension 10: Quality and Governance [tbd]
 
-### Spillover/ Next Class
-
-1. to-be-seen
-
-## Scribed: \
-

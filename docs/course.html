@@ -21,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -165,13 +145,43 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lectures/w01-l01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">01:Grounding MLOps</span></a>
+ <span class="menu-text">01A:Grounding MLOps</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lectures/w02-l01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">01:Grounding MLOps</span></a>
+ <span class="menu-text">01B:Grounding MLOps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lectures/w02-l02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01C:Grounding MLOps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lectures/w03-l01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03A:ML Project Structure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lectures/w03-l02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03B:DevOps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lectures/w04-l01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04A: Dev in Kedro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lectures/w04-l02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04B: Data Quality Tests</span></a>
   </div>
 </li>
       </ul>
@@ -194,6 +204,22 @@ div.csl-indent {
  <span class="menu-text">Tutorials</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./documentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ML Documentation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resources/project-card.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Project Card</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -235,12 +261,12 @@ div.csl-indent {
 </header>
 
 
-<p>You will find below course syallabus and schedule for <em>AI-839: ML Production Engineering</em> course offered at <a href="https://www.iiitb.ac.in/">IIIT-B</a> in the Fall of 2024. This will evolve as the course progress.</p>
+<p>You will find below course syllabus and schedule for <em>AI-839: ML Production Engineering</em> course offered at <a href="https://www.iiitb.ac.in/">IIIT-B</a> in the Fall of 2024. This will evolve as the course progress.</p>
 <section id="syllabus-schedule" class="level3">
 <h3 class="anchored" data-anchor-id="syllabus-schedule">Syllabus &amp; Schedule</h3>
 <div style="font-size: 80%;">
 <table class="table-striped caption-top table">
-<caption>Part-0: Essentials</caption>
+<caption>Part-1: Essentials</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Wk</th>
@@ -252,15 +278,78 @@ div.csl-indent {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">01</td>
-<td style="text-align: left;">30-Jul <br> 01-Aug</td>
-<td style="text-align: left;"><strong>Discovery</strong> <br> 1. Course Intro <br> 2. ML Lifecycle, Fullstack ML Infrastructure <br> 3. DAGs, Software 1.0 vs 2.0, Tool Ecosystem, Project Setup <br> 4. Project Canvas &amp; Human-centered Design</td>
-<td style="text-align: left;">0. <a href="./lectures/W01-L01.qmd">W01-01</a> <br> 1. Ch1-2: <span class="citation" data-cites="andiryp-burkov"><a href="course.html#ref-andiryp-burkov" role="doc-biblioref">[1]</a></span> <br> 2. Ch1: <span class="citation" data-cites="ville-tuulos"><a href="course.html#ref-ville-tuulos" role="doc-biblioref">[2]</a></span> <br> 3. Ch1: <span class="citation" data-cites="chip-orielly"><a href="course.html#ref-chip-orielly" role="doc-biblioref">[3]</a></span> <br> 4. Lecture Notes <span class="citation" data-cites="chip-lec01"><a href="course.html#ref-chip-lec01" role="doc-biblioref">[4]</a></span> <br> 5. <a href="https://madewithml.com/courses/mlops/product-design/#template">Project Canvas</a>: <span class="citation" data-cites="mlops-gokul"><a href="course.html#ref-mlops-gokul" role="doc-biblioref">[5]</a></span></td>
+<td style="text-align: left;">01-Aug</td>
+<td style="text-align: left;"><strong>Introduction</strong> <br> 1. Course Intro <br> 2. ML in Production - Intro <br></td>
+<td style="text-align: left;"><a href="./lectures/w01-l01.html">W01-L01</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">&nbsp;</td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;"><strong>HW-01</strong></td>
-<td style="text-align: left;">Due 13th, August, 2024, 11.59 IST</td>
+<td style="text-align: left;"><a href="homeworks.html#sec-hw-01" class="quarto-xref"><span>HW-01</span></a></td>
+<td style="text-align: left;">Due Tue, 13th, August, 2024, 11.59pm IST</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">02</td>
+<td style="text-align: left;">06-Aug <br> 09-Aug</td>
+<td style="text-align: left;"><strong>Discovery</strong> <br> 1. Contd. <em>ML in Production - Intro</em> <br> 2. Software 1.0 vs 2.0 <br> 3. Design Thinking, Project Cards <br> 4. MLOps Canvas &amp; Tool Landscape</td>
+<td style="text-align: left;"><a href="./lectures/w02-l01.html">W02-L01</a> <br> <a href="./lectures/w02-l02.html">W02-L02</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="homeworks.html#sec-hw-02" class="quarto-xref"><span>HW-02</span></a></td>
+<td style="text-align: left;">Due Fri, 23rd, August, 2024, 11.59pm IST</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">03</td>
+<td style="text-align: left;">13-Aug <br> 16-Aug</td>
+<td style="text-align: left;"><strong>Tutorials</strong> <br> 1. Kedro <br> 2. DevOps</td>
+<td style="text-align: left;"><a href="./lectures/w03-l01.html">W03-L01</a> <br> Git, Docker, k8s, Git actions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;">Note:</td>
+<td style="text-align: left;">16-Aug</td>
+<td style="text-align: left;">DevOps guest lecture by <a href="https://www.linkedin.com/in/ravismula/">Ravi</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">04</td>
+<td style="text-align: left;">20-Aug <br> 23-Aug</td>
+<td style="text-align: left;"><strong>Tutorials</strong> <br> 1. Kedro, PyTest, Ruff, Quartodoc <br> 2. Data Quality</td>
+<td style="text-align: left;"><a href="./lectures/w04-l01.html">W04-L01</a> <br> <a href="./lectures/w04-l02.html">W04-L02</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="homeworks.html#sec-hw-03" class="quarto-xref"><span>HW-03</span></a> <br> <a href="homeworks.html#sec-hw-04" class="quarto-xref"><span>HW-04</span></a></td>
+<td style="text-align: left;">11.59PM IST, Friday, 13rd Sep, 2024. <br> 11.59PM IST, Friday, 03rd Sep, 2024.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="font-size: 80%;">
+<table class="table-striped caption-top table">
+<caption>Guest Lectures</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Wk</th>
+<th style="text-align: left;">Dt</th>
+<th style="text-align: left;">Topics</th>
+<th style="text-align: left;">Resources</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">03</td>
+<td style="text-align: left;">16-Aug</td>
+<td style="text-align: left;">Intro to DevOps <br> [ML Engineering]</td>
+<td style="text-align: left;"><a href="https://www.linkedin.com/in/ravismula/">Ravi Mula</a> <br> Architect: <a href="https://sanketika.in/">Sanketika</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">08-Nov</td>
+<td style="text-align: left;">Building LLMs in Production in Regulated Industry <br> [System Design]</td>
+<td style="text-align: left;"><a href="https://www.linkedin.com/in/pingali/">Dr.&nbsp;Venkata Pingali</a> <br> Co-Founder: <a href="https://www.scribbledata.io/">Scribble Data</a></td>
 </tr>
 </tbody>
 </table>
@@ -268,18 +357,22 @@ div.csl-indent {
 </section>
 <section id="discussions" class="level2">
 <h2 class="anchored" data-anchor-id="discussions">Discussions</h2>
-<p>Join <a href="https://discord.gg/5gTQ3St2">this</a> discord channel. Use <uid>-<first-name> as id (no anonymous handles, please).</first-name></uid></p>
+<p>We will use WhatsApp group for (informal)discussions and alerts.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-
-
+<ol type="1">
+<li>[book] <a href="https://www.mlebook.com/wiki/doku.php">ML Engineering</a>, Andiry Burkov, 2019, LeanPub</li>
+<li>[book] <a href="https://www.manning.com/books/effective-data-science-infrastructure">Effective Data Science Infrastructure</a>, Vile Tuulos, 2023, Manning</li>
+<li>[book] <a href="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/">ML System Design</a>, Chip Huyen, 2023, O’Reilly</li>
+<li>[course] <a href="https://stanford-cs329s.github.io/">CS329S @ Stanford: ML Systems Design</a>, Chip Huyen, 2022</li>
+<li>[course] <a href="https://github.com/GokuMohandas/mlops-course">MLOps</a>, Chip Huyen, 2024</li>
+</ol>
 </section>
 <section id="grading" class="level2">
 <h2 class="anchored" data-anchor-id="grading">Grading</h2>
 <ul>
-<li>10%: Scribe lecture notes</li>
-<li>30%: Four assignments</li>
+<li>40%: Six assignments</li>
 <li>15%: Midterm mini project</li>
 <li>20%: In-class midterm</li>
 <li>25%: Capstone project</li>
@@ -296,9 +389,7 @@ div.csl-indent {
 <ul>
 <li><em>Late Submissions</em>: &nbsp;All deadlines are due at on the date and time indicated on the course page. The penalties for late submission are as follows:
 <ul>
-<li>less than a day : 25% penalty</li>
-<li>more than a day, less than two days: 50% penalty</li>
-<li>75% penalty otherwise.</li>
+<li>Late submissions not allowed (incur a zero) - except with prior approval or in valid exceptional cases</li>
 </ul></li>
 <li><em>Make-up Exam/Submission Policy</em>: As per institute <a href="https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf">policy</a></li>
 <li><em>Citation Policy for Papers</em>: Always mention the source, give full attribution and credits to citations, and as per institute <a href="https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf">policy</a></li>
@@ -739,8 +830,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lectures/w01-l01.html" class="pagination-link" aria-label="01:Grounding MLOps">
-        <span class="nav-page-text">01:Grounding MLOps</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./lectures/w01-l01.html" class="pagination-link" aria-label="01A:Grounding MLOps">
+        <span class="nav-page-text">01A:Grounding MLOps</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

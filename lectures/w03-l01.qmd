@@ -1,4 +1,4 @@
-# 02A:ML Project Structure {.unnumbered}
+# 03A:ML Project Structure {.unnumbered}
 
 ## Materials:
 Date: Tuesday, 13-Aug-2024.
@@ -21,10 +21,3 @@ Date: Tuesday, 13-Aug-2024.
 
 1. \[blog\][Shreya Shankar on some MLOps Principles](https://x.com/sh_reya/status/1521903041003225088)
 2. \[git template]\ [MLOps cookiecutter template](https://github.com/Chim-SO/cookiecutter-mlops) for another opinionated project structure
-
-### Spillover/ Next Class
-
-1. to-be-seen
-
-## Scribed: \
-

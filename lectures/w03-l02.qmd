@@ -1,0 +1,26 @@
+# 03B:DevOps {.unnumbered}
+
+## Materials:
+Date: Friday, 16-Aug-2024.
+
+### Pre-work:
+
+1. MLOps Platforms [some goals](https://kedro.org/blog/development-principles-for-opinionated-teams)
+2. [Convention over Configuration](https://en.wikipedia.org/wiki/Convention_over_configuration)
+3. [Data Flow Paradigm](https://en.wikipedia.org/wiki/Dataflow_programming)
+
+
+### In-Class
+
+1. Git, Docker, Docker Compose, MinIO Object Store
+2. Git Actions, CI/CD
+3. Kedro Tutorial Hands-on: Kedro pipeline execusion via airflow
+4. [W03-L02](https://docs.google.com/presentation/d/1w8iwIYl4brdeVV0KocoPxE-K-7Us_DTR1C5aA6eWd5M/edit?usp=sharing)
+
+
+### Post-class:
+
+1. \[Doc\] [Kedro-Docker](https://github.com/kedro-org/kedro-plugins/tree/main/kedro-docker) Deploy Kedro pipline using Docker via Kedro-Docker plug-in
+2. \[blog\][Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) a mental model of how to work with Git, branching process, and feature development 
+3. \[video\] [Git actions for Metrics tracking](https://www.youtube.com/watch?v=xPncjKH6SPk)
+4. Few additional resources on Git, Git Actions, Docker in the [Tutorials](./../tutorials.qmd) chapter.
