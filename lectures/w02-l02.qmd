@@ -1,4 +1,4 @@
-# 01C: Solution Thinking {.unnumbered}
+# 02B: Solution Thinking {.unnumbered}
 
 ## Materials:
 Date: Friday, 09-Aug-2024.

@@ -1,4 +1,4 @@
-# 02B: ML Project Structure {.unnumbered}
+# 03A: ML Project Structure {.unnumbered}
 
 ## Materials:
 Date: Tuesday, 13-Aug-2024.
