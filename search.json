@@ -519,6 +519,16 @@
     ]
   },
   {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks",
+    "section": "",
+    "text": "[pdf] Ops, Stratefy Planning for AI by Soma S. Dhavala, given at DFL’s Responsible AI Impact Lab (RAIL) Fellowship program.",
+    "crumbs": [
+      "Talks"
+    ]
+  },
+  {
     "objectID": "documentation.html",
     "href": "documentation.html",
     "title": "ML Documentation",
