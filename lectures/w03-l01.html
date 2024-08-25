@@ -8,7 +8,7 @@
 
 <meta name="author" content="mlsquare">
 
-<title>02A:ML Project Structure – AI-839</title>
+<title>03A:ML Project Structure – AI-839</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../homeworks.html" rel="next">
+<link href="../lectures/w03-l02.html" rel="next">
 <link href="../lectures/w02-l02.html" rel="prev">
 <link href="../crisp-ml-process.jpg" rel="icon" type="image/jpeg">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w03-l01.html">02A:ML Project Structure</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w03-l01.html">03A:ML Project Structure</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,7 +163,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/w03-l01.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">02A:ML Project Structure</span></a>
+ <span class="menu-text">03A:ML Project Structure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/w03-l02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03B:DevOps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/w04-l01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04A: Dev in Kedro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/w04-l02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04B: Data Quality Tests</span></a>
   </div>
 </li>
       </ul>
@@ -217,19 +235,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-work:</a></li>
   <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-Class</a></li>
   <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class:</a></li>
-  <li><a href="#spillover-next-class" id="toc-spillover-next-class" class="nav-link" data-scroll-target="#spillover-next-class">Spillover/ Next Class</a></li>
   </ul></li>
-  <li><a href="#scribed" id="toc-scribed" class="nav-link" data-scroll-target="#scribed">Scribed:<br>
-  </a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w03-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w03-l01.html">02A:ML Project Structure</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w03-l01.html">03A:ML Project Structure</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">02A:ML Project Structure</h1>
+<h1 class="title">03A:ML Project Structure</h1>
 </div>
 
 
@@ -271,19 +286,9 @@ ul.task-list li input[type="checkbox"] {
 <li>[blog]<a href="https://x.com/sh_reya/status/1521903041003225088">Shreya Shankar on some MLOps Principles</a></li>
 <li>[git template]&nbsp;<a href="https://github.com/Chim-SO/cookiecutter-mlops">MLOps cookiecutter template</a> for another opinionated project structure</li>
 </ol>
-</section>
-<section id="spillover-next-class" class="level3">
-<h3 class="anchored" data-anchor-id="spillover-next-class">Spillover/ Next Class</h3>
-<ol type="1">
-<li>to-be-seen</li>
-</ol>
-</section>
-</section>
-<section id="scribed" class="level2">
-<h2 class="anchored" data-anchor-id="scribed">Scribed:<br>
-</h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -714,8 +719,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../homeworks.html" class="pagination-link" aria-label="Homeworks">
-        <span class="nav-page-text">Homeworks</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lectures/w03-l02.html" class="pagination-link" aria-label="03B:DevOps">
+        <span class="nav-page-text">03B:DevOps</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

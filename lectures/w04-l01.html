@@ -8,7 +8,7 @@
 
 <meta name="author" content="mlsquare">
 
-<title>ML Documentation – AI-839</title>
+<title>04A: Dev in Kedro – AI-839</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,25 +24,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./resources/project-card.html" rel="next">
-<link href="./tutorials.html" rel="prev">
-<link href="./crisp-ml-process.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../lectures/w04-l02.html" rel="next">
+<link href="../lectures/w03-l02.html" rel="prev">
+<link href="../crisp-ml-process.jpg" rel="icon" type="image/jpeg">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./documentation.html">ML Documentation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w04-l01.html">04A: Dev in Kedro</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">AI-839</a> 
+      <a href="../">AI-839</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/mlsquare/ai-839" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -118,19 +118,19 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+  <a href="../preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Course</span></a>
+  <a href="../course.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Course</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -144,43 +144,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w01-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w01-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">01A:Grounding MLOps</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w02-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w02-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">01B:Grounding MLOps</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w02-l02.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w02-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">01C:Grounding MLOps</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w03-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w03-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">03A:ML Project Structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w03-l02.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w03-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">03B:DevOps</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w04-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w04-l01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">04A: Dev in Kedro</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w04-l02.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w04-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">04B: Data Quality Tests</span></a>
   </div>
 </li>
@@ -188,25 +188,25 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./homeworks.html" class="sidebar-item-text sidebar-link">
+  <a href="../homeworks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homeworks</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./projects.html" class="sidebar-item-text sidebar-link">
+  <a href="../projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Projects</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tutorials</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./documentation.html" class="sidebar-item-text sidebar-link active">
+            <a href="../documentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ML Documentation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -215,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources/project-card.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Project Card</span></a>
+  <a href="../resources/project-card.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Project Card</span></a>
   </div>
 </li>
       </ul>
@@ -230,28 +230,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#model-cards" id="toc-model-cards" class="nav-link active" data-scroll-target="#model-cards">Model Cards</a></li>
-  <li><a href="#data-cards" id="toc-data-cards" class="nav-link" data-scroll-target="#data-cards">Data Cards</a></li>
-  <li><a href="#ai-canvas" id="toc-ai-canvas" class="nav-link" data-scroll-target="#ai-canvas">AI Canvas</a></li>
-  <li><a href="#project-cards" id="toc-project-cards" class="nav-link" data-scroll-target="#project-cards">Project Cards</a>
+  <li><a href="#materials" id="toc-materials" class="nav-link active" data-scroll-target="#materials">Materials:</a>
   <ul class="collapse">
-  <li><a href="#business-view" id="toc-business-view" class="nav-link" data-scroll-target="#business-view">Business View</a></li>
-  <li><a href="#ml-view" id="toc-ml-view" class="nav-link" data-scroll-target="#ml-view">ML view</a></li>
-  </ul></li>
-  <li><a href="#data-driven-documentation" id="toc-data-driven-documentation" class="nav-link" data-scroll-target="#data-driven-documentation">Data-driven Documentation</a>
-  <ul class="collapse">
-  <li><a href="#what-is-the-solution" id="toc-what-is-the-solution" class="nav-link" data-scroll-target="#what-is-the-solution">What is the solution</a></li>
-  <li><a href="#core-tenets" id="toc-core-tenets" class="nav-link" data-scroll-target="#core-tenets">Core tenets</a></li>
+  <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-work:</a></li>
+  <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-Class</a></li>
+  <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class:</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/documentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w04-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w04-l01.html">04A: Dev in Kedro</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">ML Documentation</h1>
+<h1 class="title">04A: Dev in Kedro</h1>
 </div>
 
 
@@ -268,108 +261,35 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Good documentation is a necessity for any organization to present and represent itself to the world via its products, services and people. Several bodies of work exist on written and oral communication. For example:</p>
+<section id="materials" class="level2">
+<h2 class="anchored" data-anchor-id="materials">Materials:</h2>
+<p>Date: Tuesday, 20-Aug-2024.</p>
+<section id="pre-work" class="level3">
+<h3 class="anchored" data-anchor-id="pre-work">Pre-work:</h3>
 <ol type="1">
-<li><a href="https://en.wikipedia.org/wiki/The_Elements_of_Style">The ELement of Style</a> for general communication</li>
-<li><a href="https://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a> a classic from Edward Tufte on conveying informaiton with data via rich visuals.</li>
-<li><a href="https://www.oreilly.com/library/view/clean-code-a/9780136083238/">Clean Code</a> and <a href="https://www.amazon.in/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073">Clean Coder</a> and Uncle Bob’s <a href="https://cleancoders.com/">wisdom</a> on writing good (clean) code</li>
-<li><a href="https://google.github.io/styleguide/pyguide.html">Style Guide for Python</a> from Google to improve code readability</li>
-<li><a href="https://en.wikipedia.org/wiki/Literate_programming">Literate Programming</a> conceived by Don Knuth, the God of computer science, a paradigm that combines documenting code along with code.</li>
+<li>Kedro <a href="https://docs.kedro.org/en/stable/course/index.html">Tutorial</a> Part-0, Part-1.</li>
 </ol>
-<p>As one can imagine, the above cover the skills needed to write documents, codes, and reports, such that they can be understood by humans and computers, and in some cases by both simultaneously. But they fall short of expectations, particularly in regards to ML Documentation. Few differentiating factors that must be considered</p>
+</section>
+<section id="in-class" class="level3">
+<h3 class="anchored" data-anchor-id="in-class">In-Class</h3>
 <ol type="1">
-<li>Data is at the heart of all documentation.</li>
-<li>ML Lifecycle is very iterative - implying change is a constant and data changes (we can treat Model as a special type of data).</li>
-<li><em>Anything changes, Everything changes</em> - so change in data causes changes in all documents depending on that data and their derivatives.</li>
+<li>A framework to think about metrics. For example, by focussing on <em>who</em> the the solution is for, metrics such as affordability, availability, accessibility, become definable.</li>
+<li>Working with notebooks in Kedro (Kedro context magic)</li>
+<li>API documentation with <a href="https://machow.github.io/quartodoc/get-started/overview.html"><em>quartodoc</em></a> based on <a href="https://quarto.org/">quarto</a>, an alternative to <a href="https://www.sphinx-doc.org/en/master/">sphinx</a></li>
+<li>Testing with <a href="https://docs.pytest.org/en/stable/"><em>PyTest</em></a>.</li>
+<li>Linting and formating with <a href="https://docs.astral.sh/ruff/"><em>ruff</em></a>.</li>
+<li><a href="https://docs.google.com/presentation/d/1_ChCiyvrqWWicV-oF_9Rf50a94F6wEp_5Dkf3O07h_M/edit?usp=sharing">W04-L01</a> Metrics slides #35-38 (more on metrics section)</li>
 </ol>
-<p>As a result, maintaining veracity of the documentation is very hard. Further, when different stakeholders need different type of results, format and at different periodicity, it is even more problematic. Further, it is not entirely what to document. The <a href="https://shorensteincenter.org%20clear-documentation-framework-ai-transparency-recommendations-practitioners-context-policymakers/">CLeAR</a> framework has some really nice (additional) goals for a document. A document must be 1) comparable 2) legible 3) actionable and 4) robust to achieve an aspect of AI Transparency. Just to be clear, here, we are talking about documenting Data, Models, and AI Systems. We can look at them individually.</p>
-<section id="model-cards" class="level1">
-<h1>Model Cards</h1>
-<p>Google published <a href="https://arxiv.org/abs/1810.03993">Model Cards for Model Reporting</a> to improve transparency in model reporting. Idea is very similar to how information related to the nutritional content is published on the packaging. See their <a href="https://modelcards.withgoogle.com/about">blog</a> for details.</p>
 </section>
-<section id="data-cards" class="level1">
-<h1>Data Cards</h1>
-<p>Similar efforts were made to document the details about the data too. See <a href="https://arxiv.org/abs/2204.01075">Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI</a> for details and the accompanying blog with playbook <a href="https://research.google/blog/the-data-cards-playbook-a-toolkit-for-transparency-in-dataset-documentation/">here</a> from Google Research.</p>
-<p>Both Model Card and Data Card only capture “<em>an</em>” aspect of the entire problem but at a greater depth. Both of them are reporting aspects most useful in <em>post</em> deployment scenarios. But what about <em>during</em> development? In particular, given the exploratory and iterative nature of ML model and system development, how do we give structure to this process as well as document it?</p>
-</section>
-<section id="ai-canvas" class="level1">
-<h1>AI Canvas</h1>
-<p><a href="https://hbr.org/2018/04/a-simple-tool-to-start-making-decisions-with-the-help-of-ai">AI-Canvas</a> fills the gap on the business side during the <em>Design</em> phase of the development. However, the terminology is used somewhat OOD for ML folks and is not easy to get it right in first pass :).</p>
-<p><a href="https://madewithml.com/courses/mlops/product-design/#template">Project Canvas</a> is more elaborate and easier to understand than <em>AI Canvas</em>. But again, the terming <em>Project</em> can made specific and unambiguous.</p>
-<p>That leads to project cards.</p>
-</section>
-<section id="project-cards" class="level1">
-<h1>Project Cards</h1>
-<p>The purpose of Project Cards is two folds:</p>
+<section id="post-class" class="level3">
+<h3 class="anchored" data-anchor-id="post-class">Post-class:</h3>
 <ol type="1">
-<li><p>During development helps the developer think about the problem in a structured way w.r. t framing the problem, assessing the business value, viability, and many other aspects.</p></li>
-<li><p>It can also serve as a document giving a high level overview of the system developed and deployed. With proper versioning, one can also see the evolution of the problem. It is meant to be a high level document and as details emerge, documents such Model Cards and Data Cards can be linked.</p></li>
+<li>[Deck] <a href="https://docs.google.com/presentation/d/1_ChCiyvrqWWicV-oF_9Rf50a94F6wEp_5Dkf3O07h_M/edit?usp=sharing">W04-L01</a>. Review the material.</li>
+<li>[Docs] <a href="https://docs.kedro.org/en/stable/notebooks_and_ipython/kedro_and_notebooks.html">Kedro-Docker</a> work with notebooks inside Kedro.</li>
+<li>[Docs] <a href="https://machow.github.io/quartodoc/get-started/overview.html">quartodoc</a> Turn your docstrings into documentation with <em>quartodoc</em>. Plus any other content (notebooks, qmd files) can be rendered using quarto of course.</li>
+<li>[Docs] <a href="See [Kedro docs](https://docs.kedro.org/en/stable/development/automated_testing.html)"><em>PyTest</em> in <em>Kedro</em></a></li>
+<li>[Docs] [<em>ruff</em> in <em>Kedro</em>](See <a href="https://docs.kedro.org/en/stable/development/linting.html">Kedro docs</a></li>
 </ol>
-<p>The following are the different sections of the Project Cards.</p>
-<section id="business-view" class="level2">
-<h2 class="anchored" data-anchor-id="business-view">Business View</h2>
-<p>It focusses on the following questions:</p>
-<ul>
-<li>What is the problem being solved?</li>
-<li>Who is the customer?</li>
-<li>Why it needs to be solved?</li>
-<li>How does the solution like - a mental or a conceptual model or a mock of the product?</li>
-<li>What objectives does it achieve?</li>
-<li>What are the risks and challenges?</li>
-</ul>
-</section>
-<section id="ml-view" class="level2">
-<h2 class="anchored" data-anchor-id="ml-view">ML view</h2>
-<p>It is bit more in-depth focussing on the execution will have the following questions:</p>
-<ul>
-<li>What is the prediction problem?</li>
-<li>How the objective will be measured?</li>
-<li>How will it be tested?</li>
-<li>Data: What kind, how and how much and what for?</li>
-<li>What is the roadmap/plan?</li>
-<li>What resources are needed - both human, compute and admin?</li>
-</ul>
-</section>
-</section>
-<section id="data-driven-documentation" class="level1">
-<h1>Data-driven Documentation</h1>
-<p>The above cards define what is to be captured, and in part, certain goals mentioend in the CLeAR framework can be addressed. But what about the process to produce the documents? It begets the question: what qualities should an ML document should posses. We propose the following - A document must be:</p>
-<ol type="1">
-<li>Accurate (and up to date)</li>
-<li>Available</li>
-<li>Accessible</li>
-<li>Reproducible</li>
-<li>Auditable</li>
-<li>Versioned</li>
-<li>Serves more than one audience at a time (eg: purpose of a document, and as a result, the content, form of a document will vary by the audience).</li>
-</ol>
-<p>But they are not easy to achieve. An ML Developer can only deliver on some fronts. Conventionally, - (code) Development and Documentation are not part of the same process. The toolset and mindset are different, even separated in time &amp; space. - Even a simple edit or change request requires a copy-and-paste from somewhere. If data or ask or both change, one must redo the documentation repeatedly. This is neither repeatable nor reproducible and also not sustainable.</p>
-<p>As a result, a rigorous process oversight is needed for compliance. For example, a reporting manager may periodically check if the documentation is maintained and up to date as a part of the review processing. But this is not sustainable. We know it all too well.</p>
-<p>We have some pointers to realize those quality attributes.</p>
-<section id="what-is-the-solution" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-the-solution">What is the solution</h2>
-<ul>
-<li>Surprisingly simple. Just tag a notebook cell - who is it for?</li>
-<li>And take benefit of modern document publishing tools and workflows like Quarto, GitHub, GitHub actions</li>
-</ul>
-</section>
-<section id="core-tenets" class="level2">
-<h2 class="anchored" data-anchor-id="core-tenets">Core tenets</h2>
-<ul>
-<li>One content - many views</li>
-<li>Data + Code + Content &gt; should drive the documentation (format, style, purpose)</li>
-<li>Each stakeholder’s documentation need is just a view or a content rendering problem</li>
-<li>Publishing documentation = Publishing code</li>
-<li>Use the same tools and mental models both for code and documents</li>
-<li>Single source of truth for any derived document</li>
-<li>Fix in only one place and only once.</li>
-<li>Physical and mental distance between Documentation and Code should be (close to) ZERO</li>
-<li>Set up once and automate subsequently</li>
-<li>Automate the publishing process</li>
-<li>No human oversight should be necessary for process compliance</li>
-<li>Commit code + documentation content &gt; rendering must be automated</li>
-</ul>
-<p>Above points are put in a <a href="./resources/project-card.html">Project Card Template</a> which is a Jupyter notebook.</p>
 
 
 </section>
@@ -798,13 +718,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./tutorials.html" class="pagination-link" aria-label="Tutorials">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tutorials</span>
+      <a href="../lectures/w03-l02.html" class="pagination-link" aria-label="03B:DevOps">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">03B:DevOps</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./resources/project-card.html" class="pagination-link" aria-label="Project Card">
-        <span class="nav-page-text"><span class="chapter-title">Project Card</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lectures/w04-l02.html" class="pagination-link" aria-label="04B: Data Quality Tests">
+        <span class="nav-page-text">04B: Data Quality Tests</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -816,7 +736,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/documentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w04-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This course material was built with <a href="https://quarto.org/">Quarto</a> with <a href="https://github.com/hadley/r4ds">r4ds</a> theme.</p>
 </div>
