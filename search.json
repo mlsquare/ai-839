@@ -311,45 +311,45 @@
   {
     "objectID": "lectures/w02-l02.html",
     "href": "lectures/w02-l02.html",
-    "title": "01C: Solution Thinking",
+    "title": "02B: Solution Thinking",
     "section": "",
     "text": "Materials:\nDate: Friday, 09-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "01C: Solution Thinking"
+      "02B: Solution Thinking"
     ]
   },
   {
     "objectID": "lectures/w02-l02.html#materials",
     "href": "lectures/w02-l02.html#materials",
-    "title": "01C: Solution Thinking",
+    "title": "02B: Solution Thinking",
     "section": "",
     "text": "Pre-work:\n\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\nML Life Cycle CRISP-ML9(Q): blog, paper\n\n\n\nIn-Class\n\nDesign Thinking from Stanford Design School. It is a useful ideation tool to formulate a problem and develop a solution.\nProject Cards a Jupyter Notebook template for Project Cards. It touches the aspects of data-driven documentation and maintaining single source of truth for any document containing data. A WIP document on Data-driven ML Documentation. This also forms an important aspect of Transparency\nW02-L02 deck\n\n\n\nPost-class:\n\n[tool] JupDoc - render different views of Jupyter notebook markdown based on cell tags\n[blog] MLOps Tech Stack\n[canvas] MLOps Canvas\n[site] Data Nutrition Project, CLeAR Framework paper, Data Nutrition Label paper\n[blog] 10 Dimensions of making data science work by Goda Ramkumar\n\nDimension 1: Expectation\nDimension 2: Strategy\nDimension 3: Roles\nDimension 4: Collaboration\nDimension 5: Culture\nDimension 6: Discovery and Access\nDimension 7: Platforms\nDimension 8: Scalability\nDimension 9: Methodology and Practices\nDimension 10: Quality and Governance [tbd]",
     "crumbs": [
       "Lectures",
-      "01C: Solution Thinking"
+      "02B: Solution Thinking"
     ]
   },
   {
     "objectID": "lectures/w03-l01.html",
     "href": "lectures/w03-l01.html",
-    "title": "02B: ML Project Structure",
+    "title": "03A: ML Project Structure",
     "section": "",
     "text": "Materials:\nDate: Tuesday, 13-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "02B: ML Project Structure"
+      "03A: ML Project Structure"
     ]
   },
   {
     "objectID": "lectures/w03-l01.html#materials",
     "href": "lectures/w03-l01.html#materials",
-    "title": "02B: ML Project Structure",
+    "title": "03A: ML Project Structure",
     "section": "",
     "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nML model pipelines are Directed Acyclic Graphs. ML Workbench developed at EkStep was one of the early implementations of this primitive.\nW03-L01 deck\nKedro Tutorial: Part-0 and Part-1. Hands-on and commentary\n\n\n\nPost-class:\n\n[blog]Shreya Shankar on some MLOps Principles\n[git template] MLOps cookie cutter template for another opinionated project structure",
     "crumbs": [
       "Lectures",
-      "02B: ML Project Structure"
+      "03A: ML Project Structure"
     ]
   },
   {
