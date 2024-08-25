@@ -287,17 +287,6 @@
     ]
   },
   {
-    "objectID": "lectures/w01-l01.html#scribed",
-    "href": "lectures/w01-l01.html#scribed",
-    "title": "01A:Grounding MLOps",
-    "section": "Scribed:\n",
-    "text": "Scribed:",
-    "crumbs": [
-      "Lectures",
-      "01A:Grounding MLOps"
-    ]
-  },
-  {
     "objectID": "lectures/w02-l01.html",
     "href": "lectures/w02-l01.html",
     "title": "01B:Grounding MLOps",
@@ -314,17 +303,6 @@
     "title": "01B:Grounding MLOps",
     "section": "",
     "text": "Pre-work:\n\nRead the motivation for MLOps from this blog.\nReview W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\n\n\n\nIn-Class\n\nML Production Myths W01-L01-Deck\nSoftware 1.0 vs Software 2.0. See this W01-L02-Deck\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s [Project Canvas][Project Canvas](https://madewithml.com/courses/mlops/product-design/#template)\n\n\n\nPost-class:\n\n[blog] A simple Tool to Start Making Decisions with the Help of AI\n[book, optional] Prediction Machines: The Simple Economics of AI, Ajay Agrawal, Joshua Gans, Avi Goldfare\n[blog] Why Metaflow\n[blog] Building and Managing Data Science Pipelines with Kedro from neptune.ai",
-    "crumbs": [
-      "Lectures",
-      "01B:Grounding MLOps"
-    ]
-  },
-  {
-    "objectID": "lectures/w02-l01.html#scribed",
-    "href": "lectures/w02-l01.html#scribed",
-    "title": "01B:Grounding MLOps",
-    "section": "Scribed:\n",
-    "text": "Scribed:",
     "crumbs": [
       "Lectures",
       "01B:Grounding MLOps"
@@ -353,17 +331,6 @@
     ]
   },
   {
-    "objectID": "lectures/w02-l02.html#scribed",
-    "href": "lectures/w02-l02.html#scribed",
-    "title": "01C:Grounding MLOps",
-    "section": "Scribed:\n",
-    "text": "Scribed:",
-    "crumbs": [
-      "Lectures",
-      "01C:Grounding MLOps"
-    ]
-  },
-  {
     "objectID": "lectures/w03-l01.html",
     "href": "lectures/w03-l01.html",
     "title": "03A:ML Project Structure",
@@ -386,14 +353,69 @@
     ]
   },
   {
-    "objectID": "lectures/w03-l01.html#scribed",
-    "href": "lectures/w03-l01.html#scribed",
-    "title": "02A:ML Project Structure",
-    "section": "Scribed:\n",
-    "text": "Scribed:",
+    "objectID": "lectures/w03-l02.html",
+    "href": "lectures/w03-l02.html",
+    "title": "03B:DevOps",
+    "section": "",
+    "text": "Materials:\nDate: Friday, 16-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "03A:ML Project Structure"
+      "03B:DevOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w03-l02.html#materials",
+    "href": "lectures/w03-l02.html#materials",
+    "title": "03B:DevOps",
+    "section": "",
+    "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nGit, Docker, Docker Compose, MinIO Object Store\nGit Actions, CI/CD\nKedro Tutorial Hands-on: Kedro pipeline execusion via airflow\nW03-L02\n\n\n\nPost-class:\n\n[Doc] Kedro-Docker Deploy Kedro pipline using Docker via Kedro-Docker plug-in\n[blog]Git Flow a mental model of how to work with Git, branching process, and feature development\n[video] Git actions for Metrics tracking\nFew additional resources on Git, Git Actions, Docker in the Tutorials chapter.",
+    "crumbs": [
+      "Lectures",
+      "03B:DevOps"
+    ]
+  },
+  {
+    "objectID": "lectures/w04-l01.html",
+    "href": "lectures/w04-l01.html",
+    "title": "04A: Dev in Kedro",
+    "section": "",
+    "text": "Materials:\nDate: Tuesday, 20-Aug-2024.",
+    "crumbs": [
+      "Lectures",
+      "04A: Dev in Kedro"
+    ]
+  },
+  {
+    "objectID": "lectures/w04-l01.html#materials",
+    "href": "lectures/w04-l01.html#materials",
+    "title": "04A: Dev in Kedro",
+    "section": "",
+    "text": "Pre-work:\n\nKedro Tutorial Part-0, Part-1.\n\n\n\nIn-Class\n\nA framework to think about metrics. For example, by focussing on who the the solution is for, metrics such as affordability, availability, accessibility, become definable.\nWorking with notebooks in Kedro (Kedro context magic)\nAPI documentation with quartodoc based on quarto, an alternative to sphinx\nTesting with PyTest.\nLinting and formating with ruff.\nW04-L01 Metrics slides #35-38 (more on metrics section)\n\n\n\nPost-class:\n\n[Deck] W04-L01. Review the material.\n[Docs] Kedro-Docker work with notebooks inside Kedro.\n[Docs] quartodoc Turn your docstrings into documentation with quartodoc. Plus any other content (notebooks, qmd files) can be rendered using quarto of course.\n[Docs] PyTest in Kedro\n[Docs] [ruff in Kedro](See Kedro docs",
+    "crumbs": [
+      "Lectures",
+      "04A: Dev in Kedro"
+    ]
+  },
+  {
+    "objectID": "lectures/w04-l02.html",
+    "href": "lectures/w04-l02.html",
+    "title": "04B: Data Quality Tests",
+    "section": "",
+    "text": "Materials:\nDate: Friday, 23-Aug-2024.",
+    "crumbs": [
+      "Lectures",
+      "04B: Data Quality Tests"
+    ]
+  },
+  {
+    "objectID": "lectures/w04-l02.html#materials",
+    "href": "lectures/w04-l02.html#materials",
+    "title": "04B: Data Quality Tests",
+    "section": "",
+    "text": "Pre-work:\n\nSee how logistic regression test cases were written in sklearn. In particular, see how the test was prepared which makes it possible to test the fitted coeffcients analytically.\nSee how Peceptron test cases were written on Iris data.\n\n\n\nIn-Class\n\nQA for Data. It is all about asserting the statistical properties of the data.\nDiscussion on extracting statistical quality features into a table for any modality (tabular, image, speech, text)\nTesting columnar data with explicit conditions. Great Expectations defines them as expectations and validates them given a new data. For example, an expectation can be\n\na column can have at most 5% missing values\nthe range of the columns can be between [-2,10]\n\nTesting columnar data with implicit conditions. One dataset will be compared against a reference dataset. Evidently comes with many tests for reporting, model comparison, data drift detection. For example, we can compare whether or not the label distribution is same between the Train set and the Test set. A question for all readers - how often have you “actually” ran any statistical test to see if the Train and Test set are actually similar in distribution. My guess, less than 10% would have done it. The remaining would have called sklearn’s train_test_split function :)\n\n\n\nPost-class:\n\n[Blog] ETL testing with Great Expectations\n[Docs] Great Expectations Documentation. Please note that with version 1.0 released, even the examples from its repo are not working. Read them to understand what are typical tests on columnar data look like.\n[Notebooks] Evidently examples. Browse through and run how Evidently automates many test cases. Also see community examples here",
+    "crumbs": [
+      "Lectures",
+      "04B: Data Quality Tests"
     ]
   },
   {
@@ -467,11 +489,31 @@
     ]
   },
   {
-    "objectID": "tutorials.html#git",
-    "href": "tutorials.html#git",
+    "objectID": "tutorials.html#sec-tut-git",
+    "href": "tutorials.html#sec-tut-git",
     "title": "Tutorials",
     "section": "",
     "text": "[video] Git Tutorial for Beginners by Code-With-Mosh.\n[Paid Course] Ultimate Git by Code-with-Mosh is very good. Covers, additional topics like Collaboration, Advanced Branching strategies, etc.\n[video] Git and Github for Beginners - Crash Course from freeCodeCamp.org\n[book] Pro Git\n[web] Learn Git Branching - an interactive way to learn git branching",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#sec-tut-git-actions",
+    "href": "tutorials.html#sec-tut-git-actions",
+    "title": "Tutorials",
+    "section": "Git Actions",
+    "text": "Git Actions\n\n[Documentation] Quick Start Github offocial documentation\n[video] Git Actions for CI/CD",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#sec-tut-docker",
+    "href": "tutorials.html#sec-tut-docker",
+    "title": "Tutorials",
+    "section": "Docker",
+    "text": "Docker\n\n[book] The Docker Handbook Book\n[Paid Course] The Ultimate Docker Course by Code-with-Mosh is very good.\n[tutotial] Please-Contain-Yourself. Liked the title :)",
     "crumbs": [
       "Tutorials"
     ]
@@ -524,122 +566,6 @@
     "text": "Core tenets\n\nOne content - many views\nData + Code + Content &gt; should drive the documentation (format, style, purpose)\nEach stakeholder’s documentation need is just a view or a content rendering problem\nPublishing documentation = Publishing code\nUse the same tools and mental models both for code and documents\nSingle source of truth for any derived document\nFix in only one place and only once.\nPhysical and mental distance between Documentation and Code should be (close to) ZERO\nSet up once and automate subsequently\nAutomate the publishing process\nNo human oversight should be necessary for process compliance\nCommit code + documentation content &gt; rendering must be automated\n\nAbove points are put in a Project Card Template which is a Jupyter notebook.",
     "crumbs": [
       "ML Documentation"
-    ]
-  },
-  {
-    "objectID": "tutorials.html#docker",
-    "href": "tutorials.html#docker",
-    "title": "Tutorials",
-    "section": "Docker",
-    "text": "Docker\n\n[book] The Docker Handbook Book\n[Paid Course] The Ultimate Docker Course by Code-with-Mosh is very good.\n[tutotial] Please-Contain-Yourself. Liked the title :)",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "tutorials.html#git-actions",
-    "href": "tutorials.html#git-actions",
-    "title": "Tutorials",
-    "section": "Git Actions",
-    "text": "Git Actions\n\n[Documentation] Quick Start Github offocial documentation\n[video] Git Actions for CI/CD",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "tutorials.html#sec-tut-git",
-    "href": "tutorials.html#sec-tut-git",
-    "title": "Tutorials",
-    "section": "",
-    "text": "[video] Git Tutorial for Beginners by Code-With-Mosh.\n[Paid Course] Ultimate Git by Code-with-Mosh is very good. Covers, additional topics like Collaboration, Advanced Branching strategies, etc.\n[video] Git and Github for Beginners - Crash Course from freeCodeCamp.org\n[book] Pro Git\n[web] Learn Git Branching - an interactive way to learn git branching",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "tutorials.html#sec-tut-git-actions",
-    "href": "tutorials.html#sec-tut-git-actions",
-    "title": "Tutorials",
-    "section": "Git Actions",
-    "text": "Git Actions\n\n[Documentation] Quick Start Github offocial documentation\n[video] Git Actions for CI/CD",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "tutorials.html#sec-tut-docker",
-    "href": "tutorials.html#sec-tut-docker",
-    "title": "Tutorials",
-    "section": "Docker",
-    "text": "Docker\n\n[book] The Docker Handbook Book\n[Paid Course] The Ultimate Docker Course by Code-with-Mosh is very good.\n[tutotial] Please-Contain-Yourself. Liked the title :)",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "lectures/w03-l02.html",
-    "href": "lectures/w03-l02.html",
-    "title": "03B:DevOps",
-    "section": "",
-    "text": "Materials:\nDate: Friday, 16-Aug-2024.",
-    "crumbs": [
-      "Lectures",
-      "03B:DevOps"
-    ]
-  },
-  {
-    "objectID": "lectures/w03-l02.html#materials",
-    "href": "lectures/w03-l02.html#materials",
-    "title": "03B:DevOps",
-    "section": "",
-    "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nGit, Docker, Docker Compose, MinIO Object Store\nGit Actions, CI/CD\nKedro Tutorial Hands-on: Kedro pipeline execusion via airflow\nW03-L02\n\n\n\nPost-class:\n\n[Doc] Kedro-Docker Deploy Kedro pipline using Docker via Kedro-Docker plug-in\n[blog]Git Flow a mental model of how to work with Git, branching process, and feature development\n[video] Git actions for Metrics tracking\nFew additional resources on Git, Git Actions, Docker in the Tutorials chapter.",
-    "crumbs": [
-      "Lectures",
-      "03B:DevOps"
-    ]
-  },
-  {
-    "objectID": "lectures/w04-l01.html",
-    "href": "lectures/w04-l01.html",
-    "title": "04A: Dev in Kedro",
-    "section": "",
-    "text": "Materials:\nDate: Tuesday, 20-Aug-2024.",
-    "crumbs": [
-      "Lectures",
-      "04A: Dev in Kedro"
-    ]
-  },
-  {
-    "objectID": "lectures/w04-l01.html#materials",
-    "href": "lectures/w04-l01.html#materials",
-    "title": "04A: Dev in Kedro",
-    "section": "",
-    "text": "Pre-work:\n\nKedro Tutorial Part-0, Part-1.\n\n\n\nIn-Class\n\nA framework to think about metrics. For example, by focussing on who the the solution is for, metrics such as affordability, availability, accessibility, become definable.\nWorking with notebooks in Kedro (Kedro context magic)\nAPI documentation with quartodoc based on quarto, an alternative to sphinx\nTesting with PyTest.\nLinting and formating with ruff.\nW04-L01 Metrics slides #35-38 (more on metrics section)\n\n\n\nPost-class:\n\n[Deck] W04-L01. Review the material.\n[Docs] Kedro-Docker work with notebooks inside Kedro.\n[Docs] quartodoc Turn your docstrings into documentation with quartodoc. Plus any other content (notebooks, qmd files) can be rendered using quarto of course.\n[Docs] PyTest in Kedro\n[Docs] [ruff in Kedro](See Kedro docs",
-    "crumbs": [
-      "Lectures",
-      "04A: Dev in Kedro"
-    ]
-  },
-  {
-    "objectID": "lectures/w04-l02.html",
-    "href": "lectures/w04-l02.html",
-    "title": "04B: Data Quality Tests",
-    "section": "",
-    "text": "Materials:\nDate: Friday, 23-Aug-2024.",
-    "crumbs": [
-      "Lectures",
-      "04B: Data Quality Tests"
-    ]
-  },
-  {
-    "objectID": "lectures/w04-l02.html#materials",
-    "href": "lectures/w04-l02.html#materials",
-    "title": "04B: Data Quality Tests",
-    "section": "",
-    "text": "Pre-work:\n\nSee how logistic regression test cases were written in sklearn. In particular, see how the test was prepared which makes it possible to test the fitted coeffcients analytically.\nSee how Peceptron test cases were written on Iris data.\n\n\n\nIn-Class\n\nQA for Data. It is all about asserting the statistical properties of the data.\nDiscussion on extracting statistical quality features into a table for any modality (tabular, image, speech, text)\nTesting columnar data with explicit conditions. Great Expectations defines them as expectations and validates them given a new data. For example, an expectation can be\n\na column can have at most 5% missing values\nthe range of the columns can be between [-2,10]\n\nTesting columnar data with implicit conditions. One dataset will be compared against a reference dataset. Evidently comes with many tests for reporting, model comparison, data drift detection. For example, we can compare whether or not the label distribution is same between the Train set and the Test set. A question for all readers - how often have you “actually” ran any statistical test to see if the Train and Test set are actually similar in distribution. My guess, less than 10% would have done it. The remaining would have called sklearn’s train_test_split function :)\n\n\n\nPost-class:\n\n[Blog] ETL testing with Great Expectations\n[Docs] Great Expectations Documentation. Please note that with version 1.0 released, even the examples from its repo are not working. Read them to understand what are typical tests on columnar data look like.\n[Notebooks] Evidently examples. Browse through and run how Evidently automates many test cases. Also see community examples here",
-    "crumbs": [
-      "Lectures",
-      "04B: Data Quality Tests"
     ]
   }
 ]
