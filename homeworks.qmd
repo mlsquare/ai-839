@@ -18,7 +18,7 @@
     - Model usage is logged
 
 **Due by** \
-11.59PM IST, Friday, 13rd Sep, 2024.
+11.59PM IST, Friday, 13th Sep, 2024.
 
 ## HW-03 {#sec-hw-03}
 
