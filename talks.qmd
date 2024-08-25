@@ -1,0 +1,3 @@
+# Talks {.unnumbered}
+
+1. \[pdf\] [Ops, Stratefy Planning for AI](./talks/Ops-Strategy-for-ML-DFL-23-Aug-24.pdf) by Soma S. Dhavala, given at [DFL](https://digitalfutureslab.in/)'s Responsible AI Impact Lab (RAIL) Fellowship program.

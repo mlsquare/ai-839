@@ -44,6 +44,7 @@ book:
   - homeworks.qmd
   - projects.qmd
   - tutorials.qmd
+  - talks.qmd
   - part: documentation.qmd 
     chapters:
     - ./resources/project-card.ipynb
