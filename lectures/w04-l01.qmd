@@ -1,4 +1,4 @@
-# 04A: Dev in Kedro {.unnumbered}
+# 04A: Develop {.unnumbered}
 
 ## Materials:
 Date: Tuesday, 20-Aug-2024.

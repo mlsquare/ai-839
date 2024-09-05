@@ -41,6 +41,10 @@ book:
     - ./lectures/w03-l02.qmd
     - ./lectures/w04-l01.qmd
     - ./lectures/w04-l02.qmd
+    - ./lectures/w05-l01.qmd
+    - ./lectures/w05-l02.qmd
+    - ./lectures/w06-l01.qmd
+    - ./lectures/w06-l02.qmd
   - homeworks.qmd
   - projects.qmd
   - tutorials.qmd

@@ -1,4 +1,4 @@
-# 03A: ML Project Structure {.unnumbered}
+# 03A: Models for Modeling {.unnumbered}
 
 ## Materials:
 Date: Tuesday, 13-Aug-2024.

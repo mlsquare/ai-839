@@ -1,0 +1,44 @@
+# 06A: Evaluate {.unnumbered}
+
+## Materials:
+Date: Tuesday, 03-Sep-2024
+
+### Pre-work:
+1. Review [Kolmogorov-Smirnov Test](https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test) as a way to measure _divergence_ between two continous, univariate distributions
+2. Review [KL Divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) as a way to measure _divergence_ between two arbitrary (continuous/discrete and univariate/multivariate)  distributions
+
+
+### In-Class
+1. Motivation for why we need _Design of Experiments_ and _Hypothesis Testing_. Where do they appear in the ML Life Cycle.
+2. [Lesson 1](https://online.stat.psu.edu/stat503/lesson/1) - quick intro to DoE, scientific objectives, basic principles of DoEs, steps for planning, conducting, and analyzing an experiment.
+3. [Lesson 2](https://online.stat.psu.edu/stat503/lesson/2) - a simple comparative experiment. The name _A/B Testing_, perhaps, comes from testing difference between two groups A and B, which is a simple comparative experiment. How to define a business problem as a hypothesis test, collect data, perform the test, draw conclusion are demonstrated. How to calculate the sample size, probably the most important question that gets asked, is also explained in this simple case.
+
+### Post-Class
+
+1. Review [Model Selection](https://docs.google.com/presentation/d/1X_w55MfBhXGQbZkT_fbW9wdNrOs4sOuydRGPUI_yYCo/edit?usp=sharing) from [CS329s](https://stanford-cs329s.github.io/) 
+2. Review [Model Evaluation](http://bit.ly/MLEbook-Chapter7) chapter of [ML Engineering](https://www.mlebook.com/wiki/doku.php) book
+
+
+### References:
+
+1. \[book\] [A/B Testing](https://www.amazon.in/Testing-Most-Powerful-Clicks-Customers/dp/1118792416). This book gives a non technical introduction to A/B testing and how they get applied in the e-commerce, website UX optimization, running marketing campaigns. In the appendix, many scenarios of A/B testing are covered. 
+2. \[book\] [Design and Analysis of Experiments](https://www.wiley.com/en-us/Design+and+Analysis+of+Experiments%2C+10th+Edition-p-9781119492443). This is a classic in DoE. Lessons 1-2 are necessary.
+3. \[course\][STAt 503](https://online.stat.psu.edu/statprogram/stat503) Design of Experiments - online course at UPenn
+4. \[course\][STAt 514](https://www.stat.purdue.edu/~bacraig/notes514/index.html) Design of Experiments - course at Purdue (stats oriented). Chapters 1-4 are needed.
+5. \[book\] [Statistical Design](https://link.springer.com/book/10.1007/978-0-387-75965-4). This is another classic from [George Casella](https://en.wikipedia.org/wiki/George_Casella), a celebrated science author. 
+
+
+
+### Notes
+1. [QA for Data](./w04-l02.qmd) discussed earlier is a specific case of A/B testing. CS folks call it A/B testing, but they are all different types of hypothesis tests. 
+2. _Hypothesis Tests_ are tools for testing aspects of data. In the ML context, they can be used for testing 
+    - data drift (concept drift, covariate drift, label drift)
+    - data quality (implicit and explicit)
+    - model performance
+ 3. On Model Testing/ Comparison as a Hypothesis 
+    - Is the "alternate" model better than the "baseline" model? Often, ML folks report performance metrics on Test split for all the models and pick the model with the highest performance. It is not uncommon to claim SOTA even when the performance difference is in 1/100ths of decimal places and replication is almost absent  :). We do not even know if this difference is due to _just_ chance (randomness in the data) alone. A rigorous (and perhaps, the right) approach would have been to formulate this as a hypothesis test, design an experiment, collect evidence and then conclude which model is better (and is statistically significant). Note that, statistical significance does not mean practical significance, which is often the case with most SOTA claims :). Another classical example to drive this point home is the (in)famous Netflix prize. The top performing model in the million dollar competition never made it to deployment. Find out [why](https://www.wired.com/2012/04/netflix-prize-costs/).
+4. Hyperparameter Tuning and AutoML is a DoE in disguise
+    - the experimental factors are, for example, the architecture, optimizer, learning rate, batch size, among others. The response variable is the performance. Techniques like [Bayesian Optimization](https://www.analyticsvidhya.com/blog/2021/05/bayesian-optimization-bayes_opt-or-hyperopt/), and many techniques used in AutoML are indeed Sequential DoEs (you explore the search space sequentially by looking at the past exploration data). Grid-search, the naïve approach to hyperparameter tuning, can be seen as an implementation of a full-factorial DoE.
+    - Will ideas from DoE such as a Blocking lead to better search strategies? Can we  find out if the learning rate and the optimizer (eg. Adam vs AdamW) interact with each other? The experiments to address these questions are often referred to as _Ablation Studies_ in the ML community. So, by learning the principles of DoEs, we will be able to design _(data and compute) efficient_ ablation studies.
+5. How to plan and collect data for an ML problem?
+    - in the model-centric ML development, which most, if not all students, start their ML training in, will work on a data given to them in a platter. It is rare for an (undergraduate) student to have taken part in the data collection planning exercise. But once they are thrown into industry, they have to confront a very difficult question? We will address these questions in the next session.

@@ -1,0 +1,20 @@
+# 05B: Monitor (Models) {.unnumbered}
+
+## Materials:
+Date: Tuesday, 27-Aug-2024.
+
+### Pre-work:
+1. Review [Diagnostics of ML Systems](https://docs.google.com/presentation/d/1tuCIbk9Pye-RK1xqiiZXPzT8lIgDUL6CqBkFSYZXkbY/edit?usp=sharing) from [CS329s](https://stanford-cs329s.github.io/) 
+
+
+### In-Class
+
+1. Recap tests for monitoring data quality in the ETL stage
+2. Understand different types of drifts (label, covariate, concept) and ways to detect them that may be important in the model development stage
+3. Collecting data in the training stage - see [Training Data](https://docs.google.com/presentation/d/1OYjrmhSBu3Poo5FcY6WywpU_eR7mtkpe1r8nbbWvArg/edit?usp=sharing), from [CS329s](https://stanford-cs329s.github.io/)
+4. [Data Programming](https://arxiv.org/abs/1605.07723) - programmatically create labels. [snorkel](https://www.snorkel.org/) introduced these ideas first in the NLP space.
+5. Synthetic Data Generation using LLMs is a very promising and emerging application LLMs. For example, we can create labels of a piece of text, by prompting LLMs.
+
+### Post-class:
+1. Review [Training Data](https://docs.google.com/presentation/d/1OYjrmhSBu3Poo5FcY6WywpU_eR7mtkpe1r8nbbWvArg/edit?usp=sharing), from [CS329s](https://stanford-cs329s.github.io/)
+2. Review [Feature Engineering](https://docs.google.com/presentation/d/1OYjrmhSBu3Poo5FcY6WywpU_eR7mtkpe1r8nbbWvArg/edit?usp=sharing), from [CS329s](https://stanford-cs329s.github.io/)

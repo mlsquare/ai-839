@@ -42,7 +42,7 @@
     - Automated test to detect distribution drift of _target_ variable(represented as _y_ in the dataset) between Train and Test splits is run using Evidently. The pipeline fails if distribution drift is detected.
 
 **Due by** \
-11.59PM IST, Friday, 03rd Sep, 2024.
+11.59PM IST, Friday, 06th Sep, 2024.
 
 ## HW-02 {#sec-hw-02}
 
