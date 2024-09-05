@@ -245,16 +245,6 @@
     ]
   },
   {
-    "objectID": "course.html#additional-resources",
-    "href": "course.html#additional-resources",
-    "title": "Course",
-    "section": "Additional Resources",
-    "text": "Additional Resources\n\n[Book] Writing for clarity",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course</span>"
-    ]
-  },
-  {
     "objectID": "course.html#policies",
     "href": "course.html#policies",
     "title": "Course",
@@ -487,23 +477,45 @@
   {
     "objectID": "lectures/w06-l02.html",
     "href": "lectures/w06-l02.html",
-    "title": "06B: Scaling Laws",
+    "title": "06B: Govern",
     "section": "",
     "text": "Materials:\nDate: Friday, 06-Sep-2024",
     "crumbs": [
       "Lectures",
-      "06B: Scaling Laws"
+      "06B: Govern"
     ]
   },
   {
     "objectID": "lectures/w06-l02.html#materials",
     "href": "lectures/w06-l02.html#materials",
-    "title": "06B: Scaling Laws",
+    "title": "06B: Govern",
+    "section": "",
+    "text": "Pre-work:\n\nCRUD- create, read, update and delete operations are the primitives we need to make the IT systems work.\nACID- against those CRUD operations, a database needs to support atomicity, consistency, isolation, durability to guarantee data validity, despite errors, and failures.\nSet Theory - is the mathematical basis for relational databases (RDBMS)\nGraph Theory - is probably the mathematical basis for graph databases like Neo4j. NoSQL databases might lie somewhere in the middle. Since Graphs are more general mathematical objects, we might think for now that, it is important to understand graph theory to design graph databases.\nD4M- Dynamic Distributed Dimensional Data Model - is a computer programming model that combines the advantages of distinct data processing technologies (sparse linear algebra, associate arrays, fuzzy algebra, distributed arrays, triple-store/NoSQL databases) to improve search, retrieval and analysis of data.\n\n\n\nIn-Class\n\nThe CRUD operations on Model Predictions\nThe R4 (Read, Replay, Recall, Replace) Framework for Level 5 Data Governance.\n\n\n\nPost-class\n\n[book] An Elementary Introduction to Statistical Learning Theory. See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.\n[site] GDPR - in particular focussing on privacy, and right to be forgotten (or right to erasure)\n[wiki] Self Driving Cars read the six levels (Level 0 to Level 5) of autonomy. Level 5 is fully autonomous self driving car.\n\n\n\nAdditional Reading (optional)\n\n[book] Mathematics of Big Data\n\n\n\nNotes\nAt at the heart of it, all of IT applications, eventually perform CRUD operations. Depending on the type of transaction, purpose, and SLAs, the choice of the database (SQL vs NoSQL), Batch-vs-Stream, OLAP vs OLTP, among others will be made. A whole lof of mathematical theories (set theory, graph theory, associative arrays, multi linear algebra, etc) are necessary to build the technologies.\nIn yet another simplified view, ML systems are glorified auto-fills. Take out the fundamental uncertainty in the data produced by ML systems, they are akin to IT systems. Therefore, same infrastructure and engineering process to support CRUD operations on ML produced data can be applied. But is that sufficient?\nOne major difference is - ML systems have memory. Therefore, deleting a record, does not lead to deleting its influence in downstream tasks right? A simple example will drive home the point. Imagine a model is trained on a dataset. There are some records which are leaking private data. What would deleting mean here. Obviously, one can delete those records from the training set. But one must also edit the models to get rid of their influence. Think one step further. What if, these marked records are very close the some other records. Deleting and retraining on the updated training data does not mean that their residual effect is removed. So, it is not only complex but also complicated. When ML models are cascaded and appear in a sequence of data events – controlling their exposure and affects requires a very good control on the downstream consumer applications.\nLet us try to re-interpret CRUD in the ML context. It leads us to the R4 {Read, Repeat, Recall, Replace} framework.\n\nRead\nOn demand, read (or retrieve) the prediction made by an ML model. This require maintaining proper metadata to retrive the records. For example, if the input (request to the API) is available, as is, and the output (response) of the API is logged into a persistent object store, this is possible.\n\n\nRepeat\nOn demand, repeat (or reproduce) the prediction made by an ML model. This require maintaining the three things for the sake reproducibility: 1. The data (inputs) and model artifacts 2. The code which loads the model, and scores on the given data and 3. The runtime to execute the code & data.\n\n\nRecall\nOn demand, recall the prediction made by an ML model. Depending on the “definition” of recall, the implementation and engineering complexity varies. In the simplest case which itself can be very complex, all past instances where the model scored, the predictions have to be replaced with say nulls. However, this implementation is not yet actionable by itself. The downstream consumer for example, can be notified of the recall, and take an appropriate action. The downstream consumer must have the Read ability in the R4 framework. In the best case scenario, the downstream consumer updates the decision (say with human-in-the-loop) or has another back-off strategy implemented already.\nIn the highest form of recall, all downstream consumers of the predictions are notified and decisions are propagaed in the entire chain of events.\n\n\nReplace\nOn demand, replace the prediction made by an ML model with another prediction (after correcting). Once the record is updated, in the most sophisticated case, all downstream consumers propagate the change downstream.\nLike in self-driving cars, the Level of Automation can be categorized.\n\n\n** R4 Levels**\n\n\n\n\n\n\n\n\nLevel\nName\nSupported Actions\nPlatform Features\n\n\n\n\nL0\nR0\nFire and Forget  Zero Traceability\nModel APIs\n\n\nL1\nR1  Read\nTrace past decisions\nObservability\n\n\nL2\nR2  Read & Repeat\nTrace and Recreate past decisions\nObservability +  Versioning + CD\n\n\nL3\nR3  Read, Repeat, Recall\nTrace, Recreate, and Nullify past decisions\nObservability  Versioning + CD +  CImp\n\n\nL4\nR3-N  Read, Repeat, Recall with Notify\nTrace, Recreate, Nullify, and Notify past decisions\nObservability  Versioning + CD +  CImp +  Event-IO\n\n\nL5\nR4  Read, Repeat, Recall, Replace\nTrace, Recreate, and Rescore past decisions\nObservability  Versioning + CD +  CImp\n\n\nL6\nR4-N  Read, Repeat, Recall, Replace with Notify\nTrace, Recreate, Rescore, and Notify past decisions\nObservability  Versioning + CD +  CImp +  Event-IO\n\n\n\n\nAre these four primitive operations sufficient to support any model governance? 1. Can a model be debiased? 2. Can right to be erased to enabled? 3. Many more.\nAs one can see, from an engineering stand point, certain platform features and functionalities are needed.\n\nRead: An observation platform to log data, with CRUD apis on the logs - can enable reading any past decisions (model predictions)\nRepeat: Versioning of data, models, code, and run time with Continuous Deployment (CD) can ensure reproducibility.\nRecall: A Continuous Improvement (CImp) capability that can take any alternate model (which can produce Nulls), deploy it, and rescore on any past data, can enable recalling past decisions.\nReplace: Same capability as Recall except that, a new model would correct past decisions.\nNotify: One has to make the memory-less system into a system with memory, in in async fashion. Implementing a pub-sub model, where downstream consumer subcribes to the R4 topics published by the prediction maker service. For example, a model service published a recall topic with all the decisions that need to be annulled in someway. The subscribers of this topic will take action however they deem fit. They can even publish another recall event and all of its subscribers can act accordingly. This way, a recall pipeline is created based on event triggers.",
+    "crumbs": [
+      "Lectures",
+      "06B: Govern"
+    ]
+  },
+  {
+    "objectID": "lectures/w07-l01.html",
+    "href": "lectures/w07-l01.html",
+    "title": "07A: Scaling Laws",
+    "section": "",
+    "text": "Materials:\nDate: Friday, 06-Sep-2024",
+    "crumbs": [
+      "Lectures",
+      "07A: Scaling Laws"
+    ]
+  },
+  {
+    "objectID": "lectures/w07-l01.html#materials",
+    "href": "lectures/w07-l01.html#materials",
+    "title": "07A: Scaling Laws",
     "section": "",
     "text": "Pre-work:\n\nLesson 2 of Stat503 on planning a simple comparative experiment\n\n\n\nIn-Class\n\nReview sample size calculation in t-test. How sample size is a function of data quality, confidence, and tolerance for errors in the conclusions. Except in simple cases, getting a good sense of the “how much data” is a hard, rather very hard question. But we can try.\nMyth Buster - more data is better\n\nit is like a tautology. this notion never gets challenged. More data does not lead to better RoI. In fact, more of the same can never improve performance beyond a point or in some specific cases, it is impossible.\nlaw of diminishing returns. collecting more data can not only be expensive but can saturate, reaching a plateau. In fact, collecting data to understand where this plateau and what is the ceiling is, is an interesting problem in itself. A well designed experiment can address this question.\n\nCan we estimate the sample size needed?\n\nback of the envelope calculations based on some idea about the data, based on two-sample sample size calculations\nfrom PAC theory bounds (Chapter 8 of An Elementary Introduction to Statistical Learning Theory)\nempirical scaling laws\n\nHow to recruit data? Are all individual data points equal?\n\nactive learning\ncords for a collection of works/implementations based on subset selection\n\n\n\n\nPost-class\n\n[book] An Elementary Introduction to Statistical Learning Theory. See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.\n[paper] Training Compute-Optimal LLMs\n[paper] Understanding Dataset difficulty\n\n\n\nAdditional Reading (optional)\n\n[paper] Scaling Laws for Neural Language Models\n[paper] An empirical study of scaling laws for transfer learning\n[paper] Scaling laws for Individual data points\n[paper] Scaling laws in Linear Regression\n\n\n\nNotes\ntbd",
     "crumbs": [
       "Lectures",
-      "06B: Scaling Laws"
+      "07A: Scaling Laws"
     ]
   },
   {
@@ -601,7 +613,27 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Tabular Models\ntbd\n\n\nNL2SQL\ntbd",
+    "text": "Major Project\nTask\nNote:\nDue:\nProposal Submission:\n- 11.59PM IST, Friday, 20th Oct, 2024.\nPresentations:\n- 26th and 29th, Nov, 2024, in-class.\nFinal Submission:\n- 11.59PM IST, Friday, 29th Nov, 2024.",
+    "crumbs": [
+      "Projects"
+    ]
+  },
+  {
+    "objectID": "projects.html#sec-hw-major",
+    "href": "projects.html#sec-hw-major",
+    "title": "Projects",
+    "section": "",
+    "text": "This major project focuses on baking all the software engineering best practices, MLOps lifecycle and holistic ML into one code base. All the objectives of the Minor Project should be there. In addition,\n\nat dataset (aggregate) level, models are\n\nexplainable\ncalibrated\nassessed for robustness\n\nat inference time, for every instance, the following are available\n\nconformal predictions\nexplanations\ntrust scores\n\n\n\n\n\nYou can choose any problem or build on the Tabular Data provided in the class. Above must be available on major-project branch of your course private repo.\nSubmit your proposal no later than October 20th, 2024, Friday, 13.00pm IST. In the repo, create a README.md file at the root.\nIn addition to the code, you have present the project on 26th-29th November, in-class.",
+    "crumbs": [
+      "Projects"
+    ]
+  },
+  {
+    "objectID": "projects.html#sec-hw-minor",
+    "href": "projects.html#sec-hw-minor",
+    "title": "Projects",
+    "section": "Minor Project",
+    "text": "Minor Project\nTask\n\nThis minor (mini) project focuses on baking all the software engineering best practices and MLOps lifecycle into one code base\nCreate a branch named minor-project of your private repo.\nFor the dataset including all Tranche shared on your google drive, show that, your Models, Data, and Pipelines are\n\nProject Cards, Data Cards, Model Cards, MLOps Cards are populated and are data driven.\nCode is modular, linted, and tested\nCI/CD hooks are implemented\nModel is deployed and available via an API.\nInference can be scaled\nModel is monitored, and a new model is deployed when an opportunity or a need to redeploy is detected.\nRight to be forgotten is enabled.\n\nOne way to think about it is, it is is culmination of HWs up until now.\n\nDue by\n11.59PM IST, Friday, 25th Oct, 2024.",
     "crumbs": [
       "Projects"
     ]
@@ -651,7 +683,7 @@
     "href": "talks.html",
     "title": "Talks",
     "section": "",
-    "text": "[pdf] Ops, Stratefy Planning for AI by Soma S. Dhavala, given at DFL’s Responsible AI Impact Lab (RAIL) Fellowship program.",
+    "text": "[pdf] Ops, Strategy Planning for AI by Soma S. Dhavala, given at DFL’s Responsible AI Impact Lab (RAIL) Fellowship program.",
     "crumbs": [
       "Talks"
     ]

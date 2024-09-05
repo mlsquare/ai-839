@@ -8,7 +8,7 @@
 
 <meta name="author" content="mlsquare">
 
-<title>05B: Deployment – AI-839</title>
+<title>07A: Scaling Laws – AI-839</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lectures/w06-l01.html" rel="next">
-<link href="../lectures/w05-l01.html" rel="prev">
+<link href="../homeworks.html" rel="next">
+<link href="../lectures/w06-l02.html" rel="prev">
 <link href="../crisp-ml-process.jpg" rel="icon" type="image/jpeg">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w05-l02.html">05B: Deployment</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">07A: Scaling Laws</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w05-l02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lectures/w05-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05B: Deployment</span></a>
   </div>
 </li>
@@ -210,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w07-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w07-l01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">07A: Scaling Laws</span></a>
   </div>
 </li>
@@ -270,17 +270,19 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-work:</a></li>
   <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-Class</a></li>
-  <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class:</a></li>
+  <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class</a></li>
+  <li><a href="#additional-reading-optional" id="toc-additional-reading-optional" class="nav-link" data-scroll-target="#additional-reading-optional">Additional Reading (optional)</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w05-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w07-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w05-l02.html">05B: Deployment</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">07A: Scaling Laws</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">05B: Deployment</h1>
+<h1 class="title">07A: Scaling Laws</h1>
 </div>
 
 
@@ -299,28 +301,55 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="materials" class="level2">
 <h2 class="anchored" data-anchor-id="materials">Materials:</h2>
-<p>Date: Friday, 30-Aug-2024.</p>
+<p>Date: Friday, 06-Sep-2024</p>
 <section id="pre-work" class="level3">
 <h3 class="anchored" data-anchor-id="pre-work">Pre-work:</h3>
 <ol type="1">
-<li><a href="https://mlflow.org/docs/latest/deployment/index.html">mlflow docs</a></li>
-<li><a href="https://github.com/Galileo-Galilei/kedro-mlflow-tutorial">kedro-mlflow tutorial</a></li>
+<li><a href="https://online.stat.psu.edu/stat503/lesson/2">Lesson 2</a> of Stat503 on planning a simple comparative experiment</li>
 </ol>
 </section>
 <section id="in-class" class="level3">
 <h3 class="anchored" data-anchor-id="in-class">In-Class</h3>
 <ol type="1">
-<li>Stream vs Batch Deployment</li>
-<li>Hands-on Deploying models with mlflow on local server</li>
+<li>Review sample size calculation in t-test. How sample size is a function of data quality, confidence, and tolerance for errors in the conclusions. Except in simple cases, getting a good sense of the “how much data” is a hard, rather very hard question. But we can try.</li>
+<li>Myth Buster - more data is better
+<ul>
+<li>it is like a tautology. this notion never gets challenged. More data does not lead to better RoI. In fact, more of the same can never improve performance beyond a point or in some specific cases, it is impossible.</li>
+<li>law of diminishing returns. collecting more data can not only be expensive but can saturate, reaching a plateau. In fact, collecting data to understand where this plateau and what is the ceiling is, is an interesting problem in itself. A well designed experiment can address this question.</li>
+</ul></li>
+<li>Can we estimate the sample size needed?
+<ul>
+<li>back of the envelope calculations based on <em>some</em> idea about the data, based on two-sample sample size calculations</li>
+<li>from PAC theory bounds (Chapter 8 of <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471">An Elementary Introduction to Statistical Learning Theory</a>)</li>
+<li>empirical scaling laws</li>
+</ul></li>
+<li>How to recruit data? Are all individual data points equal?
+<ul>
+<li>active learning</li>
+<li><a href="https://github.com/decile-team/cords">cords</a> for a collection of works/implementations based on subset selection</li>
+</ul></li>
 </ol>
 </section>
 <section id="post-class" class="level3">
-<h3 class="anchored" data-anchor-id="post-class">Post-class:</h3>
+<h3 class="anchored" data-anchor-id="post-class">Post-class</h3>
 <ol type="1">
-<li>Review <a href="https://docs.google.com/presentation/d/1U_zKs19VLJKnGE02JDRnzxJ8lgeVF22WSZ_GrA646fY/edit?usp=sharing">Model Deployment</a> from <a href="https://stanford-cs329s.github.io/">CS329s</a>. [Note: Dr.&nbsp;Srinivas Rana will cover Model Compression, Quantization etc in his talk on <em>Deployment on Edge</em>]</li>
-<li>Review <a href="https://docs.google.com/presentation/d/1yvbJJukJjJxlLr6dAVB5dENl_9o5621z7A3P0DF5m4E/edit?usp=sharing">Monitoring and Continual Learning</a> from <a href="https://stanford-cs329s.github.io/">CS329s</a></li>
-<li>Review <a href="https://www.dropbox.com/scl/fi/rdkviwr35zigfgsl7memz/Chapter8.pdf?rlkey=1v0kqmko0sl57eunxdmlq1jrc&amp;e=1&amp;dl=0">Model Deployment</a> chapter of <a href="https://www.mlebook.com/wiki/doku.php">ML Engineering</a> book</li>
+<li>[book] <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471">An Elementary Introduction to Statistical Learning Theory</a>. See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.</li>
+<li>[paper] <a href="https://arxiv.org/abs/2203.15556">Training Compute-Optimal LLMs</a></li>
+<li>[paper] <a href="https://arxiv.org/abs/2110.08420">Understanding Dataset difficulty</a></li>
 </ol>
+</section>
+<section id="additional-reading-optional" class="level3">
+<h3 class="anchored" data-anchor-id="additional-reading-optional">Additional Reading (optional)</h3>
+<ol type="1">
+<li>[paper] <a href="https://arxiv.org/abs/2001.08361">Scaling Laws for Neural Language Models</a></li>
+<li>[paper] <a href="https://arxiv.org/abs/2408.16947v1">An empirical study of scaling laws for transfer learning</a></li>
+<li>[paper] <a href="https://arxiv.org/abs/2405.20456">Scaling laws for Individual data points</a></li>
+<li>[paper] <a href="https://arxiv.org/abs/2406.08466v1">Scaling laws in Linear Regression</a></li>
+</ol>
+</section>
+<section id="notes" class="level3">
+<h3 class="anchored" data-anchor-id="notes">Notes</h3>
+<p>tbd</p>
 
 
 </section>
@@ -749,13 +778,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lectures/w05-l01.html" class="pagination-link" aria-label="05A: Monitor (Models)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">05A: Monitor (Models)</span>
+      <a href="../lectures/w06-l02.html" class="pagination-link" aria-label="06B: Govern">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">06B: Govern</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lectures/w06-l01.html" class="pagination-link" aria-label="06A: Evaluate">
-        <span class="nav-page-text">06A: Evaluate</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../homeworks.html" class="pagination-link" aria-label="Homeworks">
+        <span class="nav-page-text">Homeworks</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -767,7 +796,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w05-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w07-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This course material was built with <a href="https://quarto.org/">Quarto</a> with <a href="https://github.com/hadley/r4ds">r4ds</a> theme.</p>
 </div>

@@ -1,0 +1,39 @@
+# 06B: Scaling Laws {.unnumbered}
+
+## Materials:
+Date: Friday, 06-Sep-2024
+
+### Pre-work:
+1. [Lesson 2](https://online.stat.psu.edu/stat503/lesson/2) of Stat503 on planning a simple comparative experiment
+
+### In-Class
+1. Review sample size calculation in t-test. How sample size is a function of  data quality, confidence, and tolerance for errors in the conclusions. Except in simple cases, getting a good sense of the "how much data" is a hard, rather very hard question. But we can try.
+2. Myth Buster - more data is better
+    - it is like a tautology. this notion never gets challenged. More data does not lead to better RoI. In fact, more of the same can never improve performance beyond a point or in some specific cases, it is impossible.
+    - law of diminishing returns. collecting more data can not only be expensive but can saturate, reaching a plateau. In fact, collecting data to understand where this plateau and what is the ceiling is, is an interesting problem in itself. A well designed experiment can address this question.
+3. Can we estimate the sample size needed?
+    - back of the envelope calculations based on _some_ idea about the data, based on two-sample sample size calculations
+    - from PAC theory bounds (Chapter 8 of  [An Elementary Introduction to Statistical Learning Theory](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471))
+    - empirical scaling laws
+4. How to recruit data? Are all individual data points equal?
+    - active learning
+    - [cords](https://github.com/decile-team/cords) for a collection of works/implementations based on subset selection
+
+### Post-class
+
+1. \[book\] [An Elementary Introduction to Statistical Learning Theory](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471). See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.
+2. \[paper\] [Training Compute-Optimal LLMs](https://arxiv.org/abs/2203.15556)
+3. \[paper\] [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
+
+### Additional Reading (optional)
+
+1. \[paper\] [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
+2. \[paper\] [An empirical study of scaling laws for transfer learning](https://arxiv.org/abs/2408.16947v1)
+3. \[paper\] [Scaling laws for Individual data points](https://arxiv.org/abs/2405.20456)
+4. \[paper\] [Scaling laws in Linear Regression](https://arxiv.org/abs/2406.08466v1)
+
+
+
+
+### Notes
+tbd
