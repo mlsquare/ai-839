@@ -1,3 +1,4 @@
 # Talks {.unnumbered}
 
 1. \[pdf\] [Ops, Strategy Planning for AI](./talks/Ops-Strategy-for-ML-DFL-23-Aug-24.pdf) by Soma S. Dhavala, given at [DFL](https://digitalfutureslab.in/)'s Responsible AI Impact Lab (RAIL) Fellowship program.
+1. \[pdf\] [Llama.LISP: AI First Compiler Framework](https://chsasank.com/assets/slides/llama.lisp_talk.pdf) by [Sasank Chilamkurthy](https://www.linkedin.com/in/sasank-chilamkurthy/), Founder & CEO [Von Neumann AI](https://von-neumann.ai/)
