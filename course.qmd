@@ -23,19 +23,26 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 &nbsp; | Note:| 16-Aug | DevOps guest lecture by [Ravi](https://www.linkedin.com/in/ravismula/)   |
 | 04 | 20-Aug <br> 23-Aug | **Dev Setup & Data Monitoring** <br> 1. Kedro, PyTest, Ruff, Quartodoc   <br>  2. Data Quality  | [W04-L01](./lectures/w04-l01.qmd) <br> [W04-L02](./lectures/w04-l02.qmd) |
 &nbsp; | | @sec-hw-03 <br> @sec-hw-04 |  11.59PM IST, Friday, 6th Sep, 2024. <br> 11.59PM IST, Friday, 16th Sep, 2024.     |
-| 05 | 27-Aug <br> 30-Aug | **Model Monitoring and Deployment** <br> 1. Kedro, PyTest, Ruff, Quartodoc   <br>  2. Data Quality  | [W05-L01](./lectures/w05-l01.qmd) <br> [W05-L02](./lectures/w05-l02.qmd) |
+| 05 | 27-Aug <br> 30-Aug | **Model Monitoring and Deployment** <br> 1. Monitoring Metrics, Tests, Label Generation    <br>  2. Deployment with MLFlow  | [W05-L01](./lectures/w05-l01.qmd) <br> [W05-L02](./lectures/w05-l02.qmd) |
 &nbsp; | |  |     |
-| 06 | 03-Sep <br> 06-Sep | **Evaluation and DoEs** <br> 1. Hypothesis Tets, DoEs, Model Comparison   <br>  2. Sample Sizes, Active Learning, Scaling Laws | [W06-L01](./lectures/w06-l01.qmd) <br> [W06-L02](./lectures/w06-l02.qmd) |
-&nbsp; |  | @sec-hw-05 <br> @sec-hw-06 <br> @sec-hw-minor | Due 11.59PM IST, Friday, 20th Sep, 2024 <br> Due 11.59PM IST, Friday, 18th Oct, 2024  <br>  Due 11.59PM IST, Friday, 25th Oct, 2024 |
+| 06 | 03-Sep <br> 06-Sep | **Evaluation and Governance** <br> 1. Hypothesis Tets, DoEs, Model Comparison   <br>  2. The R4 Framework | [W06-L01](./lectures/w06-l01.qmd) <br> [W06-L02](./lectures/w06-l02.qmd) |
+&nbsp; |  | @sec-hw-05 <br> @sec-hw-06 | Due 11.59PM IST, Friday, 20th Sep, 2024  <br> Due 11.59PM IST, Friday, 18th Oct, 2024 |
+: **Part-1: Essentials** {.striped}
+:::
 
 
-: Part-1: Essentials {.striped}
 
+::: {style="font-size: 80%;"}
+| Wk | Dt | Topics | Resources |
+| :- | :- | :------- | :------- |
+| 07 | 10-Sep <br> 03-Sep | **Scaling Laws, Calibration** <br> 1. Sample Sizes, Active Learning, Scaling Laws <br> 2. Calibration | [W07-L01](./lectures/w07-l01.qmd) <br> tbd|
+&nbsp; |  |   @sec-hw-minor | Due 11.59PM IST, Friday, 25th Oct, 2024 |
+
+: **Part-2: Full Stack ML** {.striped}
 :::
 
 
 ::: {style="font-size: 80%;"}
-
 | Wk | Dt | Topics | Resources |
 | :- | :- | :------- | :------- |
 | 03 | 16-Aug |  Intro to DevOps <br> [ML Engineering]  | [Ravi Mula](https://www.linkedin.com/in/ravismula/) <br> Architect: [Sanketika](https://sanketika.in/) |
@@ -43,7 +50,7 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 | 10 | 15-Oct |  Deploying on Edges <br> [ML Engineering]  | [Dr. Srinivas Rana](https://www.linkedin.com/in/srinivasrana/) <br> Sr ML Scientist: [Wadhwani AI](https://www.wadhwaniai.org/) |
 | 10 | 18-Oct |  MLOps @ Scale <br> [ML Engineering]  | [Kalyan Deepak](https://www.linkedin.com/in/kalyan-deepak-2304622a/) <br> Sr Staff Engineer  |
 | 13 | 08-Nov | Building LLMs in Production in Regulated Industry <br> [System Design] | [Dr. Venkata Pingali](https://www.linkedin.com/in/pingali/) <br> Co-Founder: [Scribble Data](https://www.scribbledata.io/) |
-: Guest Lectures {.striped}
+: **Guest Lectures** {.striped}
 :::
 
 
@@ -67,9 +74,6 @@ We will use WhatsApp group for (informal)discussions and alerts.
 - 15%: Midterm mini project
 - 20%: In-class midterm
 - 25%: Capstone project
-
-## Additional Resources
-- [Book] Writing for clarity 
 
 
 ## Policies

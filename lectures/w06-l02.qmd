@@ -1,39 +1,78 @@
-# 06B: Scaling Laws {.unnumbered}
+# 06B: Govern {.unnumbered}
 
 ## Materials:
 Date: Friday, 06-Sep-2024
 
 ### Pre-work:
-1. [Lesson 2](https://online.stat.psu.edu/stat503/lesson/2) of Stat503 on planning a simple comparative experiment
+1. [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)- create, read, update and delete operations are the primitives we need to make the IT systems work. 
+2. [ACID](https://en.wikipedia.org/wiki/ACID)- against those CRUD operations, a database needs to support _atomicity, consistency, isolation, durability_  to guarantee data validity, despite errors, and failures.
+3. [Set Theory](https://en.wikipedia.org/wiki/Set_theory) - is the mathematical basis for relational databases (RDBMS)
+4. [Graph Theory](https://en.wikipedia.org/wiki/Graph_theory) - is probably the mathematical basis for graph databases like Neo4j. NoSQL databases might lie somewhere in the middle. Since Graphs are more general mathematical objects, we might think for now that, it is important to understand graph theory to design graph databases.
+5. [D4M](https://d4m.mit.edu/d4m-dynamic-distributed-dimensional-data-model#:~:text=D4M%20is%20a%20breakthrough%20in,database%20and%20computation%20system%20that)- Dynamic Distributed Dimensional Data Model - is a computer programming model that combines the advantages of distinct data processing technologies (sparse linear algebra, associate arrays, fuzzy algebra, distributed arrays, triple-store/NoSQL databases) to improve search, retrieval and analysis of data.
 
 ### In-Class
-1. Review sample size calculation in t-test. How sample size is a function of  data quality, confidence, and tolerance for errors in the conclusions. Except in simple cases, getting a good sense of the "how much data" is a hard, rather very hard question. But we can try.
-2. Myth Buster - more data is better
-    - it is like a tautology. this notion never gets challenged. More data does not lead to better RoI. In fact, more of the same can never improve performance beyond a point or in some specific cases, it is impossible.
-    - law of diminishing returns. collecting more data can not only be expensive but can saturate, reaching a plateau. In fact, collecting data to understand where this plateau and what is the ceiling is, is an interesting problem in itself. A well designed experiment can address this question.
-3. Can we estimate the sample size needed?
-    - back of the envelope calculations based on _some_ idea about the data, based on two-sample sample size calculations
-    - from PAC theory bounds (Chapter 8 of  [An Elementary Introduction to Statistical Learning Theory](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471))
-    - empirical scaling laws
-4. How to recruit data? Are all individual data points equal?
-    - active learning
-    - [cords](https://github.com/decile-team/cords) for a collection of works/implementations based on subset selection
+1. The CRUD operations on Model Predictions
+2. The R4 (Read, Replay, Recall, Replace) Framework for Level 5 Data Governance.
 
 ### Post-class
-
 1. \[book\] [An Elementary Introduction to Statistical Learning Theory](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471). See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.
-2. \[paper\] [Training Compute-Optimal LLMs](https://arxiv.org/abs/2203.15556)
-3. \[paper\] [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
+2. \[site\] [GDPR](https://gdpr-info.eu) - in particular focussing on privacy, and right to be forgotten (or right to erasure)
+3. \[wiki\] [Self Driving Cars](https://en.wikipedia.org/wiki/Self-driving_car) read the six levels (Level 0 to Level 5) of autonomy. Level 5 is fully autonomous self driving car.
+
 
 ### Additional Reading (optional)
-
-1. \[paper\] [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
-2. \[paper\] [An empirical study of scaling laws for transfer learning](https://arxiv.org/abs/2408.16947v1)
-3. \[paper\] [Scaling laws for Individual data points](https://arxiv.org/abs/2405.20456)
-4. \[paper\] [Scaling laws in Linear Regression](https://arxiv.org/abs/2406.08466v1)
-
-
+1. \[book\] [Mathematics of Big Data](https://mitpress.mit.edu/9780262038393/mathematics-of-big-data/)
 
 
 ### Notes
-tbd
+At at the heart of it, all of IT applications, _eventually_ perform CRUD operations. Depending on the type of transaction, purpose, and SLAs, the choice of the database (SQL vs NoSQL), Batch-vs-Stream, OLAP vs OLTP, among others will be made. A whole lof of mathematical theories (set theory, graph theory, associative arrays, multi linear algebra, etc) are necessary to build the technologies. 
+
+In yet another simplified view, ML systems are glorified auto-fills. Take out the fundamental uncertainty in the data produced by ML systems, they are akin to IT systems. Therefore, same infrastructure and engineering process to support CRUD operations on ML produced data can be applied. But is that sufficient?
+
+One major difference is - ML systems have memory. Therefore, deleting a record, does not lead to deleting its influence in downstream tasks right? A simple example will drive home the point. Imagine a model is trained on a dataset. There are some records which are leaking private data. What would deleting mean here. Obviously, one can delete those records from the training set. But one must also edit the models to get rid of their influence. Think one step further. What if, these _marked_ records are very close the some other records. Deleting and retraining on the updated training data does not mean that their _residual_ effect is removed. So, it is not only complex but also complicated. When ML models are cascaded and appear in a sequence of data events -- controlling their exposure and affects requires a very good control on the downstream consumer applications.
+
+Let us try to re-interpret CRUD in the ML context. It leads us to the  R4 \{Read, Repeat, Recall, Replace\} framework.
+
+#### Read
+On demand, read (or retrieve) the prediction made by an ML model. This require maintaining proper metadata to retrive the records. For example, if the input (request to the API) is available, as is, and the output (response) of the API is logged into a persistent object store, this is possible.
+
+#### Repeat
+On demand, repeat (or reproduce) the prediction made by an ML model. This require maintaining the three things for the sake reproducibility: 1. The data (inputs)  and model artifacts  2. The code which loads the model, and scores on the given data and 3. The runtime to execute the code & data.
+
+#### Recall
+On demand, recall the prediction made by an ML model. Depending on the "definition" of recall, the implementation and engineering complexity varies. In the simplest case which itself can be very complex, all past instances where the model scored, the predictions have to be replaced with say _nulls_. However, this implementation is not yet actionable by itself. The downstream consumer for example, can be notified of the _recall_, and take an appropriate action. The downstream consumer must have the _Read_ ability in the R4 framework. In the best case scenario, the downstream consumer updates the decision (say with human-in-the-loop) or has another back-off strategy implemented already.
+
+In the highest form of _recall_, all downstream consumers of the predictions are notified and decisions are propagaed in the entire chain of events.
+
+#### Replace
+On demand, replace the prediction made by an ML model with another prediction (after correcting). Once the record is updated, in the most sophisticated case, all downstream consumers propagate the change downstream.
+
+
+Like in self-driving cars, the Level of Automation can be categorized.
+
+::: {style="font-size: 80%;"}
+| Level | Name | Supported Actions | Platform Features
+| :- | :--- | :------- | :------- | 
+| L0 | R0  | Fire and Forget <br> Zero Traceability | Model APIs |
+| L1 | R1 <br> Read  | Trace past decisions | Observability |
+| L2 | R2 <br> Read & Repeat | Trace and Recreate past decisions| Observability + <br> Versioning + CD  |
+| L3 | R3 <br> Read, Repeat, Recall | Trace, Recreate, and  Nullify past decisions| Observability <br> Versioning + CD + <br> CImp |
+| L4 | R3-N  <br> Read, Repeat, Recall with Notify | Trace, Recreate, Nullify, and Notify past decisions| Observability <br> Versioning + CD + <br> CImp + <br> Event-IO |
+| L5 | R4 <br> Read, Repeat, Recall, Replace  | Trace, Recreate, and Rescore past decisions| Observability <br> Versioning + CD + <br> CImp  |
+| L6 | R4-N <br> Read, Repeat, Recall, Replace with Notify  | Trace, Recreate, Rescore, and Notify past decisions| Observability <br> Versioning + CD + <br> CImp + <br> Event-IO  |
+: ** R4 Levels** {.striped}
+:::
+
+Are these four primitive operations sufficient to support any model governance? 
+1. Can a model be debiased?
+2. Can right to be erased to enabled?
+3. Many more.
+
+As one can see, from an engineering stand point, certain platform features and functionalities are needed. 
+
+1. Read: An observation platform to log data, with CRUD apis on the logs - can  enable _reading_ any past decisions (model predictions)
+2. Repeat: Versioning of data, models, code, and run time with  Continuous Deployment (CD) can ensure reproducibility.
+3. Recall: A Continuous Improvement (CImp) capability that can take any alternate model (which can produce Nulls), deploy it, and rescore on any past data, can enable _recalling_ past decisions. 
+4. Replace: Same capability as _Recall_ except that, a new model would correct past decisions.
+5. Notify: One has to make the memory-less system into a system with memory, in in _async_ fashion. Implementing a pub-sub model, where downstream consumer subcribes to the R4 topics published by the prediction maker service. For example, a model service published a _recall_ topic with all the decisions that need to be annulled in someway. The subscribers of this topic will take action however they deem fit. They can even publish another recall event and all of its subscribers can act accordingly. This way, a _recall_ pipeline is created based on event triggers.
+
