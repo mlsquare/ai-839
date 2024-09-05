@@ -179,7 +179,7 @@
     "href": "index.html#announcements",
     "title": "AI-839",
     "section": "Announcements",
-    "text": "Announcements\n\n[25-August-2024] Lecture Page W03-L02 W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
+    "text": "Announcements\n\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
     "crumbs": [
       "Welcome"
     ]
@@ -311,111 +311,199 @@
   {
     "objectID": "lectures/w02-l02.html",
     "href": "lectures/w02-l02.html",
-    "title": "02B: Solution Thinking",
+    "title": "02B: Discover",
     "section": "",
     "text": "Materials:\nDate: Friday, 09-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "02B: Solution Thinking"
+      "02B: Discover"
     ]
   },
   {
     "objectID": "lectures/w02-l02.html#materials",
     "href": "lectures/w02-l02.html#materials",
-    "title": "02B: Solution Thinking",
+    "title": "02B: Discover",
     "section": "",
     "text": "Pre-work:\n\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\nML Life Cycle CRISP-ML9(Q): blog, paper\n\n\n\nIn-Class\n\nDesign Thinking from Stanford Design School. It is a useful ideation tool to formulate a problem and develop a solution.\nProject Cards a Jupyter Notebook template for Project Cards. It touches the aspects of data-driven documentation and maintaining single source of truth for any document containing data. A WIP document on Data-driven ML Documentation. This also forms an important aspect of Transparency\nW02-L02 deck\n\n\n\nPost-class:\n\n[tool] JupDoc - render different views of Jupyter notebook markdown based on cell tags\n[blog] MLOps Tech Stack\n[canvas] MLOps Canvas\n[site] Data Nutrition Project, CLeAR Framework paper, Data Nutrition Label paper\n[blog] 10 Dimensions of making data science work by Goda Ramkumar\n\nDimension 1: Expectation\nDimension 2: Strategy\nDimension 3: Roles\nDimension 4: Collaboration\nDimension 5: Culture\nDimension 6: Discovery and Access\nDimension 7: Platforms\nDimension 8: Scalability\nDimension 9: Methodology and Practices\nDimension 10: Quality and Governance [tbd]",
     "crumbs": [
       "Lectures",
-      "02B: Solution Thinking"
+      "02B: Discover"
     ]
   },
   {
     "objectID": "lectures/w03-l01.html",
     "href": "lectures/w03-l01.html",
-    "title": "03A: ML Project Structure",
+    "title": "03A: Models for Modeling",
     "section": "",
     "text": "Materials:\nDate: Tuesday, 13-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "03A: ML Project Structure"
+      "03A: Models for Modeling"
     ]
   },
   {
     "objectID": "lectures/w03-l01.html#materials",
     "href": "lectures/w03-l01.html#materials",
-    "title": "03A: ML Project Structure",
+    "title": "03A: Models for Modeling",
     "section": "",
     "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nML model pipelines are Directed Acyclic Graphs. ML Workbench developed at EkStep was one of the early implementations of this primitive.\nW03-L01 deck\nKedro Tutorial: Part-0 and Part-1. Hands-on and commentary\n\n\n\nPost-class:\n\n[blog]Shreya Shankar on some MLOps Principles\n[git template] MLOps cookie cutter template for another opinionated project structure",
     "crumbs": [
       "Lectures",
-      "03A: ML Project Structure"
+      "03A: Models for Modeling"
     ]
   },
   {
     "objectID": "lectures/w03-l02.html",
     "href": "lectures/w03-l02.html",
-    "title": "03B: DevOps",
+    "title": "03B: DevOps for ML",
     "section": "",
     "text": "Materials:\nDate: Friday, 16-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "03B: DevOps"
+      "03B: DevOps for ML"
     ]
   },
   {
     "objectID": "lectures/w03-l02.html#materials",
     "href": "lectures/w03-l02.html#materials",
-    "title": "03B: DevOps",
+    "title": "03B: DevOps for ML",
     "section": "",
     "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nGit, Docker, Docker Compose, MinIO Object Store\nGit Actions, CI/CD\nKedro Tutorial Hands-on: Kedro pipeline execusion via airflow\nW03-L02\n\n\n\nPost-class:\n\n[Doc] Kedro-Docker Deploy Kedro pipline using Docker via Kedro-Docker plug-in\n[blog]Git Flow a mental model of how to work with Git, branching process, and feature development\n[video] Git actions for Metrics tracking\nFew additional resources on Git, Git Actions, Docker in the Tutorials chapter.",
     "crumbs": [
       "Lectures",
-      "03B: DevOps"
+      "03B: DevOps for ML"
     ]
   },
   {
     "objectID": "lectures/w04-l01.html",
     "href": "lectures/w04-l01.html",
-    "title": "04A: Dev in Kedro",
+    "title": "04A: Develop",
     "section": "",
     "text": "Materials:\nDate: Tuesday, 20-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "04A: Dev in Kedro"
+      "04A: Develop"
     ]
   },
   {
     "objectID": "lectures/w04-l01.html#materials",
     "href": "lectures/w04-l01.html#materials",
-    "title": "04A: Dev in Kedro",
+    "title": "04A: Develop",
     "section": "",
     "text": "Pre-work:\n\nKedro Tutorial Part-0, Part-1.\n\n\n\nIn-Class\n\nA framework to think about metrics. For example, by focussing on who the the solution is for, metrics such as affordability, availability, accessibility, become definable.\nWorking with notebooks in Kedro (Kedro context magic)\nAPI documentation with quartodoc based on quarto, an alternative to sphinx\nTesting with PyTest.\nLinting and formating with ruff.\nW04-L01 Metrics slides #35-38 (more on metrics section)\n\n\n\nPost-class:\n\n[Deck] W04-L01. Review the material.\n[Docs] Kedro-Docker work with notebooks inside Kedro.\n[Docs] quartodoc Turn your docstrings into documentation with quartodoc. Plus any other content (notebooks, qmd files) can be rendered using quarto of course.\n[Docs] PyTest in Kedro\n[Docs] [ruff in Kedro](See Kedro docs",
     "crumbs": [
       "Lectures",
-      "04A: Dev in Kedro"
+      "04A: Develop"
     ]
   },
   {
     "objectID": "lectures/w04-l02.html",
     "href": "lectures/w04-l02.html",
-    "title": "04B: Data Quality Tests",
+    "title": "04B: Monitor (Data)",
     "section": "",
     "text": "Materials:\nDate: Friday, 23-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "04B: Data Quality Tests"
+      "04B: Monitor (Data)"
     ]
   },
   {
     "objectID": "lectures/w04-l02.html#materials",
     "href": "lectures/w04-l02.html#materials",
-    "title": "04B: Data Quality Tests",
+    "title": "04B: Monitor (Data)",
     "section": "",
     "text": "Pre-work:\n\nSee how logistic regression test cases were written in sklearn. In particular, see how the test was prepared which makes it possible to test the fitted coeffcients analytically.\nSee how Peceptron test cases were written on Iris data.\n\n\n\nIn-Class\n\nQA for Data. It is all about asserting the statistical properties of the data.\nDiscussion on extracting statistical quality features into a table for any modality (tabular, image, speech, text)\nTesting columnar data with explicit conditions. Great Expectations defines them as expectations and validates them given a new data. For example, an expectation can be\n\na column can have at most 5% missing values\nthe range of the columns can be between [-2,10]\n\nTesting columnar data with implicit conditions. One dataset will be compared against a reference dataset. Evidently comes with many tests for reporting, model comparison, data drift detection. For example, we can compare whether or not the label distribution is same between the Train set and the Test set. A question for all readers - how often have you “actually” ran any statistical test to see if the Train and Test set are actually similar in distribution. My guess, less than 10% would have done it. The remaining would have called sklearn’s train_test_split function :)\n\n\n\nPost-class:\n\n[Blog] ETL testing with Great Expectations\n[Docs] Great Expectations Documentation. Please note that with version 1.0 released, even the examples from its repo are not working. Read them to understand what are typical tests on columnar data look like.\n[Notebooks] Evidently examples. Browse through and run how Evidently automates many test cases. Also see community examples here",
     "crumbs": [
       "Lectures",
-      "04B: Data Quality Tests"
+      "04B: Monitor (Data)"
+    ]
+  },
+  {
+    "objectID": "lectures/w05-l01.html",
+    "href": "lectures/w05-l01.html",
+    "title": "05B: Monitor (Models)",
+    "section": "",
+    "text": "Materials:\nDate: Tuesday, 27-Aug-2024.",
+    "crumbs": [
+      "Lectures",
+      "05B: Monitor (Models)"
+    ]
+  },
+  {
+    "objectID": "lectures/w05-l01.html#materials",
+    "href": "lectures/w05-l01.html#materials",
+    "title": "05B: Monitor (Models)",
+    "section": "",
+    "text": "Pre-work:\n\nReview Diagnostics of ML Systems from CS329s\n\n\n\nIn-Class\n\nRecap tests for monitoring data quality in the ETL stage\nUnderstand different types of drifts (label, covariate, concept) and ways to detect them that may be important in the model development stage\nCollecting data in the training stage - see Training Data, from CS329s\nData Programming - programmatically create labels. snorkel introduced these ideas first in the NLP space.\nSynthetic Data Generation using LLMs is a very promising and emerging application LLMs. For example, we can create labels of a piece of text, by prompting LLMs.\n\n\n\nPost-class:\n\nReview Training Data, from CS329s\nReview Feature Engineering, from CS329s",
+    "crumbs": [
+      "Lectures",
+      "05B: Monitor (Models)"
+    ]
+  },
+  {
+    "objectID": "lectures/w05-l02.html",
+    "href": "lectures/w05-l02.html",
+    "title": "05B: Deployment",
+    "section": "",
+    "text": "Materials:\nDate: Friday, 30-Aug-2024.",
+    "crumbs": [
+      "Lectures",
+      "05B: Deployment"
+    ]
+  },
+  {
+    "objectID": "lectures/w05-l02.html#materials",
+    "href": "lectures/w05-l02.html#materials",
+    "title": "05B: Deployment",
+    "section": "",
+    "text": "Pre-work:\n\nmlflow docs\nkedro-mlflow tutorial\n\n\n\nIn-Class\n\nStream vs Batch Deployment\nHands-on Deploying models with mlflow on local server\n\n\n\nPost-class:\n\nReview Model Deployment from CS329s\nReview Monitoring and Continual Learning from CS329s\nReview Model Deployment chapter of ML Engineering book",
+    "crumbs": [
+      "Lectures",
+      "05B: Deployment"
+    ]
+  },
+  {
+    "objectID": "lectures/w06-l01.html",
+    "href": "lectures/w06-l01.html",
+    "title": "06A: Evaluate",
+    "section": "",
+    "text": "Materials:\nDate: Tuesday, 03-Sep-2024",
+    "crumbs": [
+      "Lectures",
+      "06A: Evaluate"
+    ]
+  },
+  {
+    "objectID": "lectures/w06-l01.html#materials",
+    "href": "lectures/w06-l01.html#materials",
+    "title": "06A: Evaluate",
+    "section": "",
+    "text": "Pre-work:\n\nReview Kolmogorov-Smirnov Test as a way to measure divergence between two continous, univariate distributions\nReview KL Divergence as a way to measure divergence between two arbitrary (continuous/discrete and univariate/multivariate) distributions\n\n\n\nIn-Class\n\nMotivation for why we need Design of Experiments and Hypothesis Testing. Where do they appear in the ML Life Cycle.\nLesson 1 - quick intro to DoE, scientific objectives, basic principles of DoEs, steps for planning, conducting, and analyzing an experiment.\nLesson 2 - a simple comparative experiment. The name A/B Testing, perhaps, comes from testing difference between two groups A and B, which is a simple comparative experiment. How to define a business problem as a hypothesis test, collect data, perform the test, draw conclusion are demonstrated. How to calculate the sample size, probably the most important question that gets asked, is also explained in this simple case.\n\n\n\nPost-Class\n\nReview Model Selection from CS329s\nReview Model Evaluation chapter of ML Engineering book\n\n\n\nReferences:\n\n[book] A/B Testing. This book gives a non technical introduction to A/B testing and how they get applied in the e-commerce, website UX optimization, running marketing campaigns. In the appendix, many scenarios of A/B testing are covered.\n[book] Design and Analysis of Experiments. This is a classic in DoE. Lessons 1-2 are necessary.\n[course]STAt 503 Design of Experiments - online course at UPenn\n[course]STAt 514 Design of Experiments - course at Purdue (stats oriented). Chapters 1-4 are needed.\n[book] Statistical Design. This is another classic from George Casella, a celebrated science author.\n\n\n\nNotes\n\nQA for Data discussed earlier is a specific case of A/B testing. CS folks call it A/B testing, but they are all different types of hypothesis tests.\nHypothesis Tests are tools for testing aspects of data. In the ML context, they can be used for testing\n\ndata drift (concept drift, covariate drift, label drift)\ndata quality (implicit and explicit)\nmodel performance\n\nOn Model Testing/ Comparison as a Hypothesis\n\nIs the “alternate” model better than the “baseline” model? Often, ML folks report performance metrics on Test split for all the models and pick the model with the highest performance. It is not uncommon to claim SOTA even when the performance difference is in 1/100ths of decimal places and replication is almost absent :). We do not even know if this difference is due to just chance (randomness in the data) alone. A rigorous (and perhaps, the right) approach would have been to formulate this as a hypothesis test, design an experiment, collect evidence and then conclude which model is better (and is statistically significant). Note that, statistical significance does not mean practical significance, which is often the case with most SOTA claims :). Another classical example to drive this point home is the (in)famous Netflix prize. The top performing model in the million dollar competition never made it to deployment. Find out why.\n\nHyperparameter Tuning and AutoML is a DoE in disguise\n\nthe experimental factors are, for example, the architecture, optimizer, learning rate, batch size, among others. The response variable is the performance. Techniques like Bayesian Optimization, and many techniques used in AutoML are indeed Sequential DoEs (you explore the search space sequentially by looking at the past exploration data). Grid-search, the naïve approach to hyperparameter tuning, can be seen as an implementation of a full-factorial DoE.\nWill ideas from DoE such as a Blocking lead to better search strategies? Can we find out if the learning rate and the optimizer (eg. Adam vs AdamW) interact with each other? The experiments to address these questions are often referred to as Ablation Studies in the ML community. So, by learning the principles of DoEs, we will be able to design (data and compute) efficient ablation studies.\n\nHow to plan and collect data for an ML problem?\n\nin the model-centric ML development, which most, if not all students, start their ML training in, will work on a data given to them in a platter. It is rare for an (undergraduate) student to have taken part in the data collection planning exercise. But once they are thrown into industry, they have to confront a very difficult question? We will address these questions in the next session.",
+    "crumbs": [
+      "Lectures",
+      "06A: Evaluate"
+    ]
+  },
+  {
+    "objectID": "lectures/w06-l02.html",
+    "href": "lectures/w06-l02.html",
+    "title": "06B: Scaling Laws",
+    "section": "",
+    "text": "Materials:\nDate: Friday, 06-Sep-2024",
+    "crumbs": [
+      "Lectures",
+      "06B: Scaling Laws"
+    ]
+  },
+  {
+    "objectID": "lectures/w06-l02.html#materials",
+    "href": "lectures/w06-l02.html#materials",
+    "title": "06B: Scaling Laws",
+    "section": "",
+    "text": "Pre-work:\n\nLesson 2 of Stat503 on planning a simple comparative experiment\n\n\n\nIn-Class\n\nReview sample size calculation in t-test. How sample size is a function of data quality, confidence, and tolerance for errors in the conclusions. Except in simple cases, getting a good sense of the “how much data” is a hard, rather very hard question. But we can try.\nMyth Buster - more data is better\n\nit is like a tautology. this notion never gets challenged. More data does not lead to better RoI. In fact, more of the same can never improve performance beyond a point or in some specific cases, it is impossible.\nlaw of diminishing returns. collecting more data can not only be expensive but can saturate, reaching a plateau. In fact, collecting data to understand where this plateau and what is the ceiling is, is an interesting problem in itself. A well designed experiment can address this question.\n\nCan we estimate the sample size needed?\n\nback of the envelope calculations based on some idea about the data, based on two-sample sample size calculations\nfrom PAC theory bounds (Chapter 8 of An Elementary Introduction to Statistical Learning Theory)\nempirical scaling laws\n\nHow to recruit data? Are all individual data points equal?\n\nactive learning\ncords for a collection of works/implementations based on subset selection\n\n\n\n\nPost-class\n\n[book] An Elementary Introduction to Statistical Learning Theory. See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.\n[paper] Training Compute-Optimal LLMs\n[paper] Understanding Dataset difficulty\n\n\n\nAdditional Reading (optional)\n\n[paper] Scaling Laws for Neural Language Models\n[paper] An empirical study of scaling laws for transfer learning\n[paper] Scaling laws for Individual data points\n[paper] Scaling laws in Linear Regression\n\n\n\nNotes\ntbd",
+    "crumbs": [
+      "Lectures",
+      "06B: Scaling Laws"
     ]
   },
   {
@@ -443,7 +531,7 @@
     "href": "homeworks.html#sec-hw-03",
     "title": "Homeworks",
     "section": "HW-03",
-    "text": "HW-03\nReading\n\nEvidently: Read Evidently, an ML & Data Quality and Monitoring tool.\nCh 8 of ML System Design\nBlogs from Great Expectations\n\nTask\n\nThis HW focuses on Data-driven code structure, documentation, code hygiene, testing, and data quality assessment & reporting.\nA Google Drive folder with your github handle is shared. This contains a dataset.\nCreate a branch named hw03 of your private repo.\nSimilar to the Kedro spaceflights tutorial, write your data loading, model training, and testing, pipeline interms of nodes and pipelines.\nMake sure that\n\nAPIs are documented with quartodoc\nCode is linted and formatted (with ruff)\nNodes and Pipelines are Unit tested (with PyTest).\nData Quality and Drift Detection Test suites using Evidently are run and the reports are represented as Plotly nodes in Kedro .\nAutomated test to detect distribution drift of target variable(represented as y in the dataset) between Train and Test splits is run using Evidently. The pipeline fails if distribution drift is detected.\n\n\nDue by\n11.59PM IST, Friday, 03rd Sep, 2024.",
+    "text": "HW-03\nReading\n\nEvidently: Read Evidently, an ML & Data Quality and Monitoring tool.\nCh 8 of ML System Design\nBlogs from Great Expectations\n\nTask\n\nThis HW focuses on Data-driven code structure, documentation, code hygiene, testing, and data quality assessment & reporting.\nA Google Drive folder with your github handle is shared. This contains a dataset.\nCreate a branch named hw03 of your private repo.\nSimilar to the Kedro spaceflights tutorial, write your data loading, model training, and testing, pipeline interms of nodes and pipelines.\nMake sure that\n\nAPIs are documented with quartodoc\nCode is linted and formatted (with ruff)\nNodes and Pipelines are Unit tested (with PyTest).\nData Quality and Drift Detection Test suites using Evidently are run and the reports are represented as Plotly nodes in Kedro .\nAutomated test to detect distribution drift of target variable(represented as y in the dataset) between Train and Test splits is run using Evidently. The pipeline fails if distribution drift is detected.\n\n\nDue by\n11.59PM IST, Friday, 06th Sep, 2024.",
     "crumbs": [
       "Homeworks"
     ]
