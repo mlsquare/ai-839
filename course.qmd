@@ -39,6 +39,7 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 | Wk | Dt | Topics | Resources |
 | :- | :- | :------- | :------- |
 | 03 | 16-Aug |  Intro to DevOps <br> [ML Engineering]  | [Ravi Mula](https://www.linkedin.com/in/ravismula/) <br> Architect: [Sanketika](https://sanketika.in/) |
+| 08 | 20-Sep |  ML Platforms <br> [ML Engineering]  | [Abhishek Choudhary](https://www.linkedin.com/in/abhishekch123/) <br> Co-Founder & CTO: [TrueFoundry](https://www.truefoundry.com/) |
 | 10 | 15-Oct |  Deploying on Edges <br> [ML Engineering]  | [Dr. Srinivas Rana](https://www.linkedin.com/in/srinivasrana/) <br> Sr ML Scientist: [Wadhwani AI](https://www.wadhwaniai.org/) |
 | 13 | 08-Nov | Building LLMs in Production in Regulated Industry <br> [System Design] | [Dr. Venkata Pingali](https://www.linkedin.com/in/pingali/) <br> Co-Founder: [Scribble Data](https://www.scribbledata.io/) |
 : Guest Lectures {.striped}
