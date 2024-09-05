@@ -13,6 +13,6 @@ Date: Friday, 30-Aug-2024.
 2. Hands-on Deploying models with mlflow on local server
 
 ### Post-class:
-1. Review [Model Deployment](https://docs.google.com/presentation/d/1U_zKs19VLJKnGE02JDRnzxJ8lgeVF22WSZ_GrA646fY/edit?usp=sharing) from [CS329s](https://stanford-cs329s.github.io/) 
+1. Review [Model Deployment](https://docs.google.com/presentation/d/1U_zKs19VLJKnGE02JDRnzxJ8lgeVF22WSZ_GrA646fY/edit?usp=sharing) from [CS329s](https://stanford-cs329s.github.io/). [Note: Dr. Srinivas Rana will cover Model Compression, Quantization etc in his talk on _Deployment on Edge_]
 2. Review [Monitoring and Continual Learning](https://docs.google.com/presentation/d/1yvbJJukJjJxlLr6dAVB5dENl_9o5621z7A3P0DF5m4E/edit?usp=sharing) from [CS329s](https://stanford-cs329s.github.io/)
 3. Review [Model Deployment](https://www.dropbox.com/scl/fi/rdkviwr35zigfgsl7memz/Chapter8.pdf?rlkey=1v0kqmko0sl57eunxdmlq1jrc&e=1&dl=0) chapter of [ML Engineering](https://www.mlebook.com/wiki/doku.php) book
