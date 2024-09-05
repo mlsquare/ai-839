@@ -179,7 +179,7 @@
     "href": "index.html#announcements",
     "title": "AI-839",
     "section": "Announcements",
-    "text": "Announcements\n\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
+    "text": "Announcements\n\n[05-September-2024] Homework, Minor and Major preoject details added. See HW-05, HW-06, Minor Project, Major Project for details. Course pages updated.\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
     "crumbs": [
       "Welcome"
     ]
@@ -421,23 +421,23 @@
   {
     "objectID": "lectures/w05-l01.html",
     "href": "lectures/w05-l01.html",
-    "title": "05B: Monitor (Models)",
+    "title": "05A: Monitor (Models)",
     "section": "",
     "text": "Materials:\nDate: Tuesday, 27-Aug-2024.",
     "crumbs": [
       "Lectures",
-      "05B: Monitor (Models)"
+      "05A: Monitor (Models)"
     ]
   },
   {
     "objectID": "lectures/w05-l01.html#materials",
     "href": "lectures/w05-l01.html#materials",
-    "title": "05B: Monitor (Models)",
+    "title": "05A: Monitor (Models)",
     "section": "",
     "text": "Pre-work:\n\nReview Diagnostics of ML Systems from CS329s\n\n\n\nIn-Class\n\nRecap tests for monitoring data quality in the ETL stage\nUnderstand different types of drifts (label, covariate, concept) and ways to detect them that may be important in the model development stage\nCollecting data in the training stage - see Training Data, from CS329s\nData Programming - programmatically create labels. snorkel introduced these ideas first in the NLP space.\nSynthetic Data Generation using LLMs is a very promising and emerging application LLMs. For example, we can create labels of a piece of text, by prompting LLMs.\n\n\n\nPost-class:\n\nReview Training Data, from CS329s\nReview Feature Engineering, from CS329s",
     "crumbs": [
       "Lectures",
-      "05B: Monitor (Models)"
+      "05A: Monitor (Models)"
     ]
   },
   {
@@ -511,7 +511,47 @@
     "href": "homeworks.html",
     "title": "Homeworks",
     "section": "",
-    "text": "HW-04\nReading\nTask\nDue by\n11.59PM IST, Friday, 13th Sep, 2024.",
+    "text": "Major Project\nTask\nNote:\nDue:\nProposal Submission:\n- 11.59PM IST, Friday, 20th Oct, 2024.\nPresentations:\n- 26th and 29th, Nov, 2024, in-class.\nFinal Submission:\n- 11.59PM IST, Friday, 29th Nov, 2024.",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "homeworks.html#sec-hw-major",
+    "href": "homeworks.html#sec-hw-major",
+    "title": "Homeworks",
+    "section": "",
+    "text": "This major project focuses on baking all the software engineering best practices, MLOps lifecycle and holistic ML into one code base. All the objectives of the Minor Project should be there. In addition,\n\nat dataset (aggregate) level, models are\n\nexplainable\ncalibrated\nassessed for robustness\n\nat inference time, for every instance, the following are available\n\nconformal predictions\nexplanations\ntrust scores\n\n\n\n\n\nYou can choose any problem or build on the Tabular Data provided in the class. Above must be available on major-project branch of your course private repo.\nSubmit your proposal no later than October 20th, 2024, Friday, 13.00pm IST. In the repo, create a README.md file at the root.\nIn addition to the code, you have present the project on 26th-29th November, in-class.",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "homeworks.html#sec-hw-minor",
+    "href": "homeworks.html#sec-hw-minor",
+    "title": "Homeworks",
+    "section": "Minor Project",
+    "text": "Minor Project\nTask\n\nThis minor (mini) project focuses on baking all the software engineering best practices and MLOps lifecycle into one code base\nCreate a branch named minor-project of your private repo.\nFor the dataset including all Tranche shared on your google drive, show that, your Models, Data, and Pipelines are\n\nProject Cards, Data Cards, Model Cards, MLOps Cards are populated and are data driven.\nCode is modular, linted, and tested\nCI/CD hooks are implemented\nModel is deployed and available via an API.\nInference can be scaled\nModel is monitored, and a new model is deployed when an opportunity or a need to redeploy is detected.\nRight to be forgotten is enabled.\n\nOne way to think about it is, it is is culmination of HWs up until now.\n\nDue by\n11.59PM IST, Friday, 25th Oct, 2024.",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "homeworks.html#sec-hw-06",
+    "href": "homeworks.html#sec-hw-06",
+    "title": "Homeworks",
+    "section": "HW-06",
+    "text": "HW-06\nReading\n\nRight to Erasure act of GDPR\n\nTask\n\nThis HW focuses on the ability to implement techniques to enforce the “right to erase” policy\nCreate a branch named hw06 of your private repo.\nTreat the model you have built in HW-04 as your baseline, call it Model A\nImagine the first 10 records were to be erased.\nImplement a strategy s.t those 10 records will not be used in any future predictions. Update the API, and Data and Model cards to reflect this change.\nSuggest a method to implement “right to erasure” such that, even all past predictions that were influenced by the 10 records will be re-scored, and pushed.\n\nDue by\n11.59PM IST, Friday, 18th Oct, 2024.",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "homeworks.html#sec-hw-05",
+    "href": "homeworks.html#sec-hw-05",
+    "title": "Homeworks",
+    "section": "HW-05",
+    "text": "HW-05\nReading\n\nmlflow Read mlflow documentation\nkedro-mlflow Read kedro-mlflow plug-in documentation\n\nTask\n\nThis HW focuses on Model Comparison and Continuous Improvement\nIt builds on HW03-04. See instructions for HW-03, HW-04.\nCreate a branch named hw05 of your private repo.\nTreat the model you have built in HW-04 as your baseline, call it Model A\nA new tranche of data is shared with you on google drive.\nAsses the performance of Model A on this new tranche data. Is the model performing well on all metrics (i.e data drift)?\nDevelop an alternate model, call it Model B. Run a Hypothesis test to see Model B is better than Model A on new tranche of data shared in your private repo.\nDeploy Model B if the performance is better than Model A on the new tranche of data. Update metadata of the API to reflect the new model version being used to make the predictions.\n\nDue by\n11.59PM IST, Friday, 20th Sep, 2024.",
     "crumbs": [
       "Homeworks"
     ]
@@ -520,8 +560,8 @@
     "objectID": "homeworks.html#sec-hw-04",
     "href": "homeworks.html#sec-hw-04",
     "title": "Homeworks",
-    "section": "",
-    "text": "mlflow Read mlflow documentation\nkedro-mlflow Read kedro-mlflow plug-in documentation\n\n\n\nThis HW focuses on Deployment and Monitoring.\nIt builds on HW03. See instructions for HW-03.\nCreate a branch named hw04 of your private repo.\nMake sure that\n\nDefine the request and response structure of the API. Provide API documentation.\nModel is deployed and API is available via kedro-mlflow plug-in.\nModel usage is logged",
+    "section": "HW-04",
+    "text": "HW-04\nReading\n\nmlflow Read mlflow documentation\nkedro-mlflow Read kedro-mlflow plug-in documentation\n\nTask\n\nThis HW focuses on Deployment and Monitoring.\nIt builds on HW03. See instructions for HW-03.\nCreate a branch named hw04 of your private repo.\nMake sure that\n\nDefine the request and response structure of the API. Provide API documentation.\nModel is deployed and API is available via kedro-mlflow plug-in.\nModel usage is logged\n\n\nDue by\n11.59PM IST, Friday, 13th Sep, 2024.",
     "crumbs": [
       "Homeworks"
     ]
