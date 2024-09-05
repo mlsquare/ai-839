@@ -456,7 +456,7 @@
     "href": "lectures/w05-l02.html#materials",
     "title": "05B: Deployment",
     "section": "",
-    "text": "Pre-work:\n\nmlflow docs\nkedro-mlflow tutorial\n\n\n\nIn-Class\n\nStream vs Batch Deployment\nHands-on Deploying models with mlflow on local server\n\n\n\nPost-class:\n\nReview Model Deployment from CS329s\nReview Monitoring and Continual Learning from CS329s\nReview Model Deployment chapter of ML Engineering book",
+    "text": "Pre-work:\n\nmlflow docs\nkedro-mlflow tutorial\n\n\n\nIn-Class\n\nStream vs Batch Deployment\nHands-on Deploying models with mlflow on local server\n\n\n\nPost-class:\n\nReview Model Deployment from CS329s. [Note: Dr. Srinivas Rana will cover Model Compression, Quantization etc in his talk on Deployment on Edge]\nReview Monitoring and Continual Learning from CS329s\nReview Model Deployment chapter of ML Engineering book",
     "crumbs": [
       "Lectures",
       "05B: Deployment"
