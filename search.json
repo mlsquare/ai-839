@@ -358,7 +358,7 @@
     "href": "lectures/w03-l02.html#materials",
     "title": "03B: DevOps for ML",
     "section": "",
-    "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nGit, Docker, Docker Compose, MinIO Object Store\nGit Actions, CI/CD\nKedro Tutorial Hands-on: Kedro pipeline execusion via airflow\nW03-L02\n\n\n\nPost-class:\n\n[Doc] Kedro-Docker Deploy Kedro pipline using Docker via Kedro-Docker plug-in\n[blog]Git Flow a mental model of how to work with Git, branching process, and feature development\n[video] Git actions for Metrics tracking\nFew additional resources on Git, Git Actions, Docker in the Tutorials chapter.",
+    "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nGit, Docker, Docker Compose, MinIO Object Store\nGit Actions, CI/CD\nKedro Tutorial Hands-on: Kedro pipeline execusion via airflow\nW03-L02\n\n\n\nPost-class:\n\n[Doc] Kedro-Docker Deploy Kedro pipline using Docker via Kedro-Docker plug-in\n[blog]Git Flow a mental model of how to work with Git, branching process, and feature development\n[video] Git actions for Metrics tracking\nFew additional resources on Git, Git Actions, Docker in the Tutorials chapter.\n[code] Data Science Life Cycle Process a git flow like Issue tracker and branching process more suitable for Data Science Projects.",
     "crumbs": [
       "Lectures",
       "03B: DevOps for ML"
