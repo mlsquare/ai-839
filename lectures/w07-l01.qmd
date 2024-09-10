@@ -23,9 +23,9 @@ Date: Friday, 06-Sep-2024
 
 1. \[book\] [An Elementary Introduction to Statistical Learning Theory](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471). See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.
 2. \[youtube\] [PAC Learning](https://www.youtube.com/watch?v=qOMOYM0WCzU) Ali Ghosi Lec 19 PAC Learning, STAT 441/841 Statistical Learning, University of Waterloo
-3. \[paper\] [Learning Sample Difficulty from Pre-trained Models for Reliable Prediction](https://proceedings.neurips.
+3. \[paper\] [Learning Sample Difficulty from Pre-trained Models for Reliable Prediction](https://proceedings.neurips.cc/paper_files/paper/2023/file/50251f54848a433f3e47ae3b7cbded53-Paper-Conference.pdf)
 4. \[paper\] [Training Compute-Optimal LLMs](https://arxiv.org/abs/2203.15556)
-5. \[paper\] [A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection](https://arxiv.org/abs/2106.09022
+5. \[paper\] [A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection](https://arxiv.org/abs/2106.09022)
 
 ### Additional Reading (optional)
 
@@ -37,13 +37,50 @@ Date: Friday, 06-Sep-2024
 6. \[paper\] [An empirical study of scaling laws for transfer learning](https://arxiv.org/abs/2408.16947v1)
 7. \[paper\] [Scaling laws for Individual data points](https://arxiv.org/abs/2405.20456)
 8. \[paper\] [Scaling laws in Linear Regression](https://arxiv.org/abs/2406.08466v1)
-cc/paper_files/paper/2023/hash/50251f54848a433f3e47ae3b7cbded53-Abstract-Conference.html)
 9. \[paper\] [Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI](https://arxiv.org/abs/2403.04551)
 10. \[paper\] [Learning Sample Difficulty from Pre-trained Models
 for Reliable Prediction](https://arxiv.org/abs/2304.10127) NeurIPS'23
 
 
-
-
 ### Notes
-tbd
+
+When embarking on a problem, the first set of questions are ask or you have to answer are:
+
+1. What type/kind of data is needed or useful for the problem at hand.
+2. How many samples do you need.
+
+Let us briefly discuss the first question about "**what kind**". 
+
+We [discussed](./w02-l02.qmd) ideation tools like [Design Thinking](https://web.stanford.edu/~mshanks/MichaelShanks/files/509554.pdf), [Human-centered Design](https://online.hbs.edu/blog/post/what-is-human-centered-design) to engage with the problem (to define what to solve). In the [Project Canvas](./../resources/project-card.ipynb), we also discussed what is the ML Task, and what kind of data is needed to solve the business problem. 
+
+For example, suppose the problem is, say, assessing the quality of food grains. The business problem is to  objectively assess the grain quality and decide a fair price linked to the quality. ML problem is to grade the grains, identify any foreign materia/contaminations, may be based on the morphology of the grains. What kind of data is needed here? We can treat this problem as a combination of segmentation, object detection, object classification, morphology analysis, and granulometry. Data must support these tasks. See the blogs [Image Annotation Definition, Usecases and Types](https://www.v7labs.com/blog/image-annotation-guide), [Best practices for successful image annotation](https://labelbox.com/guides/image-annotation/), [Data Annotation - A beginner's guide](https://opencv.org/blog/data-annotation/) to delve into this topic further. Annotating images for segmentation at grain level is very time consuming but can potentially to be very useful. Treating this problem into grades is relatively easy in terms of annotations but can not pivot to a different problem formulation if the solution is proved not useful. This is an inherent design challange. Getting as many details as possible is desirable but many not be practical. But thankfully, with foundation models like [SAM](https://segment-anything.com/), some of this leg work can be automated. See this [paper](https://arxiv.org/abs/2105.04678) on sample selection for efficient image annotation. Most modern annotation studies offer some support to speed-up the process.
+
+While the above support primary ML task, say the segmentation task, for example, they may not be sufficient to offer SLAs or Model monitoring (battling the unknown unknowns) that we discussed in [Model Monitoring](./w05-l01.qmd). Suppose, for the same problem, the model is deployed in two grain collection points. Training data was collected from the the first site (for rice grains), and model is being is used in the second site. It so happens that, the second site is using the model for "wheat" instead of "rice." Obviously, model will perform poorly. This may not have been anticipated ahead of time. Only way to detect this is to first log the data, where the model is being used, and observe the performance by site. Thinking about dimensions is the topic of _knowledge representation_ and _knowledge engineering_. Dimensional Modeling](https://www.ibm.com/docs/en/ida/9.1.2?topic=modeling-dimensional) is a framework to adopt to collect data that can address the concerns of different stakeholders besides the ML and Data Scientists such as a Software Engineer, QA, Architect, Product Manager, Site Manager etc. IBM's book on [Dimensional Modeling: In a Business Intelligence Environment](https://www.redbooks.ibm.com/redbooks/pdfs/sg247138.pdf) is a definitive guide on this topic. [A knowledge Engineering Primer ](https://arxiv.org/abs/2305.17196) is perhaps a lighter compared to the book.
+
+Now let us move to the other question. **How many?** 
+
+This question gets very complicated in no time. So, let us simplify and consider a _regression problem_. We are trying to learn a function $f: [0,1] \rightarrow R$. Imagine you are fitting a decision tree to approximate this function. A decision tree partitions the input space, and each of the partitions certain statistics like mean and quintiles are computed. For a given instance, the prediction is, for example, mean of all responses of the examples belonging to that partition. So, we divide or cluster or partition the training data into $K$ subsets and compute some statistic of of each these partitions. If we assume that this labels (response) of the k-th partition $y_k$ follow $N(\mu_k, \sigma^2)$, we can estimate the $(1-\alpha)$ level prediction interval (PI) for $\mu_k$ as 
+$$\bar{y}_k + z_{1-\frac{\alpha}{2}}\sigma \sqrt{1+\frac{1}{N}}$$
+
+  where $\bar{y}_k$ is the sample mean, $N$ is the sample size, $\sigma^2$ is the noise variance, $\alpha$ controls the confidence level (or type-1 error of the corresponding hypothesis test). So the "design inputs" needed to solicit a sample size are: $\alpha$, $\sigma^2$. Sometimes, the precision needed for the estimate can be asserted in terms of the width of the interval (PIW). In this case, PIW is given as $PIW = 2z_{1-\frac{\alpha}{2}}\sigma \sqrt{1+\frac{1}{N}}$. For large $n$, $PIW \approx 2z_{1-\frac{\alpha}{2}} \frac{\sigma}{\sqrt{N}}$. Now we can express sample size as a function of $PIW$, $\alpha$ as: $N \approx \left(\frac{2\sigma z_{1-\frac{\alpha}{2}}}{PIW} \right)^2$. If there are $K$ partitions, we need to estimate that many $\mu_k$s. So, the total sample size will be $NK$ assuming all partitions have same variance. If not, is is not hard to update the formula. In someways, the model complexity is captured by $K$. One do not know these numbers in advance. One has to make an educated guess based on domain knowledge and refine as the experiment is in motion.
+
+
+What about the **classification** problem?
+
+Assume it is a binary classification problem. Approach is still identical. Even in the classificaiton setting, estimating the mean and taking _argmax_ to predict the label of the partition is still useful and applicable except that the $PI$ formula needs to be updated.
+
+Can we **relax the assumptions** and yet come-up with some estimates for $N$_?
+
+We can invoke PAC theory. Suppose $\epsilon$ is the tolerable error (that the test error should not exceed), $\delta$ is the confidence in the learning algorithm that test error can exceed $\epsilon$ by no more than $\delta$ fraction of times and $V$ is the VC-dimensionof the function class. The following bounds from PAC theory can guide us:
+
+$$\frac{1}{\epsilon}\left(4\log(\frac{2}{\delta}) + 8V\log(\frac{13}{\epsilon}) \right) \le N \le \frac{64}{\epsilon^2}\left(2V \log(\frac{V}{\epsilon}) + \log(\frac{4}{\delta}) \right)  $$
+
+In particular, if one uses an MLP, following is a lower bound on the VC-dimension $$V \le 2(d+1)s \log(2.718s)$$ where $d$ is the number of features, $s$ is the number of perceptrons in the network. So, in effect, given an MLP architecture (with $s$ number of perceptrons), confidence($\delta$), permissible error ($\epsilon$), input features ($d$), one can get an idea of the sample size.
+
+
+What about **Large Language Models**? 
+
+This area is emerging with results and counter-results. But some early works fit parametric curves to predict performance given training data (counted in terms of number of tokens) and for a given compute budget. See this paper on [Training Compute-Optimal LLMs](https://arxiv.org/abs/2203.15556) and references therein to get a sense.
+
+
+

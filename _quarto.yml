@@ -32,7 +32,7 @@ book:
   - preface.qmd
   - index.qmd
   - course.qmd        
-  - part: Lectures
+  - part: Lectures[ML Engg.]
     chapters:
     - ./lectures/w01-l01.qmd
     - ./lectures/w02-l01.qmd
@@ -45,6 +45,9 @@ book:
     - ./lectures/w05-l02.qmd
     - ./lectures/w06-l01.qmd
     - ./lectures/w06-l02.qmd
+  - part: Lectures[ML Science]
+    chapters:
+    - ./lectures/w07-l01.qmd
   - homeworks.qmd
   - projects.qmd
   - tutorials.qmd
