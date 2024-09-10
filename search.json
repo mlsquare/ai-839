@@ -261,7 +261,7 @@
     "section": "",
     "text": "Materials:\nDate: Thursday, 01-Aug-2024.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "01A: Grounding MLOps"
     ]
   },
@@ -272,7 +272,7 @@
     "section": "",
     "text": "Pre-work:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible here\n\n\n\nIn-Class\n\nWe will go over W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\n\n\n\nPost-class:\n\nRead the motivation for MLOps from this blog.\nML Life Cycle CRISP-ML9(Q): blog, paper\nCh1-2 of AB, Ch1 of VT, Ch1 of CH1",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "01A: Grounding MLOps"
     ]
   },
@@ -283,7 +283,7 @@
     "section": "",
     "text": "Materials:\nDate: Tuesday, 06-Aug-2024.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "02A: Grounding MLOps"
     ]
   },
@@ -294,7 +294,7 @@
     "section": "",
     "text": "Pre-work:\n\nRead the motivation for MLOps from this blog.\nReview W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\n\n\n\nIn-Class\n\nML Production Myths W01-L01-Deck\nSoftware 1.0 vs Software 2.0. See this W01-L02-Deck\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\n\n\n\nPost-class:\n\n[blog] A simple Tool to Start Making Decisions with the Help of AI\n[book, optional] Prediction Machines: The Simple Economics of AI, Ajay Agrawal, Joshua Gans, Avi Goldfare\n[blog] Why Metaflow\n[blog] Building and Managing Data Science Pipelines with Kedro from neptune.ai",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "02A: Grounding MLOps"
     ]
   },
@@ -305,7 +305,7 @@
     "section": "",
     "text": "Materials:\nDate: Friday, 09-Aug-2024.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "02B: Discover"
     ]
   },
@@ -314,9 +314,9 @@
     "href": "lectures/w02-l02.html#materials",
     "title": "02B: Discover",
     "section": "",
-    "text": "Pre-work:\n\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\nML Life Cycle CRISP-ML9(Q): blog, paper\n\n\n\nIn-Class\n\nDesign Thinking from Stanford Design School. It is a useful ideation tool to formulate a problem and develop a solution.\nProject Cards a Jupyter Notebook template for Project Cards. It touches the aspects of data-driven documentation and maintaining single source of truth for any document containing data. A WIP document on Data-driven ML Documentation. This also forms an important aspect of Transparency\nW02-L02 deck\n\n\n\nPost-class:\n\n[tool] JupDoc - render different views of Jupyter notebook markdown based on cell tags\n[blog] MLOps Tech Stack\n[canvas] MLOps Canvas\n[site] Data Nutrition Project, CLeAR Framework paper, Data Nutrition Label paper\n[blog] 10 Dimensions of making data science work by Goda Ramkumar\n\nDimension 1: Expectation\nDimension 2: Strategy\nDimension 3: Roles\nDimension 4: Collaboration\nDimension 5: Culture\nDimension 6: Discovery and Access\nDimension 7: Platforms\nDimension 8: Scalability\nDimension 9: Methodology and Practices\nDimension 10: Quality and Governance [tbd]",
+    "text": "Pre-work:\n\nMLOps Motivation\nAI/ML Canvas from ml-ops.org Phase-Zero, Gokul Mohandas’s Project Canvas\nML Life Cycle CRISP-ML9(Q): blog, paper\n\n\n\nIn-Class\n\nDesign Thinking from Stanford Design School. It is a useful ideation tool to formulate a problem and develop a solution.\nProject Cards a Jupyter Notebook template for Project Cards. It touches the aspects of data-driven documentation and maintaining single source of truth for any document containing data. A WIP document on Data-driven ML Documentation. This also forms an important aspect of Transparency\nW02-L02 deck\n\n\n\nPost-class:\n\n[blog] MLOps Tech Stack\n[canvas] MLOps Canvas\n[site] Data Nutrition Project, CLeAR Framework paper, Data Nutrition Label paper\n[blog] 10 Dimensions of making data science work by Goda Ramkumar\n\nDimension 1: Expectation\nDimension 2: Strategy\nDimension 3: Roles\nDimension 4: Collaboration\nDimension 5: Culture\nDimension 6: Discovery and Access\nDimension 7: Platforms\nDimension 8: Scalability\nDimension 9: Methodology and Practices\nDimension 10: Quality and Governance [tbd]",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "02B: Discover"
     ]
   },
@@ -327,7 +327,7 @@
     "section": "",
     "text": "Materials:\nDate: Tuesday, 13-Aug-2024.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "03A: Models for Modeling"
     ]
   },
@@ -338,7 +338,7 @@
     "section": "",
     "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nML model pipelines are Directed Acyclic Graphs. ML Workbench developed at EkStep was one of the early implementations of this primitive.\nW03-L01 deck\nKedro Tutorial: Part-0 and Part-1. Hands-on and commentary\n\n\n\nPost-class:\n\n[blog]Shreya Shankar on some MLOps Principles\n[git template] MLOps cookie cutter template for another opinionated project structure",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "03A: Models for Modeling"
     ]
   },
@@ -349,7 +349,7 @@
     "section": "",
     "text": "Materials:\nDate: Friday, 16-Aug-2024.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "03B: DevOps for ML"
     ]
   },
@@ -360,7 +360,7 @@
     "section": "",
     "text": "Pre-work:\n\nMLOps Platforms some goals\nConvention over Configuration\nData Flow Paradigm\n\n\n\nIn-Class\n\nGit, Docker, Docker Compose, MinIO Object Store\nGit Actions, CI/CD\nKedro Tutorial Hands-on: Kedro pipeline execusion via airflow\nW03-L02\n\n\n\nPost-class:\n\n[Doc] Kedro-Docker Deploy Kedro pipline using Docker via Kedro-Docker plug-in\n[blog]Git Flow a mental model of how to work with Git, branching process, and feature development\n[video] Git actions for Metrics tracking\nFew additional resources on Git, Git Actions, Docker in the Tutorials chapter.\n[code] Data Science Life Cycle Process a git flow like Issue tracker and branching process more suitable for Data Science Projects.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "03B: DevOps for ML"
     ]
   },
@@ -371,7 +371,7 @@
     "section": "",
     "text": "Materials:\nDate: Tuesday, 20-Aug-2024.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "04A: Develop"
     ]
   },
@@ -382,7 +382,7 @@
     "section": "",
     "text": "Pre-work:\n\nKedro Tutorial Part-0, Part-1.\n\n\n\nIn-Class\n\nA framework to think about metrics. For example, by focussing on who the the solution is for, metrics such as affordability, availability, accessibility, become definable.\nWorking with notebooks in Kedro (Kedro context magic)\nAPI documentation with quartodoc based on quarto, an alternative to sphinx\nTesting with PyTest.\nLinting and formating with ruff.\nW04-L01 Metrics slides #35-38 (more on metrics section)\n\n\n\nPost-class:\n\n[Deck] W04-L01. Review the material.\n[Docs] Kedro-Docker work with notebooks inside Kedro.\n[Docs] quartodoc Turn your docstrings into documentation with quartodoc. Plus any other content (notebooks, qmd files) can be rendered using quarto of course.\n[Docs] PyTest in Kedro\n[Docs] [ruff in Kedro](See Kedro docs",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "04A: Develop"
     ]
   },
@@ -393,7 +393,7 @@
     "section": "",
     "text": "Materials:\nDate: Friday, 23-Aug-2024.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "04B: Monitor (Data)"
     ]
   },
@@ -404,7 +404,7 @@
     "section": "",
     "text": "Pre-work:\n\nSee how logistic regression test cases were written in sklearn. In particular, see how the test was prepared which makes it possible to test the fitted coeffcients analytically.\nSee how Peceptron test cases were written on Iris data.\n\n\n\nIn-Class\n\nQA for Data. It is all about asserting the statistical properties of the data.\nDiscussion on extracting statistical quality features into a table for any modality (tabular, image, speech, text)\nTesting columnar data with explicit conditions. Great Expectations defines them as expectations and validates them given a new data. For example, an expectation can be\n\na column can have at most 5% missing values\nthe range of the columns can be between [-2,10]\n\nTesting columnar data with implicit conditions. One dataset will be compared against a reference dataset. Evidently comes with many tests for reporting, model comparison, data drift detection. For example, we can compare whether or not the label distribution is same between the Train set and the Test set. A question for all readers - how often have you “actually” ran any statistical test to see if the Train and Test set are actually similar in distribution. My guess, less than 10% would have done it. The remaining would have called sklearn’s train_test_split function :)\n\n\n\nPost-class:\n\n[Blog] ETL testing with Great Expectations\n[Docs] Great Expectations Documentation. Please note that with version 1.0 released, even the examples from its repo are not working. Read them to understand what are typical tests on columnar data look like.\n[Notebooks] Evidently examples. Browse through and run how Evidently automates many test cases. Also see community examples here",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "04B: Monitor (Data)"
     ]
   },
@@ -415,7 +415,7 @@
     "section": "",
     "text": "Materials:\nDate: Tuesday, 27-Aug-2024.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "05A: Monitor (Models)"
     ]
   },
@@ -426,7 +426,7 @@
     "section": "",
     "text": "Pre-work:\n\nReview Diagnostics of ML Systems from CS329s\n\n\n\nIn-Class\n\nRecap tests for monitoring data quality in the ETL stage\nUnderstand different types of drifts (label, covariate, concept) and ways to detect them that may be important in the model development stage\nCollecting data in the training stage - see Training Data, from CS329s\nData Programming - programmatically create labels. snorkel introduced these ideas first in the NLP space.\nSynthetic Data Generation using LLMs is a very promising and emerging application LLMs. For example, we can create labels of a piece of text, by prompting LLMs.\n\n\n\nPost-class:\n\nReview Training Data, from CS329s\nReview Feature Engineering, from CS329s",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "05A: Monitor (Models)"
     ]
   },
@@ -437,7 +437,7 @@
     "section": "",
     "text": "Materials:\nDate: Friday, 30-Aug-2024.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "05B: Deployment"
     ]
   },
@@ -448,7 +448,7 @@
     "section": "",
     "text": "Pre-work:\n\nmlflow docs\nkedro-mlflow tutorial\n\n\n\nIn-Class\n\nStream vs Batch Deployment\nHands-on Deploying models with mlflow on local server\n\n\n\nPost-class:\n\nReview Model Deployment from CS329s. [Note: Dr. Srinivas Rana will cover Model Compression, Quantization etc in his talk on Deployment on Edge]\nReview Monitoring and Continual Learning from CS329s\nReview Model Deployment chapter of ML Engineering book",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "05B: Deployment"
     ]
   },
@@ -459,7 +459,7 @@
     "section": "",
     "text": "Materials:\nDate: Tuesday, 03-Sep-2024",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "06A: Evaluate"
     ]
   },
@@ -470,7 +470,7 @@
     "section": "",
     "text": "Pre-work:\n\nReview Kolmogorov-Smirnov Test as a way to measure divergence between two continous, univariate distributions\nReview KL Divergence as a way to measure divergence between two arbitrary (continuous/discrete and univariate/multivariate) distributions\n\n\n\nIn-Class\n\nMotivation for why we need Design of Experiments and Hypothesis Testing. Where do they appear in the ML Life Cycle.\nLesson 1 - quick intro to DoE, scientific objectives, basic principles of DoEs, steps for planning, conducting, and analyzing an experiment.\nLesson 2 - a simple comparative experiment. The name A/B Testing, perhaps, comes from testing difference between two groups A and B, which is a simple comparative experiment. How to define a business problem as a hypothesis test, collect data, perform the test, draw conclusion are demonstrated. How to calculate the sample size, probably the most important question that gets asked, is also explained in this simple case.\n\n\n\nPost-Class\n\nReview Model Selection from CS329s\nReview Model Evaluation chapter of ML Engineering book\n\n\n\nReferences:\n\n[book] A/B Testing. This book gives a non technical introduction to A/B testing and how they get applied in the e-commerce, website UX optimization, running marketing campaigns. In the appendix, many scenarios of A/B testing are covered.\n[book] Design and Analysis of Experiments. This is a classic in DoE. Lessons 1-2 are necessary.\n[course]STAt 503 Design of Experiments - online course at UPenn\n[course]STAt 514 Design of Experiments - course at Purdue (stats oriented). Chapters 1-4 are needed.\n[book] Statistical Design. This is another classic from George Casella, a celebrated science author.\n\n\n\nNotes\n\nQA for Data discussed earlier is a specific case of A/B testing. CS folks call it A/B testing, but they are all different types of hypothesis tests.\nHypothesis Tests are tools for testing aspects of data. In the ML context, they can be used for testing\n\ndata drift (concept drift, covariate drift, label drift)\ndata quality (implicit and explicit)\nmodel performance\n\nOn Model Testing/ Comparison as a Hypothesis\n\nIs the “alternate” model better than the “baseline” model? Often, ML folks report performance metrics on Test split for all the models and pick the model with the highest performance. It is not uncommon to claim SOTA even when the performance difference is in 1/100ths of decimal places and replication is almost absent :). We do not even know if this difference is due to just chance (randomness in the data) alone. A rigorous (and perhaps, the right) approach would have been to formulate this as a hypothesis test, design an experiment, collect evidence and then conclude which model is better (and is statistically significant). Note that, statistical significance does not mean practical significance, which is often the case with most SOTA claims :). Another classical example to drive this point home is the (in)famous Netflix prize. The top performing model in the million dollar competition never made it to deployment. Find out why.\n\nHyperparameter Tuning and AutoML is a DoE in disguise\n\nthe experimental factors are, for example, the architecture, optimizer, learning rate, batch size, among others. The response variable is the performance. Techniques like Bayesian Optimization, and many techniques used in AutoML are indeed Sequential DoEs (you explore the search space sequentially by looking at the past exploration data). Grid-search, the naïve approach to hyperparameter tuning, can be seen as an implementation of a full-factorial DoE.\nWill ideas from DoE such as a Blocking lead to better search strategies? Can we find out if the learning rate and the optimizer (eg. Adam vs AdamW) interact with each other? The experiments to address these questions are often referred to as Ablation Studies in the ML community. So, by learning the principles of DoEs, we will be able to design (data and compute) efficient ablation studies.\n\nHow to plan and collect data for an ML problem?\n\nin the model-centric ML development, which most, if not all students, start their ML training in, will work on a data given to them in a platter. It is rare for an (undergraduate) student to have taken part in the data collection planning exercise. But once they are thrown into industry, they have to confront a very difficult question? We will address these questions in the next session.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "06A: Evaluate"
     ]
   },
@@ -481,7 +481,7 @@
     "section": "",
     "text": "Materials:\nDate: Friday, 06-Sep-2024",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "06B: Govern"
     ]
   },
@@ -492,7 +492,7 @@
     "section": "",
     "text": "Pre-work:\n\nCRUD- create, read, update and delete operations are the primitives we need to make the IT systems work.\nACID- against those CRUD operations, a database needs to support atomicity, consistency, isolation, durability to guarantee data validity, despite errors, and failures.\nSet Theory - is the mathematical basis for relational databases (RDBMS)\nGraph Theory - is probably the mathematical basis for graph databases like Neo4j. NoSQL databases might lie somewhere in the middle. Since Graphs are more general mathematical objects, we might think for now that, it is important to understand graph theory to design graph databases.\nD4M- Dynamic Distributed Dimensional Data Model - is a computer programming model that combines the advantages of distinct data processing technologies (sparse linear algebra, associate arrays, fuzzy algebra, distributed arrays, triple-store/NoSQL databases) to improve search, retrieval and analysis of data.\n\n\n\nIn-Class\n\nThe CRUD operations on Model Predictions\nThe R4 (Read, Replay, Recall, Replace) Framework for Level 5 Data Governance.\n\n\n\nPost-class\n\n[book] An Elementary Introduction to Statistical Learning Theory. See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.\n[site] GDPR - in particular focussing on privacy, and right to be forgotten (or right to erasure)\n[wiki] Self Driving Cars read the six levels (Level 0 to Level 5) of autonomy. Level 5 is fully autonomous self driving car.\n\n\n\nAdditional Reading (optional)\n\n[book] Mathematics of Big Data\n\n\n\nNotes\nAt at the heart of it, all of IT applications, eventually perform CRUD operations. Depending on the type of transaction, purpose, and SLAs, the choice of the database (SQL vs NoSQL), Batch-vs-Stream, OLAP vs OLTP, among others will be made. A whole lof of mathematical theories (set theory, graph theory, associative arrays, multi linear algebra, etc) are necessary to build the technologies.\nIn yet another simplified view, ML systems are glorified auto-fills. Take out the fundamental uncertainty in the data produced by ML systems, they are akin to IT systems. Therefore, same infrastructure and engineering process to support CRUD operations on ML produced data can be applied. But is that sufficient?\nOne major difference is - ML systems have memory. Therefore, deleting a record, does not lead to deleting its influence in downstream tasks right? A simple example will drive home the point. Imagine a model is trained on a dataset. There are some records which are leaking private data. What would deleting mean here. Obviously, one can delete those records from the training set. But one must also edit the models to get rid of their influence. Think one step further. What if, these marked records are very close the some other records. Deleting and retraining on the updated training data does not mean that their residual effect is removed. So, it is not only complex but also complicated. When ML models are cascaded and appear in a sequence of data events – controlling their exposure and affects requires a very good control on the downstream consumer applications.\nLet us try to re-interpret CRUD in the ML context. It leads us to the R4 {Read, Repeat, Recall, Replace} framework.\n\nRead\nOn demand, read (or retrieve) the prediction made by an ML model. This require maintaining proper metadata to retrive the records. For example, if the input (request to the API) is available, as is, and the output (response) of the API is logged into a persistent object store, this is possible.\n\n\nRepeat\nOn demand, repeat (or reproduce) the prediction made by an ML model. This require maintaining the three things for the sake reproducibility: 1. The data (inputs) and model artifacts 2. The code which loads the model, and scores on the given data and 3. The runtime to execute the code & data.\n\n\nRecall\nOn demand, recall the prediction made by an ML model. Depending on the “definition” of recall, the implementation and engineering complexity varies. In the simplest case which itself can be very complex, all past instances where the model scored, the predictions have to be replaced with say nulls. However, this implementation is not yet actionable by itself. The downstream consumer for example, can be notified of the recall, and take an appropriate action. The downstream consumer must have the Read ability in the R4 framework. In the best case scenario, the downstream consumer updates the decision (say with human-in-the-loop) or has another back-off strategy implemented already.\nIn the highest form of recall, all downstream consumers of the predictions are notified and decisions are propagaed in the entire chain of events.\n\n\nReplace\nOn demand, replace the prediction made by an ML model with another prediction (after correcting). Once the record is updated, in the most sophisticated case, all downstream consumers propagate the change downstream.\nLike in self-driving cars, the Level of Automation can be categorized.\n\n\n** R4 Levels**\n\n\n\n\n\n\n\n\nLevel\nName\nSupported Actions\nPlatform Features\n\n\n\n\nL0\nR0\nFire and Forget  Zero Traceability\nModel APIs\n\n\nL1\nR1  Read\nTrace past decisions\nObservability\n\n\nL2\nR2  Read & Repeat\nTrace and Recreate past decisions\nObservability +  Versioning + CD\n\n\nL3\nR3  Read, Repeat, Recall\nTrace, Recreate, and Nullify past decisions\nObservability  Versioning + CD +  CImp\n\n\nL4\nR3-N  Read, Repeat, Recall with Notify\nTrace, Recreate, Nullify, and Notify past decisions\nObservability  Versioning + CD +  CImp +  Event-IO\n\n\nL5\nR4  Read, Repeat, Recall, Replace\nTrace, Recreate, and Rescore past decisions\nObservability  Versioning + CD +  CImp\n\n\nL6\nR4-N  Read, Repeat, Recall, Replace with Notify\nTrace, Recreate, Rescore, and Notify past decisions\nObservability  Versioning + CD +  CImp +  Event-IO\n\n\n\n\nAre these four primitive operations sufficient to support any model governance? 1. Can a model be debiased? 2. Can right to be erased to enabled? 3. Many more.\nAs one can see, from an engineering stand point, certain platform features and functionalities are needed.\n\nRead: An observation platform to log data, with CRUD apis on the logs - can enable reading any past decisions (model predictions)\nRepeat: Versioning of data, models, code, and run time with Continuous Deployment (CD) can ensure reproducibility.\nRecall: A Continuous Improvement (CImp) capability that can take any alternate model (which can produce Nulls), deploy it, and rescore on any past data, can enable recalling past decisions.\nReplace: Same capability as Recall except that, a new model would correct past decisions.\nNotify: One has to make the memory-less system into a system with memory, in in async fashion. Implementing a pub-sub model, where downstream consumer subcribes to the R4 topics published by the prediction maker service. For example, a model service published a recall topic with all the decisions that need to be annulled in someway. The subscribers of this topic will take action however they deem fit. They can even publish another recall event and all of its subscribers can act accordingly. This way, a recall pipeline is created based on event triggers.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Engg.]",
       "06B: Govern"
     ]
   },
@@ -503,7 +503,7 @@
     "section": "",
     "text": "Materials:\nDate: Friday, 06-Sep-2024",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Science]",
       "07A: Scaling Laws"
     ]
   },
@@ -512,9 +512,9 @@
     "href": "lectures/w07-l01.html#materials",
     "title": "07A: Scaling Laws",
     "section": "",
-    "text": "Pre-work:\n\nLesson 2 of Stat503 on planning a simple comparative experiment\n\n\n\nIn-Class\n\nReview sample size calculation in t-test. How sample size is a function of data quality, confidence, and tolerance for errors in the conclusions. Except in simple cases, getting a good sense of the “how much data” is a hard, rather very hard question. But we can try.\nMyth Buster - more data is better\n\nit is like a tautology. this notion never gets challenged. More data does not lead to better RoI. In fact, more of the same can never improve performance beyond a point or in some specific cases, it is impossible.\nlaw of diminishing returns. collecting more data can not only be expensive but can saturate, reaching a plateau. In fact, collecting data to understand where this plateau and what is the ceiling is, is an interesting problem in itself. A well designed experiment can address this question.\n\nCan we estimate the sample size needed?\n\nback of the envelope calculations based on some idea about the data, based on two-sample sample size calculations\nfrom PAC theory bounds (Chapter 8 of An Elementary Introduction to Statistical Learning Theory)\nempirical scaling laws\n\nHow to recruit data? Are all individual data points equal?\n\nactive learning\ncords for a collection of works/implementations based on subset selection\n\n\n\n\nPost-class\n\n[book] An Elementary Introduction to Statistical Learning Theory. See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.\n[youtube] PAC Learning Ali Ghosi Lec 19 PAC Learning, STAT 441/841 Statistical Learning, University of Waterloo\n[paper] [Learning Sample Difficulty from Pre-trained Models for Reliable Prediction](https://proceedings.neurips.\n[paper] Training Compute-Optimal LLMs\n[paper] [A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection](https://arxiv.org/abs/2106.09022\n\n\n\nAdditional Reading (optional)\n\n[book-online] Linear Models - first regression course for EPFL mathematicians.\n[paper] Approximation Rates and VC-Dimension Bounds for (P)ReLU MLP Mixture of Experts\n[book] Understanding Machine Learning: From Theory to Algorithms - a classic from Shai Shalev-Shwartz and Shai Ben-David. Part-1. youtube playlist\n[paper] Understanding Dataset difficulty\n[paper] Scaling Laws for Neural Language Models\n[paper] An empirical study of scaling laws for transfer learning\n[paper] Scaling laws for Individual data points\n[paper] Scaling laws in Linear Regression cc/paper_files/paper/2023/hash/50251f54848a433f3e47ae3b7cbded53-Abstract-Conference.html)\n[paper] Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI\n[paper] Learning Sample Difficulty from Pre-trained Models for Reliable Prediction NeurIPS’23\n\n\n\nNotes\ntbd",
+    "text": "Pre-work:\n\nLesson 2 of Stat503 on planning a simple comparative experiment\n\n\n\nIn-Class\n\nReview sample size calculation in t-test. How sample size is a function of data quality, confidence, and tolerance for errors in the conclusions. Except in simple cases, getting a good sense of the “how much data” is a hard, rather very hard question. But we can try.\nMyth Buster - more data is better\n\nit is like a tautology. this notion never gets challenged. More data does not lead to better RoI. In fact, more of the same can never improve performance beyond a point or in some specific cases, it is impossible.\nlaw of diminishing returns. collecting more data can not only be expensive but can saturate, reaching a plateau. In fact, collecting data to understand where this plateau and what is the ceiling is, is an interesting problem in itself. A well designed experiment can address this question.\n\nCan we estimate the sample size needed?\n\nback of the envelope calculations based on some idea about the data, based on two-sample sample size calculations\nfrom PAC theory bounds (Chapter 8 of An Elementary Introduction to Statistical Learning Theory)\nempirical scaling laws\n\nHow to recruit data? Are all individual data points equal?\n\nactive learning\ncords for a collection of works/implementations based on subset selection\n\n\n\n\nPost-class\n\n[book] An Elementary Introduction to Statistical Learning Theory. See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.\n[youtube] PAC Learning Ali Ghosi Lec 19 PAC Learning, STAT 441/841 Statistical Learning, University of Waterloo\n[paper] Learning Sample Difficulty from Pre-trained Models for Reliable Prediction\n[paper] Training Compute-Optimal LLMs\n[paper] A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection\n\n\n\nAdditional Reading (optional)\n\n[book-online] Linear Models - first regression course for EPFL mathematicians.\n[paper] Approximation Rates and VC-Dimension Bounds for (P)ReLU MLP Mixture of Experts\n[book] Understanding Machine Learning: From Theory to Algorithms - a classic from Shai Shalev-Shwartz and Shai Ben-David. Part-1. youtube playlist\n[paper] Understanding Dataset difficulty\n[paper] Scaling Laws for Neural Language Models\n[paper] An empirical study of scaling laws for transfer learning\n[paper] Scaling laws for Individual data points\n[paper] Scaling laws in Linear Regression\n[paper] Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI\n[paper] Learning Sample Difficulty from Pre-trained Models for Reliable Prediction NeurIPS’23\n\n\n\nNotes\nWhen embarking on a problem, the first set of questions are ask or you have to answer are:\n\nWhat type/kind of data is needed or useful for the problem at hand.\nHow many samples do you need.\n\nLet us briefly discuss the first question about “what kind”.\nWe discussed ideation tools like Design Thinking, Human-centered Design to engage with the problem (to define what to solve). In the Project Canvas, we also discussed what is the ML Task, and what kind of data is needed to solve the business problem.\nFor example, suppose the problem is, say, assessing the quality of food grains. The business problem is to objectively assess the grain quality and decide a fair price linked to the quality. ML problem is to grade the grains, identify any foreign materia/contaminations, may be based on the morphology of the grains. What kind of data is needed here? We can treat this problem as a combination of segmentation, object detection, object classification, morphology analysis, and granulometry. Data must support these tasks. See the blogs Image Annotation Definition, Usecases and Types, Best practices for successful image annotation, Data Annotation - A beginner’s guide to delve into this topic further. Annotating images for segmentation at grain level is very time consuming but can potentially to be very useful. Treating this problem into grades is relatively easy in terms of annotations but can not pivot to a different problem formulation if the solution is proved not useful. This is an inherent design challange. Getting as many details as possible is desirable but many not be practical. But thankfully, with foundation models like SAM, some of this leg work can be automated. See this paper on sample selection for efficient image annotation. Most modern annotation studies offer some support to speed-up the process.\nWhile the above support primary ML task, say the segmentation task, for example, they may not be sufficient to offer SLAs or Model monitoring (battling the unknown unknowns) that we discussed in Model Monitoring. Suppose, for the same problem, the model is deployed in two grain collection points. Training data was collected from the the first site (for rice grains), and model is being is used in the second site. It so happens that, the second site is using the model for “wheat” instead of “rice.” Obviously, model will perform poorly. This may not have been anticipated ahead of time. Only way to detect this is to first log the data, where the model is being used, and observe the performance by site. Thinking about dimensions is the topic of knowledge representation and knowledge engineering. Dimensional Modeling](https://www.ibm.com/docs/en/ida/9.1.2?topic=modeling-dimensional) is a framework to adopt to collect data that can address the concerns of different stakeholders besides the ML and Data Scientists such as a Software Engineer, QA, Architect, Product Manager, Site Manager etc. IBM’s book on Dimensional Modeling: In a Business Intelligence Environment is a definitive guide on this topic. A knowledge Engineering Primer is perhaps a lighter compared to the book.\nNow let us move to the other question. How many?\nThis question gets very complicated in no time. So, let us simplify and consider a regression problem. We are trying to learn a function \\(f: [0,1] \\rightarrow R\\). Imagine you are fitting a decision tree to approximate this function. A decision tree partitions the input space, and each of the partitions certain statistics like mean and quintiles are computed. For a given instance, the prediction is, for example, mean of all responses of the examples belonging to that partition. So, we divide or cluster or partition the training data into \\(K\\) subsets and compute some statistic of of each these partitions. If we assume that this labels (response) of the k-th partition \\(y_k\\) follow \\(N(\\mu_k, \\sigma^2)\\), we can estimate the \\((1-\\alpha)\\) level prediction interval (PI) for \\(\\mu_k\\) as \\[\\bar{y}_k + z_{1-\\frac{\\alpha}{2}}\\sigma \\sqrt{1+\\frac{1}{N}}\\]\nwhere \\(\\bar{y}_k\\) is the sample mean, \\(N\\) is the sample size, \\(\\sigma^2\\) is the noise variance, \\(\\alpha\\) controls the confidence level (or type-1 error of the corresponding hypothesis test). So the “design inputs” needed to solicit a sample size are: \\(\\alpha\\), \\(\\sigma^2\\). Sometimes, the precision needed for the estimate can be asserted in terms of the width of the interval (PIW). In this case, PIW is given as \\(PIW = 2z_{1-\\frac{\\alpha}{2}}\\sigma \\sqrt{1+\\frac{1}{N}}\\). For large \\(n\\), \\(PIW \\approx 2z_{1-\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{N}}\\). Now we can express sample size as a function of \\(PIW\\), \\(\\alpha\\) as: \\(N \\approx \\left(\\frac{2\\sigma z_{1-\\frac{\\alpha}{2}}}{PIW} \\right)^2\\). If there are \\(K\\) partitions, we need to estimate that many \\(\\mu_k\\)s. So, the total sample size will be \\(NK\\) assuming all partitions have same variance. If not, is is not hard to update the formula. In someways, the model complexity is captured by \\(K\\). One do not know these numbers in advance. One has to make an educated guess based on domain knowledge and refine as the experiment is in motion.\nWhat about the classification problem?\nAssume it is a binary classification problem. Approach is still identical. Even in the classificaiton setting, estimating the mean and taking argmax to predict the label of the partition is still useful and applicable except that the \\(PI\\) formula needs to be updated.\nCan we relax the assumptions and yet come-up with some estimates for \\(N\\)_?\nWe can invoke PAC theory. Suppose \\(\\epsilon\\) is the tolerable error (that the test error should not exceed), \\(\\delta\\) is the confidence in the learning algorithm that test error can exceed \\(\\epsilon\\) by no more than \\(\\delta\\) fraction of times and \\(V\\) is the VC-dimensionof the function class. The following bounds from PAC theory can guide us:\n\\[\\frac{1}{\\epsilon}\\left(4\\log(\\frac{2}{\\delta}) + 8V\\log(\\frac{13}{\\epsilon}) \\right) \\le N \\le \\frac{64}{\\epsilon^2}\\left(2V \\log(\\frac{V}{\\epsilon}) + \\log(\\frac{4}{\\delta}) \\right)  \\]\nIn particular, if one uses an MLP, following is a lower bound on the VC-dimension \\[V \\le 2(d+1)s \\log(2.718s)\\] where \\(d\\) is the number of features, \\(s\\) is the number of perceptrons in the network. So, in effect, given an MLP architecture (with \\(s\\) number of perceptrons), confidence(\\(\\delta\\)), permissible error (\\(\\epsilon\\)), input features (\\(d\\)), one can get an idea of the sample size.\nWhat about Large Language Models?\nThis area is emerging with results and counter-results. But some early works fit parametric curves to predict performance given training data (counted in terms of number of tokens) and for a given compute budget. See this paper on Training Compute-Optimal LLMs and references therein to get a sense.",
     "crumbs": [
-      "Lectures",
+      "Lectures[ML Science]",
       "07A: Scaling Laws"
     ]
   },

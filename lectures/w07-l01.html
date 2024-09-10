@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -83,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">07A: Scaling Laws</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">07A: Scaling Laws</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -136,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Lectures</span></a>
+ <span class="menu-text">Lectures[ML Engg.]</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -208,6 +237,17 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">06B: Govern</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lectures[ML Science]</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/w07-l01.html" class="sidebar-item-text sidebar-link active">
@@ -244,11 +284,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../documentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ML Documentation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources/project-card.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Project Card</span></a>
@@ -280,7 +320,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">07A: Scaling Laws</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">07A: Scaling Laws</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">07A: Scaling Laws</h1>
 </div>
@@ -335,9 +375,9 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>[book] <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471">An Elementary Introduction to Statistical Learning Theory</a>. See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.</li>
 <li>[youtube] <a href="https://www.youtube.com/watch?v=qOMOYM0WCzU">PAC Learning</a> Ali Ghosi Lec 19 PAC Learning, STAT 441/841 Statistical Learning, University of Waterloo</li>
-<li>[paper] [Learning Sample Difficulty from Pre-trained Models for Reliable Prediction](https://proceedings.neurips.</li>
+<li>[paper] <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/50251f54848a433f3e47ae3b7cbded53-Paper-Conference.pdf">Learning Sample Difficulty from Pre-trained Models for Reliable Prediction</a></li>
 <li>[paper] <a href="https://arxiv.org/abs/2203.15556">Training Compute-Optimal LLMs</a></li>
-<li>[paper] [A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection](https://arxiv.org/abs/2106.09022</li>
+<li>[paper] <a href="https://arxiv.org/abs/2106.09022">A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection</a></li>
 </ol>
 </section>
 <section id="additional-reading-optional" class="level3">
@@ -350,14 +390,33 @@ ul.task-list li input[type="checkbox"] {
 <li>[paper] <a href="https://arxiv.org/abs/2001.08361">Scaling Laws for Neural Language Models</a></li>
 <li>[paper] <a href="https://arxiv.org/abs/2408.16947v1">An empirical study of scaling laws for transfer learning</a></li>
 <li>[paper] <a href="https://arxiv.org/abs/2405.20456">Scaling laws for Individual data points</a></li>
-<li>[paper] <a href="https://arxiv.org/abs/2406.08466v1">Scaling laws in Linear Regression</a> cc/paper_files/paper/2023/hash/50251f54848a433f3e47ae3b7cbded53-Abstract-Conference.html)</li>
+<li>[paper] <a href="https://arxiv.org/abs/2406.08466v1">Scaling laws in Linear Regression</a></li>
 <li>[paper] <a href="https://arxiv.org/abs/2403.04551">Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI</a></li>
 <li>[paper] <a href="https://arxiv.org/abs/2304.10127">Learning Sample Difficulty from Pre-trained Models for Reliable Prediction</a> NeurIPS’23</li>
 </ol>
 </section>
 <section id="notes" class="level3">
 <h3 class="anchored" data-anchor-id="notes">Notes</h3>
-<p>tbd</p>
+<p>When embarking on a problem, the first set of questions are ask or you have to answer are:</p>
+<ol type="1">
+<li>What type/kind of data is needed or useful for the problem at hand.</li>
+<li>How many samples do you need.</li>
+</ol>
+<p>Let us briefly discuss the first question about “<strong>what kind</strong>”.</p>
+<p>We <a href="../lectures/w02-l02.html">discussed</a> ideation tools like <a href="https://web.stanford.edu/~mshanks/MichaelShanks/files/509554.pdf">Design Thinking</a>, <a href="https://online.hbs.edu/blog/post/what-is-human-centered-design">Human-centered Design</a> to engage with the problem (to define what to solve). In the <a href="../resources/project-card.html">Project Canvas</a>, we also discussed what is the ML Task, and what kind of data is needed to solve the business problem.</p>
+<p>For example, suppose the problem is, say, assessing the quality of food grains. The business problem is to objectively assess the grain quality and decide a fair price linked to the quality. ML problem is to grade the grains, identify any foreign materia/contaminations, may be based on the morphology of the grains. What kind of data is needed here? We can treat this problem as a combination of segmentation, object detection, object classification, morphology analysis, and granulometry. Data must support these tasks. See the blogs <a href="https://www.v7labs.com/blog/image-annotation-guide">Image Annotation Definition, Usecases and Types</a>, <a href="https://labelbox.com/guides/image-annotation/">Best practices for successful image annotation</a>, <a href="https://opencv.org/blog/data-annotation/">Data Annotation - A beginner’s guide</a> to delve into this topic further. Annotating images for segmentation at grain level is very time consuming but can potentially to be very useful. Treating this problem into grades is relatively easy in terms of annotations but can not pivot to a different problem formulation if the solution is proved not useful. This is an inherent design challange. Getting as many details as possible is desirable but many not be practical. But thankfully, with foundation models like <a href="https://segment-anything.com/">SAM</a>, some of this leg work can be automated. See this <a href="https://arxiv.org/abs/2105.04678">paper</a> on sample selection for efficient image annotation. Most modern annotation studies offer some support to speed-up the process.</p>
+<p>While the above support primary ML task, say the segmentation task, for example, they may not be sufficient to offer SLAs or Model monitoring (battling the unknown unknowns) that we discussed in <a href="../lectures/w05-l01.html">Model Monitoring</a>. Suppose, for the same problem, the model is deployed in two grain collection points. Training data was collected from the the first site (for rice grains), and model is being is used in the second site. It so happens that, the second site is using the model for “wheat” instead of “rice.” Obviously, model will perform poorly. This may not have been anticipated ahead of time. Only way to detect this is to first log the data, where the model is being used, and observe the performance by site. Thinking about dimensions is the topic of <em>knowledge representation</em> and <em>knowledge engineering</em>. Dimensional Modeling](https://www.ibm.com/docs/en/ida/9.1.2?topic=modeling-dimensional) is a framework to adopt to collect data that can address the concerns of different stakeholders besides the ML and Data Scientists such as a Software Engineer, QA, Architect, Product Manager, Site Manager etc. IBM’s book on <a href="https://www.redbooks.ibm.com/redbooks/pdfs/sg247138.pdf">Dimensional Modeling: In a Business Intelligence Environment</a> is a definitive guide on this topic. <a href="https://arxiv.org/abs/2305.17196">A knowledge Engineering Primer</a> is perhaps a lighter compared to the book.</p>
+<p>Now let us move to the other question. <strong>How many?</strong></p>
+<p>This question gets very complicated in no time. So, let us simplify and consider a <em>regression problem</em>. We are trying to learn a function <span class="math inline">\(f: [0,1] \rightarrow R\)</span>. Imagine you are fitting a decision tree to approximate this function. A decision tree partitions the input space, and each of the partitions certain statistics like mean and quintiles are computed. For a given instance, the prediction is, for example, mean of all responses of the examples belonging to that partition. So, we divide or cluster or partition the training data into <span class="math inline">\(K\)</span> subsets and compute some statistic of of each these partitions. If we assume that this labels (response) of the k-th partition <span class="math inline">\(y_k\)</span> follow <span class="math inline">\(N(\mu_k, \sigma^2)\)</span>, we can estimate the <span class="math inline">\((1-\alpha)\)</span> level prediction interval (PI) for <span class="math inline">\(\mu_k\)</span> as <span class="math display">\[\bar{y}_k + z_{1-\frac{\alpha}{2}}\sigma \sqrt{1+\frac{1}{N}}\]</span></p>
+<p>where <span class="math inline">\(\bar{y}_k\)</span> is the sample mean, <span class="math inline">\(N\)</span> is the sample size, <span class="math inline">\(\sigma^2\)</span> is the noise variance, <span class="math inline">\(\alpha\)</span> controls the confidence level (or type-1 error of the corresponding hypothesis test). So the “design inputs” needed to solicit a sample size are: <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\sigma^2\)</span>. Sometimes, the precision needed for the estimate can be asserted in terms of the width of the interval (PIW). In this case, PIW is given as <span class="math inline">\(PIW = 2z_{1-\frac{\alpha}{2}}\sigma \sqrt{1+\frac{1}{N}}\)</span>. For large <span class="math inline">\(n\)</span>, <span class="math inline">\(PIW \approx 2z_{1-\frac{\alpha}{2}} \frac{\sigma}{\sqrt{N}}\)</span>. Now we can express sample size as a function of <span class="math inline">\(PIW\)</span>, <span class="math inline">\(\alpha\)</span> as: <span class="math inline">\(N \approx \left(\frac{2\sigma z_{1-\frac{\alpha}{2}}}{PIW} \right)^2\)</span>. If there are <span class="math inline">\(K\)</span> partitions, we need to estimate that many <span class="math inline">\(\mu_k\)</span>s. So, the total sample size will be <span class="math inline">\(NK\)</span> assuming all partitions have same variance. If not, is is not hard to update the formula. In someways, the model complexity is captured by <span class="math inline">\(K\)</span>. One do not know these numbers in advance. One has to make an educated guess based on domain knowledge and refine as the experiment is in motion.</p>
+<p>What about the <strong>classification</strong> problem?</p>
+<p>Assume it is a binary classification problem. Approach is still identical. Even in the classificaiton setting, estimating the mean and taking <em>argmax</em> to predict the label of the partition is still useful and applicable except that the <span class="math inline">\(PI\)</span> formula needs to be updated.</p>
+<p>Can we <strong>relax the assumptions</strong> and yet come-up with some estimates for <span class="math inline">\(N\)</span>_?</p>
+<p>We can invoke PAC theory. Suppose <span class="math inline">\(\epsilon\)</span> is the tolerable error (that the test error should not exceed), <span class="math inline">\(\delta\)</span> is the confidence in the learning algorithm that test error can exceed <span class="math inline">\(\epsilon\)</span> by no more than <span class="math inline">\(\delta\)</span> fraction of times and <span class="math inline">\(V\)</span> is the VC-dimensionof the function class. The following bounds from PAC theory can guide us:</p>
+<p><span class="math display">\[\frac{1}{\epsilon}\left(4\log(\frac{2}{\delta}) + 8V\log(\frac{13}{\epsilon}) \right) \le N \le \frac{64}{\epsilon^2}\left(2V \log(\frac{V}{\epsilon}) + \log(\frac{4}{\delta}) \right)  \]</span></p>
+<p>In particular, if one uses an MLP, following is a lower bound on the VC-dimension <span class="math display">\[V \le 2(d+1)s \log(2.718s)\]</span> where <span class="math inline">\(d\)</span> is the number of features, <span class="math inline">\(s\)</span> is the number of perceptrons in the network. So, in effect, given an MLP architecture (with <span class="math inline">\(s\)</span> number of perceptrons), confidence(<span class="math inline">\(\delta\)</span>), permissible error (<span class="math inline">\(\epsilon\)</span>), input features (<span class="math inline">\(d\)</span>), one can get an idea of the sample size.</p>
+<p>What about <strong>Large Language Models</strong>?</p>
+<p>This area is emerging with results and counter-results. But some early works fit parametric curves to predict performance given training data (counted in terms of number of tokens) and for a given compute budget. See this paper on <a href="https://arxiv.org/abs/2203.15556">Training Compute-Optimal LLMs</a> and references therein to get a sense.</p>
 
 
 </section>
