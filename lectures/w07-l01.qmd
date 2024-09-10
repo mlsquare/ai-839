@@ -22,22 +22,26 @@ Date: Friday, 06-Sep-2024
 ### Post-class
 
 1. \[book\] [An Elementary Introduction to Statistical Learning Theory](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471). See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.
-2. \[paper\] [Training Compute-Optimal LLMs](https://arxiv.org/abs/2203.15556)
-3. \[paper\] [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
-4. \[youtube\] [PAC Learning](https://www.youtube.com/watch?v=qOMOYM0WCzU) Ali Ghosi Lec 19 PAC Learning, STAT 441/841 Statistical Learning, University of Waterloo
+2. \[youtube\] [PAC Learning](https://www.youtube.com/watch?v=qOMOYM0WCzU) Ali Ghosi Lec 19 PAC Learning, STAT 441/841 Statistical Learning, University of Waterloo
+3. \[paper\] [Learning Sample Difficulty from Pre-trained Models for Reliable Prediction](https://proceedings.neurips.
+4. \[paper\] [Training Compute-Optimal LLMs](https://arxiv.org/abs/2203.15556)
+5. \[paper\] [A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection](https://arxiv.org/abs/2106.09022
 
 ### Additional Reading (optional)
 
-1. \[paper\] [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
-2. \[paper\] [An empirical study of scaling laws for transfer learning](https://arxiv.org/abs/2408.16947v1)
-3. \[paper\] [Scaling laws for Individual data points](https://arxiv.org/abs/2405.20456)
-4. \[paper\] [Scaling laws in Linear Regression](https://arxiv.org/abs/2406.08466v1)
-5. \[paper\] [Learning Sample Difficulty from Pre-trained Models for Reliable Prediction](https://proceedings.neurips.cc/paper_files/paper/2023/hash/50251f54848a433f3e47ae3b7cbded53-Abstract-Conference.html)
-6. \[paper\] [Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI](https://arxiv.org/abs/2403.04551)
-7. \[paper\] [Learning Sample Difficulty from Pre-trained Models
+1. \[book-online\] [Linear Models](https://lbelzile.github.io/lineaRmodels/) - first regression course for EPFL mathematicians.
+2. \[paper\] [Approximation Rates and VC-Dimension Bounds for (P)ReLU MLP Mixture of Experts](https://arxiv.org/html/2402.03460v2)
+3. \[book\] [Understanding Machine Learning: From Theory to Algorithms](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/) - a classic from Shai Shalev-Shwartz and Shai Ben-David.  Part-1. [youtube playlist](https://www.youtube.com/playlist?list=PLPW2keNyw-usgvmR7FTQ3ZRjfLs5jT4BO)
+4. \[paper\] [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
+5. \[paper\] [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
+6. \[paper\] [An empirical study of scaling laws for transfer learning](https://arxiv.org/abs/2408.16947v1)
+7. \[paper\] [Scaling laws for Individual data points](https://arxiv.org/abs/2405.20456)
+8. \[paper\] [Scaling laws in Linear Regression](https://arxiv.org/abs/2406.08466v1)
+cc/paper_files/paper/2023/hash/50251f54848a433f3e47ae3b7cbded53-Abstract-Conference.html)
+9. \[paper\] [Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI](https://arxiv.org/abs/2403.04551)
+10. \[paper\] [Learning Sample Difficulty from Pre-trained Models
 for Reliable Prediction](https://arxiv.org/abs/2304.10127) NeurIPS'23
-8. \[paper\] [Approximation Rates and VC-Dimension Bounds for (P)ReLU MLP Mixture of Experts](https://arxiv.org/html/2402.03460v2)
-9. \[book-online\] [Linear Models](https://lbelzile.github.io/lineaRmodels/) - first regression course for EPFL mathematicians.
+
 
 
 

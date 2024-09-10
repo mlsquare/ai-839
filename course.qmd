@@ -50,7 +50,6 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 | 10 | 15-Oct |  Deploying on Edges <br> [ML Engineering]  | [Dr. Srinivas Rana](https://www.linkedin.com/in/srinivasrana/) <br> Sr ML Scientist: [Wadhwani AI](https://www.wadhwaniai.org/) |
 | 10 | 18-Oct |  MLOps @ Scale <br> [ML Engineering]  | [Kalyan Deepak](https://www.linkedin.com/in/kalyan-deepak-2304622a/) <br> Sr Staff Engineer  |
 | 11 | 22-Oct |   DoWhy, Causal ML  <br> [XAI]  | [Dr. Amit Sharma](https://www.amitsharma.in/)) <br> Principal Researcher, [MSR](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/) |
-
 | 13 | 08-Nov | Building LLMs in Production in Regulated Industry <br> [System Design] | [Dr. Venkata Pingali](https://www.linkedin.com/in/pingali/) <br> Co-Founder: [Scribble Data](https://www.scribbledata.io/) |
 : **Guest Lectures** {.striped}
 :::
