@@ -24,6 +24,7 @@ Date: Friday, 06-Sep-2024
 1. \[book\] [An Elementary Introduction to Statistical Learning Theory](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471). See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.
 2. \[paper\] [Training Compute-Optimal LLMs](https://arxiv.org/abs/2203.15556)
 3. \[paper\] [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
+4. \[youtube\] [PAC Learning](https://www.youtube.com/watch?v=qOMOYM0WCzU) Ali Ghosi Lec 19 PAC Learning, STAT 441/841 Statistical Learning, University of Waterloo
 
 ### Additional Reading (optional)
 
@@ -31,7 +32,12 @@ Date: Friday, 06-Sep-2024
 2. \[paper\] [An empirical study of scaling laws for transfer learning](https://arxiv.org/abs/2408.16947v1)
 3. \[paper\] [Scaling laws for Individual data points](https://arxiv.org/abs/2405.20456)
 4. \[paper\] [Scaling laws in Linear Regression](https://arxiv.org/abs/2406.08466v1)
-
+5. \[paper\] [Learning Sample Difficulty from Pre-trained Models for Reliable Prediction](https://proceedings.neurips.cc/paper_files/paper/2023/hash/50251f54848a433f3e47ae3b7cbded53-Abstract-Conference.html)
+6. \[paper\] [Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI](https://arxiv.org/abs/2403.04551)
+7. \[paper\] [Learning Sample Difficulty from Pre-trained Models
+for Reliable Prediction](https://arxiv.org/abs/2304.10127) NeurIPS'23
+8. \[paper\] [Approximation Rates and VC-Dimension Bounds for (P)ReLU MLP Mixture of Experts](https://arxiv.org/html/2402.03460v2)
+9. \[book-online\] [Linear Models](https://lbelzile.github.io/lineaRmodels/) - first regression course for EPFL mathematicians.
 
 
 
