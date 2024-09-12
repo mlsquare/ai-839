@@ -1,4 +1,4 @@
-# 07A: Scaling Laws {.unnumbered}
+# 07B: Sample Hardness {.unnumbered}
 
 ## Materials:
 Date: Friday, 13-Sep-2024

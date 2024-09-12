@@ -48,6 +48,7 @@ book:
   - part: Lectures[ML Science]
     chapters:
     - ./lectures/w07-l01.qmd
+    - ./lectures/w07-l02.qmd
   - homeworks.qmd
   - projects.qmd
   - tutorials.qmd
