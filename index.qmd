@@ -6,6 +6,7 @@ Hello Students of AI 839.
 See the [course](./course.qmd) page for recent information on Lectures, Homeworks, Projects, etc.. 
 
 ## Announcements
+- [12-September-2024] Notes added to [W07-L01](/lectures/w07-l01.qmd) 
 - [05-September-2024] Homework, Minor and Major preoject details added. See @sec-hw-05, @sec-hw-06, @sec-hw-minor, @sec-hw-major for details.  Course pages updated.
 - [05-September-2024] Lecture Page [W05-L01](/lectures/w05-l01.qmd), [W05-L02](/lectures/w05-l02.qmd), [W06-L01](/lectures/w06-l01.qmd), [W06-L02](/lectures/w06-l02.qmd) added. Course pages updated.
 - [25-August-2024] Lecture Page [W03-L02](/lectures/w03-l02.qmd), [W04-L01](/lectures/w04-l01.qmd), [W04-L02](/lectures/w04-l02.qmd)  added. Course pages updated.

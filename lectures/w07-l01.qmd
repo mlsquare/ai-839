@@ -49,7 +49,7 @@ for Reliable Prediction](https://arxiv.org/abs/2304.10127) NeurIPS'23
 When embarking on a problem, the first set of questions we are asked are:
 
 1. What type/kind of data is needed or useful for the problem at hand?
-2. How many samples do you need?
+2. How many samples do you need? A new name for this is _scaling laws_ :)
 3. How hard the problem is - are all examples will be equally important?
 
 Let us briefly discuss the first question about "**what kind**". 
@@ -68,12 +68,12 @@ Now let us move to the other question. **How many?**
 
 ### How many?
 
-This question gets very complicated in no time. And there can be more than one way to develop a heuristic to arrive at an approximate answer. The type of response and approach also depends on
+This question gets very complicated in no time. And there can be more than one way to develop a heuristic to arrive at an approximate answer. The type of response and approach also depends on the scenario.
 
-1. Exact problem was solved before or data is available which can be used as-is [best case]. Take the data, build a model, and deploy and start using. Such occurrences can be rare but can happen. For example, people counting of a given demographic.
+1. Exact problem was solved before or data is available which can be used as-is [best case]. Take the data, build a model, and deploy and start using. Such occurrences can be rare but can happen. For example, people counting of a given demographic from traffic camera feeds.
 2. Similar problem solved, except for differences in domain. Take a model trained on that data, collect data on the target domain. Start improving the model over a period of time. Use transfer learning/ supervised fine-tuning methods.  If data exists (in literature or on huggingace/kaggle for eg) for that problem, plot _accuracy_ vs _sample size_ and pick a target that gives desired performance. Iterate over it. Do not collect all data at once.
 3. Unlabelled data available in large quantities.  In such a case, run a pre-trained model or develop self-supervised learning tasks, get very good representations and try to label those that are easy and/or important for the performance. See [cords](https://github.com/decile-team/cords) and other active learning methods. 
-4. Data exists and similar problem is not solved before [worst case]. Then, one has to design an experiment, provide some inputs about the problem, get a ball park sense of the sample size (for the sake of budget, resource and project planning), run a pilot exercise, refine the strategy and iterate. Below, we develop some heuristics to estimate the sample size.   
+4. Data exists and similar problem is not solved before [worst case]. Then, one has to design an experiment, provide some inputs (design considerations or operating environment) about the problem, get a ball park sense of the sample size (for the sake of budget, resource and project planning), run a pilot data collection exercise, refine the strategy and iterate. Below, we develop some heuristics to estimate the sample size.   
 
 #### A Statistical Approach
 Let us simplify and consider a _regression problem_. We are trying to learn a function $f: [0,1] \rightarrow R$. 
@@ -103,7 +103,19 @@ For tabular problems, one can use either of the above methods to get a sensible 
 #### What about **Large Language Models**? 
 Do we want to train custom LLMs or do we want to use them for inference?
  
-For training LLMs, how much data is needed, the compute needed and the performance and emergence of the variables to study play. This area is emerging with results and counter-results. But some early works fit parametric curves to predict performance given training data (counted in terms of number of tokens) and for a given compute budget. See this paper on [Training Compute-Optimal LLMs](https://arxiv.org/abs/2203.15556) and references therein to get a sense. See [Pathways Language Model and Model Scaling](https://www.youtube.com/watch?v=CV_eBVwzOaw) from [Aakanskha](https://www.achowdhery.com/). The key take-aways are, to train LLMs from scratch is an extremely specialized endeavor, requiring not only deep pockets, good understanding of the LLM science but also solid (distributed) systems engineering knowledge. General pointers are: both data size and model size of sufficient size are needed to see emergence. For instruction fine-tuning, about 1000 instruction pairs is considered a good start. More would be better in this case. Like always, quality and representativeness matter. For In-Context Learning (ICL), a fewshot learning is better. But instead of prompt engineering in ad-hoc fashion, optimizing prompts in a data driven manner, using frameworks like [DSPy](https://github.com/stanfordnlp/dspy). For example, how many and which examples to include in the fewshot ICL can be optimzed with DSPy.
+For training LLMs, how much data is needed, the compute needed and the performance and emergence of the variables to study play. This area is emerging with results and counter-results. But some early works fit parametric curves to predict performance given training data (counted in terms of number of tokens) and for a given compute budget. The following regression model is considered in [Training Compute-Optimal LLMs](https://arxiv.org/abs/2203.15556), using their notation, known as Chinchila scaling laws :
+$$ L(N,D) = \frac{A}{N^{\alpha}} + \frac{B}{D^{\beta}} + E $$
+where $L()$ is the loss, $D$ is the training dataset size in tokens, $N$ is the model size, $A,B,E,\alpha, \beta$ are unknowns to be fit from experimental data. Under this mode, $E$ is the smallest loss achievable (irreducible noise), with infinite data and infinite compute. Based on large scale experiments, they fit $$ L(N,D) = \frac{406.4}{N^{0.34}} + \frac{410.7}{D^{0.28}} + 1.69 $$.
+It may be better to use a more standard notation and rewrite them as:
+$$ E(K,N) = \frac{A}{K^{\alpha}} + \frac{B}{N^{\beta}} + \sigma^2 $$
+where $K$ is the model size/complexity, $N$ is the number of tokens, and $\sigma^2$ is the noise variance. See [Pathways Language Model and Model Scaling](https://www.youtube.com/watch?v=CV_eBVwzOaw) from [Aakanskha](https://www.achowdhery.com/) for more on Scaling Laws. 
+
+Some observations w.r.t LLM scaling laws are:
+
+1. Training LLMs from scratch is an extremely specialized endeavor, requiring not only deep pockets, good understanding of the LLM science but also solid (distributed) systems engineering knowledge. 
+2. Both data size and model size of sufficient size are needed to see emergence. 
+3. For instruction fine-tuning, about 1k-6k instruction pairs is considered a good start. See [LIMIT: Less Is More for Instruction Tuning Across Evaluation Paradigm](https://arxiv.org/abs/2311.13133) . More would be better in this case. Like always, quality and representativeness matter. 
+4. For In-Context Learning (ICL), a fewshot learning is better. But instead of prompt engineering in ad-hoc fashion, optimizing prompts in a data driven manner, using frameworks like [DSPy](https://github.com/stanfordnlp/dspy). For example, how many and which examples to include in the fewshot ICL can be optimzed with DSPy. Fewshot is all but one of the strategies to improve the performance of LLMs. See [The Prompt](https://trigaten.github.io/Prompt_Survey_Site/) report for more details.
 
 
 #### Take-aways
