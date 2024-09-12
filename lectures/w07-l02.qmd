@@ -1,0 +1,40 @@
+# 07A: Scaling Laws {.unnumbered}
+
+## Materials:
+Date: Friday, 13-Sep-2024
+
+### Pre-work:
+1. [AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion) a criteria for model selection
+2. [cords](https://github.com/decile-team/cords) for a collection of works/implementations based on subset selection
+
+### In-Class
+
+1. Characterizing data difficulty or sample hardness.
+2. Look at some statistics like Relative Mahalanobis Distance (which some used to flag OOD, others used to measure sample hardness), Perplexity (cross entropy between two models, one model and data or between), Trust Scores 
+3. Sample easiness on training performance and generalization error
+
+### Post-class
+
+1. \[paper\] [Learning Sample Difficulty from Pre-trained Models for Reliable Prediction](https://proceedings.neurips.
+cc/paper_files/paper/2023/file/50251f54848a433f3e47ae3b7cbded53-Paper-Conference.pdf)
+2. \[paper\] [A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection](https://arxiv.org/abs/2106.09022)
+3. \[paper\] [Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI](https://arxiv.org/abs/2403.04551) 
+4. \[paper\] [To Trust or Not To Trust A Classifier](https://arxiv.org/abs/1805.11783)
+
+
+### Additional Reading (optional)
+
+1. \[paper\] [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
+2. \[tools\] [Pytoch-ood](https://github.com/kkirchheim/pytorch-ood) - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.
+3. \[tools\] [PyOD](https://github.com/yzhao062/pyod) - a collection of Anomaly detection techniques 
+
+
+## Notes
+1. Not all examples are equal (in the eyes of the model). There can be many reasons.
+2. There can be outliers (in the feature space, in the label space or both in the feature and label space).
+3. Outliers affect the model performance in different ways.
+4. A suite of techniques, preferable model-agnostic, are needed to quantify sample hardness and make them avaibale at dataset level (train set) and also at inference time. 
+
+
+
+

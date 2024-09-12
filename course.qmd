@@ -35,7 +35,7 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 ::: {style="font-size: 80%;"}
 | Wk | Dt | Topics | Resources |
 | :- | :- | :------- | :------- |
-| 07 | 10-Sep <br> 03-Sep | **Scaling Laws, Calibration** <br> 1. Sample Sizes, Active Learning, Scaling Laws <br> 2. Calibration | [W07-L01](./lectures/w07-l01.qmd) <br> tbd|
+| 07 | 10-Sep <br> 03-Sep | **Scaling Laws, Dataset Hardness** <br> 1. Sample Sizes, Active Learning, Scaling Laws <br> 2. Sample Hardness | [W07-L01](./lectures/w07-l01.qmd) <br> [W07-L02](./lectures/w07-l02.qmd) |
 &nbsp; |  |   @sec-hw-minor | Due 11.59PM IST, Friday, 25th Oct, 2024 |
 
 : **Part-2: Full Stack ML** {.striped}
