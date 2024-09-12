@@ -26,7 +26,9 @@ cc/paper_files/paper/2023/file/50251f54848a433f3e47ae3b7cbded53-Paper-Conference
 
 1. \[paper\] [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
 2. \[tools\] [Pytoch-ood](https://github.com/kkirchheim/pytorch-ood) - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.
-3. \[tools\] [PyOD](https://github.com/yzhao062/pyod) - a collection of Anomaly detection techniques 
+3. \[tools\] [PyOD](https://github.com/yzhao062/pyod) - a collection of anomaly detection techniques 
+4. \[tools\] [DEEL](https://github.com/deel-ai) - a collection of OOD, XAI, and other techniques
+
 
 
 ## Notes
