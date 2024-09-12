@@ -530,6 +530,39 @@
     ]
   },
   {
+    "objectID": "lectures/w07-l02.html",
+    "href": "lectures/w07-l02.html",
+    "title": "07B: Sample Hardness",
+    "section": "",
+    "text": "Materials:\nDate: Friday, 13-Sep-2024",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "07B: Sample Hardness"
+    ]
+  },
+  {
+    "objectID": "lectures/w07-l02.html#materials",
+    "href": "lectures/w07-l02.html#materials",
+    "title": "07B: Sample Hardness",
+    "section": "",
+    "text": "Pre-work:\n\nAIC a criteria for model selection\ncords for a collection of works/implementations based on subset selection\n\n\n\nIn-Class\n\nCharacterizing data difficulty or sample hardness.\nLook at some statistics like Relative Mahalanobis Distance (which some used to flag OOD, others used to measure sample hardness), Perplexity (cross entropy between two models, one model and data or between), Trust Scores\nSample easiness on training performance and generalization error\n\n\n\nPost-class\n\n[paper] Learning Sample Difficulty from Pre-trained Models for Reliable Prediction\n[paper] A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection\n[paper] Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI\n[paper] To Trust or Not To Trust A Classifier\n\n\n\nAdditional Reading (optional)\n\n[paper] Understanding Dataset difficulty\n[tools] Pytoch-ood - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.\n[tools] PyOD - a collection of Anomaly detection techniques",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "07B: Sample Hardness"
+    ]
+  },
+  {
+    "objectID": "lectures/w07-l02.html#notes",
+    "href": "lectures/w07-l02.html#notes",
+    "title": "07B: Sample Hardness",
+    "section": "Notes",
+    "text": "Notes\n\nNot all examples are equal (in the eyes of the model). There can be many reasons.\nThere can be outliers (in the feature space, in the label space or both in the feature and label space).\nOutliers affect the model performance in different ways.\nA suite of techniques, preferable model-agnostic, are needed to quantify sample hardness and make them avaibale at dataset level (train set) and also at inference time.",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "07B: Sample Hardness"
+    ]
+  },
+  {
     "objectID": "homeworks.html",
     "href": "homeworks.html",
     "title": "Homeworks",
