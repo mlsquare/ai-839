@@ -1,5 +1,27 @@
 [
   {
+    "objectID": "notebooks/Sample-Hardness.html",
+    "href": "notebooks/Sample-Hardness.html",
+    "title": "Sample Hardness",
+    "section": "",
+    "text": "RMD\nLet us compute the Mahalanobis Distance (MD) and Relative Mahalanobis Distance (RMD) to flag RMD score\n# let us compute RMD for this two features\nfrom sklearn.covariance import EmpiricalCovariance, MinCovDet\nX1 = X_train[y_train==0,:]\nprint('1st group', X1.shape)\nX2 = X_train[y_train==1,:]\nprint('1st group', X2.shape)\n\nSig1 = MinCovDet().fit(X1)\nSig2 = MinCovDet().fit(X2)\nSig = MinCovDet().fit(X_train)\n\nm1 = Sig1.mahalanobis(X_train)\nm2 = Sig2.mahalanobis(X_train)\nm = Sig.mahalanobis(X_train)\n\nrmd_1 = (m1-m)\nrmd_2 = (m2-m)\n\n\n# take the min of m1, m2 for each record, subtract m\n# min_m1_m2 = np.minimum(m1, m2)\nconf_rmd  = -np.minimum(rmd_1, rmd_2)\n\n_, ax = plt.subplots(figsize=(5,5))\nscatter = ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train)\n\n_, ax = plt.subplots(figsize=(5,5))\nscatter = ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train,s=np.exp(conf_rmd))\n\n1st group (41, 2)\n1st group (39, 2)",
+    "crumbs": [
+      "Notebooks",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sample Hardness</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/Sample-Hardness.html#margins",
+    "href": "notebooks/Sample-Hardness.html#margins",
+    "title": "Sample Hardness",
+    "section": "Margins",
+    "text": "Margins\nFit an SVM, and develop a score based on margins\n\nfrom sklearn.svm import LinearSVC\n\nclf = LinearSVC(random_state=0, tol=1e-5)\nclf.fit(X_train, y_train)\nyh_train = clf.predict(X_train)\n\ny_test = clf.predict(X_test)\nprint('on test set')\nprint(classification_report(y_train, yh_train, target_names=['versicolor','virginica']))\n\nprint('on test set')\nprint(classification_report(y_test, yh_test, target_names=['versicolor','virginica']))\n\non test set\n              precision    recall  f1-score   support\n\n  versicolor       0.72      0.71      0.72        41\n   virginica       0.70      0.72      0.71        39\n\n    accuracy                           0.71        80\n   macro avg       0.71      0.71      0.71        80\nweighted avg       0.71      0.71      0.71        80\n\non test set\n              precision    recall  f1-score   support\n\n  versicolor       1.00      1.00      1.00         9\n   virginica       1.00      1.00      1.00        11\n\n    accuracy                           1.00        20\n   macro avg       1.00      1.00      1.00        20\nweighted avg       1.00      1.00      1.00        20\n\n\n\n\nconf = clf.decision_function(X_train)\n_, ax = plt.subplots(figsize=(5,5))\nscatter = ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train,s=50*np.abs(conf))\n\n\n\n\n\n\n\n\n\n# plot the decision function\nfrom sklearn.inspection import DecisionBoundaryDisplay\n\n\nfrom sklearn import svm\nclf = svm.SVC(kernel=\"linear\", C=1000)\nclf.fit(X_train, y_train)\n\nconf = clf.decision_function(X_train)\n\nprint('conf scores len', len(conf))\n\nax = plt.gca()\nDecisionBoundaryDisplay.from_estimator(\n    clf,\n    X_train,\n    plot_method=\"contour\",\n    colors=\"k\",\n    levels=[-1, 0, 1],\n    alpha=0.5,\n    linestyles=[\"--\", \"-\", \"--\"],\n    ax=ax,\n)\n# plot support vectors\nax.scatter(\n    clf.support_vectors_[:, 0],\n    clf.support_vectors_[:, 1],\n    s=100,\n    linewidth=1,\n    facecolors=\"none\",\n    edgecolors=\"k\",\n)\nax.scatter(X_train[:, 0], X_train[:, 1], c=y_train,s=50*np.abs(conf))\nplt.show()\n\nprint('Train size', len(X_train))\nprint('# of support vectors', len(clf.support_vectors_))\n\nconf scores len 80\n\n\n\n\n\n\n\n\n\nTrain size 80\n# of support vectors 54\n\n\nLet us remove the points with low confidence and re-train the model, and at inference time, flag those points with low confidence\n\n# get the smallest confidence that is not of a support vector\nsv = clf.support_vectors_\n\n# get the conf of those support vectors\nconf_sv = clf.decision_function(sv)\nprint('support vectors',sv.shape)\nprint('conf of sv',conf_sv.shape)\n\n# get conf of all points in the train set\nconf = clf.decision_function(X_train)\nprint('conf',conf.shape)\n\n# get the min of max conf of SVs\nthresh = np.median(conf_sv)\n\nprint('median conf of support vectors is: ', thresh)\n\n# now get all indexes in the training set where conf is more than them and only retain them for model retraining\nind = conf &gt; thresh\n\nsupport vectors (54, 2)\nconf of sv (54,)\nconf (80,)\nmedian conf of support vectors is:  -0.16589414579587292\n\n\n\n# conf of negative examples\nprint('neg examples',conf[y_train==0])\nprint('pos examples',conf[y_train==1])\n\nneg examples [ 1.15547161 -0.35591521 -0.9986464  -1.65188176 -1.00389849 -0.03192357\n -0.92158756 -0.7009152  -2.77797436  0.83673206 -2.53104157  0.74916904\n  0.44093366 -0.9986464  -1.41020106 -1.31738595 -1.24557919  0.19400087\n  1.39715231 -0.36641939  0.36387482 -0.44347823 -0.45923449  0.83673206\n -1.65188176 -1.00915057 -0.92683964 -0.36641939  0.27105971 -1.4872599\n  0.59505135 -1.01965475 -1.56957083 -0.52053707 -0.83927662 -0.60810009\n -1.00389849 -0.28410846 -1.08095733 -0.29461263 -1.88305829]\npos examples [ 0.36387482  0.35862273  0.03463109 -0.04767984  1.00135392  0.83673206\n  0.34286647 -0.92683964  0.28681598 -0.3611673   3.00660633 -2.52578948\n  0.44618575  2.34811888 -0.52053707 -1.01965475  1.07841276  2.1887491\n  3.32534588  0.9137909   0.60030344  0.11168994 -0.20704961 -0.12999077\n -0.29461263 -0.84452871 -1.25083128  0.44093366  2.18349701  1.15547161\n  1.62832885  0.43568158  1.15547161  1.00135392  2.04513559 -0.20179752\n -1.16326826  2.01887515  1.23778254]\n\n\n\n# At inference time, flag test points as low conf or high conf\nconf_test = clf.decision_function(X_test)\nind = conf_test &gt; thresh\nprint(ind)\n\n[False  True  True False False False  True  True  True  True False  True\n  True  True  True  True  True False False False]\n\n\n\n# select high conf points (which are easy) and retrain the model\nind = conf &gt; thresh\n\nX_train_easy = X_train[ind]\ny_train_easy = y_train[ind]\n\nclf_easy = svm.SVC(kernel=\"linear\", C=1000)\nclf_easy.fit(X_train_easy, y_train_easy)\n\nconf_easy = clf_easy.decision_function(X_train_easy)\n\nax = plt.gca()\nDecisionBoundaryDisplay.from_estimator(\n    clf_easy,\n    X_train_easy,\n    plot_method=\"contour\",\n    colors=\"k\",\n    levels=[-1, 0, 1],\n    alpha=0.5,\n    linestyles=[\"--\", \"-\", \"--\"],\n    ax=ax,\n)\n# plot support vectors\nax.scatter(\n    clf_easy.support_vectors_[:, 0],\n    clf_easy.support_vectors_[:, 1],\n    s=100,\n    linewidth=1,\n    facecolors=\"none\",\n    edgecolors=\"k\",\n)\nax.scatter(X_train_easy[:, 0], X_train_easy[:, 1], c=y_train_easy,s=50*np.abs(conf_easy))\nplt.show()",
+    "crumbs": [
+      "Notebooks",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sample Hardness</span>"
+    ]
+  },
+  {
     "objectID": "resources/project-card.html",
     "href": "resources/project-card.html",
     "title": "Project Card",
@@ -7,7 +29,7 @@
     "text": "Business View",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -18,7 +40,7 @@
     "text": "Background\nProvide succinct background to the problem so that the reader can empathize with the problem.\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -29,7 +51,7 @@
     "text": "Problem\nWhat is the problem being solved?\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -40,7 +62,7 @@
     "text": "Customer\nWho it is for? Is that a user or a beneficiary? What is the problem being solved? Who it is for?\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -51,7 +73,7 @@
     "text": "Value Proposition\nWhy it needs to be solved?\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -62,7 +84,7 @@
     "text": "Product\nHow does the solution look like? It is more of the experience, rather how it will be developed.\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -73,7 +95,7 @@
     "text": "Objectives\nBreakdown the product into key (business) objectives that need to be delivered? SMART Goals is useful to frame\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -84,7 +106,7 @@
     "text": "Risks & Challenges\nWhat are the challenges one can face and ways to overcome?\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -95,7 +117,7 @@
     "text": "Task\nWhat type of prediction problem is this? Link Model Card when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -106,7 +128,7 @@
     "text": "Metrics\nHow will the solution be evaluated - What are the ML metrics? What are the business metrics? Link Model Card when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -117,7 +139,7 @@
     "text": "Evaluation\nHow will the solution be evaluated (process)? Link Model Card when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -128,7 +150,7 @@
     "text": "Data\nWhat type of data is needed? How will it be collected - for training and for continuous improvement? Link Data Cards when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -139,7 +161,7 @@
     "text": "Plan/ Roadmap\nProvide problem break-up, tentative timelines and deliverables? Use PACT format if SMART is not suitable.\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -150,7 +172,7 @@
     "text": "Continuous Improvement\nHow will the system/model will improve? Provide a plan and means.\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -161,29 +183,7 @@
     "text": "Resources\nWhat resources are needed? Estimate the cost!\nyour response\n\nHuman Resources\nwhat type of team and strength needed?\nyour response\n\n\nCompute Resources\nWhat type of compute resources needed to train and serve?\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Project Card</span>"
-    ]
-  },
-  {
-    "objectID": "resources/Sample-Hardness.html",
-    "href": "resources/Sample-Hardness.html",
-    "title": "Sample Hardness",
-    "section": "",
-    "text": "RMD\nLet us compute the Mahalanobis Distance (MD) and Relative Mahalanobis Distance (RMD) to flag RMD score\n# let us compute RMD for this two features\nfrom sklearn.covariance import EmpiricalCovariance, MinCovDet\nX1 = X_train[y_train==0,:]\nprint('1st group', X1.shape)\nX2 = X_train[y_train==1,:]\nprint('1st group', X2.shape)\n\nSig1 = MinCovDet().fit(X1)\nSig2 = MinCovDet().fit(X2)\nSig = MinCovDet().fit(X_train)\n\nm1 = Sig1.mahalanobis(X_train)\nm2 = Sig2.mahalanobis(X_train)\nm = Sig.mahalanobis(X_train)\n\nrmd_1 = (m1-m)\nrmd_2 = (m2-m)\n\n\n# take the min of m1, m2 for each record, subtract m\n# min_m1_m2 = np.minimum(m1, m2)\nconf_rmd  = -np.minimum(rmd_1, rmd_2)\n\n_, ax = plt.subplots(figsize=(5,5))\nscatter = ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train)\n\n_, ax = plt.subplots(figsize=(5,5))\nscatter = ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train,s=np.exp(conf_rmd))\n\n1st group (41, 2)\n1st group (39, 2)",
-    "crumbs": [
-      "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sample Hardness</span>"
-    ]
-  },
-  {
-    "objectID": "resources/Sample-Hardness.html#margins",
-    "href": "resources/Sample-Hardness.html#margins",
-    "title": "Sample Hardness",
-    "section": "Margins",
-    "text": "Margins\nFit an SVM, and develop a score based on margins\n\nfrom sklearn.svm import LinearSVC\n\nclf = LinearSVC(random_state=0, tol=1e-5)\nclf.fit(X_train, y_train)\nyh_train = clf.predict(X_train)\n\ny_test = clf.predict(X_test)\nprint('on test set')\nprint(classification_report(y_train, yh_train, target_names=['versicolor','virginica']))\n\nprint('on test set')\nprint(classification_report(y_test, yh_test, target_names=['versicolor','virginica']))\n\non test set\n              precision    recall  f1-score   support\n\n  versicolor       0.72      0.71      0.72        41\n   virginica       0.70      0.72      0.71        39\n\n    accuracy                           0.71        80\n   macro avg       0.71      0.71      0.71        80\nweighted avg       0.71      0.71      0.71        80\n\non test set\n              precision    recall  f1-score   support\n\n  versicolor       1.00      1.00      1.00         9\n   virginica       1.00      1.00      1.00        11\n\n    accuracy                           1.00        20\n   macro avg       1.00      1.00      1.00        20\nweighted avg       1.00      1.00      1.00        20\n\n\n\n\nconf = clf.decision_function(X_train)\n_, ax = plt.subplots(figsize=(5,5))\nscatter = ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train,s=50*np.abs(conf))\n\n\n\n\n\n\n\n\n\n# plot the decision function\nfrom sklearn.inspection import DecisionBoundaryDisplay\n\n\nfrom sklearn import svm\nclf = svm.SVC(kernel=\"linear\", C=1000)\nclf.fit(X_train, y_train)\n\nconf = clf.decision_function(X_train)\n\nprint('conf scores len', len(conf))\n\nax = plt.gca()\nDecisionBoundaryDisplay.from_estimator(\n    clf,\n    X_train,\n    plot_method=\"contour\",\n    colors=\"k\",\n    levels=[-1, 0, 1],\n    alpha=0.5,\n    linestyles=[\"--\", \"-\", \"--\"],\n    ax=ax,\n)\n# plot support vectors\nax.scatter(\n    clf.support_vectors_[:, 0],\n    clf.support_vectors_[:, 1],\n    s=100,\n    linewidth=1,\n    facecolors=\"none\",\n    edgecolors=\"k\",\n)\nax.scatter(X_train[:, 0], X_train[:, 1], c=y_train,s=50*np.abs(conf))\nplt.show()\n\nprint('Train size', len(X_train))\nprint('# of support vectors', len(clf.support_vectors_))\n\nconf scores len 80\n\n\n\n\n\n\n\n\n\nTrain size 80\n# of support vectors 54\n\n\nLet us remove the points with low confidence and re-train the model, and at inference time, flag those points with low confidence\n\n# get the smallest confidence that is not of a support vector\nsv = clf.support_vectors_\n\n# get the conf of those support vectors\nconf_sv = clf.decision_function(sv)\nprint('support vectors',sv.shape)\nprint('conf of sv',conf_sv.shape)\n\n# get conf of all points in the train set\nconf = clf.decision_function(X_train)\nprint('conf',conf.shape)\n\n# get the min of max conf of SVs\nthresh = np.median(conf_sv)\n\nprint('median conf of support vectors is: ', thresh)\n\n# now get all indexes in the training set where conf is more than them and only retain them for model retraining\nind = conf &gt; thresh\n\nsupport vectors (54, 2)\nconf of sv (54,)\nconf (80,)\nmedian conf of support vectors is:  -0.16589414579587292\n\n\n\n# conf of negative examples\nprint('neg examples',conf[y_train==0])\nprint('pos examples',conf[y_train==1])\n\nneg examples [ 1.15547161 -0.35591521 -0.9986464  -1.65188176 -1.00389849 -0.03192357\n -0.92158756 -0.7009152  -2.77797436  0.83673206 -2.53104157  0.74916904\n  0.44093366 -0.9986464  -1.41020106 -1.31738595 -1.24557919  0.19400087\n  1.39715231 -0.36641939  0.36387482 -0.44347823 -0.45923449  0.83673206\n -1.65188176 -1.00915057 -0.92683964 -0.36641939  0.27105971 -1.4872599\n  0.59505135 -1.01965475 -1.56957083 -0.52053707 -0.83927662 -0.60810009\n -1.00389849 -0.28410846 -1.08095733 -0.29461263 -1.88305829]\npos examples [ 0.36387482  0.35862273  0.03463109 -0.04767984  1.00135392  0.83673206\n  0.34286647 -0.92683964  0.28681598 -0.3611673   3.00660633 -2.52578948\n  0.44618575  2.34811888 -0.52053707 -1.01965475  1.07841276  2.1887491\n  3.32534588  0.9137909   0.60030344  0.11168994 -0.20704961 -0.12999077\n -0.29461263 -0.84452871 -1.25083128  0.44093366  2.18349701  1.15547161\n  1.62832885  0.43568158  1.15547161  1.00135392  2.04513559 -0.20179752\n -1.16326826  2.01887515  1.23778254]\n\n\n\n# At inference time, flag test points as low conf or high conf\nconf_test = clf.decision_function(X_test)\nind = conf_test &gt; thresh\nprint(ind)\n\n[False  True  True False False False  True  True  True  True False  True\n  True  True  True  True  True False False False]\n\n\n\n# select high conf points (which are easy) and retrain the model\nind = conf &gt; thresh\n\nX_train_easy = X_train[ind]\ny_train_easy = y_train[ind]\n\nclf_easy = svm.SVC(kernel=\"linear\", C=1000)\nclf_easy.fit(X_train_easy, y_train_easy)\n\nconf_easy = clf_easy.decision_function(X_train_easy)\n\nax = plt.gca()\nDecisionBoundaryDisplay.from_estimator(\n    clf_easy,\n    X_train_easy,\n    plot_method=\"contour\",\n    colors=\"k\",\n    levels=[-1, 0, 1],\n    alpha=0.5,\n    linestyles=[\"--\", \"-\", \"--\"],\n    ax=ax,\n)\n# plot support vectors\nax.scatter(\n    clf_easy.support_vectors_[:, 0],\n    clf_easy.support_vectors_[:, 1],\n    s=100,\n    linewidth=1,\n    facecolors=\"none\",\n    edgecolors=\"k\",\n)\nax.scatter(X_train_easy[:, 0], X_train_easy[:, 1], c=y_train_easy,s=50*np.abs(conf_easy))\nplt.show()",
-    "crumbs": [
-      "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sample Hardness</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
