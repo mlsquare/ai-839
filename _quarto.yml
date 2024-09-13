@@ -53,10 +53,12 @@ book:
   - projects.qmd
   - tutorials.qmd
   - talks.qmd
+  - part: Notebooks
+    chapters:
+    - ./notebooks/Sample-Hardness.ipynb
   - part: documentation.qmd 
     chapters:
     - ./resources/project-card.ipynb
-    - ./resources/Sample-Hardness.ipynb
   
   
 format:
