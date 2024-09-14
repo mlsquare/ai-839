@@ -15,8 +15,7 @@ Date: Friday, 13-Sep-2024
 
 ### Post-class
 
-1. \[paper\] [Learning Sample Difficulty from Pre-trained Models for Reliable Prediction](https://proceedings.neurips.
-cc/paper_files/paper/2023/file/50251f54848a433f3e47ae3b7cbded53-Paper-Conference.pdf)
+1. \[paper\] [Learning Sample Difficulty from Pre-trained Models for Reliable Prediction](https://arxiv.org/abs/2304.10127)
 2. \[paper\] [A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection](https://arxiv.org/abs/2106.09022)
 3. \[paper\] [Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI](https://arxiv.org/abs/2403.04551) 
 4. \[paper\] [To Trust or Not To Trust A Classifier](https://arxiv.org/abs/1805.11783)
