@@ -361,7 +361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>We will look at dataset difficulty and sample hardness using Iris data</p>
-<div id="cell-1" class="cell" data-execution_count="84">
+<div id="cell-1" class="cell" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> load_iris()</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -382,7 +382,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Iris is a relative easy dataset. We will pick two features, and pick <em>versicolor</em> and <em>virginica</em> lables as there seems to be some overalp in the feature space. We will look at this two dimensional data from many angles and see what can we learn about</p>
-<div id="cell-3" class="cell" data-execution_count="85">
+<div id="cell-3" class="cell" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> iris.target</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> (y<span class="op">==</span><span class="dv">1</span>) <span class="op">|</span> (y<span class="op">==</span><span class="dv">2</span>)</span>
@@ -406,9 +406,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>We will build a simple linear model (no interactions), then an MLP, use the Linear Model to define sample hardness. Later, we will remove those points, and retrain an MLP. And see the difference. Along the way, we will see different sample hardness measures.</p>
-<div id="cell-5" class="cell" data-execution_count="86">
+<div id="cell-5" class="cell" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X,y, test_size<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X,y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">11</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
@@ -427,29 +427,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>on train set
               precision    recall  f1-score   support
 
-  versicolor       0.70      0.76      0.73        41
-   virginica       0.72      0.67      0.69        39
+  versicolor       0.69      0.72      0.71        40
+   virginica       0.71      0.68      0.69        40
 
-    accuracy                           0.71        80
-   macro avg       0.71      0.71      0.71        80
-weighted avg       0.71      0.71      0.71        80
+    accuracy                           0.70        80
+   macro avg       0.70      0.70      0.70        80
+weighted avg       0.70      0.70      0.70        80
 
 on test set
               precision    recall  f1-score   support
 
-  versicolor       0.78      0.78      0.78         9
-   virginica       0.82      0.82      0.82        11
+  versicolor       0.82      0.90      0.86        10
+   virginica       0.89      0.80      0.84        10
 
-    accuracy                           0.80        20
-   macro avg       0.80      0.80      0.80        20
-weighted avg       0.80      0.80      0.80        20
+    accuracy                           0.85        20
+   macro avg       0.85      0.85      0.85        20
+weighted avg       0.85      0.85      0.85        20
 </code></pre>
 </div>
 </div>
 <section id="rmd" class="level2">
 <h2 class="anchored" data-anchor-id="rmd">RMD</h2>
 <p>Let us compute the Mahalanobis Distance (MD) and Relative Mahalanobis Distance (RMD) to flag RMD score</p>
-<div id="cell-7" class="cell" data-execution_count="87">
+<p>Ref <a href="https://arxiv.org/abs/2106.09022">A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection</a>. In the paper, while computing the foreground MD, while the means are specific to each class, the covariance is common to all classes. The background model to compute the MD assumes a common mean and covariance. You compute the difference between the foreground MD and the background MD, and take the minimum.</p>
+<p>But it is must simpler to implement (using sklearn covariance APIs) MD and RMD with class specific covariance. We will implement this slight modification of RMD for a two class problem.</p>
+<div id="cell-7" class="cell" data-execution_count="49">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># let us compute RMD for this two features</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.covariance <span class="im">import</span> EmpiricalCovariance, MinCovDet</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> X_train[y_train<span class="op">==</span><span class="dv">0</span>,:]</span>
@@ -457,30 +459,32 @@ weighted avg       0.80      0.80      0.80        20
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>X2 <span class="op">=</span> X_train[y_train<span class="op">==</span><span class="dv">1</span>,:]</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'1st group'</span>, X2.shape)</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>Sig1 <span class="op">=</span> MinCovDet().fit(X1)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>Sig2 <span class="op">=</span> MinCovDet().fit(X2)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>Sig <span class="op">=</span> MinCovDet().fit(X_train)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>m1 <span class="op">=</span> Sig1.mahalanobis(X_train)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>m2 <span class="op">=</span> Sig2.mahalanobis(X_train)</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> Sig.mahalanobis(X_train)</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>rmd_1 <span class="op">=</span> (m1<span class="op">-</span>m)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>rmd_2 <span class="op">=</span> (m2<span class="op">-</span>m)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># class-specific covariances</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>Sig1 <span class="op">=</span> MinCovDet().fit(X1)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>Sig2 <span class="op">=</span> MinCovDet().fit(X2)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># covariance for the entire data, dropping the class labels</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>Sig <span class="op">=</span> MinCovDet().fit(X_train)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># sklearn has mahalanobis functions. we don't have to implement</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>m1 <span class="op">=</span> Sig1.mahalanobis(X_train)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>m2 <span class="op">=</span> Sig2.mahalanobis(X_train)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> Sig.mahalanobis(X_train)</span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># take the min of m1, m2 for each record, subtract m</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co"># min_m1_m2 = np.minimum(m1, m2)</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>conf_rmd  <span class="op">=</span> <span class="op">-</span>np.minimum(rmd_1, rmd_2)</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>_, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>scatter <span class="op">=</span> ax.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span>y_train)</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>_, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>scatter <span class="op">=</span> ax.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span>y_train,s<span class="op">=</span>np.exp(conf_rmd))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>rmd_1 <span class="op">=</span> (m1<span class="op">-</span>m)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>rmd_2 <span class="op">=</span> (m2<span class="op">-</span>m)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># take the min of m1, m2 for each record, subtract m. will take exp to keep them positive.</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>conf_rmd  <span class="op">=</span> np.exp(<span class="op">-</span>np.minimum(rmd_1, rmd_2))</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>_, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>scatter <span class="op">=</span> ax.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span>y_train)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>_, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>scatter <span class="op">=</span> ax.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span>y_train,s<span class="op">=</span>conf_rmd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>1st group (41, 2)
-1st group (39, 2)</code></pre>
+<pre><code>1st group (40, 2)
+1st group (40, 2)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
@@ -500,47 +504,49 @@ weighted avg       0.80      0.80      0.80        20
 </section>
 <section id="margins" class="level2">
 <h2 class="anchored" data-anchor-id="margins">Margins</h2>
-<p>Fit an SVM, and develop a score based on margins</p>
-<div id="cell-9" class="cell" data-execution_count="88">
+<p>Given some representation of the data (or embedding), we can use very well known ML techniques to come up similar statistics like RMD. For example, we can fit an SVM, and calculate the margins for each instance. Not only we solve the prediciton problem, we can get secondary statistics, which are useful in determining the difficulty of the sample to the model.</p>
+<div id="cell-9" class="cell" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.svm <span class="im">import</span> LinearSVC</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> LinearSVC(random_state<span class="op">=</span><span class="dv">0</span>, tol<span class="op">=</span><span class="fl">1e-5</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train, y_train)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>yh_train <span class="op">=</span> clf.predict(X_train)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>y_test <span class="op">=</span> clf.predict(X_test)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'on test set'</span>)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_train, yh_train, target_names<span class="op">=</span>[<span class="st">'versicolor'</span>,<span class="st">'virginica'</span>]))</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'on test set'</span>)</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_test, yh_test, target_names<span class="op">=</span>[<span class="st">'versicolor'</span>,<span class="st">'virginica'</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.inspection <span class="im">import</span> DecisionBoundaryDisplay</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> svm</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> svm.SVC(kernel<span class="op">=</span><span class="st">"linear"</span>, C<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train, y_train)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>y_test <span class="op">=</span> clf.predict(X_test)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'on test set'</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_train, yh_train, target_names<span class="op">=</span>[<span class="st">'versicolor'</span>,<span class="st">'virginica'</span>]))</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'on test set'</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_test, yh_test, target_names<span class="op">=</span>[<span class="st">'versicolor'</span>,<span class="st">'virginica'</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>on test set
               precision    recall  f1-score   support
 
-  versicolor       0.72      0.71      0.72        41
-   virginica       0.70      0.72      0.71        39
+  versicolor       0.69      0.72      0.71        40
+   virginica       0.71      0.68      0.69        40
 
-    accuracy                           0.71        80
-   macro avg       0.71      0.71      0.71        80
-weighted avg       0.71      0.71      0.71        80
+    accuracy                           0.70        80
+   macro avg       0.70      0.70      0.70        80
+weighted avg       0.70      0.70      0.70        80
 
 on test set
               precision    recall  f1-score   support
 
-  versicolor       1.00      1.00      1.00         9
-   virginica       1.00      1.00      1.00        11
+  versicolor       1.00      0.85      0.92        13
+   virginica       0.78      1.00      0.88         7
 
-    accuracy                           1.00        20
-   macro avg       1.00      1.00      1.00        20
-weighted avg       1.00      1.00      1.00        20
+    accuracy                           0.90        20
+   macro avg       0.89      0.92      0.90        20
+weighted avg       0.92      0.90      0.90        20
 </code></pre>
 </div>
 </div>
-<div id="cell-10" class="cell" data-execution_count="89">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>conf <span class="op">=</span> clf.decision_function(X_train)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>_, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>scatter <span class="op">=</span> ax.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span>y_train,s<span class="op">=</span><span class="dv">50</span><span class="op">*</span>np.<span class="bu">abs</span>(conf))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-10" class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the margin of all data points in the training set, already available in sklearn</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>conf <span class="op">=</span> clf.decision_function(X_train)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>_, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>scatter <span class="op">=</span> ax.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span>y_train,s<span class="op">=</span><span class="dv">50</span><span class="op">*</span>np.<span class="bu">abs</span>(conf))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -549,152 +555,131 @@ weighted avg       1.00      1.00      1.00        20
 </div>
 </div>
 </div>
-<div id="cell-11" class="cell" data-execution_count="90">
+<div id="cell-11" class="cell" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the decision function</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.inspection <span class="im">import</span> DecisionBoundaryDisplay</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> svm</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> svm.SVC(kernel<span class="op">=</span><span class="st">"linear"</span>, C<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train, y_train)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>conf <span class="op">=</span> clf.decision_function(X_train)</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'conf scores len'</span>, <span class="bu">len</span>(conf))</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.gca()</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>DecisionBoundaryDisplay.from_estimator(</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    clf,</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    X_train,</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    plot_method<span class="op">=</span><span class="st">"contour"</span>,</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    colors<span class="op">=</span><span class="st">"k"</span>,</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span>[<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>],</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.5</span>,</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    linestyles<span class="op">=</span>[<span class="st">"--"</span>, <span class="st">"-"</span>, <span class="st">"--"</span>],</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>ax,</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co"># plot support vectors</span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>ax.scatter(</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    clf.support_vectors_[:, <span class="dv">0</span>],</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    clf.support_vectors_[:, <span class="dv">1</span>],</span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    s<span class="op">=</span><span class="dv">100</span>,</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>    facecolors<span class="op">=</span><span class="st">"none"</span>,</span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    edgecolors<span class="op">=</span><span class="st">"k"</span>,</span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>ax.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span>y_train,s<span class="op">=</span><span class="dv">50</span><span class="op">*</span>np.<span class="bu">abs</span>(conf))</span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Train size'</span>, <span class="bu">len</span>(X_train))</span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'# of support vectors'</span>, <span class="bu">len</span>(clf.support_vectors_))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>conf scores len 80</code></pre>
-</div>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.gca()</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>DecisionBoundaryDisplay.from_estimator(</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    clf,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    X_train,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    plot_method<span class="op">=</span><span class="st">"contour"</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    colors<span class="op">=</span><span class="st">"k"</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span>[<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>],</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.5</span>,</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    linestyles<span class="op">=</span>[<span class="st">"--"</span>, <span class="st">"-"</span>, <span class="st">"--"</span>],</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>ax,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># plot support vectors</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>ax.scatter(</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    clf.support_vectors_[:, <span class="dv">0</span>],</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    clf.support_vectors_[:, <span class="dv">1</span>],</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    s<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    facecolors<span class="op">=</span><span class="st">"none"</span>,</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    edgecolors<span class="op">=</span><span class="st">"k"</span>,</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>ax.scatter(X_train[:, <span class="dv">0</span>], X_train[:, <span class="dv">1</span>], c<span class="op">=</span>y_train,s<span class="op">=</span><span class="dv">50</span><span class="op">*</span>np.<span class="bu">abs</span>(conf))</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Train size'</span>, <span class="bu">len</span>(X_train))</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'# of support vectors'</span>, <span class="bu">len</span>(clf.support_vectors_))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Sample-Hardness_files/figure-html/cell-8-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="Sample-Hardness_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Train size 80
-# of support vectors 54</code></pre>
+# of support vectors 56</code></pre>
 </div>
 </div>
-<p>Let us remove the points with low confidence and re-train the model, and at inference time, flag those points with low confidence</p>
-<div id="cell-13" class="cell" data-execution_count="91">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the smallest confidence that is not of a support vector</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>sv <span class="op">=</span> clf.support_vectors_</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># get the conf of those support vectors</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>conf_sv <span class="op">=</span> clf.decision_function(sv)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'support vectors'</span>,sv.shape)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'conf of sv'</span>,conf_sv.shape)</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># get conf of all points in the train set</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>conf <span class="op">=</span> clf.decision_function(X_train)</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'conf'</span>,conf.shape)</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># get the min of max conf of SVs</span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>thresh <span class="op">=</span> np.median(conf_sv)</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'median conf of support vectors is: '</span>, thresh)</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co"># now get all indexes in the training set where conf is more than them and only retain them for model retraining</span></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> conf <span class="op">&gt;</span> thresh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>At inference time, we can flag instances with low confidence. A simple heuristic to flag us, the confidence score has to be greater than the confidence of the suppost vectors.</p>
+<div id="cell-13" class="cell" data-execution_count="53">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the smallest confidence that is not of a support vector</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>sv <span class="op">=</span> clf.support_</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># get the conf of those support vectors</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>conf_sv <span class="op">=</span> clf.decision_function(X_train[sv,:])</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># get conf of all points in the train set</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>conf <span class="op">=</span> clf.decision_function(X_train)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'conf'</span>,conf.shape)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co"># get the mix conf of SVs from the training data</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>thresh <span class="op">=</span> np.<span class="bu">max</span>(conf_sv)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'max conf of support vectors is: '</span>, thresh)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>support vectors (54, 2)
-conf of sv (54,)
-conf (80,)
-median conf of support vectors is:  -0.16589414579587292</code></pre>
+<pre><code>conf (80,)
+max conf of support vectors is:  1.2440925839422636</code></pre>
 </div>
 </div>
-<div id="cell-14" class="cell" data-execution_count="92">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># conf of negative examples</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'neg examples'</span>,conf[y_train<span class="op">==</span><span class="dv">0</span>])</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'pos examples'</span>,conf[y_train<span class="op">==</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Either we can remove the points with low confidence and re-train the model, or pass a sample weight based on the confidence, and retrain the model.</p>
+<div id="cell-15" class="cell" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># At inference time, flag test points as low conf or high conf</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>conf_test <span class="op">=</span> clf.decision_function(X_test)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>ind_high_conf <span class="op">=</span> np.where(conf_test <span class="op">&gt;</span> thresh)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Test points that with high confidence'</span>, ind_high_conf[<span class="dv">0</span>].tolist())</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>ind_low_conf <span class="op">=</span> np.where(conf_test <span class="op">&lt;=</span> thresh)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Test points that with low confidence'</span>, ind_low_conf[<span class="dv">0</span>].tolist())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>neg examples [ 1.15547161 -0.35591521 -0.9986464  -1.65188176 -1.00389849 -0.03192357
- -0.92158756 -0.7009152  -2.77797436  0.83673206 -2.53104157  0.74916904
-  0.44093366 -0.9986464  -1.41020106 -1.31738595 -1.24557919  0.19400087
-  1.39715231 -0.36641939  0.36387482 -0.44347823 -0.45923449  0.83673206
- -1.65188176 -1.00915057 -0.92683964 -0.36641939  0.27105971 -1.4872599
-  0.59505135 -1.01965475 -1.56957083 -0.52053707 -0.83927662 -0.60810009
- -1.00389849 -0.28410846 -1.08095733 -0.29461263 -1.88305829]
-pos examples [ 0.36387482  0.35862273  0.03463109 -0.04767984  1.00135392  0.83673206
-  0.34286647 -0.92683964  0.28681598 -0.3611673   3.00660633 -2.52578948
-  0.44618575  2.34811888 -0.52053707 -1.01965475  1.07841276  2.1887491
-  3.32534588  0.9137909   0.60030344  0.11168994 -0.20704961 -0.12999077
- -0.29461263 -0.84452871 -1.25083128  0.44093366  2.18349701  1.15547161
-  1.62832885  0.43568158  1.15547161  1.00135392  2.04513559 -0.20179752
- -1.16326826  2.01887515  1.23778254]</code></pre>
+<pre><code>Test points that with high confidence [13]
+Test points that with low confidence [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19]</code></pre>
 </div>
 </div>
-<div id="cell-15" class="cell" data-execution_count="93">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># At inference time, flag test points as low conf or high conf</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>conf_test <span class="op">=</span> clf.decision_function(X_test)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> conf_test <span class="op">&gt;</span> thresh</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ind)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can look at the accuracy of test data on high conf and low conf data points on train set, as we seem to have not many points in the test set.</p>
+<div id="cell-17" class="cell" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>conf_train <span class="op">=</span> clf.decision_function(X_train)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ind_high_conf <span class="op">=</span> np.where(conf_train <span class="op">&gt;</span> thresh)[<span class="dv">0</span>].tolist()</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>yh_high_conf <span class="op">=</span> clf.predict(X_train[ind_high_conf,:])</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'on train set: high conf'</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_train[ind_high_conf], yh_high_conf))</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>ind_low_conf <span class="op">=</span> np.where(conf_train <span class="op">&lt;=</span> thresh)[<span class="dv">0</span>].tolist()</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>yh_low_conf <span class="op">=</span> clf.predict(X_train[ind_low_conf,:])</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'on train set: low conf'</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_train[ind_low_conf], yh_low_conf))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[False  True  True False False False  True  True  True  True False  True
-  True  True  True  True  True False False False]</code></pre>
+<pre><code>on train set: high conf
+              precision    recall  f1-score   support
+
+           1       1.00      1.00      1.00        10
+
+    accuracy                           1.00        10
+   macro avg       1.00      1.00      1.00        10
+weighted avg       1.00      1.00      1.00        10
+
+on train set: low conf
+              precision    recall  f1-score   support
+
+           0       0.64      0.70      0.67        40
+           1       0.54      0.47      0.50        30
+
+    accuracy                           0.60        70
+   macro avg       0.59      0.58      0.58        70
+weighted avg       0.59      0.60      0.60        70
+</code></pre>
 </div>
 </div>
-<div id="cell-16" class="cell" data-execution_count="94">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select high conf points (which are easy) and retrain the model</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> conf <span class="op">&gt;</span> thresh</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>X_train_easy <span class="op">=</span> X_train[ind]</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>y_train_easy <span class="op">=</span> y_train[ind]</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>clf_easy <span class="op">=</span> svm.SVC(kernel<span class="op">=</span><span class="st">"linear"</span>, C<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>clf_easy.fit(X_train_easy, y_train_easy)</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>conf_easy <span class="op">=</span> clf_easy.decision_function(X_train_easy)</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.gca()</span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>DecisionBoundaryDisplay.from_estimator(</span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    clf_easy,</span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    X_train_easy,</span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    plot_method<span class="op">=</span><span class="st">"contour"</span>,</span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    colors<span class="op">=</span><span class="st">"k"</span>,</span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span>[<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>],</span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.5</span>,</span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    linestyles<span class="op">=</span>[<span class="st">"--"</span>, <span class="st">"-"</span>, <span class="st">"--"</span>],</span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>ax,</span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="co"># plot support vectors</span></span>
-<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>ax.scatter(</span>
-<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>    clf_easy.support_vectors_[:, <span class="dv">0</span>],</span>
-<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    clf_easy.support_vectors_[:, <span class="dv">1</span>],</span>
-<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>    s<span class="op">=</span><span class="dv">100</span>,</span>
-<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>    facecolors<span class="op">=</span><span class="st">"none"</span>,</span>
-<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    edgecolors<span class="op">=</span><span class="st">"k"</span>,</span>
-<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>ax.scatter(X_train_easy[:, <span class="dv">0</span>], X_train_easy[:, <span class="dv">1</span>], c<span class="op">=</span>y_train_easy,s<span class="op">=</span><span class="dv">50</span><span class="op">*</span>np.<span class="bu">abs</span>(conf_easy))</span>
-<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We achieve perfect accuracy on the train set in which all samples have high confidence. And accuracy is around ~ 60% on the samples with low confidence. This demonstrates an important aspect – not all samples will have equal degree of confidence, and if there is a way to flag them, and deal with in the downstream task, we can bring reliability into the system.</p>
+<p>We have chosen the threshold based on some intuition that, typically support vectors will be closed to the separating hyper plans and will exactly sit on the hyperplanes. So, if we choose points whose are farther from the support vectors, they should be farther away from the decision boundary and hence easy to classify.</p>
+<p>But this way of choosing the thresholds does not give any statistical guarantees. One to has to choose the threshold via some cross-validation procedure. Later, we will see conformalization techniques which address this issue.</p>
+<p>One way to incorporate the confidence or sample easiness into training procedure is to, remove all difficult examples and retrain the model. Or convert the RMD or other types scores into weights and use a weighted loss, instead.</p>
+<p>This paper <a href="https://arxiv.org/abs/2304.10127">Learning Sample Difficulty from Pre-trained Models for Reliable Prediction</a> uses a score based on RMD to reweigh the samples in loss function.</p>
+<div id="cell-21" class="cell" data-execution_count="62">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create weight from conf, and fit a logistic regression with weighed samples</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>weights <span class="op">=</span> np.exp(<span class="fl">0.5</span><span class="op">*</span>conf)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> np.<span class="bu">max</span>(weights)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>weights <span class="op">=</span> weights<span class="op">/</span>scaler</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.plot(weights)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>plt.plot(conf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -702,7 +687,54 @@ pos examples [ 0.36387482  0.35862273  0.03463109 -0.04767984  1.00135392  0.836
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Sample-Hardness_files/figure-html/cell-12-output-2.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</div>
+</div>
+<div id="cell-22" class="cell" data-execution_count="64">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># fit a logistic model with sampled weights</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>weighed_model <span class="op">=</span> LogisticRegression(random_state<span class="op">=</span><span class="dv">0</span>).fit(X_train, y_train, sample_weight<span class="op">=</span>weights)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>yh_test <span class="op">=</span> weighed_model.predict(X_test)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># get conf from margins of svm</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>conf_test <span class="op">=</span> clf.decision_function(X_test)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>test_weights <span class="op">=</span> np.exp(conf_test)<span class="op">/</span>scaler</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'on test set w/o weights'</span>)</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_test, yh_test))</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'on test set with weights'</span>)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_test, yh_test, sample_weight <span class="op">=</span> test_weights ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>on test set w/o weights
+              precision    recall  f1-score   support
+
+           0       1.00      0.62      0.76        13
+           1       0.58      1.00      0.74         7
+
+    accuracy                           0.75        20
+   macro avg       0.79      0.81      0.75        20
+weighted avg       0.85      0.75      0.75        20
+
+on test set with weights
+              precision    recall  f1-score   support
+
+           0       1.00      0.41      0.58 1.5365777483728735
+           1       0.78      1.00      0.88 3.298054168177313
+
+    accuracy                           0.81 4.834631916550187
+   macro avg       0.89      0.70      0.73 4.834631916550187
+weighted avg       0.85      0.81      0.78 4.834631916550187
+</code></pre>
+</div>
+</div>
+<p>Overall accuracy improves. Based on our earlier observations, we can predict class 1 much better than class 0.</p>
 
 
 </section>
