@@ -12,7 +12,7 @@ Date: Friday, 13-Sep-2024
 1. Characterizing data difficulty or sample hardness.
 2. Look at some statistics like Relative Mahalanobis Distance (which some used to flag OOD, others used to measure sample hardness), Perplexity (cross entropy between two models, one model and data or between), Trust Scores 
 3. Sample easiness on training performance and generalization error
-4. See this [notebook](././notebooks/Sample-Hardness.ipynb) where we walk through these concept on a toy dataset
+4. See this [notebook](./../notebooks/Sample-Hardness.ipynb) where we walk through these concept on a toy dataset
 
 ### Post-class
 

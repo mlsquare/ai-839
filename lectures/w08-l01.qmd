@@ -10,7 +10,7 @@ Date: Tuesday, 17-Sep-2024
 ### In-Class
 
 1. Characterizing data difficulty or sample hardness : [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
-2. \[notebook\] [Information-Theoretic Metrics](././notebooks/Sample-Fitness.ipynb) where we walk through these concept on a toy dataset
+2. \[notebook\] [Sample Fitness  Metrics based on Information Theory](./../notebooks/Sample-Fitness.ipynb) where we walk through these concept on a toy dataset
 
 ### Post-class
 1. \[paper\] [The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning](https://arxiv.org/abs/2312.01552)
