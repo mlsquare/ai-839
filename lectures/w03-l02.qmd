@@ -24,3 +24,4 @@ Date: Friday, 16-Aug-2024.
 2. \[blog\][Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) a mental model of how to work with Git, branching process, and feature development 
 3. \[video\] [Git actions for Metrics tracking](https://www.youtube.com/watch?v=xPncjKH6SPk)
 4. Few additional resources on Git, Git Actions, Docker in the [Tutorials](./../tutorials.qmd) chapter.
+5. \[code\] [Data Science Life Cycle Process](https://github.com/dslp/dslp) a git flow like Issue tracker and branching process more suitable for Data Science Projects.

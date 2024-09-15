@@ -1,0 +1,25 @@
+# 08A: Sample Fitness {.unnumbered}
+
+## Materials:
+Date: Tuesday, 17-Sep-2024
+
+### Pre-work:
+1. \[tools\] [Pytorch-ood](https://github.com/kkirchheim/pytorch-ood) - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.
+2. \[tools\] [PyOD](https://github.com/yzhao062/pyod) - a collection of anomaly detection techniques 
+
+### In-Class
+
+1. Characterizing data difficulty or sample hardness : [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
+2. \[notebook\] [Information-Theoretic Metrics](././notebooks/Sample-Fitness.ipynb) where we walk through these concept on a toy dataset
+
+### Post-class
+1. \[paper\] [The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning](https://arxiv.org/abs/2312.01552)
+2. \[tools\] [AlignTDS](https://github.com/Re-Align/AlignTDS/blob/main/src/compute_dist_diff.py) - common metrics to detect differences between token distributions in LLMs
+
+
+## Notes
+1. Many metrics proposed to understand and characterize data and models are based on information theory. 
+2. Likelihood Ratio, Deviance, Cross-Entropy, Perplexity, $\nu\text{-information}$ all are related in linear and Generalized Linear models. They can be useful in modern deep learning and LLM context as well.
+
+
+

@@ -49,6 +49,7 @@ book:
     chapters:
     - ./lectures/w07-l01.qmd
     - ./lectures/w07-l02.qmd
+    - ./lectures/w08-l01.qmd
   - homeworks.qmd
   - projects.qmd
   - tutorials.qmd
@@ -56,6 +57,7 @@ book:
   - part: Notebooks
     chapters:
     - ./notebooks/Sample-Hardness.ipynb
+    - ./notebooks/Sample-Fitness.ipynb
   - part: documentation.qmd 
     chapters:
     - ./resources/project-card.ipynb

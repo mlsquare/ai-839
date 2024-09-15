@@ -12,6 +12,7 @@ Date: Friday, 13-Sep-2024
 1. Characterizing data difficulty or sample hardness.
 2. Look at some statistics like Relative Mahalanobis Distance (which some used to flag OOD, others used to measure sample hardness), Perplexity (cross entropy between two models, one model and data or between), Trust Scores 
 3. Sample easiness on training performance and generalization error
+4. See this [notebook](././notebooks/Sample-Hardness.ipynb) where we walk through these concept on a toy dataset
 
 ### Post-class
 
@@ -24,7 +25,7 @@ Date: Friday, 13-Sep-2024
 ### Additional Reading (optional)
 
 1. \[paper\] [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
-2. \[tools\] [Pytoch-ood](https://github.com/kkirchheim/pytorch-ood) - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.
+2. \[tools\] [Pytorch-ood](https://github.com/kkirchheim/pytorch-ood) - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.
 3. \[tools\] [PyOD](https://github.com/yzhao062/pyod) - a collection of anomaly detection techniques 
 4. \[tools\] [DEEL](https://github.com/deel-ai) - a collection of OOD, XAI, and other techniques
 
@@ -34,7 +35,7 @@ Date: Friday, 13-Sep-2024
 1. Not all examples are equal (in the eyes of the model). There can be many reasons.
 2. There can be outliers (in the feature space, in the label space or both in the feature and label space).
 3. Outliers affect the model performance in different ways.
-4. A suite of techniques, preferable model-agnostic, are needed to quantify sample hardness and make them avaibale at dataset level (train set) and also at inference time. 
+4. A suite of techniques, preferably model-agnostic, are needed to quantify sample hardness and make them available at dataset level (train set) and also at inference time. 
 
 
 
