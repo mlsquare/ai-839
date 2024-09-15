@@ -8,7 +8,7 @@
 
 <meta name="author" content="mlsquare">
 
-<title>05B: Deployment – AI-839</title>
+<title>08A: Sample Fitness – AI-839</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lectures/w06-l01.html" rel="next">
-<link href="../lectures/w05-l01.html" rel="prev">
+<link href="../homeworks.html" rel="next">
+<link href="../lectures/w07-l02.html" rel="prev">
 <link href="../crisp-ml-process.jpg" rel="icon" type="image/jpeg">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -83,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures[ML Engg.]</a></li><li class="breadcrumb-item"><a href="../lectures/w05-l02.html">05B: Deployment</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w08-l01.html">08A: Sample Fitness</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w05-l02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lectures/w05-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05B: Deployment</span></a>
   </div>
 </li>
@@ -233,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w08-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w08-l01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">08A: Sample Fitness</span></a>
   </div>
 </li>
@@ -314,17 +343,18 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-work:</a></li>
   <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-Class</a></li>
-  <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class:</a></li>
+  <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class</a></li>
   </ul></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w05-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w08-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures[ML Engg.]</a></li><li class="breadcrumb-item"><a href="../lectures/w05-l02.html">05B: Deployment</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w08-l01.html">08A: Sample Fitness</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">05B: Deployment</h1>
+<h1 class="title">08A: Sample Fitness</h1>
 </div>
 
 
@@ -343,31 +373,37 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="materials" class="level2">
 <h2 class="anchored" data-anchor-id="materials">Materials:</h2>
-<p>Date: Friday, 30-Aug-2024.</p>
+<p>Date: Tuesday, 17-Sep-2024</p>
 <section id="pre-work" class="level3">
 <h3 class="anchored" data-anchor-id="pre-work">Pre-work:</h3>
 <ol type="1">
-<li><a href="https://mlflow.org/docs/latest/deployment/index.html">mlflow docs</a></li>
-<li><a href="https://github.com/Galileo-Galilei/kedro-mlflow-tutorial">kedro-mlflow tutorial</a></li>
+<li>[tools] <a href="https://github.com/kkirchheim/pytorch-ood">Pytorch-ood</a> - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.</li>
+<li>[tools] <a href="https://github.com/yzhao062/pyod">PyOD</a> - a collection of anomaly detection techniques</li>
 </ol>
 </section>
 <section id="in-class" class="level3">
 <h3 class="anchored" data-anchor-id="in-class">In-Class</h3>
 <ol type="1">
-<li>Stream vs Batch Deployment</li>
-<li>Hands-on Deploying models with mlflow on local server</li>
+<li>Characterizing data difficulty or sample hardness : <a href="https://arxiv.org/abs/2110.08420">Understanding Dataset difficulty</a></li>
+<li>[notebook] <a href="././notebooks/Sample-Fitness.ipynb">Information-Theoretic Metrics</a> where we walk through these concept on a toy dataset</li>
 </ol>
 </section>
 <section id="post-class" class="level3">
-<h3 class="anchored" data-anchor-id="post-class">Post-class:</h3>
+<h3 class="anchored" data-anchor-id="post-class">Post-class</h3>
 <ol type="1">
-<li>Review <a href="https://docs.google.com/presentation/d/1U_zKs19VLJKnGE02JDRnzxJ8lgeVF22WSZ_GrA646fY/edit?usp=sharing">Model Deployment</a> from <a href="https://stanford-cs329s.github.io/">CS329s</a>. [Note: Dr.&nbsp;Srinivas Rana will cover Model Compression, Quantization etc in his talk on <em>Deployment on Edge</em>]</li>
-<li>Review <a href="https://docs.google.com/presentation/d/1yvbJJukJjJxlLr6dAVB5dENl_9o5621z7A3P0DF5m4E/edit?usp=sharing">Monitoring and Continual Learning</a> from <a href="https://stanford-cs329s.github.io/">CS329s</a></li>
-<li>Review <a href="https://www.dropbox.com/scl/fi/rdkviwr35zigfgsl7memz/Chapter8.pdf?rlkey=1v0kqmko0sl57eunxdmlq1jrc&amp;e=1&amp;dl=0">Model Deployment</a> chapter of <a href="https://www.mlebook.com/wiki/doku.php">ML Engineering</a> book</li>
+<li>[paper] <a href="https://arxiv.org/abs/2312.01552">The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning</a></li>
+<li>[tools] <a href="https://github.com/Re-Align/AlignTDS/blob/main/src/compute_dist_diff.py">AlignTDS</a> - common metrics to detect differences between token distributions in LLMs</li>
+</ol>
+</section>
+</section>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<ol type="1">
+<li>Many metrics proposed to understand and characterize data and models are based on information theory.</li>
+<li>Likelihood Ratio, Deviance, Cross-Entropy, Perplexity, <span class="math inline">\(\nu\text{-information}\)</span> all are related in linear and Generalized Linear models. They can be useful in modern deep learning and LLM context as well.</li>
 </ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -793,13 +829,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lectures/w05-l01.html" class="pagination-link" aria-label="05A: Monitor (Models)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">05A: Monitor (Models)</span>
+      <a href="../lectures/w07-l02.html" class="pagination-link" aria-label="07B: Sample Hardness">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">07B: Sample Hardness</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lectures/w06-l01.html" class="pagination-link" aria-label="06A: Evaluate">
-        <span class="nav-page-text">06A: Evaluate</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../homeworks.html" class="pagination-link" aria-label="Homeworks">
+        <span class="nav-page-text">Homeworks</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -811,7 +847,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w05-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w08-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This course material was built with <a href="https://quarto.org/">Quarto</a> with <a href="https://github.com/hadley/r4ds">r4ds</a> theme.</p>
 </div>

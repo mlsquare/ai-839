@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -231,6 +260,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">07B: Sample Hardness</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lectures/w08-l01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">08A: Sample Fitness</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -269,6 +304,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./notebooks/Sample-Hardness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sample Hardness</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/Sample-Fitness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sample Fitness</span></a>
   </div>
 </li>
       </ul>
@@ -442,6 +482,18 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;"></td>
 <td style="text-align: left;"><a href="projects.html#sec-hw-minor" class="quarto-xref"><span>Minor Project</span></a></td>
 <td style="text-align: left;">Due 11.59PM IST, Friday, 25th Oct, 2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">08</td>
+<td style="text-align: left;">17-Sep <br> 20-Sep</td>
+<td style="text-align: left;"><strong>Info-theoretic Measures, Guest Lecture</strong> <br> 1. Likelihood Ratio, <span class="math inline">\(\nu\text{-information}\)</span> <br> ML Platform</td>
+<td style="text-align: left;"><a href="./lectures/w08-l01.html">W08-L01</a> <br> tbd</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&nbsp;</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Talk by</td>
+<td style="text-align: left;"><a href="https://www.linkedin.com/in/abhishekch123/">Abhishek Choudhary</a> <br> Co-Founder &amp; CTO: <a href="https://www.truefoundry.com/">TrueFoundry</a></td>
 </tr>
 </tbody>
 </table>

@@ -22,6 +22,17 @@
     ]
   },
   {
+    "objectID": "notebooks/Sample-Fitness.html",
+    "href": "notebooks/Sample-Fitness.html",
+    "title": "Sample Fitness",
+    "section": "",
+    "text": "We will look at dataset difficulty and sample perplexity using Iris data.\nIris is a relative easy dataset. We will pick two features, and pick versicolor and virginica lables as there seems to be some overalp in the feature space. We will look at this two dimensional data from many angles and see what can we learn about\nSee Sample Hardness notebook for prior work. We will build from there.\n\nfrom sklearn.datasets import load_iris\nimport matplotlib.pyplot as plt\n\niris = load_iris()\ny = iris.target\nind = (y==1) | (y==2)\nX = iris.data[ind, 0:2]\ny = y[ind]-1\n\nWe will build a simple logistic model and calculate the perplexity between two models given data. Or see how likely data from one model to be generate from another model. This idea is intimately tied to likelihood ratio tests, Bayes Factors.\n\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.2, random_state=128)\n\n\nimport statsmodels.api as sm\nimport matplotlib.pyplot as plt\n\n\nmodel = sm.Logit(y_train, X_train).fit()\nprint(model.summary())\n\nOptimization terminated successfully.\n         Current function value: 0.667806\n         Iterations 5\n                           Logit Regression Results                           \n==============================================================================\nDep. Variable:                      y   No. Observations:                   80\nModel:                          Logit   Df Residuals:                       78\nMethod:                           MLE   Df Model:                            1\nDate:                Sun, 15 Sep 2024   Pseudo R-squ.:                 0.03482\nTime:                        17:04:38   Log-Likelihood:                -53.424\nconverged:                       True   LL-Null:                       -55.352\nCovariance Type:            nonrobust   LLR p-value:                   0.04961\n==============================================================================\n                 coef    std err          z      P&gt;|z|      [0.025      0.975]\n------------------------------------------------------------------------------\nx1             0.6830      0.377      1.811      0.070      -0.056       1.422\nx2            -1.4199      0.815     -1.742      0.082      -3.018       0.178\n==============================================================================\n\n\nThe model summary contains many useful statistics like Log-Likelihood, LL-Null (when ), and LLR p-value. Let us explore what these different objects.\nThe generative model for Logistic regression can be written like as follows:\n\\[y_i \\sim Binomial(1,\\pi_i) \\\\\n\\log \\left(\\frac{\\pi_i}{1-\\pi_i} \\right) = x_i^T\\beta\\] where \\(y_i \\in {0,1}\\) is the binary response drawn from a Bernoulli trial with \\(P(y_i=1)=\\pi_i\\), \\(x_i\\) is a $p $ vector of input features, \\(\\beta\\) is a vector of \\(p \\times 1\\) coefficients (weights).\nThe likelihood of \\(n\\) examples (from a training set) can be written as: \\[\\ell(\\beta, D) = \\sum_{i=1}^{n} y_i \\log(\\pi_i) + (1-y_i) \\log(1-\\pi_i)\\] where \\(D = \\{x_i, y_i\\}_{i=1}^{n}\\) represents all the data available to fit (train) the model, and \\(\\pi_i\\) is as defined earlier.\nTypically, log likelihood \\(\\log(\\ell)\\) is reported.\n\n# log likelihood \nprint('log likelihood', model.llf)\n\nlog likelihood -53.424489860304064\n\n\n\nAIC\nAIC defined as \\(2p - 2 \\ln(\\hat{\\ell})\\) where \\(p\\) is the number of parameters, and \\(\\hat{\\ell}\\) is the negative likelihood evaluated at the estimated model parameters with a correction factor based on the model complexity measures in terms of the number of parameters. AIC is often used in model comparision. Smaller the AIC, better is the fit to the data, complex models are more penalized, of course.\n\n# AIC\nprint('aic', model.aic)\n\naic 110.84897972060813\n\n\n\n\nLLR and Deviance\nThe simplest model one can fit to the data is to not have any features or just fit an intercept model. Then, we have two models \\(M_r \\equiv \\log \\left(\\frac{\\pi_i}{1-\\pi_i} \\right) = \\beta_0\\) where \\(\\beta_0\\) is the intercept term and no features are in the model. Here \\(M_r\\) stands for the reduced model.\nWhereas \\(M_f \\equiv \\log \\left(\\frac{\\pi_i}{1-\\pi_i} \\right) = x_i^T\\beta\\) defined earlier is the full model, meaning, all features are used in the model and perhaps, this is the best in the model class available, like an Oracle. One may say, $M_r M_f $ when set of \\(x_i\\) includes the constant \\(1\\) as one of the features and both \\(M_r\\) and \\(M_f\\) belong to the same model class. The difference in the log-likelihoods is a useful indicator of how large the discrepancy between \\(M_r\\) and \\(M_f\\).\nThe Log-likelihood ratio (LLR) is a statistic that computes this quantity: \\[LLR(M_r, M_f) = \\log\\left( \\frac{\\ell(M_r;D)}{\\ell(M_f;D)} \\right) = \\log(\\ell(M_r;D))-\\log(\\ell(M_f;D))\\]\n\n# LLR\nprint('LLR', model.llr)\n\nLLR 3.8544857609679326\n\n\nLLR expressed differently with a scaling factor is known as the Deviance defined as: \\[D(M_r, M_f) = -2 \\left[\\log(\\ell(M_r;D))-\\log(\\ell(M_f;D))\\right]\\]\nAsymptotically, Deviance follows a \\(\\Chi^2\\) distribution with \\(p\\) degrees of freedom (which is the difference in the parameres between the full and the reduced models). So, we can see how useful the predictors in \\(M_f\\) compared to \\(M_r\\). The evidence can be expressed in terms of p-value.\n\n# Wald's LLR test\n\nprint('LLR Test', model.llr_pvalue)\n\nLLR Test 0.04961313336509171\n\n\nWe reject the null (i.e. prefer \\(M_f\\), a more complex model over a simpler model \\(M_r\\)) at type-1 error rate \\(\\alpha\\) if \\(p_{val} &lt; \\alpha\\). Typical choice for \\(\\alpha\\) is 0.05.\n\n\n\\(\\nu\\text{-information criteria}\\)\nAt the core of this procedure is a way to, given the same data, compare two different models. Generally, one model will be simpler than the other. This idea is recently explored in the paper Understanding Dataset Difficulty with \\(\\nu\\)-Usable Information.\nThe paper introduces two new information-theoretic measures called \\(\\nu\\text{-information}\\) denoted as \\(I_{\\mathcal{V}(X \\rightarrow Y)}\\) and \\(\\text{pointwise }\\nu\\text{-information}\\) denoted as \\(\\text{PVI}(x \\rightarrow y)\\). Note that \\(I_{\\mathcal{V}}(X \\rightarrow Y) = \\mathcal{E}_{x,y \\sim P(X,Y)}[PVI(x,y)]\\).\nPlease see the paper for definitions and motivations. But informally, from information theory point of view, \\(\\nu\\text{-information}\\) is the information gain due to conditioning (observing X). As a matter of fact, it closely resembles mutual information \\(I(X,Y) = H(Y)-H(Y|X)\\) where \\(H(X)\\) is the entropy of \\(Y\\) and \\(H(Y|X)\\) is the conditional (on \\(X\\)) entropy of \\(Y\\). But the difference is in how \\(X\\) and \\(Y\\) are related. \\(\\nu\\text{-information}\\) restricts the mappings \\(f: X \\rightarrow Y\\) to the admissable class of functions that can be learnt under the hypothesis class \\(\\mathcal{V}\\) and not any function which is used in classical mutual information (in fact, it is not specified).\nThe procedure to estimate given in Algorithm 1 for \\(\\nu\\text{-information}\\). After adapting criteria with some notational details,\n\\[\n\\hat{PVI}(x_i,y_i) =  -\\log \\hat{\\ell}(M_r; x_i,y_i) + \\log \\hat{\\ell}(M_f; x_i,y_i)\\\\\n\\hat{I}_{M_r,M_f}(X \\rightarrow Y) = \\sum_{i=1}^{n} \\hat{PVI}(x_i,y_i)\n\\].\nIf we scale it appropriately, we notice that, \\(D(M_r,M_f) = 2I_{M_r,M_f}(X \\rightarrow Y)\\). So, the \\(I_{\\mathcal{V}(X \\rightarrow Y)}\\) is actually \\(log likelihood ratio\\) with a information theoretic lense, applied to modern deep learning context, more specifically to LLMs.\nSpecially, \\(PVI\\) was used to identify mislabelled examples. Across datasets, and training regimes, examples with high \\(PVI\\) are generally accurate and low \\(PVI\\) examples are not. This suggests that one can use \\(PVI\\) can be used to define the confidence in the predictions.\nIt is to be noted that the connection between Likelihood and Information Theory is not new. Prof. Manny Parzen’s works have demonstrated this connection between in Goodness-of-Fit tests and Entropy. See for example, Entropy Interpretation of Goodness of Fit Tests(1983) and Goodness of Fit tests and Entropy(1990). Indeed, LLR is a Goodness-of-Fit test.\n\n\nPerplexity\nPerplexity, as the name implies, is about the element of surprise. Again, it is just a fancy word for a monotonic transformation of cross-entropy, widely used in the NLP/LLM community. Having trained an LLM, one wants to see, how perplexing the observed data to the LLM. More perplexing the data (higher the cross entropy), less likely is the model to have generated data or put in a more relatable fashion, higher is the additional number of bits needed to code the data.\nLike the recent \\(\\nu\\text{-information}\\) criteria, cross-entropy and other information-theoretic metrics such as the KL-divergence are also used to study LLM performance. For example, in The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning, token distributions are compared. Multiple metrics such as KL-divergence, Jaccard Similarity, among others are implemented see code. Using these metrics, they showed that LLM Alignment via RLHF mostly did stylistic modification to the output than it did to the actual factual content.\nOnce log-likelihood is avaibale, perplexity can be calculates as \\[\n\\text{perplexity} = 2^{H(P,Q)}\n\\] where \\(P\\) is the true distribution and \\(Q\\) is the distribution under proposed model. Since true \\(P\\) is unknown, we often replace it with its empirical version. When a model is fit, the log-likelhood is an estimate of the cross-entropy. Therefore, \\[\n\\text{perplexity}_{M} = 2^{\\log \\hat{\\ell}(M; D)}\n\\] where \\(M\\) is the model under consideration.\nIt is possible to compute cross-entropy between two models, where \\(P\\) takes the role of a reference distribution and \\(Q\\) takes the role of a probing model. Note that, this metric is no symmetric in \\(P\\) and \\(Q\\).",
+    "crumbs": [
+      "Notebooks",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sample Fitness</span>"
+    ]
+  },
+  {
     "objectID": "resources/project-card.html",
     "href": "resources/project-card.html",
     "title": "Project Card",
@@ -29,7 +40,7 @@
     "text": "Business View",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -40,7 +51,7 @@
     "text": "Background\nProvide succinct background to the problem so that the reader can empathize with the problem.\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -51,7 +62,7 @@
     "text": "Problem\nWhat is the problem being solved?\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -62,7 +73,7 @@
     "text": "Customer\nWho it is for? Is that a user or a beneficiary? What is the problem being solved? Who it is for?\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -73,7 +84,7 @@
     "text": "Value Proposition\nWhy it needs to be solved?\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -84,7 +95,7 @@
     "text": "Product\nHow does the solution look like? It is more of the experience, rather how it will be developed.\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -95,7 +106,7 @@
     "text": "Objectives\nBreakdown the product into key (business) objectives that need to be delivered? SMART Goals is useful to frame\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -106,7 +117,7 @@
     "text": "Risks & Challenges\nWhat are the challenges one can face and ways to overcome?\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -117,7 +128,7 @@
     "text": "Task\nWhat type of prediction problem is this? Link Model Card when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -128,7 +139,7 @@
     "text": "Metrics\nHow will the solution be evaluated - What are the ML metrics? What are the business metrics? Link Model Card when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -139,7 +150,7 @@
     "text": "Evaluation\nHow will the solution be evaluated (process)? Link Model Card when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -150,7 +161,7 @@
     "text": "Data\nWhat type of data is needed? How will it be collected - for training and for continuous improvement? Link Data Cards when sufficient details become available (start small but early)\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -161,7 +172,7 @@
     "text": "Plan/ Roadmap\nProvide problem break-up, tentative timelines and deliverables? Use PACT format if SMART is not suitable.\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -172,7 +183,7 @@
     "text": "Continuous Improvement\nHow will the system/model will improve? Provide a plan and means.\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -183,7 +194,7 @@
     "text": "Resources\nWhat resources are needed? Estimate the cost!\nyour response\n\nHuman Resources\nwhat type of team and strength needed?\nyour response\n\n\nCompute Resources\nWhat type of compute resources needed to train and serve?\nyour response",
     "crumbs": [
       "ML Documentation",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Project Card</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Card</span>"
     ]
   },
   {
@@ -201,7 +212,7 @@
     "href": "index.html#announcements",
     "title": "AI-839",
     "section": "Announcements",
-    "text": "Announcements\n\n[12-September-2024] Notes added to W07-L01. W07-L02 is added.\n[05-September-2024] Homework, Minor and Major preoject details added. See HW-05, HW-06, Minor Project, Major Project for details. Course pages updated.\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
+    "text": "Announcements\n\n[16-September-2024] Notes added to W08-L01.\n[12-September-2024] Notes added to W07-L01. W07-L02 is added.\n[05-September-2024] Homework, Minor and Major preoject details added. See HW-05, HW-06, Minor Project, Major Project for details. Course pages updated.\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
     "crumbs": [
       "Welcome"
     ]
@@ -567,7 +578,7 @@
     "href": "lectures/w07-l02.html#materials",
     "title": "07B: Sample Hardness",
     "section": "",
-    "text": "Pre-work:\n\nAIC a criteria for model selection\ncords for a collection of works/implementations based on subset selection\n\n\n\nIn-Class\n\nCharacterizing data difficulty or sample hardness.\nLook at some statistics like Relative Mahalanobis Distance (which some used to flag OOD, others used to measure sample hardness), Perplexity (cross entropy between two models, one model and data or between), Trust Scores\nSample easiness on training performance and generalization error\n\n\n\nPost-class\n\n[paper] Learning Sample Difficulty from Pre-trained Models for Reliable Prediction\n[paper] A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection\n[paper] Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI\n[paper] To Trust or Not To Trust A Classifier\n\n\n\nAdditional Reading (optional)\n\n[paper] Understanding Dataset difficulty\n[tools] Pytoch-ood - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.\n[tools] PyOD - a collection of anomaly detection techniques\n[tools] DEEL - a collection of OOD, XAI, and other techniques",
+    "text": "Pre-work:\n\nAIC a criteria for model selection\ncords for a collection of works/implementations based on subset selection\n\n\n\nIn-Class\n\nCharacterizing data difficulty or sample hardness.\nLook at some statistics like Relative Mahalanobis Distance (which some used to flag OOD, others used to measure sample hardness), Perplexity (cross entropy between two models, one model and data or between), Trust Scores\nSample easiness on training performance and generalization error\nSee this notebook where we walk through these concept on a toy dataset\n\n\n\nPost-class\n\n[paper] Learning Sample Difficulty from Pre-trained Models for Reliable Prediction\n[paper] A Simple Fix to Mahalanobis Distance for Improving Near-OOD Detection\n[paper] Dissecting Sample Hardness: A fine-grained analysis of hardness characterization methods for data-centric AI\n[paper] To Trust or Not To Trust A Classifier\n\n\n\nAdditional Reading (optional)\n\n[paper] Understanding Dataset difficulty\n[tools] Pytorch-ood - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.\n[tools] PyOD - a collection of anomaly detection techniques\n[tools] DEEL - a collection of OOD, XAI, and other techniques",
     "crumbs": [
       "Lectures[ML Science]",
       "07B: Sample Hardness"
@@ -578,10 +589,43 @@
     "href": "lectures/w07-l02.html#notes",
     "title": "07B: Sample Hardness",
     "section": "Notes",
-    "text": "Notes\n\nNot all examples are equal (in the eyes of the model). There can be many reasons.\nThere can be outliers (in the feature space, in the label space or both in the feature and label space).\nOutliers affect the model performance in different ways.\nA suite of techniques, preferable model-agnostic, are needed to quantify sample hardness and make them avaibale at dataset level (train set) and also at inference time.",
+    "text": "Notes\n\nNot all examples are equal (in the eyes of the model). There can be many reasons.\nThere can be outliers (in the feature space, in the label space or both in the feature and label space).\nOutliers affect the model performance in different ways.\nA suite of techniques, preferably model-agnostic, are needed to quantify sample hardness and make them available at dataset level (train set) and also at inference time.",
     "crumbs": [
       "Lectures[ML Science]",
       "07B: Sample Hardness"
+    ]
+  },
+  {
+    "objectID": "lectures/w08-l01.html",
+    "href": "lectures/w08-l01.html",
+    "title": "08A: Sample Fitness",
+    "section": "",
+    "text": "Materials:\nDate: Tuesday, 17-Sep-2024",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "08A: Sample Fitness"
+    ]
+  },
+  {
+    "objectID": "lectures/w08-l01.html#materials",
+    "href": "lectures/w08-l01.html#materials",
+    "title": "08A: Sample Fitness",
+    "section": "",
+    "text": "Pre-work:\n\n[tools] Pytorch-ood - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.\n[tools] PyOD - a collection of anomaly detection techniques\n\n\n\nIn-Class\n\nCharacterizing data difficulty or sample hardness : Understanding Dataset difficulty\n[notebook] Information-Theoretic Metrics where we walk through these concept on a toy dataset\n\n\n\nPost-class\n\n[paper] The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning\n[tools] AlignTDS - common metrics to detect differences between token distributions in LLMs",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "08A: Sample Fitness"
+    ]
+  },
+  {
+    "objectID": "lectures/w08-l01.html#notes",
+    "href": "lectures/w08-l01.html#notes",
+    "title": "08A: Sample Fitness",
+    "section": "Notes",
+    "text": "Notes\n\nMany metrics proposed to understand and characterize data and models are based on information theory.\nLikelihood Ratio, Deviance, Cross-Entropy, Perplexity, \\(\\nu\\text{-information}\\) all are related in linear and Generalized Linear models. They can be useful in modern deep learning and LLM context as well.",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "08A: Sample Fitness"
     ]
   },
   {

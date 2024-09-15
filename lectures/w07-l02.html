@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../homeworks.html" rel="next">
+<link href="../lectures/w08-l01.html" rel="next">
 <link href="../lectures/w07-l01.html" rel="prev">
 <link href="../crisp-ml-process.jpg" rel="icon" type="image/jpeg">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -231,6 +231,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">07B: Sample Hardness</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/w08-l01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">08A: Sample Fitness</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -269,6 +275,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notebooks/Sample-Hardness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sample Hardness</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/Sample-Fitness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sample Fitness</span></a>
   </div>
 </li>
       </ul>
@@ -348,6 +359,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Characterizing data difficulty or sample hardness.</li>
 <li>Look at some statistics like Relative Mahalanobis Distance (which some used to flag OOD, others used to measure sample hardness), Perplexity (cross entropy between two models, one model and data or between), Trust Scores</li>
 <li>Sample easiness on training performance and generalization error</li>
+<li>See this <a href="././notebooks/Sample-Hardness.ipynb">notebook</a> where we walk through these concept on a toy dataset</li>
 </ol>
 </section>
 <section id="post-class" class="level3">
@@ -363,7 +375,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="additional-reading-optional">Additional Reading (optional)</h3>
 <ol type="1">
 <li>[paper] <a href="https://arxiv.org/abs/2110.08420">Understanding Dataset difficulty</a></li>
-<li>[tools] <a href="https://github.com/kkirchheim/pytorch-ood">Pytoch-ood</a> - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.</li>
+<li>[tools] <a href="https://github.com/kkirchheim/pytorch-ood">Pytorch-ood</a> - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.</li>
 <li>[tools] <a href="https://github.com/yzhao062/pyod">PyOD</a> - a collection of anomaly detection techniques</li>
 <li>[tools] <a href="https://github.com/deel-ai">DEEL</a> - a collection of OOD, XAI, and other techniques</li>
 </ol>
@@ -375,7 +387,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Not all examples are equal (in the eyes of the model). There can be many reasons.</li>
 <li>There can be outliers (in the feature space, in the label space or both in the feature and label space).</li>
 <li>Outliers affect the model performance in different ways.</li>
-<li>A suite of techniques, preferable model-agnostic, are needed to quantify sample hardness and make them avaibale at dataset level (train set) and also at inference time.</li>
+<li>A suite of techniques, preferably model-agnostic, are needed to quantify sample hardness and make them available at dataset level (train set) and also at inference time.</li>
 </ol>
 
 
@@ -809,8 +821,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../homeworks.html" class="pagination-link" aria-label="Homeworks">
-        <span class="nav-page-text">Homeworks</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lectures/w08-l01.html" class="pagination-link" aria-label="08A: Sample Fitness">
+        <span class="nav-page-text">08A: Sample Fitness</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

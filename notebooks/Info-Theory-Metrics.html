@@ -8,7 +8,7 @@
 
 <meta name="author" content="mlsquare">
 
-<title>05B: Deployment – AI-839</title>
+<title>Sample Fitness – AI-839</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lectures/w06-l01.html" rel="next">
-<link href="../lectures/w05-l01.html" rel="prev">
+<link href="../documentation.html" rel="next">
+<link href="../notebooks/Sample-Hardness.html" rel="prev">
 <link href="../crisp-ml-process.jpg" rel="icon" type="image/jpeg">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -71,6 +105,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -83,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures[ML Engg.]</a></li><li class="breadcrumb-item"><a href="../lectures/w05-l02.html">05B: Deployment</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notebooks/Sample-Hardness.html">Notebooks</a></li><li class="breadcrumb-item"><a href="../notebooks/Info-Theory-Metrics.html"><span class="chapter-title">Sample Fitness</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w05-l02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lectures/w05-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05B: Deployment</span></a>
   </div>
 </li>
@@ -234,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/w08-l01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">08A: Sample Fitness</span></a>
+ <span class="menu-text">08A: Info-theoretic Metrics</span></a>
   </div>
 </li>
       </ul>
@@ -279,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/Sample-Fitness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sample Fitness</span></a>
+  <a href="../notebooks/Info-Theory-Metrics.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sample Fitness</span></a>
   </div>
 </li>
       </ul>
@@ -310,21 +373,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#materials" id="toc-materials" class="nav-link active" data-scroll-target="#materials">Materials:</a>
-  <ul class="collapse">
-  <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-work:</a></li>
-  <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-Class</a></li>
-  <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class:</a></li>
-  </ul></li>
+  <li><a href="#aic" id="toc-aic" class="nav-link active" data-scroll-target="#aic">AIC</a></li>
+  <li><a href="#llr-and-deviance" id="toc-llr-and-deviance" class="nav-link" data-scroll-target="#llr-and-deviance">LLR and Deviance</a></li>
+  <li><a href="#nutext-information-criteria" id="toc-nutext-information-criteria" class="nav-link" data-scroll-target="#nutext-information-criteria"><span class="math inline">\(\nu\text{-information criteria}\)</span></a></li>
+  <li><a href="#perplexity" id="toc-perplexity" class="nav-link" data-scroll-target="#perplexity">Perplexity</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w05-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/mlsquare/ai-839/blob/main/notebooks/Info-Theory-Metrics.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures[ML Engg.]</a></li><li class="breadcrumb-item"><a href="../lectures/w05-l02.html">05B: Deployment</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notebooks/Sample-Hardness.html">Notebooks</a></li><li class="breadcrumb-item"><a href="../notebooks/Info-Theory-Metrics.html"><span class="chapter-title">Sample Fitness</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">05B: Deployment</h1>
+<h1 class="title">Sample Fitness</h1>
 </div>
 
 
@@ -341,33 +402,126 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="materials" class="level2">
-<h2 class="anchored" data-anchor-id="materials">Materials:</h2>
-<p>Date: Friday, 30-Aug-2024.</p>
-<section id="pre-work" class="level3">
-<h3 class="anchored" data-anchor-id="pre-work">Pre-work:</h3>
-<ol type="1">
-<li><a href="https://mlflow.org/docs/latest/deployment/index.html">mlflow docs</a></li>
-<li><a href="https://github.com/Galileo-Galilei/kedro-mlflow-tutorial">kedro-mlflow tutorial</a></li>
-</ol>
+<p>We will look at dataset difficulty and sample perplexity using Iris data.</p>
+<p>Iris is a relative easy dataset. We will pick two features, and pick <em>versicolor</em> and <em>virginica</em> lables as there seems to be some overalp in the feature space. We will look at this two dimensional data from many angles and see what can we learn about</p>
+<p>See <a href="../notebooks/Sample-Hardness.html">Sample Hardness notebook</a> for prior work. We will build from there.</p>
+<div id="cell-1" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> load_iris()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> iris.target</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>ind <span class="op">=</span> (y<span class="op">==</span><span class="dv">1</span>) <span class="op">|</span> (y<span class="op">==</span><span class="dv">2</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> iris.data[ind, <span class="dv">0</span>:<span class="dv">2</span>]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> y[ind]<span class="op">-</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We will build a simple logistic model and calculate the perplexity between two models given data. Or see how likely data from one model to be generate from another model. This idea is intimately tied to likelihood ratio tests, Bayes Factors.</p>
+<div id="cell-3" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X,y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">128</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.Logit(y_train, X_train).fit()</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Optimization terminated successfully.
+         Current function value: 0.667806
+         Iterations 5
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                   80
+Model:                          Logit   Df Residuals:                       78
+Method:                           MLE   Df Model:                            1
+Date:                Sun, 15 Sep 2024   Pseudo R-squ.:                 0.03482
+Time:                        17:04:38   Log-Likelihood:                -53.424
+converged:                       True   LL-Null:                       -55.352
+Covariance Type:            nonrobust   LLR p-value:                   0.04961
+==============================================================================
+                 coef    std err          z      P&gt;|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+x1             0.6830      0.377      1.811      0.070      -0.056       1.422
+x2            -1.4199      0.815     -1.742      0.082      -3.018       0.178
+==============================================================================</code></pre>
+</div>
+</div>
+<p>The model summary contains many useful statistics like Log-Likelihood, LL-Null (when ), and LLR p-value. Let us explore what these different objects.</p>
+<p>The generative model for Logistic regression can be written like as follows:</p>
+<p><span class="math display">\[y_i \sim Binomial(1,\pi_i) \\
+\log \left(\frac{\pi_i}{1-\pi_i} \right) = x_i^T\beta\]</span> where <span class="math inline">\(y_i \in {0,1}\)</span> is the binary response drawn from a Bernoulli trial with <span class="math inline">\(P(y_i=1)=\pi_i\)</span>, <span class="math inline">\(x_i\)</span> is a $p $ vector of input features, <span class="math inline">\(\beta\)</span> is a vector of <span class="math inline">\(p \times 1\)</span> coefficients (weights).</p>
+<p>The likelihood of <span class="math inline">\(n\)</span> examples (from a training set) can be written as: <span class="math display">\[\ell(\beta, D) = \sum_{i=1}^{n} y_i \log(\pi_i) + (1-y_i) \log(1-\pi_i)\]</span> where <span class="math inline">\(D = \{x_i, y_i\}_{i=1}^{n}\)</span> represents all the data available to fit (train) the model, and <span class="math inline">\(\pi_i\)</span> is as defined earlier.</p>
+<p>Typically, log likelihood <span class="math inline">\(\log(\ell)\)</span> is reported.</p>
+<div id="cell-6" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># log likelihood </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'log likelihood'</span>, model.llf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>log likelihood -53.424489860304064</code></pre>
+</div>
+</div>
+<section id="aic" class="level3">
+<h3 class="anchored" data-anchor-id="aic">AIC</h3>
+<p>AIC defined as <span class="math inline">\(2p - 2 \ln(\hat{\ell})\)</span> where <span class="math inline">\(p\)</span> is the number of parameters, and <span class="math inline">\(\hat{\ell}\)</span> is the negative likelihood evaluated at the estimated model parameters with a correction factor based on the model complexity measures in terms of the number of parameters. AIC is often used in model comparision. Smaller the AIC, better is the fit to the data, complex models are more penalized, of course.</p>
+<div id="cell-8" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># AIC</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'aic'</span>, model.aic)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>aic 110.84897972060813</code></pre>
+</div>
+</div>
 </section>
-<section id="in-class" class="level3">
-<h3 class="anchored" data-anchor-id="in-class">In-Class</h3>
-<ol type="1">
-<li>Stream vs Batch Deployment</li>
-<li>Hands-on Deploying models with mlflow on local server</li>
-</ol>
+<section id="llr-and-deviance" class="level3">
+<h3 class="anchored" data-anchor-id="llr-and-deviance">LLR and Deviance</h3>
+<p>The simplest model one can fit to the data is to not have any features or just fit an intercept model. Then, we have two models <span class="math inline">\(M_r \equiv \log \left(\frac{\pi_i}{1-\pi_i} \right) = \beta_0\)</span> where <span class="math inline">\(\beta_0\)</span> is the intercept term and no features are in the model. Here <span class="math inline">\(M_r\)</span> stands for the reduced model.</p>
+<p>Whereas <span class="math inline">\(M_f \equiv \log \left(\frac{\pi_i}{1-\pi_i} \right) = x_i^T\beta\)</span> defined earlier is the full model, meaning, all features are used in the model and perhaps, this is the best in the model class available, like an Oracle. One may say, $M_r M_f $ when set of <span class="math inline">\(x_i\)</span> includes the constant <span class="math inline">\(1\)</span> as one of the features and both <span class="math inline">\(M_r\)</span> and <span class="math inline">\(M_f\)</span> belong to the same model class. The difference in the log-likelihoods is a useful indicator of how large the discrepancy between <span class="math inline">\(M_r\)</span> and <span class="math inline">\(M_f\)</span>.</p>
+<p>The Log-likelihood ratio (LLR) is a statistic that computes this quantity: <span class="math display">\[LLR(M_r, M_f) = \log\left( \frac{\ell(M_r;D)}{\ell(M_f;D)} \right) = \log(\ell(M_r;D))-\log(\ell(M_f;D))\]</span></p>
+<div id="cell-10" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># LLR</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'LLR'</span>, model.llr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>LLR 3.8544857609679326</code></pre>
+</div>
+</div>
+<p>LLR expressed differently with a scaling factor is known as the Deviance defined as: <span class="math display">\[D(M_r, M_f) = -2 \left[\log(\ell(M_r;D))-\log(\ell(M_f;D))\right]\]</span></p>
+<p>Asymptotically, Deviance follows a <span class="math inline">\(\Chi^2\)</span> distribution with <span class="math inline">\(p\)</span> degrees of freedom (which is the difference in the parameres between the full and the reduced models). So, we can see how useful the predictors in <span class="math inline">\(M_f\)</span> compared to <span class="math inline">\(M_r\)</span>. The evidence can be expressed in terms of p-value.</p>
+<div id="cell-12" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wald's LLR test</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'LLR Test'</span>, model.llr_pvalue)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>LLR Test 0.04961313336509171</code></pre>
+</div>
+</div>
+<p>We reject the null (i.e.&nbsp;prefer <span class="math inline">\(M_f\)</span>, a more complex model over a simpler model <span class="math inline">\(M_r\)</span>) at type-1 error rate <span class="math inline">\(\alpha\)</span> if <span class="math inline">\(p_{val} &lt; \alpha\)</span>. Typical choice for <span class="math inline">\(\alpha\)</span> is 0.05.</p>
 </section>
-<section id="post-class" class="level3">
-<h3 class="anchored" data-anchor-id="post-class">Post-class:</h3>
-<ol type="1">
-<li>Review <a href="https://docs.google.com/presentation/d/1U_zKs19VLJKnGE02JDRnzxJ8lgeVF22WSZ_GrA646fY/edit?usp=sharing">Model Deployment</a> from <a href="https://stanford-cs329s.github.io/">CS329s</a>. [Note: Dr.&nbsp;Srinivas Rana will cover Model Compression, Quantization etc in his talk on <em>Deployment on Edge</em>]</li>
-<li>Review <a href="https://docs.google.com/presentation/d/1yvbJJukJjJxlLr6dAVB5dENl_9o5621z7A3P0DF5m4E/edit?usp=sharing">Monitoring and Continual Learning</a> from <a href="https://stanford-cs329s.github.io/">CS329s</a></li>
-<li>Review <a href="https://www.dropbox.com/scl/fi/rdkviwr35zigfgsl7memz/Chapter8.pdf?rlkey=1v0kqmko0sl57eunxdmlq1jrc&amp;e=1&amp;dl=0">Model Deployment</a> chapter of <a href="https://www.mlebook.com/wiki/doku.php">ML Engineering</a> book</li>
-</ol>
+<section id="nutext-information-criteria" class="level3">
+<h3 class="anchored" data-anchor-id="nutext-information-criteria"><span class="math inline">\(\nu\text{-information criteria}\)</span></h3>
+<p>At the core of this procedure is a way to, given the same data, compare two different models. Generally, one model will be simpler than the other. This idea is recently explored in the paper <a href="https://arxiv.org/abs/2110.08420">Understanding Dataset Difficulty with <span class="math inline">\(\nu\)</span>-Usable Information</a>.</p>
+<p>The paper introduces two new information-theoretic measures called <span class="math inline">\(\nu\text{-information}\)</span> denoted as <span class="math inline">\(I_{\mathcal{V}(X \rightarrow Y)}\)</span> and <span class="math inline">\(\text{pointwise }\nu\text{-information}\)</span> denoted as <span class="math inline">\(\text{PVI}(x \rightarrow y)\)</span>. Note that <span class="math inline">\(I_{\mathcal{V}}(X \rightarrow Y) = \mathcal{E}_{x,y \sim P(X,Y)}[PVI(x,y)]\)</span>.</p>
+<p>Please see the paper for definitions and motivations. But informally, from information theory point of view, <span class="math inline">\(\nu\text{-information}\)</span> is the information gain due to conditioning (observing X). As a matter of fact, it closely resembles mutual information <span class="math inline">\(I(X,Y) = H(Y)-H(Y|X)\)</span> where <span class="math inline">\(H(X)\)</span> is the entropy of <span class="math inline">\(Y\)</span> and <span class="math inline">\(H(Y|X)\)</span> is the conditional (on <span class="math inline">\(X\)</span>) entropy of <span class="math inline">\(Y\)</span>. But the difference is in how <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are related. <span class="math inline">\(\nu\text{-information}\)</span> restricts the mappings <span class="math inline">\(f: X \rightarrow Y\)</span> to the admissable class of functions that can be learnt under the hypothesis class <span class="math inline">\(\mathcal{V}\)</span> and not <em>any</em> function which is used in classical mutual information (in fact, it is not specified).</p>
+<p>The procedure to estimate given in <strong>Algorithm 1</strong> for <span class="math inline">\(\nu\text{-information}\)</span>. After adapting criteria with some notational details,<br>
+<span class="math display">\[
+\hat{PVI}(x_i,y_i) =  -\log \hat{\ell}(M_r; x_i,y_i) + \log \hat{\ell}(M_f; x_i,y_i)\\
+\hat{I}_{M_r,M_f}(X \rightarrow Y) = \sum_{i=1}^{n} \hat{PVI}(x_i,y_i)
+\]</span>.</p>
+<p>If we scale it appropriately, we notice that, <span class="math inline">\(D(M_r,M_f) = 2I_{M_r,M_f}(X \rightarrow Y)\)</span>. So, the <span class="math inline">\(I_{\mathcal{V}(X \rightarrow Y)}\)</span> is actually <span class="math inline">\(log likelihood ratio\)</span> with a information theoretic lense, applied to modern deep learning context, more specifically to LLMs.</p>
+<p>Specially, <span class="math inline">\(PVI\)</span> was used to identify mislabelled examples. Across datasets, and training regimes, examples with high <span class="math inline">\(PVI\)</span> are generally accurate and low <span class="math inline">\(PVI\)</span> examples are not. This suggests that one can use <span class="math inline">\(PVI\)</span> can be used to define the confidence in the predictions.</p>
+<p>It is to be noted that the connection between Likelihood and Information Theory is not new. Prof.&nbsp;Manny Parzen’s works have demonstrated this connection between in Goodness-of-Fit tests and Entropy. See for example, <a href="https://apps.dtic.mil/sti/tr/pdf/ADA125155.pdf">Entropy Interpretation of Goodness of Fit Tests</a>(1983) and <a href="https://apps.dtic.mil/sti/tr/pdf/ADA224860.pdf">Goodness of Fit tests and Entropy</a>(1990). Indeed, LLR is a Goodness-of-Fit test.</p>
+</section>
+<section id="perplexity" class="level3">
+<h3 class="anchored" data-anchor-id="perplexity">Perplexity</h3>
+<p><a href="https://en.wikipedia.org/wiki/Perplexity">Perplexity</a>, as the name implies, is about the element of surprise. Again, it is just a fancy word for a monotonic transformation of cross-entropy, widely used in the NLP/LLM community. Having trained an LLM, one wants to see, how perplexing the observed data to the LLM. More perplexing the data (higher the cross entropy), less likely is the model to have generated data or put in a more relatable fashion, higher is the additional number of bits needed to code the data.</p>
+<p>Like the recent <span class="math inline">\(\nu\text{-information}\)</span> criteria, cross-entropy and other information-theoretic metrics such as the KL-divergence are also used to study LLM performance. For example, in <a href="https://arxiv.org/abs/2312.01552">The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning</a>, token distributions are compared. Multiple metrics such as KL-divergence, Jaccard Similarity, among others are implemented <a href="https://github.com/Re-Align/AlignTDS">see code</a>. Using these metrics, they showed that LLM Alignment via RLHF mostly did stylistic modification to the output than it did to the <em>actual</em> factual content.</p>
+<p>Once log-likelihood is avaibale, perplexity can be calculates as <span class="math display">\[
+\text{perplexity} = 2^{H(P,Q)}
+\]</span> where <span class="math inline">\(P\)</span> is the true distribution and <span class="math inline">\(Q\)</span> is the distribution under proposed model. Since true <span class="math inline">\(P\)</span> is unknown, we often replace it with its empirical version. When a model is fit, the log-likelhood is an estimate of the cross-entropy. Therefore, <span class="math display">\[
+\text{perplexity}_{M} = 2^{\log \hat{\ell}(M; D)}
+\]</span> where <span class="math inline">\(M\)</span> is the model under consideration.</p>
+<p>It is possible to compute cross-entropy between two models, where <span class="math inline">\(P\)</span> takes the role of a reference distribution and <span class="math inline">\(Q\)</span> takes the role of a probing model. Note that, this metric is no symmetric in <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -793,13 +947,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lectures/w05-l01.html" class="pagination-link" aria-label="05A: Monitor (Models)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">05A: Monitor (Models)</span>
+      <a href="../notebooks/Sample-Hardness.html" class="pagination-link" aria-label="Sample Hardness">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Sample Hardness</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lectures/w06-l01.html" class="pagination-link" aria-label="06A: Evaluate">
-        <span class="nav-page-text">06A: Evaluate</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../documentation.html" class="pagination-link" aria-label="ML Documentation">
+        <span class="nav-page-text">ML Documentation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -811,7 +965,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w05-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/mlsquare/ai-839/blob/main/notebooks/Info-Theory-Metrics.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This course material was built with <a href="https://quarto.org/">Quarto</a> with <a href="https://github.com/hadley/r4ds">r4ds</a> theme.</p>
 </div>
