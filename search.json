@@ -611,7 +611,7 @@
     "href": "lectures/w08-l01.html#materials",
     "title": "08A: Sample Fitness",
     "section": "",
-    "text": "Pre-work:\n\n[tools] Pytorch-ood - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.\n[tools] PyOD - a collection of anomaly detection techniques\n\n\n\nIn-Class\n\nCharacterizing data difficulty or sample hardness : Understanding Dataset difficulty\n[notebook] Information-Theoretic Metrics where we walk through these concept on a toy dataset\n\n\n\nPost-class\n\n[paper] The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning\n[tools] AlignTDS - common metrics to detect differences between token distributions in LLMs",
+    "text": "Pre-work:\n\n[tools] Pytorch-ood - a collection of techniques to detect OOD in PyTroch. Mostly image focussed.\n[tools] PyOD - a collection of anomaly detection techniques\n\n\n\nIn-Class\n\nCharacterizing data difficulty or sample hardness : Understanding Dataset difficulty\n[notebook] Sample Fitness Metrics based on Information Theory where we walk through these concept on a toy dataset\n\n\n\nPost-class\n\n[paper] The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning\n[tools] AlignTDS - common metrics to detect differences between token distributions in LLMs",
     "crumbs": [
       "Lectures[ML Science]",
       "08A: Sample Fitness"
