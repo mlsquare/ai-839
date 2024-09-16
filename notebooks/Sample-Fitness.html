@@ -300,6 +300,12 @@ window.Quarto = {
  <span class="menu-text">08A: Sample Fitness</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/w09-l01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09A: Uncertainty Quantification</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -464,6 +470,7 @@ x2            -1.4199      0.815     -1.742      0.082      -3.018       0.178
 <section id="aic" class="level3">
 <h3 class="anchored" data-anchor-id="aic">AIC</h3>
 <p>AIC defined as <span class="math inline">\(2p - 2 \ln(\hat{\ell})\)</span> where <span class="math inline">\(p\)</span> is the number of parameters, and <span class="math inline">\(\hat{\ell}\)</span> is the negative likelihood evaluated at the estimated model parameters with a correction factor based on the model complexity measures in terms of the number of parameters. AIC is often used in model comparision. Smaller the AIC, better is the fit to the data, complex models are more penalized, of course.</p>
+<p>Cross-Validation is a very popular hyper parameter tuning technique among ML community. It is worth noting that, asymptotically AIC and LOOCV (Leave-one-out Cross Validation) are equivalent. See <a href="https://www.jstor.org/stable/2984877">An Asymptotic Equivalence of Choice of Model by Cross Validation and Akaike’s Criterion</a>[1977].</p>
 <div id="cell-8" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># AIC</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'aic'</span>, model.aic)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

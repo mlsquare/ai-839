@@ -8,7 +8,7 @@
 
 <meta name="author" content="mlsquare">
 
-<title>06B: Govern – AI-839</title>
+<title>09A: Uncertainty Quantification – AI-839</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lectures/w07-l01.html" rel="next">
-<link href="../lectures/w06-l01.html" rel="prev">
+<link href="../homeworks.html" rel="next">
+<link href="../lectures/w08-l01.html" rel="prev">
 <link href="../crisp-ml-process.jpg" rel="icon" type="image/jpeg">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures[ML Engg.]</a></li><li class="breadcrumb-item"><a href="../lectures/w06-l02.html">06B: Govern</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w09-l01.html">09A: Uncertainty Quantification</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -204,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w06-l02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lectures/w06-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">06B: Govern</span></a>
   </div>
 </li>
@@ -239,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w09-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w09-l01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">09A: Uncertainty Quantification</span></a>
   </div>
 </li>
@@ -321,18 +321,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-work:</a></li>
   <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-Class</a></li>
   <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class</a></li>
-  <li><a href="#additional-reading-optional" id="toc-additional-reading-optional" class="nav-link" data-scroll-target="#additional-reading-optional">Additional Reading (optional)</a></li>
-  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
   </ul></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w06-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w09-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures[ML Engg.]</a></li><li class="breadcrumb-item"><a href="../lectures/w06-l02.html">06B: Govern</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w09-l01.html">09A: Uncertainty Quantification</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">06B: Govern</h1>
+<h1 class="title">09A: Uncertainty Quantification</h1>
 </div>
 
 
@@ -351,137 +350,41 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="materials" class="level2">
 <h2 class="anchored" data-anchor-id="materials">Materials:</h2>
-<p>Date: Friday, 06-Sep-2024</p>
+<p>Date: Tuesday, 24-Sep-2024</p>
 <section id="pre-work" class="level3">
 <h3 class="anchored" data-anchor-id="pre-work">Pre-work:</h3>
 <ol type="1">
-<li><a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a>- create, read, update and delete operations are the primitives we need to make the IT systems work.</li>
-<li><a href="https://en.wikipedia.org/wiki/ACID">ACID</a>- against those CRUD operations, a database needs to support <em>atomicity, consistency, isolation, durability</em> to guarantee data validity, despite errors, and failures.</li>
-<li><a href="https://en.wikipedia.org/wiki/Set_theory">Set Theory</a> - is the mathematical basis for relational databases (RDBMS)</li>
-<li><a href="https://en.wikipedia.org/wiki/Graph_theory">Graph Theory</a> - is probably the mathematical basis for graph databases like Neo4j. NoSQL databases might lie somewhere in the middle. Since Graphs are more general mathematical objects, we might think for now that, it is important to understand graph theory to design graph databases.</li>
-<li><a href="https://d4m.mit.edu/d4m-dynamic-distributed-dimensional-data-model#:~:text=D4M%20is%20a%20breakthrough%20in,database%20and%20computation%20system%20that">D4M</a>- Dynamic Distributed Dimensional Data Model - is a computer programming model that combines the advantages of distinct data processing technologies (sparse linear algebra, associate arrays, fuzzy algebra, distributed arrays, triple-store/NoSQL databases) to improve search, retrieval and analysis of data.</li>
+<li>[blog] <a href="https://towardsdatascience.com/">Expected Calibration Error</a>expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d)</li>
+<li>[paper] <a href="https://arxiv.org/abs/2308.01222">Calibration in Deep Learning: A Survey of the State-of-the-Art</a></li>
 </ol>
 </section>
 <section id="in-class" class="level3">
 <h3 class="anchored" data-anchor-id="in-class">In-Class</h3>
 <ol type="1">
-<li>The CRUD operations on Model Predictions</li>
-<li>The R4 (Read, Replay, Recall, Replace) Framework for Level 5 Data Governance.</li>
+<li><a href="https://people.eecs.berkeley.edu/~angelopoulos/publications/downloads/gentle_intro_conformal_dfuq.pdf">A gentle introduction to Conformal Prediction and Distribution-free Uncertainty Quantification</a> <a href="https://www.youtube.com/watch?v=nql000Lu_iE">Video</a></li>
 </ol>
 </section>
 <section id="post-class" class="level3">
 <h3 class="anchored" data-anchor-id="post-class">Post-class</h3>
 <ol type="1">
-<li>[book] <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781118023471">An Elementary Introduction to Statistical Learning Theory</a>. See Chapter 8 for how the theory of VC Dimension can be applied to get an idea on the sample size.</li>
-<li>[site] <a href="https://gdpr-info.eu">GDPR</a> - in particular focussing on privacy, and right to be forgotten (or right to erasure)</li>
-<li>[wiki] <a href="https://en.wikipedia.org/wiki/Self-driving_car">Self Driving Cars</a> read the six levels (Level 0 to Level 5) of autonomy. Level 5 is fully autonomous self driving car.</li>
+<li>[paper] <a href="https://jmlr.csail.mit.edu/papers/volume9/shafer08a/shafer08a.pdf">A tutorial on Conformal Prediction</a></li>
+<li>[paper] <a href="https://arxiv.org/abs/2207.07411">Towards Reliability using Pretrained Large Model Extensions</a></li>
+<li>[tools] <a href="https://github.com/valeman/awesome-conformal-prediction">awesome-conformal-prediction</a> - a collection Conformal Prediction resources including implementations.</li>
+<li>[tools] <a href="https://github.com/henrikbostrom/crepes">crepes</a> - Conformal Classifiers, Regressors, and Predictive Systems.</li>
+<li>[tools] <a href="https://github.com/ml-stat-Sustech/TorchCP">TorchCP</a> - a python toolbox for Conformal Prediction research in Deep Learning Models using PyTorch.</li>
 </ol>
 </section>
-<section id="additional-reading-optional" class="level3">
-<h3 class="anchored" data-anchor-id="additional-reading-optional">Additional Reading (optional)</h3>
+</section>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
 <ol type="1">
-<li>[book] <a href="https://mitpress.mit.edu/9780262038393/mathematics-of-big-data/">Mathematics of Big Data</a></li>
-</ol>
-</section>
-<section id="notes" class="level3">
-<h3 class="anchored" data-anchor-id="notes">Notes</h3>
-<p>At at the heart of it, all of IT applications, <em>eventually</em> perform CRUD operations. Depending on the type of transaction, purpose, and SLAs, the choice of the database (SQL vs NoSQL), Batch-vs-Stream, OLAP vs OLTP, among others will be made. A whole lof of mathematical theories (set theory, graph theory, associative arrays, multi linear algebra, etc) are necessary to build the technologies.</p>
-<p>In yet another simplified view, ML systems are glorified auto-fills. Take out the fundamental uncertainty in the data produced by ML systems, they are akin to IT systems. Therefore, same infrastructure and engineering process to support CRUD operations on ML produced data can be applied. But is that sufficient?</p>
-<p>One major difference is - ML systems have memory. Therefore, deleting a record, does not lead to deleting its influence in downstream tasks right? A simple example will drive home the point. Imagine a model is trained on a dataset. There are some records which are leaking private data. What would deleting mean here. Obviously, one can delete those records from the training set. But one must also edit the models to get rid of their influence. Think one step further. What if, these <em>marked</em> records are very close the some other records. Deleting and retraining on the updated training data does not mean that their <em>residual</em> effect is removed. So, it is not only complex but also complicated. When ML models are cascaded and appear in a sequence of data events – controlling their exposure and affects requires a very good control on the downstream consumer applications.</p>
-<p>Let us try to re-interpret CRUD in the ML context. It leads us to the R4 {Read, Repeat, Recall, Replace} framework.</p>
-<section id="read" class="level4">
-<h4 class="anchored" data-anchor-id="read">Read</h4>
-<p>On demand, read (or retrieve) the prediction made by an ML model. This require maintaining proper metadata to retrive the records. For example, if the input (request to the API) is available, as is, and the output (response) of the API is logged into a persistent object store, this is possible.</p>
-</section>
-<section id="repeat" class="level4">
-<h4 class="anchored" data-anchor-id="repeat">Repeat</h4>
-<p>On demand, repeat (or reproduce) the prediction made by an ML model. This require maintaining the three things for the sake reproducibility: 1. The data (inputs) and model artifacts 2. The code which loads the model, and scores on the given data and 3. The runtime to execute the code &amp; data.</p>
-</section>
-<section id="recall" class="level4">
-<h4 class="anchored" data-anchor-id="recall">Recall</h4>
-<p>On demand, recall the prediction made by an ML model. Depending on the “definition” of recall, the implementation and engineering complexity varies. In the simplest case which itself can be very complex, all past instances where the model scored, the predictions have to be replaced with say <em>nulls</em>. However, this implementation is not yet actionable by itself. The downstream consumer for example, can be notified of the <em>recall</em>, and take an appropriate action. The downstream consumer must have the <em>Read</em> ability in the R4 framework. In the best case scenario, the downstream consumer updates the decision (say with human-in-the-loop) or has another back-off strategy implemented already.</p>
-<p>In the highest form of <em>recall</em>, all downstream consumers of the predictions are notified and decisions are propagaed in the entire chain of events.</p>
-</section>
-<section id="replace" class="level4">
-<h4 class="anchored" data-anchor-id="replace">Replace</h4>
-<p>On demand, replace the prediction made by an ML model with another prediction (after correcting). Once the record is updated, in the most sophisticated case, all downstream consumers propagate the change downstream.</p>
-<p>Like in self-driving cars, the Level of Automation can be categorized.</p>
-<div style="font-size: 80%;">
-<table class="table-striped caption-top table">
-<caption>** R4 Levels**</caption>
-<colgroup>
-<col style="width: 9%">
-<col style="width: 18%">
-<col style="width: 36%">
-<col style="width: 36%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Level</th>
-<th style="text-align: left;">Name</th>
-<th style="text-align: left;">Supported Actions</th>
-<th style="text-align: left;">Platform Features</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">L0</td>
-<td style="text-align: left;">R0</td>
-<td style="text-align: left;">Fire and Forget <br> Zero Traceability</td>
-<td style="text-align: left;">Model APIs</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">L1</td>
-<td style="text-align: left;">R1 <br> Read</td>
-<td style="text-align: left;">Trace past decisions</td>
-<td style="text-align: left;">Observability</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">L2</td>
-<td style="text-align: left;">R2 <br> Read &amp; Repeat</td>
-<td style="text-align: left;">Trace and Recreate past decisions</td>
-<td style="text-align: left;">Observability + <br> Versioning + CD</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">L3</td>
-<td style="text-align: left;">R3 <br> Read, Repeat, Recall</td>
-<td style="text-align: left;">Trace, Recreate, and Nullify past decisions</td>
-<td style="text-align: left;">Observability <br> Versioning + CD + <br> CImp</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">L4</td>
-<td style="text-align: left;">R3-N <br> Read, Repeat, Recall with Notify</td>
-<td style="text-align: left;">Trace, Recreate, Nullify, and Notify past decisions</td>
-<td style="text-align: left;">Observability <br> Versioning + CD + <br> CImp + <br> Event-IO</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">L5</td>
-<td style="text-align: left;">R4 <br> Read, Repeat, Recall, Replace</td>
-<td style="text-align: left;">Trace, Recreate, and Rescore past decisions</td>
-<td style="text-align: left;">Observability <br> Versioning + CD + <br> CImp</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">L6</td>
-<td style="text-align: left;">R4-N <br> Read, Repeat, Recall, Replace with Notify</td>
-<td style="text-align: left;">Trace, Recreate, Rescore, and Notify past decisions</td>
-<td style="text-align: left;">Observability <br> Versioning + CD + <br> CImp + <br> Event-IO</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Are these four primitive operations sufficient to support any model governance? 1. Can a model be debiased? 2. Can right to be erased to enabled? 3. Many more.</p>
-<p>As one can see, from an engineering stand point, certain platform features and functionalities are needed.</p>
-<ol type="1">
-<li>Read: An observation platform to log data, with CRUD apis on the logs - can enable <em>reading</em> any past decisions (model predictions)</li>
-<li>Repeat: Versioning of data, models, code, and run time with Continuous Deployment (CD) can ensure reproducibility.</li>
-<li>Recall: A Continuous Improvement (CImp) capability that can take any alternate model (which can produce Nulls), deploy it, and rescore on any past data, can enable <em>recalling</em> past decisions.</li>
-<li>Replace: Same capability as <em>Recall</em> except that, a new model would correct past decisions.</li>
-<li>Notify: One has to make the memory-less system into a system with memory, in in <em>async</em> fashion. Implementing a pub-sub model, where downstream consumer subcribes to the R4 topics published by the prediction maker service. For example, a model service published a <em>recall</em> topic with all the decisions that need to be annulled in someway. The subscribers of this topic will take action however they deem fit. They can even publish another recall event and all of its subscribers can act accordingly. This way, a <em>recall</em> pipeline is created based on event triggers.</li>
+<li>Deep Learning models are not calibrated. They can make confident, but wrong mistakes.</li>
+<li>Conformal Prediction (CP) provides a rigorous statistical guarantees for the predictions by predicting sets and not points. For example, in a regression problem, one gets to predict an interval with guaranteed coverage probability. In a classification problem, CP may predict more than one class label.</li>
+<li>CP is model-agnostic and can work for a variety of tasks including, regression, multi-class classification, multi-label prediction, time-series models, and also in LLMs <a href="https://arxiv.org/abs/2306.10193">Conformal Language Modeling</a></li>
+<li>It is a post-hoc technique and should be used in every project.</li>
 </ol>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -907,13 +810,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lectures/w06-l01.html" class="pagination-link" aria-label="06A: Evaluate">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">06A: Evaluate</span>
+      <a href="../lectures/w08-l01.html" class="pagination-link" aria-label="08A: Sample Fitness">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">08A: Sample Fitness</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lectures/w07-l01.html" class="pagination-link" aria-label="07A: Scaling Laws">
-        <span class="nav-page-text">07A: Scaling Laws</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../homeworks.html" class="pagination-link" aria-label="Homeworks">
+        <span class="nav-page-text">Homeworks</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -925,7 +828,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w06-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w09-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This course material was built with <a href="https://quarto.org/">Quarto</a> with <a href="https://github.com/hadley/r4ds">r4ds</a> theme.</p>
 </div>
