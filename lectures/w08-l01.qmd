@@ -1,4 +1,4 @@
-# 08A: Sample Fitness {.unnumbered}
+# 08A: Model Fitness {.unnumbered}
 
 ## Materials:
 Date: Tuesday, 17-Sep-2024
@@ -11,10 +11,16 @@ Date: Tuesday, 17-Sep-2024
 
 1. Characterizing data difficulty or sample hardness : [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
 2. \[notebook\] [Sample Fitness  Metrics based on Information Theory](./../notebooks/Sample-Fitness.ipynb) where we walk through these concept on a toy dataset
+3. Model diagnostics of LLMs: Application Random Matrix Theory (RMT) to assess model generalization ability
+    - Implicit Self-Regularization in Deep Neural Networks: Evidence from Random Matrix Theory and Implications for Learning [paper](https://jmlr.org/papers/v22/20-410.html)
+    - Predicting trends in the quality of state-of-the-art neural networks without accesss to training or testing data [paper](https://www.nature.com/articles/s41467-021-24025-8) [Nature Communications, 2021]
+    - Application of RMT to analyse a LSA (Latent Semantic Analysis) model [notebook](https://github.com/CalculatedContent/WeightWatcher/blob/master/examples/LSA.ipynb)
 
 ### Post-class
 1. \[paper\] [The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning](https://arxiv.org/abs/2312.01552)
 2. \[tools\] [AlignTDS](https://github.com/Re-Align/AlignTDS/blob/main/src/compute_dist_diff.py) - common metrics to detect differences between token distributions in LLMs
+3. \[video\] [Heavy Tails in ML: Structures, Stability Dynamics](https://nips.cc/virtual/2023/83033) Invited talks at NeurIPS'23
+4. \[notebooks\] [RMT Application for Diagnosing LLMs](https://github.com/CalculatedContent/WeightWatcher/tree/master/examples). See the[] git repo](https://github.com/CalculatedContent/WeightWatcher) for navigation. 
 
 
 ## Notes
