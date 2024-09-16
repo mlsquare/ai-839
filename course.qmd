@@ -39,7 +39,7 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 &nbsp; |  |   @sec-hw-minor | Due 11.59PM IST, Friday, 25th Oct, 2024 |
 | 08 | 17-Sep <br> 20-Sep | **Sample Fitness, Guest Lecture** <br> 1. Likelihood Ratio, $\nu\text{-information}$ <br> 2. ML Platform | [W08-L01](./lectures/w08-l01.qmd) <br> Talk by Abhishek |
 &nbsp; |  |    |  |
-| 09 | 24-Sep <br> 27-Sep | **UQ, Midterm** <br> 1. Uncertainty Quantification, Conformal prediction <br> 2. Midterm | [W08-L01](./lectures/w09-l01.qmd) <br> NA |
+| 09 | 24-Sep <br> 27-Sep | **UQ, Midterm** <br> 1. Uncertainty Quantification, Conformal prediction <br> 2. Midterm | [W09-L01](./lectures/w09-l01.qmd) <br> NA |
 &nbsp; |  |   Midterm | in-class |
 | 10 | 15-Oct <br> 18-Oct | **Edge Deployment, ML Platforms** <br> 1. Model Compression, Quantization   <br> 2. Distributed Systems, Solving ML Eng. issues with Keras and TensorFlow | Talk by Dr. Srinivas <br> Talk by Kalyan |
 &nbsp; |  |    |  |
