@@ -263,7 +263,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/w08-l01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">08A: Sample Fitness</span></a>
+ <span class="menu-text">08A: Model Fitness</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -452,7 +452,7 @@ window.Quarto = {
 <ol type="1">
 <li>Exact problem was solved before or data is available which can be used as-is [best case]. Take the data, build a model, and deploy and start using. Such occurrences can be rare but can happen. For example, people counting of a given demographic from traffic camera feeds.</li>
 <li>Similar problem solved, except for differences in domain. Take a model trained on that data, collect data on the target domain. Start improving the model over a period of time. Use transfer learning/ supervised fine-tuning methods. If data exists (in literature or on huggingace/kaggle for eg) for that problem, plot <em>accuracy</em> vs <em>sample size</em> and pick a target that gives desired performance. Iterate over it. Do not collect all data at once.</li>
-<li>Unlabelled data available in large quantities. In such a case, run a pre-trained model or develop self-supervised learning tasks, get very good representations and try to label those that are easy and/or important for the performance. See <a href="https://github.com/decile-team/cords">cords</a> and other active learning methods.</li>
+<li>Unlabelled data available in large quantities. In such a case, run a pre-trained model or develop self-supervised learning tasks, get very good representations and try to label those that are easy and/or important for the performance. See <a href="https://github.com/decile-team/cords">cords</a> and other active learning methods. See the application of self-supervised pre-training techniques for multi-lable classification in Chest X-Ray <a href="https://arxiv.org/abs/2211.12931">paper</a></li>
 <li>Data exists and similar problem is not solved before [worst case]. Then, one has to design an experiment, provide some inputs (design considerations or operating environment) about the problem, get a ball park sense of the sample size (for the sake of budget, resource and project planning), run a pilot data collection exercise, refine the strategy and iterate. Below, we develop some heuristics to estimate the sample size.</li>
 </ol>
 <section id="a-statistical-approach" class="level4">
