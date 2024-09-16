@@ -11,21 +11,22 @@ Date: Tuesday, 17-Sep-2024
 
 1. Characterizing data difficulty or sample hardness : [Understanding Dataset difficulty](https://arxiv.org/abs/2110.08420)
 2. \[notebook\] [Sample Fitness  Metrics based on Information Theory](./../notebooks/Sample-Fitness.ipynb) where we walk through these concept on a toy dataset
-3. Model diagnostics of LLMs: Application Random Matrix Theory (RMT) to assess model generalization ability
-    - Implicit Self-Regularization in Deep Neural Networks: Evidence from Random Matrix Theory and Implications for Learning [paper](https://jmlr.org/papers/v22/20-410.html)
+3. Model diagnostics of LLMs: Application of Random Matrix Theory (RMT) to assess model generalization ability
+    - Implicit Self-Regularization in Deep Neural Networks: Evidence from Random Matrix Theory and Implications for Learning [paper](https://jmlr.org/papers/v22/20-410.html) [JMLR, 2021]
     - Predicting trends in the quality of state-of-the-art neural networks without accesss to training or testing data [paper](https://www.nature.com/articles/s41467-021-24025-8) [Nature Communications, 2021]
-    - Application of RMT to analyse a LSA (Latent Semantic Analysis) model [notebook](https://github.com/CalculatedContent/WeightWatcher/blob/master/examples/LSA.ipynb)
+    - Application of RMT to analyze an LSA (Latent Semantic Analysis) model [notebook](https://github.com/CalculatedContent/WeightWatcher/blob/master/examples/LSA.ipynb)
 
 ### Post-class
 1. \[paper\] [The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning](https://arxiv.org/abs/2312.01552)
 2. \[tools\] [AlignTDS](https://github.com/Re-Align/AlignTDS/blob/main/src/compute_dist_diff.py) - common metrics to detect differences between token distributions in LLMs
-3. \[video\] [Heavy Tails in ML: Structures, Stability Dynamics](https://nips.cc/virtual/2023/83033) Invited talks at NeurIPS'23
-4. \[notebooks\] [RMT Application for Diagnosing LLMs](https://github.com/CalculatedContent/WeightWatcher/tree/master/examples). See the[] git repo](https://github.com/CalculatedContent/WeightWatcher) for navigation. 
+3. \[video\] [Heavy Tails in ML: Structures, Stability Dynamics](https://nips.cc/virtual/2023/83033) Invited talk at NeurIPS'23
+4. \[notebooks\] [RMT Application for Diagnosing LLMs](https://github.com/CalculatedContent/WeightWatcher/tree/master/examples). See the [git repo](https://github.com/CalculatedContent/WeightWatcher) for navigation. 
 
 
 ## Notes
 1. Many metrics proposed to understand and characterize data and models are based on information theory. 
 2. Likelihood Ratio, Deviance, Cross-Entropy, Perplexity, $\nu\text{-information}$ all are related in linear and Generalized Linear models. They can be useful in modern deep learning and LLM context as well.
+3. [Weight|Watchers](https://weightwatcher.ai/) is a very interesting application of Random Matrix Theory (RMT) to study the training dynamics of LLMs and other blackbox models. We need access to the model weights, not necessarily the entire training data. Fit power-law to the eigen spectrum of the weights, and based model (of learning dynamics), characterise the training regime into different stages. Models that have good generalization capabilities exhibit different characteristics in in the eigen spectrum. 
 
 
 
