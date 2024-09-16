@@ -1,0 +1,28 @@
+# 09A: Uncertainty Quantification {.unnumbered}
+
+## Materials:
+Date: Tuesday, 24-Sep-2024
+
+### Pre-work:
+1. \[blog\] [Expected Calibration Error](https://towardsdatascience.com/)expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d)
+2. \[paper\] [Calibration in Deep Learning: A Survey of the State-of-the-Art](https://arxiv.org/abs/2308.01222)
+
+### In-Class
+1. [A gentle introduction to Conformal Prediction and Distribution-free Uncertainty Quantification](https://people.eecs.berkeley.edu/~angelopoulos/publications/downloads/gentle_intro_conformal_dfuq.pdf) [Video](https://www.youtube.com/watch?v=nql000Lu_iE)
+
+### Post-class
+1. \[paper\] [A tutorial on Conformal Prediction](https://jmlr.csail.mit.edu/papers/volume9/shafer08a/shafer08a.pdf)
+2. \[paper\] [Towards Reliability using Pretrained Large Model Extensions](https://arxiv.org/abs/2207.07411)
+3. \[tools\] [awesome-conformal-prediction](https://github.com/valeman/awesome-conformal-prediction) - a collection Conformal Prediction resources including implementations.
+4. \[tools\] [crepes](https://github.com/henrikbostrom/crepes) - Conformal Classifiers, Regressors, and Predictive Systems.
+5. \[tools\] [TorchCP](https://github.com/ml-stat-Sustech/TorchCP) - a python toolbox for Conformal Prediction research in Deep Learning Models using PyTorch.
+
+
+
+## Notes
+1. Deep Learning models are not calibrated. They can make confident, but wrong mistakes.
+2. Conformal Prediction (CP) provides a rigorous statistical guarantees for the predictions by predicting sets and not points. For example, in a regression problem, one gets to predict an interval with guaranteed coverage probability. In a classification problem, CP may predict more than one class label.
+3. CP is model-agnostic and can work for a variety of tasks including, regression, multi-class classification, multi-label prediction, time-series models, and also in LLMs [Conformal Language Modeling](https://arxiv.org/abs/2306.10193)
+4. It is a post-hoc technique and should be used in every project.
+
+
