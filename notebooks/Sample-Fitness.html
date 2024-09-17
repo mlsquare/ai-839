@@ -379,7 +379,8 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#aic" id="toc-aic" class="nav-link active" data-scroll-target="#aic">AIC</a></li>
+  <li><a href="#likelihood" id="toc-likelihood" class="nav-link active" data-scroll-target="#likelihood">Likelihood</a></li>
+  <li><a href="#aic" id="toc-aic" class="nav-link" data-scroll-target="#aic">AIC</a></li>
   <li><a href="#llr-and-deviance" id="toc-llr-and-deviance" class="nav-link" data-scroll-target="#llr-and-deviance">LLR and Deviance</a></li>
   <li><a href="#nutext-information-criteria" id="toc-nutext-information-criteria" class="nav-link" data-scroll-target="#nutext-information-criteria"><span class="math inline">\(\nu\text{-information criteria}\)</span></a></li>
   <li><a href="#perplexity" id="toc-perplexity" class="nav-link" data-scroll-target="#perplexity">Perplexity</a></li>
@@ -454,6 +455,8 @@ x2            -1.4199      0.815     -1.742      0.082      -3.018       0.178
 ==============================================================================</code></pre>
 </div>
 </div>
+<section id="likelihood" class="level3">
+<h3 class="anchored" data-anchor-id="likelihood">Likelihood</h3>
 <p>The model summary contains many useful statistics like Log-Likelihood, LL-Null and LLR p-value. Let us explore what these different objects.</p>
 <p>The generative model for Logistic regression can be written like as follows:</p>
 <p><span class="math display">\[y_i \sim Binomial(1,\pi_i) \\
@@ -467,6 +470,7 @@ x2            -1.4199      0.815     -1.742      0.082      -3.018       0.178
 <pre><code>log likelihood -53.424489860304064</code></pre>
 </div>
 </div>
+</section>
 <section id="aic" class="level3">
 <h3 class="anchored" data-anchor-id="aic">AIC</h3>
 <p>AIC is defined as <span class="math inline">\(2p - 2 \ln(\hat{\ell})\)</span> where <span class="math inline">\(p\)</span> is the number of parameters, and <span class="math inline">\(\hat{\ell}\)</span> is the log-likelihood evaluated at the estimated model parameters. The correction factor or penalty term <span class="math inline">\(2p\)</span> penalizes complex models. AIC is often used in model comparison. Smaller the AIC, better is the fit to the data. Complex models are more penalized, of course.</p>
@@ -515,17 +519,17 @@ x2            -1.4199      0.815     -1.742      0.082      -3.018       0.178
 \hat{I}_{M_r,M_f}(X \rightarrow Y) = \sum_{i=1}^{n} \hat{PVI}(x_i,y_i)
 \]</span>.</p>
 <p>If we scale it appropriately, we notice that, <span class="math inline">\(D(M_r,M_f) = 2I_{M_r,M_f}(X \rightarrow Y)\)</span>. So, the <span class="math inline">\(I_{\mathcal{V}}(X \rightarrow Y)\)</span> is actually <span class="math inline">\(LLR\)</span> with an information theoretic lense, applied to modern deep learning context, more specifically to LLMs.</p>
-<p><span class="math inline">\(PVI\)</span> was used to identify mislabelled examples. Across datasets, and training regimes, examples with high <span class="math inline">\(PVI\)</span> are generally accurate and low <span class="math inline">\(PVI\)</span> examples are not. This suggests that one can use <span class="math inline">\(PVI\)</span> can be used to define the confidence in the predictions.</p>
-<p>It is to be noted that the connection between Likelihood and Information Theory is not new. Prof.&nbsp;Manny Parzen’s works have demonstrated this connection between in Goodness-of-Fit tests and Entropy. See for example, <a href="https://apps.dtic.mil/sti/tr/pdf/ADA125155.pdf">Entropy Interpretation of Goodness of Fit Tests</a>(1983) and <a href="https://apps.dtic.mil/sti/tr/pdf/ADA224860.pdf">Goodness of Fit tests and Entropy</a>(1990). Indeed, LLR is a Goodness-of-Fit test.</p>
+<p><span class="math inline">\(PVI\)</span> was used to identify mislabelled examples. Across datasets, and training regimes, examples with high <span class="math inline">\(PVI\)</span> are generally accurate and low <span class="math inline">\(PVI\)</span> examples are not. This suggests that one can use <span class="math inline">\(PVI\)</span> to define the confidence in the predictions.</p>
+<p>It is to be noted that the connection between Likelihood and Information Theory is not new. Prof.&nbsp;Manny Parzen’s works have demonstrated this connection between in Goodness-of-Fit Tests and Entropy. See for example, <a href="https://apps.dtic.mil/sti/tr/pdf/ADA125155.pdf">Entropy Interpretation of Goodness of Fit Tests</a>(1983) and <a href="https://apps.dtic.mil/sti/tr/pdf/ADA224860.pdf">Goodness of Fit tests and Entropy</a>(1990). Indeed, LLR is a Goodness-of-Fit Test and <em>statsmodel</em> API gives p-vlaue for this test, as we have seen before.</p>
 </section>
 <section id="perplexity" class="level3">
 <h3 class="anchored" data-anchor-id="perplexity">Perplexity</h3>
-<p><a href="https://en.wikipedia.org/wiki/Perplexity">Perplexity</a>, as the name implies, is about the element of surprise. Again, it is just a fancy word for a monotonic transformation of cross-entropy, widely used in the NLP/LLM community. Having trained an LLM, one wants to see, how perplexing the observed data to the LLM. More perplexing the data (higher the cross entropy), less likely is the model to have generated data or put in a more relatable fashion, higher is the additional number of bits needed to code the data.</p>
-<p>Like the recent <span class="math inline">\(\nu\text{-information}\)</span> criteria, cross-entropy and other information-theoretic metrics such as the KL-divergence are also used to study LLM performance. For example, in <a href="https://arxiv.org/abs/2312.01552">The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning</a>, token distributions are compared. Multiple metrics such as KL-divergence, Jaccard Similarity, among others are implemented <a href="https://github.com/Re-Align/AlignTDS">see code</a>. Using these metrics, they showed that LLM Alignment via RLHF mostly did stylistic modification to the output than it did to the <em>actual</em> factual content.</p>
-<p>Once log-likelihood is avaibale, perplexity can be calculates as <span class="math display">\[
+<p><a href="https://en.wikipedia.org/wiki/Perplexity">Perplexity</a>, as the name implies, is about the element of surprise. Again, it is just a fancy word for a monotonic transformation of cross-entropy, widely used in the NLP/LLM community. Having trained an LLM, one wants to see how perplexing the observed data to the LLM. More perplexing the data (higher the cross entropy), less likely is the model to have generated data or put in a more relatable fashion, higher is the additional number of bits needed to code the data.</p>
+<p>Like the recent <span class="math inline">\(\nu\text{-information}\)</span> criteria, cross-entropy and other information-theoretic metrics such as the KL-divergence are also used to study LLM performance. For example, in <a href="https://arxiv.org/abs/2312.01552">The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning</a>, token distributions are compared. Multiple metrics such as KL-divergence, Jaccard Similarity, among others, are implemented <a href="https://github.com/Re-Align/AlignTDS">see code</a>. Using these metrics, they showed that LLM Alignment via RLHF mostly did stylistic modifications to the output than it did to the <em>factual</em> content.</p>
+<p>Once log-likelihood is available, perplexity can be calculates as <span class="math display">\[
 \text{perplexity} = 2^{H(P,Q)}
-\]</span> where <span class="math inline">\(P\)</span> is the true distribution and <span class="math inline">\(Q\)</span> is the distribution under proposed model. Since true <span class="math inline">\(P\)</span> is unknown, we often replace it with its empirical version. When a model is fit, the log-likelhood is an estimate of the cross-entropy. Therefore, <span class="math display">\[
-\text{perplexity}_{M} = 2^{\log \hat{\ell}(M; D)}
+\]</span> where <span class="math inline">\(P\)</span> is the true distribution and <span class="math inline">\(Q\)</span> is the distribution under proposed model. Since true <span class="math inline">\(P\)</span> is unknown, we often replace it with its empirical version. When a model is fit, the log-likelhood is an estimate of the negative cross-entropy. Therefore, <span class="math display">\[
+\text{perplexity} = 2^{-\log \hat{\ell}(M; D)}
 \]</span> where <span class="math inline">\(M\)</span> is the model under consideration.</p>
 <p>It is possible to compute cross-entropy between two models, where <span class="math inline">\(P\)</span> takes the role of a reference distribution and <span class="math inline">\(Q\)</span> takes the role of a probing model. Note that, this metric is no symmetric in <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>.</p>
 
