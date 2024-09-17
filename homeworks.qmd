@@ -41,7 +41,7 @@
 - Deploy _Model B_ if the performance is better than _Model A_ on the new tranche of data. Update metadata of the API to reflect the new model version being used to make the predictions.
 
 **Due by** \
-11.59PM IST, Friday, 20th Sep, 2024.
+11.59PM IST, Tuesday, 24th Sep, 2024.
 
 ## HW-04 {#sec-hw-04}
 

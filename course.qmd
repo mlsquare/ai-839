@@ -26,7 +26,7 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 | 05 | 27-Aug <br> 30-Aug | **Model Monitoring and Deployment** <br> 1. Monitoring Metrics, Tests, Label Generation    <br>  2. Deployment with MLFlow  | [W05-L01](./lectures/w05-l01.qmd) <br> [W05-L02](./lectures/w05-l02.qmd) |
 &nbsp; | |  |     |
 | 06 | 03-Sep <br> 06-Sep | **Evaluation and Governance** <br> 1. Hypothesis Tets, DoEs, Model Comparison   <br>  2. The R4 Framework | [W06-L01](./lectures/w06-l01.qmd) <br> [W06-L02](./lectures/w06-l02.qmd) |
-&nbsp; |  | @sec-hw-05 <br> @sec-hw-06 | Due 11.59PM IST, Friday, 20th Sep, 2024  <br> Due 11.59PM IST, Friday, 18th Oct, 2024 |
+&nbsp; |  | @sec-hw-05 <br> @sec-hw-06 | Due 11.59PM IST, Tuesday, 24th Sep, 2024  <br> Due 11.59PM IST, Friday, 18th Oct, 2024 |
 : **Part-1: Essentials** {.striped}
 :::
 
