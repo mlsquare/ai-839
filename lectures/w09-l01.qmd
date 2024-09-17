@@ -24,5 +24,3 @@ Date: Tuesday, 24-Sep-2024
 2. Conformal Prediction (CP) provides a rigorous statistical guarantees for the predictions by predicting sets and not points. For example, in a regression problem, one gets to predict an interval with guaranteed coverage probability. In a classification problem, CP may predict more than one class label.
 3. CP is model-agnostic and can work for a variety of tasks including, regression, multi-class classification, multi-label prediction, time-series models, and also useful in LLMs [Conformal Language Modeling](https://arxiv.org/abs/2306.10193), even though it is still a research topic.
 4. It is a post-hoc technique and should be used in every project.
-
-
