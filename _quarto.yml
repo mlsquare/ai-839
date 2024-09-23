@@ -59,6 +59,7 @@ book:
     chapters:
     - ./notebooks/Sample-Hardness.ipynb
     - ./notebooks/Sample-Fitness.ipynb
+    - ./notebooks/Conformal-Predictions.ipynb
   - part: documentation.qmd 
     chapters:
     - ./resources/project-card.ipynb
