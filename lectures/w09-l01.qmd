@@ -9,6 +9,7 @@ Date: Tuesday, 24-Sep-2024
 
 ### In-Class
 1. [A gentle introduction to Conformal Prediction and Distribution-free Uncertainty Quantification](https://people.eecs.berkeley.edu/~angelopoulos/publications/downloads/gentle_intro_conformal_dfuq.pdf) [Video](https://www.youtube.com/watch?v=nql000Lu_iE)
+2. [colab](https://colab.research.google.com/drive/1TC_BM7JaEYtBIq6yuYB5U4cJjeg71Tch) from [DEEL-PUNCC](https://github.com/deel-ai/puncc)
 
 ### Post-class
 1. \[paper\] [A tutorial on Conformal Prediction](https://jmlr.csail.mit.edu/papers/volume9/shafer08a/shafer08a.pdf)
@@ -16,6 +17,9 @@ Date: Tuesday, 24-Sep-2024
 3. \[tools\] [awesome-conformal-prediction](https://github.com/valeman/awesome-conformal-prediction) - a collection Conformal Prediction resources including implementations.
 4. \[tools\] [crepes](https://github.com/henrikbostrom/crepes) - Conformal Classifiers, Regressors, and Predictive Systems.
 5. \[tools\] [TorchCP](https://github.com/ml-stat-Sustech/TorchCP) - a python toolbox for Conformal Prediction research in Deep Learning Models using PyTorch.
+6. \[tools\] [MAPIE](https://github.com/scikit-learn-contrib/MAPIE) - a python toolbox for Conformal Prediction
+7. \[tools\] [DEEL-PUNCC](https://github.com/deel-ai/puncc) - a python toolbox for Conformal Prediction from [DEEL.ai](https://www.deel.ai/) a project for Dependable, Certifiable, Explainable AI for Critical Systems. Checkout the sister projects from DEEl on Bias [DEEL INFLUENCIAE](https://github.com/deel-ai/influenciae), [oodeel](https://github.com/deel-ai/oodeel) for OOD, [xplique](https://github.com/deel-ai/xplique) for XAI, 
+
 
 
 
