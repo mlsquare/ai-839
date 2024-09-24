@@ -6,7 +6,8 @@ Date: Tuesday, 24-Sep-2024
 ### Pre-work:
 1. \[blog\] [Expected Calibration Error](https://towardsdatascience.com/expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d)
 2. \[paper\] [Calibration in Deep Learning: A Survey of the State-of-the-Art](https://arxiv.org/abs/2308.01222)
-3. [\paper\] [On Calibration of Modern Neural Networks](https://arxiv.org/abs/1706.04599)
+3. \[paper\] [On Calibration of Modern Neural Networks](https://arxiv.org/abs/1706.04599)
+4. \[tutorial\] [Introduction to Uncertainty in Deep Learning](https://www.gatsby.ucl.ac.uk/~balaji/balaji-uncertainty-talk-cifar-dlrl.pdf)
 
 ### In-Class
 1. [A gentle introduction to Conformal Prediction and Distribution-free Uncertainty Quantification](https://people.eecs.berkeley.edu/~angelopoulos/publications/downloads/gentle_intro_conformal_dfuq.pdf) [Video](https://www.youtube.com/watch?v=nql000Lu_iE)
