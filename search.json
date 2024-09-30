@@ -223,7 +223,7 @@
     "href": "index.html#announcements",
     "title": "AI-839",
     "section": "Announcements",
-    "text": "Announcements\n\n[17-September-2024] HW-05 extended to 11.59pm, Tue, Sept, 2024 IST.\n[16-September-2024] Notes added to W08-L01. Updated course page with scheudle for the rest of the course (tentative).\n[12-September-2024] Notes added to W07-L01. W07-L02 is added.\n[05-September-2024] Homework, Minor and Major preoject details added. See HW-05, HW-06, Minor Project, Major Project for details. Course pages updated.\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
+    "text": "Announcements\n\n[30-September-2024] Midterm Bonus Problem released. Due by 11.59pm, Oct 15, 2024 IST.\n[27-September-2024] Midterm at 11.15am, Tue, Sept, 2024 IST.\n[17-September-2024] HW-05 extended to 11.59pm, Tue, Sept, 2024 IST.\n[16-September-2024] Notes added to W08-L01. Updated course page with scheudle for the rest of the course (tentative).\n[12-September-2024] Notes added to W07-L01. W07-L02 is added.\n[05-September-2024] Homework, Minor and Major preoject details added. See HW-05, HW-06, Minor Project, Major Project for details. Course pages updated.\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
     "crumbs": [
       "Welcome"
     ]
@@ -677,7 +677,17 @@
     "href": "homeworks.html",
     "title": "Homeworks",
     "section": "",
-    "text": "HW-06\nReading\nTask\nDue by\n11.59PM IST, Friday, 18th Oct, 2024.",
+    "text": "Midterm Bonus Problem\nReading/ Coding\nTask:\nDue by\n11.59PM IST, Tuesday, 15th Oct, 2024.",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "homeworks.html#sec-hw-midterm-bonus",
+    "href": "homeworks.html#sec-hw-midterm-bonus",
+    "title": "Homeworks",
+    "section": "",
+    "text": "Building a Large Language Model (From Scratch). Book by Sebastian Raschka\nAxiomatic Attribution for Deep Networks. This paper was the precursor to XAI methods like Grad-CAM and Grad-CAM++ and variants.\nExplaining and Harnessing Adversarial Examples(2014). This was the precursor to many adversarial attacks papers and robustness methods in DL and grown into a massive research area with implications in AI security.\ncode Compute gradients of a Deep Network w.r.t to inputs and apply them in XAI and Adversatial Attacks. Video tutorial here\n\n\n\nCreate Midterm-Bonus branch of your private AI-839 repo.\nVerify that you can pre-train 150M GPT-2 small model based on code of Building LLMs from Scratch. Highly recommend reading this book by Sebastian Raschka.\nVerify that you can fine-tune with GPT-2 small model on a binary classification task. Consider the spam/ham example dataset provided in there.\nVerify that you can compute gradients w.r.t to inputs and the weights of the model.",
     "crumbs": [
       "Homeworks"
     ]
@@ -686,8 +696,8 @@
     "objectID": "homeworks.html#sec-hw-06",
     "href": "homeworks.html#sec-hw-06",
     "title": "Homeworks",
-    "section": "",
-    "text": "Right to Erasure act of GDPR\n\n\n\nThis HW focuses on the ability to implement techniques to enforce the “right to erase” policy\nCreate a branch named hw06 of your private repo.\nTreat the model you have built in HW-04 as your baseline, call it Model A\nImagine the first 10 records were to be erased.\nImplement a strategy s.t those 10 records will not be used in any future predictions. Update the API, and Data and Model cards to reflect this change.\nSuggest a method to implement “right to erasure” such that, even all past predictions that were influenced by the 10 records will be re-scored, and pushed.",
+    "section": "HW-06",
+    "text": "HW-06\nReading\n\nRight to Erasure act of GDPR\n\nTask\n\nThis HW focuses on the ability to implement techniques to enforce the “right to erase” policy\nCreate a branch named hw06 of your private repo.\nTreat the model you have built in HW-04 as your baseline, call it Model A\nImagine the first 10 records were to be erased.\nImplement a strategy s.t those 10 records will not be used in any future predictions. Update the API, and Data and Model cards to reflect this change.\nSuggest a method to implement “right to erasure” such that, even all past predictions that were influenced by the 10 records will be re-scored, and pushed.\n\nDue by\n11.59PM IST, Friday, 18th Oct, 2024.",
     "crumbs": [
       "Homeworks"
     ]
