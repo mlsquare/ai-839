@@ -2,6 +2,25 @@
 
 
 
+## Midterm Bonus Problem {#sec-hw-midterm-bonus}
+
+**Reading/ Coding**
+
+- [Building a Large Language Model](https://www.manning.com/books/build-a-large-language-model-from-scratch?utm_source=raschka&utm_medium=affiliate&utm_campaign=book_raschka_build_12_12_23&a_aid=raschka&a_bid=4c2437a0&chan=mm_github) (From Scratch). Book by Sebastian Raschka
+- [Axiomatic Attribution for Deep Networks](https://arxiv.org/abs/1703.01365). This paper was the precursor to XAI methods like [Grad-CAM](https://arxiv.org/abs/1610.02391) and [Grad-CAM++](https://arxiv.org/abs/1710.11063) and variants.
+- [Explaining and Harnessing Adversarial Examples](https://arxiv.org/abs/1412.6572)(2014). This was the precursor to many adversarial attacks papers and robustness methods in DL and grown into a massive research area with implications in AI security.
+- [code](https://github.com/jankrepl/mildlyoverfitted/tree/master/mini_tutorials/gradient_wrt_input) Compute gradients of a Deep Network w.r.t to inputs and apply them in XAI and Adversatial Attacks. Video tutorial [here](https://www.youtube.com/watch?v=5lFiZTSsp40)
+
+
+**Task**:
+
+- Create _Midterm-Bonus_ branch of your private _AI-839_ repo. 
+- Verify that you can pre-train 150M GPT-2 small model based on [code](https://github.com/rasbt/LLMs-from-scratch/blob/main/ch05/01_main-chapter-code/gpt_train.py) of [Building LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch). Highly recommend reading this book by Sebastian Raschka.
+- Verify that you can fine-tune with GPT-2 small model on a binary classification task. Consider the spam/ham example dataset provided in there.
+- Verify that you can compute gradients w.r.t to inputs and the weights of the model.
+
+**Due by** \
+11.59PM IST, Tuesday, 15th Oct, 2024.
 
 ## HW-06 {#sec-hw-06}
 
