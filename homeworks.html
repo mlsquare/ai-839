@@ -410,6 +410,15 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Due by</strong><br>
 11.59PM IST, Tuesday, 24th Sep, 2024.</p>
+<p><strong>Feedback</strong><br>
+</p>
+<ul>
+<li>Write a separate monitoring pipeline. It is exactly the evaluation pipeline except that it runs on the new ground truth data.</li>
+<li>Conditionally, trigger a re-training pipeline, which is again exactly, the training pipeline when the strategy to update the model is retraining on new data or all data including the new delta.</li>
+<li>Add a new model comparison pipeline</li>
+<li>Using git-hooks, deploy the model if the performance is satisfactory.</li>
+<li>Automate as much as possible.</li>
+</ul>
 </section>
 <section id="sec-hw-04" class="level2">
 <h2 class="anchored" data-anchor-id="sec-hw-04">HW-04</h2>
@@ -432,6 +441,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Due by</strong><br>
 11.59PM IST, Friday, 13th Sep, 2024.</p>
+<p><strong>Feedback</strong><br>
+</p>
+<ul>
+<li>Separate inference pipeline from the training pipeline. Inference pipeline includes the pre-processors, if any, model loading, and model prediction functions. Typically, only models are exposed as inference APIs. This may not work always. Guess why?</li>
+<li>Train any pre-processors like standard scaler, label encoding <em>after</em> splitting the data into train, test. Not before splitting. Guess why?</li>
+</ul>
 </section>
 <section id="sec-hw-03" class="level2">
 <h2 class="anchored" data-anchor-id="sec-hw-03">HW-03</h2>
@@ -456,6 +471,16 @@ ul.task-list li input[type="checkbox"] {
 <li>Automated test to detect distribution drift of <em>target</em> variable(represented as <em>y</em> in the dataset) between Train and Test splits is run using Evidently. The pipeline fails if distribution drift is detected.</li>
 </ul></li>
 </ul>
+<p><strong>Feedback</strong><br>
+</p>
+<ul>
+<li>API documentation
+<ul>
+<li>use docstrings in code so that they can be parsed and rendered into code documentation automatically. You do not have to write it your self separately.</li>
+<li>code and documentation should co-exist and should be written at the same time, so that changes in code will and should be reflected in the documentation immediately.</li>
+</ul></li>
+<li>Know what tests <em>evidently</em> runs, and read the documentation. Running the software is not sufficient.</li>
+</ul>
 <p><strong>Due by</strong><br>
 11.59PM IST, Friday, 06th Sep, 2024.</p>
 </section>
@@ -477,6 +502,23 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Due by</strong><br>
 11.59PM IST, Friday, 23rd August, 2024.</p>
+<p><strong>Feedback</strong><br>
+</p>
+<ul>
+<li>Like Project Cards, identify clear sections. For example, Data Cards should address
+<ul>
+<li>why was the data collected (if we know it)</li>
+<li>When was collected</li>
+<li>Who collected</li>
+<li>What was collected. Is there sensitive data? If so, what are they?</li>
+</ul></li>
+<li>Description/profile of the data</li>
+<li>Sample data</li>
+<li>Most datasets on the internet do not have any of these attributes. Imagine, someone gives you a CSV file without the headers? Will that be useful? Put the end user first.</li>
+<li>The instruction was to use <a href="https://github.com/ealcobaca/pymfe">pymfe</a> as it can routinely gather most statistics. Data Cards is not a data scientist’s jupyer notebook. Neatly format. Do not treat Data Cards as notebook with code blocks and output cells. It is data-driven document. It is neither a document with static content or jupyter notebook.</li>
+<li>Use modern publishing tools like <em>quarto</em> which erase the boundary between word processors like word and EDA notebooks. Do not reinvent the wheel and render your own markdown strings from notebook cell outouts.</li>
+<li>Focus is on data-driven documentation.</li>
+</ul>
 </section>
 <section id="sec-hw-01" class="level2">
 <h2 class="anchored" data-anchor-id="sec-hw-01">HW-01</h2>
@@ -498,6 +540,46 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Due by</strong><br>
 11.59PM IST, Tuesday, 13th August, 2024.</p>
+<p><strong>Feedback</strong><br>
+</p>
+<ul>
+<li>Complete all sections - even if the problem is hypothetical.</li>
+<li>In reality, authoring Project Cards is an <em>iterative</em> and <em>collaborative</em> exercise. But in this HW, you are forced to think through. Information may be inaccurate but should not be incomplete. Recall that one of the objective of the <a href="https://shorensteincenter.org/">CLeAR</a> framework is to make documentation comparable. If some sections of this standard template are missing, these docs can not be compared.</li>
+<li><em>Business View</em>
+<ul>
+<li>was the hard part to get it right. Often, models, ML metrics, features of the ML model crept into this section. Very little ML will go into this section.</li>
+</ul></li>
+<li><em>Business View: Background</em>
+<ul>
+<li>Do not describe the solution. Describe the situation of the user. It is like the backdrop. It should describe the “where” of your solution. Once the <em>why</em> section is read through, it should resonate well. Marketing &amp; Sales teams, Product and User Research teams should be consulted (or lead by them).</li>
+</ul></li>
+<li>In the <em>Business View: Problem</em> section, often solution is outlined. Don’t commit to a solution just as yet. Describe the problem - what to be solved, not how it is being solved. It is not the ML problem yet. Think of this way. Even of the solution does not involve ML, it could still have been a good problem to solve.</li>
+<li><em>Business View: Customer</em>
+<ul>
+<li>Keep it as specific as possible. Simply put, every additional adjective, and qualifier will identify the customer better.</li>
+</ul></li>
+<li><em>Business View: Value Proposition</em>
+<ul>
+<li>It is largely about <em>reduction</em> in <em>something</em> or <em>improvement</em> of <em>something</em> by a certain <em>quantity</em>.<br>
+</li>
+</ul></li>
+<li><em>Business View: Product</em>
+<ul>
+<li>It is not about the features. Features is not equal to experience. Focus on the experience, journey, workflow of the user. Think of user stories. One should almost be able to visualize how they will <em>use</em> your solution and get benefit from.</li>
+</ul></li>
+<li><em>Business View: Objectives</em>
+<ul>
+<li>Objectives are not wishlists. An objective should at least have a deliverable (outcome) and a timeline.</li>
+</ul></li>
+<li><em>Business View: Risks &amp; Challenges</em>
+<ul>
+<li>Probably, we should can keep ML Risks separate. Here, it is about Viability, Adoption and Scalability of the Solution and the assumptions went into it.</li>
+<li>Data challenges are real and most pressing.</li>
+<li>Is the eco-system ready to handle ML responses? Can the users handle wrong information? Is there a redressal/ recourse mechanism?</li>
+<li>The user has knowledge of the application? In other words, can user review the information provided by the application or naively believes the results?</li>
+<li>This is the most paradoxical issue with ML. Are you solving the problem from the past? The historical data is about the past. But do we expect the world to live that way? Is ML necessary, could it have been solved differently?</li>
+</ul></li>
+</ul>
 
 
 </section>
