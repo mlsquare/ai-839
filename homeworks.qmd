@@ -62,6 +62,15 @@
 **Due by** \
 11.59PM IST, Tuesday, 24th Sep, 2024.
 
+**Feedback** \
+
+- Write a separate monitoring pipeline. It is exactly the evaluation pipeline except that it runs on the new ground truth data. 
+- Conditionally, trigger a re-training pipeline, which is again exactly, the training pipeline when the strategy to update the model is retraining on new data or all data including the new delta. 
+- Add a new model comparison pipeline
+- Using git-hooks, deploy the model if the performance is satisfactory.
+- Automate as much as possible.
+
+
 ## HW-04 {#sec-hw-04}
 
 **Reading**
@@ -82,6 +91,11 @@
 **Due by** \
 11.59PM IST, Friday, 13th Sep, 2024.
 
+**Feedback** \
+
+- Separate inference pipeline from the training pipeline. Inference pipeline includes the pre-processors, if any, model loading, and model prediction functions. Typically, only models are exposed as inference APIs. This may not work always. Guess why?
+- Train any pre-processors like standard scaler, label encoding _after_ splitting the data into train, test. Not before splitting. Guess why?
+    
 ## HW-03 {#sec-hw-03}
 
 **Reading**
@@ -102,6 +116,13 @@
     - Nodes and Pipelines are Unit tested (with _PyTest_). 
     - Data Quality and Drift Detection Test suites using Evidently are run and the reports are represented as Plotly nodes in Kedro . 
     - Automated test to detect distribution drift of _target_ variable(represented as _y_ in the dataset) between Train and Test splits is run using Evidently. The pipeline fails if distribution drift is detected.
+
+**Feedback** \
+
+- API documentation
+    - use docstrings in code so that they can be parsed and rendered into code documentation automatically. You do not have to write it your self separately. 
+    - code and documentation should co-exist and should be written at the same time, so that changes in code will and should be reflected in the documentation immediately.
+- Know what tests _evidently_ runs, and read the documentation. Running the software is not sufficient. 
 
 **Due by** \
 11.59PM IST, Friday, 06th Sep, 2024.
@@ -124,6 +145,21 @@
 **Due by** \
 11.59PM IST, Friday, 23rd August, 2024.
 
+**Feedback** \
+
+- Like Project Cards, identify clear sections. For example, Data Cards should address 
+    - why was the data collected (if we know it)
+    - When was collected
+    - Who collected
+    - What was collected. Is there sensitive data? If so, what are they?
+- Description/profile of the data
+- Sample data
+- Most datasets on the internet do not have any of these attributes. Imagine, someone gives you a CSV file without the headers? Will that be useful? Put the end user first.
+-  The instruction was to use [pymfe](https://github.com/ealcobaca/pymfe) as it can routinely gather most statistics. Data Cards is not a data scientist's jupyer notebook. Neatly format. Do not treat Data Cards as notebook with code blocks and output cells. It is data-driven document. It is neither a document with static content or jupyter notebook.
+- Use modern publishing tools like _quarto_ which erase the boundary between word processors like word and EDA notebooks. Do not reinvent the wheel and render your own markdown strings from notebook cell outouts.
+- Focus is on data-driven documentation.
+
+
 ## HW-01 {#sec-hw-01}
 
 **Reading**
@@ -144,5 +180,29 @@
 
 **Due by** \
 11.59PM IST, Tuesday, 13th August, 2024.
+
+**Feedback** \
+
+- Complete all sections - even if the problem is hypothetical.
+- In reality, authoring Project Cards is an _iterative_ and _collaborative_ exercise. But in this HW, you are forced to think through. Information may be inaccurate but should not be incomplete. Recall that one of the objective of the [CLeAR](https://shorensteincenter.org/) framework is to make documentation comparable. If some sections of this standard template are missing, these docs can not be compared.
+- _Business View_
+    - was the hard part to get it right. Often, models, ML metrics, features of the ML model crept into this section. Very little ML will go into this section. 
+- _Business View: Background_
+    - Do not describe the solution. Describe the situation of the user. It is like the backdrop. It should describe the "where" of your solution. Once the _why_ section is read through, it should resonate well. Marketing & Sales teams, Product and User Research teams should be consulted (or lead by them).
+- In the _Business View: Problem_ section, often solution is outlined. Don't commit to a solution just as yet. Describe the problem - what to be solved, not how it is being solved. It is not the ML problem yet. Think of this way. Even of the solution does not involve ML, it could still have been a good problem to solve.
+- _Business View: Customer_
+    - Keep it as specific as possible. Simply put, every additional adjective, and qualifier will identify the customer better. 
+- _Business View: Value Proposition_
+    - It is largely about _reduction_ in _something_ or _improvement_ of _something_ by a certain _quantity_.  
+- _Business View: Product_
+    - It is not about the features. Features is not equal to experience. Focus on the experience, journey, workflow of the user. Think of user stories. One should almost be able to visualize how they will _use_ your solution and get benefit from.
+- _Business View: Objectives_
+    - Objectives are not wishlists. An objective should at least have a deliverable (outcome) and a timeline.
+- _Business View: Risks & Challenges_
+    - Probably, we should can keep ML Risks separate. Here, it is about Viability, Adoption and Scalability of the Solution and the assumptions went into it. 
+    - Data challenges are real and most pressing. 
+    - Is the eco-system ready to handle ML responses? Can the users handle wrong information? Is there a redressal/ recourse mechanism? 
+    - The user has knowledge of the application? In other words, can user review the information provided by the application or naively believes the results?
+    - This is the most paradoxical issue with ML. Are you solving the problem from the past? The historical data is about the past. But do we expect the world to live that way? Is ML necessary, could it have been solved differently?
 
 
