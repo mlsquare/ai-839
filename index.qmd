@@ -6,6 +6,7 @@ Hello Students of AI 839.
 See the [course](./course.qmd) page for recent information on Lectures, Homeworks, Projects, etc.. 
 
 ## Announcements  
+- [22-October-2024] Guest lecture decks added.
 - [01-October-2024] Generic feedback on HWs is added to [homeworks](./homeworks.qmd) page.
 - [30-September-2024] @sec-hw-midterm-bonus released. Due by 11.59pm, Oct 15, 2024 IST.
 - [27-September-2024] Midterm at 11.15am, Tue, Sept, 2024 IST. 

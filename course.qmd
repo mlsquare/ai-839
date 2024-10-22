@@ -41,17 +41,17 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 &nbsp; |  |    |  |
 | 09 | 24-Sep <br> 27-Sep | **UQ, Midterm** <br> 1. Uncertainty Quantification, Conformal prediction <br> 2. Midterm | [W09-L01](./lectures/w09-l01.qmd) <br> NA |
 &nbsp; |  |   Midterm | in-class |
-| 10 | 15-Oct <br> 18-Oct | **Edge Deployment, ML Platforms** <br> 1. Model Compression, Quantization   <br> 2. Distributed Systems, Solving ML Eng. issues with Keras and TensorFlow | Talk by Dr. Srinivas <br> Talk by Kalyan |
+| 10 | 15-Oct <br> 18-Oct | **Edge Deployment, ML Platforms** <br> 1. Model Compression, Quantization   <br> 2. Distributed Systems, Solving ML Eng. issues with Keras and TensorFlow | [Talk](./talks/EdgeDeployment_SrinivasRana.pdf) by Dr. Srinivas <br> [Talk](./talks/MLOps_Kalyan.pdf) by Kalyan |
 &nbsp; |  |    |  |
 | 11 | 22-Oct <br> 25-Oct | **Causal ML, Robustness** <br> 1. DoWhy and DICE   <br> 2. Robust ML | Talk by Dr. Amit <br> TBD |
 &nbsp; |  |    |  |
-| 12 | 29-Oct <br> 01-Nov | **Robustness** <br> 1. Adversarial ML  <br> 2. Holiday | TBD <br> NA |
+| 12 | 29-Oct <br> 01-Nov | **Robustness** <br> 1. Securing ML  <br> 2. Holiday | Talk by Manoj Parmar <br> NA |
 &nbsp; |  |    |  |
-| 13 | 05-Nov <br> 08-Nov | **LLMOps** <br> 1. MLOps Intro  <br> 2. Talk | TBD <br> NA |
+| 13 | 05-Nov <br> 08-Nov | **LLMOps** <br> 1. LLMs & MLOps Intro  <br> 2. Building LLM Apps in Fintech | Lecture <br> Talk by Dr. Venkata |
 &nbsp; |  |    |  |
 | 14 | 12-Nov <br> 15-Nov | **Fairness, XAI** <br> 1. Bias and Privacy  <br> 2. XAI in different modalities  | TBD <br> TBD |
 &nbsp; |  |    |  |
-| 15 | 19-Nov <br> 22-Nov | **Security, Machine Unlearning** <br> 1. ML Vulnerabilities and Safeguards  <br> 2. Recent work on model unlearning | TBD <br> TBD |
+| 15 | 19-Nov <br> 22-Nov | **Security, Machine Unlearning** <br> 1. ML Vulnerabilities and Safeguards  <br> 2. Recent work on model unlearning | Talk by Puneet Jindal <br> TBD |
 &nbsp; |  |    |  |
 | 16 | Last Week | **Student Presentations**  | TBD |
 &nbsp; | 26-Nov <br> 29-Nov |  in-class final presentations  |  |
@@ -65,10 +65,12 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 | :- | :- | :------- | :------- |
 | 03 | 16-Aug |  Intro to DevOps <br> [ML Engineering]  | [Ravi Mula](https://www.linkedin.com/in/ravismula/) <br> Architect: [Sanketika](https://sanketika.in/) |
 | 08 | 20-Sep |  ML Platforms <br> [ML Engineering]  | [Abhishek Choudhary](https://www.linkedin.com/in/abhishekch123/) <br> Co-Founder & CTO: [TrueFoundry](https://www.truefoundry.com/) |
-| 10 | 15-Oct |  Deploying on Edges <br> [ML Engineering]  | [Dr. Srinivas Rana](https://www.linkedin.com/in/srinivasrana/) <br> Sr ML Scientist: [Wadhwani AI](https://www.wadhwaniai.org/) |
-| 10 | 18-Oct |  MLOps @ Scale <br> [ML Engineering]  | [Kalyan Deepak](https://www.linkedin.com/in/kalyan-deepak-2304622a/) <br> Sr Staff Engineer  |
+| 10 | 15-Oct |  Deploying on Edges <br> [ML Engineering] <br> [Deck](./talks/EdgeDeployment_SrinivasRana.pdf) | [Dr. Srinivas Rana](https://www.linkedin.com/in/srinivasrana/) <br> Sr ML Scientist: [Wadhwani AI](https://www.wadhwaniai.org/) |
+| 10 | 18-Oct |  MLOps @ Scale <br> [ML Engineering] <br> [Deck](./talks/MLOps_Kalyan.pdf)  | [Kalyan Deepak](https://www.linkedin.com/in/kalyan-deepak-2304622a/) <br> Sr Staff Engineer, [LinkedIn](https://www.linkedin.com/)  |
 | 11 | 22-Oct |   DoWhy, Causal ML  <br> [XAI]  | [Dr. Amit Sharma](https://www.amitsharma.in/) <br> Principal Researcher, [MSR](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/) |
+| 12 | 29-Oct |   Securing AI  <br> [Adversarial ML]  | [Manojkumar Parmar](https://www.linkedin.com/in/manojkumarparmar/) <br> CEO & CTO AI Shield [Bosch AI Shield](https://www.linkedin.com/company/bosch-aishield/) |
 | 13 | 08-Nov | Building LLMs in Production in Regulated Industry <br> [System Design] | [Dr. Venkata Pingali](https://www.linkedin.com/in/pingali/) <br> Co-Founder: [Scribble Data](https://www.scribbledata.io/) |
+| 14 | 15-Nov | Problems and Solutions in Data Labelling <br> [Data Collection] | [Puneet Jindal](https://www.linkedin.com/in/puneetjindalisb/) <br> CEO, [Labellerr](https://www.linkedin.com/company/labellerr/)
 : **Guest Lectures** {.striped}
 :::
 
