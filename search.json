@@ -223,7 +223,7 @@
     "href": "index.html#announcements",
     "title": "AI-839",
     "section": "Announcements",
-    "text": "Announcements\n\n[22-October-2024] Dr. Amit’s Causal ML deck added to course page.\n[22-October-2024] Guest lecture decks added.\n[01-October-2024] Generic feedback on HWs is added to homeworks page.\n[30-September-2024] Midterm Bonus Problem released. Due by 11.59pm, Oct 15, 2024 IST.\n[27-September-2024] Midterm at 11.15am, Tue, Sept, 2024 IST.\n[17-September-2024] HW-05 extended to 11.59pm, Tue, Sept, 2024 IST.\n[16-September-2024] Notes added to W08-L01. Updated course page with scheudle for the rest of the course (tentative).\n[12-September-2024] Notes added to W07-L01. W07-L02 is added.\n[05-September-2024] Homework, Minor and Major preoject details added. See HW-05, HW-06, Minor Project, Major Project for details. Course pages updated.\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
+    "text": "Announcements\n\n[25-October-2024] Lecture page added to W11-L02\n[22-October-2024] Dr. Amit’s Causal ML deck added to course page.\n[22-October-2024] Guest lecture decks added.\n[01-October-2024] Generic feedback on HWs is added to homeworks page.\n[30-September-2024] Midterm Bonus Problem released. Due by 11.59pm, Oct 15, 2024 IST.\n[27-September-2024] Midterm at 11.15am, Tue, Sept, 2024 IST.\n[17-September-2024] HW-05 extended to 11.59pm, Tue, Sept, 2024 IST.\n[16-September-2024] Notes added to W08-L01. Updated course page with scheudle for the rest of the course (tentative).\n[12-September-2024] Notes added to W07-L01. W07-L02 is added.\n[05-September-2024] Homework, Minor and Major preoject details added. See HW-05, HW-06, Minor Project, Major Project for details. Course pages updated.\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
     "crumbs": [
       "Welcome"
     ]
@@ -670,6 +670,39 @@
     "crumbs": [
       "Lectures[ML Science]",
       "09A: Uncertainty Quantification"
+    ]
+  },
+  {
+    "objectID": "lectures/w11-l02.html",
+    "href": "lectures/w11-l02.html",
+    "title": "11B: Influence Functions",
+    "section": "",
+    "text": "Materials:\nDate: Friday, 25-Oct-2024",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "11B: Influence Functions"
+    ]
+  },
+  {
+    "objectID": "lectures/w11-l02.html#materials",
+    "href": "lectures/w11-l02.html#materials",
+    "title": "11B: Influence Functions",
+    "section": "",
+    "text": "Pre-work:\n\n[tools] DEEL-PUNCC - a python toolbox for Conformal Prediction from DEEL.ai a project for Dependable, Certifiable, Explainable AI for Critical Systems. Checkout the sister projects from DEEl on Bias DEEL INFLUENCIAE, oodeel for OOD, xplique for XAI,\nWhite Paper - Machine Learning in Certified Systems\n\n\n\nIn-Class\nTopic: Gradients &gt; IFs &gt; {Debugging, OOD, Robustness, XAI}\nDiscussion:\n\nCook’s Distance\n\nleverage\noutlier\ninfluence\n\nLeveraing Influence Functions for Dataset Exploration and Cleaning\nInterpreting Robust Optimization via Adversarial Influence Functions\nData Debugging: TraceIn - Estimating Training Data Influence by Tracing Gradient Descent\nGradOrth A Simple yet Efficient Out-of-Distribution Detection with Orthogonal Projection of Gradients\nAxiomatic Attribution for Deep Networks - integrated gradients for xai\nUnderstanding Black-box Predictions via Influence Functions - Perhaps, the first applications of Influence Functions to explain Black Box Deep Learning models\nInfluence functions in Machine Learning tasks\n\nLab\n\nIF from pyDVL library for data valuation and influence function computation.\nOOD: Notebook\nXAI in LLMs: Notebook Use IFs for XIA on LLMs, Blog\nXAI with gradients xplique\n\n\n\nPost-class\n\nInfluence Functions (IFs)\n\nTheory:\n\nHampel’s IF Seminal Paper - The Influence Curve and its Role in Robust Estimation, from Frank R. Hampel, that started this work\n\nComputation:\n\nScaling Up Influence Functions\nRevisiting inverse Hessian vector products for calculating influence functions\nM-FAC: Efficient Matrix-Free Approximations of Second-Order Information\nFastIF FastIF: Scalable Influence Functions for Efficient Model Interpretation and Debugging, with some applications in NLP.\n\n(Early) Application in ML:\n\nUnderstanding Black-box Predictions via Influence Functions - Perhaps, the first applications of Influence Functions to explain Black Box Deep Learning models\nInfluence Functions in Deep Learning Are Fragile\nInfluence Functions for Machine Learning: Nonparametric Estimators for Entropies, Divergences and Mutual Informations\nInfuence functions in Machine Learning tasks\nIf Influence Functions are the Answer, Then What is the Question?\n\nTools:\n\nInfluenciate from the DEEL Influenciae project\npyDVL library for data valuation and influence function computation.\n\n\n\n\nLLMs\n\nStudying Large Language Model Generalization with Influence Functions\nDo Influence Functions Work on Large Language Models?\nTextGrad Automatic ‘’Differentiation’’ via Text, paper\n\n\n\nXAI using Gradients and IFs\n\nAxiomatic Attribution for Deep Networks - integrated gradients for xai\nFor others DEEL.ai’ Xplique code paper\n\n\n\n\nData Debugging\n\nEstimating Training Data Influence by Tracing Gradient Descent\nLeveraing Influence Functions for Dataset Exploration and Cleaning\nUnderstanding Black-box Predictions via Influence Functions\nRelatIF: Identifying Explanatory Training Examples via Relative Influence\nOn the Accuracy of Influence Functions for Measuring Group Effects\nRepresenter Point Selection for Explaining Deep Neural Networks\nRepresenter Point Selection via Local Jacobian Expansion for Post-hoc Classifier Explanation of Deep Neural Networks and Ensemble Models\nUnderstanding Influence Functions and Datamodels via Harmonic Analysis\nAn Automatic Finite-Sample Robustness Metric: When Can Dropping a Little Data Make a Big Difference?\nLAVA: Data Valuation without Pre-Specified Learning Algorithms\n\n\nOOD\n\nOut-of-Distribution Generalization Analysis via Influence Function\nHow Useful are Gradients for OOD Detection Really? - a negative results on gradients\nGradient-Regularized Out-of-Distribution Detection\nGradOrth A Simple yet Efficient Out-of-Distribution Detection with Orthogonal Projection of Gradients\noodeel - a toolbox for OOD detection\n\n\n\nRobustness\n\nInterpreting Robust Optimization via Adversarial Influence Functions\nRobust inference: The approach based on influence functions\nRobust inference by influence functions\nGeneralized Influence Functions and Robustness Analysis",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "11B: Influence Functions"
+    ]
+  },
+  {
+    "objectID": "lectures/w11-l02.html#notes",
+    "href": "lectures/w11-l02.html#notes",
+    "title": "11B: Influence Functions",
+    "section": "Notes",
+    "text": "Notes\n\n\nGradients is all you need\n\n\nModality\nAspect\nTopics\nResources\n\n\n\n\nTabular\nOOD\nx\nx\n\n\nTabular\nXAI\nx\nx\n\n\nTabular\nBias\nx\nx\n\n\nTabular\nCP\nx\nx\n\n\nTabular\nRobustness\nx\nx\n\n\nText\nOOD\nx\nx\n\n\nText\nXAI\nx\nx\n\n\nText\nBias\nx\nx\n\n\nText\nCP\nx\nx\n\n\nText\nRobustness\nx\nx\n\n\nSpeech\nOOD\nx\nx\n\n\nSpeech\nXAI\nx\nx\n\n\nSpeech\nBias\nx\nx\n\n\nSpeech\nCP\nx\nx\n\n\nSpeech\nRobustness\nx\nx\n\n\nImage\nOOD\nx\nx\n\n\nImage\nXAI\nx\nx\n\n\nImage\nBias\nx\nx\n\n\nImage\nCP\nx\nx\n\n\nImage\nRobustness\nx\nx\n\n\nVideo\nOOD\nx\nx\n\n\nVideo\nXAI\nx\nx\n\n\nVideo\nBias\nx\nx\n\n\nVideo\nCP\nx\nx\n\n\nVideo\nRobustness\nx\nx",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "11B: Influence Functions"
     ]
   },
   {

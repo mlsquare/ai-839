@@ -8,7 +8,7 @@
 
 <meta name="author" content="mlsquare">
 
-<title>Course – AI-839</title>
+<title>11B: Influence Functions – AI-839</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,25 +24,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./lectures/w01-l01.html" rel="next">
-<link href="./index.html" rel="prev">
-<link href="./crisp-ml-process.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../homeworks.html" rel="next">
+<link href="../lectures/w09-l01.html" rel="prev">
+<link href="../crisp-ml-process.jpg" rel="icon" type="image/jpeg">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,35 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -112,7 +83,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course.html"><span class="chapter-title">Course</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w11-l02.html">11B: Influence Functions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -127,7 +98,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">AI-839</a> 
+      <a href="../">AI-839</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/mlsquare/ai-839" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -147,19 +118,19 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+  <a href="../preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Course</span></a>
+  <a href="../course.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Course</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -173,67 +144,67 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w01-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w01-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">01A: Grounding MLOps</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w02-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w02-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">02A: Grounding MLOps</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w02-l02.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w02-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">02B: Discover</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w03-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w03-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">03A: Models for Modeling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w03-l02.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w03-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">03B: DevOps for ML</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w04-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w04-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">04A: Develop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w04-l02.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w04-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">04B: Monitor (Data)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w05-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w05-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05A: Monitor (Models)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w05-l02.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w05-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05B: Deployment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w06-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w06-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">06A: Evaluate</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w06-l02.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w06-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">06B: Govern</span></a>
   </div>
 </li>
@@ -250,31 +221,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w07-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w07-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">07A: Scaling Laws</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w07-l02.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w07-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">07B: Sample Hardness</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w08-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w08-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">08A: Model Fitness</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w09-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w09-l01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">09A: Uncertainty Quantification</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/w11-l02.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w11-l02.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">11B: Influence Functions</span></a>
   </div>
 </li>
@@ -282,25 +253,25 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./homeworks.html" class="sidebar-item-text sidebar-link">
+  <a href="../homeworks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homeworks</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./projects.html" class="sidebar-item-text sidebar-link">
+  <a href="../projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Projects</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorials.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tutorials</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./talks.html" class="sidebar-item-text sidebar-link">
+  <a href="../talks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Talks</span></a>
   </div>
 </li>
@@ -315,24 +286,24 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/Sample-Hardness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sample Hardness</span></a>
+  <a href="../notebooks/Sample-Hardness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sample Hardness</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/Sample-Fitness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sample Fitness</span></a>
+  <a href="../notebooks/Sample-Fitness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sample Fitness</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/Conformal-Predictions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conformal Prediction</span></a>
+  <a href="../notebooks/Conformal-Predictions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conformal Prediction</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./documentation.html" class="sidebar-item-text sidebar-link">
+            <a href="../documentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ML Documentation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -341,7 +312,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources/project-card.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Project Card</span></a>
+  <a href="../resources/project-card.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Project Card</span></a>
   </div>
 </li>
       </ul>
@@ -356,20 +327,23 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#syllabus-schedule" id="toc-syllabus-schedule" class="nav-link active" data-scroll-target="#syllabus-schedule">Syllabus &amp; Schedule</a></li>
-  <li><a href="#discussions" id="toc-discussions" class="nav-link" data-scroll-target="#discussions">Discussions</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  <li><a href="#policies" id="toc-policies" class="nav-link" data-scroll-target="#policies">Policies</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link active" data-scroll-target="#materials">Materials:</a>
+  <ul class="collapse">
+  <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-work:</a></li>
+  <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-Class</a></li>
+  <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class</a></li>
+  <li><a href="#data-debugging" id="toc-data-debugging" class="nav-link" data-scroll-target="#data-debugging">Data Debugging</a></li>
+  </ul></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/course.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w11-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w11-l02.html">11B: Influence Functions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Course</span></h1>
+<h1 class="title">11B: Influence Functions</h1>
 </div>
 
 
@@ -386,332 +360,292 @@ window.Quarto = {
 </header>
 
 
-<p>You will find below course syllabus and schedule for <em>AI-839: ML Production Engineering</em> course offered at <a href="https://www.iiitb.ac.in/">IIIT-B</a> in the Fall of 2024. This will evolve as the course progress.</p>
-<section id="syllabus-schedule" class="level3">
-<h3 class="anchored" data-anchor-id="syllabus-schedule">Syllabus &amp; Schedule</h3>
-<div style="font-size: 80%;">
-<table class="table-striped caption-top table">
-<caption><strong>Part-1: Essentials</strong></caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Wk</th>
-<th style="text-align: left;">Dt</th>
-<th style="text-align: left;">Topics</th>
-<th style="text-align: left;">Resources</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">01</td>
-<td style="text-align: left;">01-Aug</td>
-<td style="text-align: left;"><strong>Introduction</strong> <br> 1. Course Intro <br> 2. ML in Production - Intro <br></td>
-<td style="text-align: left;"><a href="./lectures/w01-l01.html">W01-L01</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><a href="homeworks.html#sec-hw-01" class="quarto-xref"><span>HW-01</span></a></td>
-<td style="text-align: left;">Due Tue, 13th, August, 2024, 11.59pm IST</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">02</td>
-<td style="text-align: left;">06-Aug <br> 09-Aug</td>
-<td style="text-align: left;"><strong>Discovery</strong> <br> 1. Contd. <em>ML in Production - Intro</em> <br> 2. Software 1.0 vs 2.0 <br> 3. Design Thinking, Project Cards <br> 4. MLOps Canvas &amp; Tool Landscape</td>
-<td style="text-align: left;"><a href="./lectures/w02-l01.html">W02-L01</a> <br> <a href="./lectures/w02-l02.html">W02-L02</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><a href="homeworks.html#sec-hw-02" class="quarto-xref"><span>HW-02</span></a></td>
-<td style="text-align: left;">Due Fri, 23rd, August, 2024, 11.59pm IST</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">03</td>
-<td style="text-align: left;">13-Aug <br> 16-Aug</td>
-<td style="text-align: left;"><strong>Models for Modeling</strong> <br> 1. Kedro <br> 2. DevOps</td>
-<td style="text-align: left;"><a href="./lectures/w03-l01.html">W03-L01</a> <br> <a href="./lectures/w03-l02.html">W03-L02</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;">Note:</td>
-<td style="text-align: left;">16-Aug</td>
-<td style="text-align: left;">DevOps guest lecture by <a href="https://www.linkedin.com/in/ravismula/">Ravi</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">04</td>
-<td style="text-align: left;">20-Aug <br> 23-Aug</td>
-<td style="text-align: left;"><strong>Dev Setup &amp; Data Monitoring</strong> <br> 1. Kedro, PyTest, Ruff, Quartodoc <br> 2. Data Quality</td>
-<td style="text-align: left;"><a href="./lectures/w04-l01.html">W04-L01</a> <br> <a href="./lectures/w04-l02.html">W04-L02</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><a href="homeworks.html#sec-hw-03" class="quarto-xref"><span>HW-03</span></a> <br> <a href="homeworks.html#sec-hw-04" class="quarto-xref"><span>HW-04</span></a></td>
-<td style="text-align: left;">11.59PM IST, Friday, 6th Sep, 2024. <br> 11.59PM IST, Friday, 16th Sep, 2024.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">05</td>
-<td style="text-align: left;">27-Aug <br> 30-Aug</td>
-<td style="text-align: left;"><strong>Model Monitoring and Deployment</strong> <br> 1. Monitoring Metrics, Tests, Label Generation <br> 2. Deployment with MLFlow</td>
-<td style="text-align: left;"><a href="./lectures/w05-l01.html">W05-L01</a> <br> <a href="./lectures/w05-l02.html">W05-L02</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">06</td>
-<td style="text-align: left;">03-Sep <br> 06-Sep</td>
-<td style="text-align: left;"><strong>Evaluation and Governance</strong> <br> 1. Hypothesis Tets, DoEs, Model Comparison <br> 2. The R4 Framework</td>
-<td style="text-align: left;"><a href="./lectures/w06-l01.html">W06-L01</a> <br> <a href="./lectures/w06-l02.html">W06-L02</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><a href="homeworks.html#sec-hw-05" class="quarto-xref"><span>HW-05</span></a> <br> <a href="homeworks.html#sec-hw-06" class="quarto-xref"><span>HW-06</span></a></td>
-<td style="text-align: left;">Due 11.59PM IST, Tuesday, 24th Sep, 2024 <br> Due 11.59PM IST, Friday, 18th Oct, 2024</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div style="font-size: 80%;">
-<table class="table-striped caption-top table">
-<caption><strong>Part-2: Full Stack ML</strong></caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Wk</th>
-<th style="text-align: left;">Dt</th>
-<th style="text-align: left;">Topics</th>
-<th style="text-align: left;">Resources</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">07</td>
-<td style="text-align: left;">10-Sep <br> 13-Sep</td>
-<td style="text-align: left;"><strong>Scaling Laws, Sample Hardness</strong> <br> 1. Sample Sizes, Active Learning, Scaling Laws <br> 2. Sample Hardness</td>
-<td style="text-align: left;"><a href="./lectures/w07-l01.html">W07-L01</a> <br> <a href="./lectures/w07-l02.html">W07-L02</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><a href="projects.html#sec-hw-minor" class="quarto-xref"><span>Minor Project</span></a></td>
-<td style="text-align: left;">Due 11.59PM IST, Friday, 25th Oct, 2024</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">08</td>
-<td style="text-align: left;">17-Sep <br> 20-Sep</td>
-<td style="text-align: left;"><strong>Sample Fitness, Guest Lecture</strong> <br> 1. Likelihood Ratio, <span class="math inline">\(\nu\text{-information}\)</span> <br> 2. ML Platform</td>
-<td style="text-align: left;"><a href="./lectures/w08-l01.html">W08-L01</a> <br> Talk by Abhishek</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">09</td>
-<td style="text-align: left;">24-Sep <br> 27-Sep</td>
-<td style="text-align: left;"><strong>UQ, Midterm</strong> <br> 1. Uncertainty Quantification, Conformal prediction <br> 2. Midterm</td>
-<td style="text-align: left;"><a href="./lectures/w09-l01.html">W09-L01</a> <br> NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Midterm</td>
-<td style="text-align: left;">in-class</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">15-Oct <br> 18-Oct</td>
-<td style="text-align: left;"><strong>Edge Deployment, ML Platforms</strong> <br> 1. Model Compression, Quantization <br> 2. Distributed Systems, Solving ML Eng. issues with Keras and TensorFlow</td>
-<td style="text-align: left;"><a href="./talks/EdgeDeployment_SrinivasRana.pdf">Talk</a> by Dr.&nbsp;Srinivas <br> <a href="./talks/MLOps_Kalyan.pdf">Talk</a> by Kalyan</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">22-Oct <br> 25-Oct</td>
-<td style="text-align: left;"><strong>Causal ML, Robustness</strong> <br> 1. DoWhy and DICE <br> 2. Gradients is all you need</td>
-<td style="text-align: left;"><a href="./talks/CausalML_dowhy_dice_Amit.pdf">Talk</a> by Dr.&nbsp;Amit <br> <a href="./lectures/w11-l02.html">W11-L02</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">29-Oct <br> 01-Nov</td>
-<td style="text-align: left;"><strong>Robustness</strong> <br> 1. Securing ML <br> 2. Holiday</td>
-<td style="text-align: left;">Talk by Manoj Parmar <br> NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">13</td>
-<td style="text-align: left;">05-Nov <br> 08-Nov</td>
-<td style="text-align: left;"><strong>LLMOps</strong> <br> 1. LLMs &amp; MLOps Intro <br> 2. Building LLM Apps in Fintech</td>
-<td style="text-align: left;">Lecture <br> Talk by Dr.&nbsp;Venkata</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">14</td>
-<td style="text-align: left;">12-Nov <br> 15-Nov</td>
-<td style="text-align: left;"><strong>Fairness, XAI</strong> <br> 1. Bias and Privacy <br> 2. XAI in different modalities</td>
-<td style="text-align: left;">TBD <br> TBD</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">15</td>
-<td style="text-align: left;">19-Nov <br> 22-Nov</td>
-<td style="text-align: left;"><strong>Security, Machine Unlearning</strong> <br> 1. ML Vulnerabilities and Safeguards <br> 2. Recent work on model unlearning</td>
-<td style="text-align: left;">Talk by Puneet Jindal <br> TBD</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">16</td>
-<td style="text-align: left;">Last Week</td>
-<td style="text-align: left;"><strong>Student Presentations</strong></td>
-<td style="text-align: left;">TBD</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;</td>
-<td style="text-align: left;">26-Nov <br> 29-Nov</td>
-<td style="text-align: left;">in-class final presentations</td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div style="font-size: 80%;">
-<table class="table-striped caption-top table">
-<caption><strong>Guest Lectures</strong></caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Wk</th>
-<th style="text-align: left;">Dt</th>
-<th style="text-align: left;">Topics</th>
-<th style="text-align: left;">Resources</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">03</td>
-<td style="text-align: left;">16-Aug</td>
-<td style="text-align: left;">Intro to DevOps <br> [ML Engineering]</td>
-<td style="text-align: left;"><a href="https://www.linkedin.com/in/ravismula/">Ravi Mula</a> <br> Architect: <a href="https://sanketika.in/">Sanketika</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">08</td>
-<td style="text-align: left;">20-Sep</td>
-<td style="text-align: left;">ML Platforms <br> [ML Engineering]</td>
-<td style="text-align: left;"><a href="https://www.linkedin.com/in/abhishekch123/">Abhishek Choudhary</a> <br> Co-Founder &amp; CTO: <a href="https://www.truefoundry.com/">TrueFoundry</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">15-Oct</td>
-<td style="text-align: left;">Deploying on Edges <br> [ML Engineering] <br> <a href="./talks/EdgeDeployment_SrinivasRana.pdf">Deck</a></td>
-<td style="text-align: left;"><a href="https://www.linkedin.com/in/srinivasrana/">Dr.&nbsp;Srinivas Rana</a> <br> Sr ML Scientist: <a href="https://www.wadhwaniai.org/">Wadhwani AI</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">18-Oct</td>
-<td style="text-align: left;">MLOps @ Scale <br> [ML Engineering] <br> <a href="./talks/MLOps_Kalyan.pdf">Deck</a></td>
-<td style="text-align: left;"><a href="https://www.linkedin.com/in/kalyan-deepak-2304622a/">Kalyan Deepak</a> <br> Sr Staff Engineer, <a href="https://www.linkedin.com/">LinkedIn</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">22-Oct</td>
-<td style="text-align: left;">DoWhy, DiCE <br> [Causal ML] <br> <a href="./talks/CausalML_dowhy_dice_Amit.pdf">Deck</a></td>
-<td style="text-align: left;"><a href="https://www.amitsharma.in/">Dr.&nbsp;Amit Sharma</a> <br> Principal Researcher, <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">MSR</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">29-Oct</td>
-<td style="text-align: left;">Securing AI <br> [Adversarial ML]</td>
-<td style="text-align: left;"><a href="https://www.linkedin.com/in/manojkumarparmar/">Manojkumar Parmar</a> <br> CEO &amp; CTO AI Shield <a href="https://www.linkedin.com/company/bosch-aishield/">Bosch AI Shield</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">13</td>
-<td style="text-align: left;">08-Nov</td>
-<td style="text-align: left;">Building LLMs in Production in Regulated Industry <br> [System Design]</td>
-<td style="text-align: left;"><a href="https://www.linkedin.com/in/pingali/">Dr.&nbsp;Venkata Pingali</a> <br> Co-Founder: <a href="https://www.scribbledata.io/">Scribble Data</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">14</td>
-<td style="text-align: left;">15-Nov</td>
-<td style="text-align: left;">Problems and Solutions in Data Labelling <br> [Data Collection]</td>
-<td style="text-align: left;"><a href="https://www.linkedin.com/in/puneetjindalisb/">Puneet Jindal</a> <br> CEO, <a href="https://www.linkedin.com/company/labellerr/">Labellerr</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="discussions" class="level2">
-<h2 class="anchored" data-anchor-id="discussions">Discussions</h2>
-<p>We will use WhatsApp group for (informal)discussions and alerts.</p>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<section id="materials" class="level2">
+<h2 class="anchored" data-anchor-id="materials">Materials:</h2>
+<p>Date: Friday, 25-Oct-2024</p>
+<section id="pre-work" class="level3">
+<h3 class="anchored" data-anchor-id="pre-work">Pre-work:</h3>
 <ol type="1">
-<li>[book] <a href="https://www.mlebook.com/wiki/doku.php">ML Engineering</a>, Andiry Burkov, 2019, LeanPub</li>
-<li>[book] <a href="https://www.manning.com/books/effective-data-science-infrastructure">Effective Data Science Infrastructure</a>, Vile Tuulos, 2023, Manning</li>
-<li>[book] <a href="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/">ML System Design</a>, Chip Huyen, 2023, O’Reilly</li>
-<li>[course] <a href="https://stanford-cs329s.github.io/">CS329S @ Stanford: ML Systems Design</a>, Chip Huyen, 2022</li>
-<li>[course] <a href="https://github.com/GokuMohandas/mlops-course">MLOps</a>, Chip Huyen, 2024</li>
+<li>[tools] <a href="https://github.com/deel-ai/puncc">DEEL-PUNCC</a> - a python toolbox for Conformal Prediction from <a href="https://www.deel.ai/">DEEL.ai</a> a project for Dependable, Certifiable, Explainable AI for Critical Systems. Checkout the sister projects from DEEl on Bias <a href="https://github.com/deel-ai/influenciae">DEEL INFLUENCIAE</a>, <a href="https://github.com/deel-ai/oodeel">oodeel</a> for OOD, <a href="https://github.com/deel-ai/xplique">xplique</a> for XAI,</li>
+<li><a href="https://arxiv.org/abs/2103.10529">White Paper - Machine Learning in Certified Systems</a></li>
 </ol>
 </section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<section id="in-class" class="level3">
+<h3 class="anchored" data-anchor-id="in-class">In-Class</h3>
+<p>Topic: Gradients &gt; IFs &gt; {Debugging, OOD, Robustness, XAI}</p>
+<p><strong>Discussion</strong>:</p>
+<ol type="1">
+<li><a href="https://s2.smu.edu/tfomby/eco5350/data/Influential%20Observations/Lecture_5.pdf">Cook’s Distance</a>
 <ul>
-<li>40%: Six assignments</li>
-<li>15%: Midterm mini project</li>
-<li>20%: In-class midterm</li>
-<li>25%: Capstone project</li>
+<li>leverage</li>
+<li>outlier</li>
+<li>influence</li>
+</ul></li>
+<li><a href="https://hal.science/hal-03617649/file/Leveraging_Influence_Functions_for_Dataset_Exploration_and_Cleaning_finalV2.pdf">Leveraing Influence Functions for Dataset Exploration and Cleaning</a></li>
+<li><a href="https://arxiv.org/abs/2010.01247">Interpreting Robust Optimization via Adversarial Influence Functions</a></li>
+<li>Data Debugging: <a href="https://arxiv.org/pdf/2002.08484">TraceIn</a> - Estimating Training Data Influence by Tracing Gradient Descent</li>
+<li><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/77cf940349218069bbc230fc2c9c8a21-Abstract-Conference.html">GradOrth</a> A Simple yet Efficient Out-of-Distribution Detection with Orthogonal Projection of Gradients</li>
+<li><a href="https://arxiv.org/abs/1703.01365">Axiomatic Attribution for Deep Networks</a> - integrated gradients for xai</li>
+<li><a href="https://arxiv.org/abs/1703.04730">Understanding Black-box Predictions via Influence Functions</a> - Perhaps, the first applications of Influence Functions to explain Black Box Deep Learning models</li>
+<li><a href="https://subendhurongali.netlify.app/files/689_report.pdf">Influence functions in Machine Learning tasks</a></li>
+</ol>
+<p><strong>Lab</strong></p>
+<ol type="1">
+<li><a href="https://pydvl.org/stable/influence/#construction">IF</a> from <a href="https://pydvl.org/stable/">pyDVL</a> library for data valuation and influence function computation.</li>
+<li>OOD: <a href="https://pydvl.org/stable/examples/influence_wine/">Notebook</a></li>
+<li>XAI in LLMs: <a href="https://pydvl.org/stable/examples/influence_sentiment_analysis/">Notebook</a> Use IFs for XIA on LLMs, <a href="https://transferlab.ai/pills/2023/llm-influences-with-ekfac/">Blog</a></li>
+<li>XAI with gradients <a href="https://deel-ai.github.io/xplique/latest/api/attributions/api_attributions/">xplique</a></li>
+</ol>
+</section>
+<section id="post-class" class="level3">
+<h3 class="anchored" data-anchor-id="post-class">Post-class</h3>
+<section id="influence-functions-ifs" class="level4">
+<h4 class="anchored" data-anchor-id="influence-functions-ifs">Influence Functions (IFs)</h4>
+<ul>
+<li>Theory:
+<ul>
+<li><a href="https://www.tandfonline.com/doi/abs/10.1080/01621459.1974.10482962">Hampel’s IF Seminal Paper</a> - The Influence Curve and its Role in Robust Estimation, from Frank R. Hampel, that started this work</li>
+</ul></li>
+<li>Computation:
+<ul>
+<li><a href="https://arxiv.org/abs/2112.03052">Scaling Up Influence Functions</a></li>
+<li><a href="https://arxiv.org/abs/2409.17357">Revisiting inverse Hessian vector products for calculating influence functions</a></li>
+<li><a href="https://arxiv.org/abs/2107.03356">M-FAC: Efficient Matrix-Free Approximations of Second-Order Information</a></li>
+<li><a href="https://aclanthology.org/2021.emnlp-main.808/">FastIF</a> FastIF: Scalable Influence Functions for Efficient Model Interpretation and Debugging, with some applications in NLP.</li>
+</ul></li>
+<li>(Early) Application in ML:
+<ul>
+<li><a href="https://arxiv.org/abs/1703.04730">Understanding Black-box Predictions via Influence Functions</a> - Perhaps, the first applications of Influence Functions to explain Black Box Deep Learning models</li>
+<li><a href="https://arxiv.org/abs/2006.14651">Influence Functions in Deep Learning Are Fragile</a></li>
+<li><a href="https://arxiv.org/abs/1411.4342">Influence Functions for Machine Learning: Nonparametric Estimators for Entropies, Divergences and Mutual Informations</a></li>
+<li><a href="https://subendhurongali.netlify.app/files/689_report.pdf">Infuence functions in Machine Learning tasks</a></li>
+<li><a href="https://arxiv.org/abs/2209.05364">If Influence Functions are the Answer, Then What is the Question?</a></li>
+</ul></li>
+<li>Tools:
+<ul>
+<li><a href="https://hal.science/hal-04284178/">Influenciate</a> from the <a href="https://github.com/deel-ai/influenciae">DEEL Influenciae</a> project</li>
+<li><a href="https://pydvl.org/stable/">pyDVL</a> library for data valuation and influence function computation.</li>
+</ul></li>
 </ul>
 </section>
-<section id="policies" class="level2">
-<h2 class="anchored" data-anchor-id="policies">Policies</h2>
-<ul>
-<li><em>Late Submissions</em>: &nbsp;All deadlines are due at on the date and time indicated on the course page. The penalties for late submission are as follows:
-<ul>
-<li>Late submissions not allowed (incur a zero) - except with prior approval or in valid exceptional cases</li>
-</ul></li>
-<li><em>Make-up Exam/Submission Policy</em>: As per institute <a href="https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf">policy</a></li>
-<li><em>Citation Policy for Papers</em>: Always mention the source, give full attribution and credits to citations, and as per institute <a href="https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf">policy</a></li>
-<li><em>Academic Dishonesty/Plagiarism</em>: As per institute <a href="https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf">policy</a></li>
-<li><em>Accommodation of Divyangs</em>: As per institute <a href="https://www.iiitb.ac.in/includefiles/userfiles/images/pdf/code-of-coduct.pdf">policy</a></li>
-</ul>
-<p><a href="https://www.linkedin.com/in/somasdhavala/">Soma S Dhavala</a><br>
-Course Instructor</p>
+<section id="llms" class="level4">
+<h4 class="anchored" data-anchor-id="llms">LLMs</h4>
+<ol type="1">
+<li><a href="https://arxiv.org/abs/2308.03296">Studying Large Language Model Generalization with Influence Functions</a></li>
+<li><a href="https://arxiv.org/abs/2409.19998">Do Influence Functions Work on Large Language Models?</a></li>
+<li><a href="https://github.com/zou-group/textgrad">TextGrad</a> Automatic ‘’Differentiation’’ via Text, <a href="https://arxiv.org/abs/2406.07496">paper</a></li>
+</ol>
+</section>
+<section id="xai-using-gradients-and-ifs" class="level4">
+<h4 class="anchored" data-anchor-id="xai-using-gradients-and-ifs">XAI using Gradients and IFs</h4>
+<ol type="1">
+<li><a href="https://arxiv.org/abs/1703.01365">Axiomatic Attribution for Deep Networks</a> - integrated gradients for xai</li>
+<li>For others DEEL.ai’ Xplique <a href="https://deel-ai.github.io/xplique/latest/">code</a> <a href="https://arxiv.org/abs/2206.04394">paper</a></li>
+</ol>
+</section>
+</section>
+<section id="data-debugging" class="level3">
+<h3 class="anchored" data-anchor-id="data-debugging">Data Debugging</h3>
+<ol type="1">
+<li><a href="https://arxiv.org/abs/2002.08484">Estimating Training Data Influence by Tracing Gradient Descent</a></li>
+<li><a href="https://hal.science/hal-03617649/file/Leveraging_Influence_Functions_for_Dataset_Exploration_and_Cleaning_finalV2.pdf">Leveraing Influence Functions for Dataset Exploration and Cleaning</a></li>
+<li><a href="https://arxiv.org/abs/1703.04730">Understanding Black-box Predictions via Influence Functions</a></li>
+<li><a href="https://arxiv.org/abs/2003.11630">RelatIF: Identifying Explanatory Training Examples via Relative Influence</a></li>
+<li><a href="https://arxiv.org/abs/1905.13289">On the Accuracy of Influence Functions for Measuring Group Effects</a></li>
+<li><a href="https://arxiv.org/abs/1811.09720">Representer Point Selection for Explaining Deep Neural Networks</a></li>
+<li><a href="https://proceedings.neurips.cc/paper/2021/file/c460dc0f18fc309ac07306a4a55d2fd6-Paper.pdf">Representer Point Selection via Local Jacobian Expansion for Post-hoc Classifier Explanation of Deep Neural Networks and Ensemble Models</a></li>
+<li><a href="https://arxiv.org/abs/2210.01072">Understanding Influence Functions and Datamodels via Harmonic Analysis</a></li>
+<li><a href="https://arxiv.org/abs/2011.14999">An Automatic Finite-Sample Robustness Metric: When Can Dropping a Little Data Make a Big Difference?</a></li>
+<li><a href="https://arxiv.org/abs/2305.00054">LAVA: Data Valuation without Pre-Specified Learning Algorithms</a></li>
+</ol>
+<section id="ood" class="level4">
+<h4 class="anchored" data-anchor-id="ood">OOD</h4>
+<ol type="1">
+<li><a href="https://arxiv.org/abs/2101.08521">Out-of-Distribution Generalization Analysis via Influence Function</a></li>
+<li><a href="https://arxiv.org/abs/2205.10439">How Useful are Gradients for OOD Detection Really?</a> - a negative results on gradients</li>
+<li><a href="https://arxiv.org/abs/2404.12368">Gradient-Regularized Out-of-Distribution Detection</a></li>
+<li><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/77cf940349218069bbc230fc2c9c8a21-Abstract-Conference.html">GradOrth</a> A Simple yet Efficient Out-of-Distribution Detection with Orthogonal Projection of Gradients</li>
+<li><a href="https://github.com/deel-ai/oodeel">oodeel</a> - a toolbox for OOD detection</li>
+</ol>
+</section>
+<section id="robustness" class="level4">
+<h4 class="anchored" data-anchor-id="robustness">Robustness</h4>
+<ol type="1">
+<li><a href="https://arxiv.org/abs/2010.01247">Interpreting Robust Optimization via Adversarial Influence Functions</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0169716197150052">Robust inference: The approach based on influence functions</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0378375896000365">Robust inference by influence functions</a></li>
+<li><a href="https://ideas.repec.org/h/spr/sprchp/978-88-470-0704-8_15.html">Generalized Influence Functions and Robustness Analysis</a></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<div style="font-size: 80%;">
+<table class="table-striped caption-top table">
+<caption><strong>Gradients is all you need</strong></caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Modality</th>
+<th style="text-align: left;">Aspect</th>
+<th style="text-align: left;">Topics</th>
+<th style="text-align: left;">Resources</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Tabular</td>
+<td style="text-align: left;">OOD</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tabular</td>
+<td style="text-align: left;">XAI</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tabular</td>
+<td style="text-align: left;">Bias</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tabular</td>
+<td style="text-align: left;">CP</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tabular</td>
+<td style="text-align: left;">Robustness</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">OOD</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">XAI</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">Bias</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">CP</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">Robustness</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Speech</td>
+<td style="text-align: left;">OOD</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Speech</td>
+<td style="text-align: left;">XAI</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Speech</td>
+<td style="text-align: left;">Bias</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Speech</td>
+<td style="text-align: left;">CP</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Speech</td>
+<td style="text-align: left;">Robustness</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Image</td>
+<td style="text-align: left;">OOD</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Image</td>
+<td style="text-align: left;">XAI</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Image</td>
+<td style="text-align: left;">Bias</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Image</td>
+<td style="text-align: left;">CP</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Image</td>
+<td style="text-align: left;">Robustness</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Video</td>
+<td style="text-align: left;">OOD</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Video</td>
+<td style="text-align: left;">XAI</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Video</td>
+<td style="text-align: left;">Bias</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Video</td>
+<td style="text-align: left;">CP</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Video</td>
+<td style="text-align: left;">Robustness</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 </section>
@@ -1139,13 +1073,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Welcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
+      <a href="../lectures/w09-l01.html" class="pagination-link" aria-label="09A: Uncertainty Quantification">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">09A: Uncertainty Quantification</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lectures/w01-l01.html" class="pagination-link" aria-label="01A: Grounding MLOps">
-        <span class="nav-page-text">01A: Grounding MLOps</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../homeworks.html" class="pagination-link" aria-label="Homeworks">
+        <span class="nav-page-text">Homeworks</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1157,7 +1091,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/course.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w11-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This course material was built with <a href="https://quarto.org/">Quarto</a> with <a href="https://github.com/hadley/r4ds">r4ds</a> theme.</p>
 </div>
