@@ -1,0 +1,124 @@
+# 11B: Influence Functions {.unnumbered}
+
+## Materials:
+Date: Friday, 25-Oct-2024
+
+### Pre-work:
+1. \[tools\] [DEEL-PUNCC](https://github.com/deel-ai/puncc) - a python toolbox for Conformal Prediction from [DEEL.ai](https://www.deel.ai/) a project for Dependable, Certifiable, Explainable AI for Critical Systems. Checkout the sister projects from DEEl on Bias [DEEL INFLUENCIAE](https://github.com/deel-ai/influenciae), [oodeel](https://github.com/deel-ai/oodeel) for OOD, [xplique](https://github.com/deel-ai/xplique) for XAI, 
+2. [White Paper - Machine Learning in Certified Systems](https://arxiv.org/abs/2103.10529)
+
+### In-Class
+
+Topic: Gradients > IFs > {Debugging, OOD, Robustness, XAI}
+
+**Discussion**:
+
+1. [Cook's Distance](https://s2.smu.edu/tfomby/eco5350/data/Influential%20Observations/Lecture_5.pdf) 
+    - leverage
+    - outlier
+    - influence
+2. [Leveraing Influence Functions for Dataset Exploration and Cleaning](https://hal.science/hal-03617649/file/Leveraging_Influence_Functions_for_Dataset_Exploration_and_Cleaning_finalV2.pdf)
+3. [Interpreting Robust Optimization via Adversarial Influence Functions](https://arxiv.org/abs/2010.01247)
+4. Data Debugging: [TraceIn](https://arxiv.org/pdf/2002.08484) - Estimating Training Data Influence by Tracing Gradient Descent
+5. [GradOrth](https://proceedings.neurips.cc/paper_files/paper/2023/hash/77cf940349218069bbc230fc2c9c8a21-Abstract-Conference.html) A Simple yet Efficient Out-of-Distribution Detection with Orthogonal Projection of Gradients
+6. [Axiomatic Attribution for Deep Networks](https://arxiv.org/abs/1703.01365) - integrated gradients for xai
+7. [Understanding Black-box Predictions via Influence Functions](https://arxiv.org/abs/1703.04730) - Perhaps, the first applications of Influence Functions to explain Black Box Deep Learning models
+8. [Influence functions in Machine Learning tasks](https://subendhurongali.netlify.app/files/689_report.pdf)
+
+**Lab**
+
+1. [IF](https://pydvl.org/stable/influence/#construction) from [pyDVL](https://pydvl.org/stable/) library for data valuation and influence function computation.
+2. OOD: [Notebook](https://pydvl.org/stable/examples/influence_wine/)
+3. XAI in LLMs: [Notebook](https://pydvl.org/stable/examples/influence_sentiment_analysis/) Use IFs for XIA on LLMs, [Blog](https://transferlab.ai/pills/2023/llm-influences-with-ekfac/)
+4. XAI with gradients [xplique](https://deel-ai.github.io/xplique/latest/api/attributions/api_attributions/)
+
+
+### Post-class
+
+#### Influence Functions (IFs)
+- Theory:
+    - [Hampel's IF Seminal Paper](https://www.tandfonline.com/doi/abs/10.1080/01621459.1974.10482962) - The Influence Curve and its Role in Robust Estimation, from Frank R. Hampel, that started this work
+- Computation: 
+    - [Scaling Up Influence Functions](https://arxiv.org/abs/2112.03052)
+    - [Revisiting inverse Hessian vector products for calculating influence functions](https://arxiv.org/abs/2409.17357)
+    - [M-FAC: Efficient Matrix-Free Approximations of Second-Order Information](https://arxiv.org/abs/2107.03356)
+    - [FastIF](https://aclanthology.org/2021.emnlp-main.808/) FastIF: Scalable Influence Functions for Efficient Model Interpretation and Debugging, with some applications in NLP.
+- (Early) Application in ML:
+    - [Understanding Black-box Predictions via Influence Functions](https://arxiv.org/abs/1703.04730) - Perhaps, the first applications of Influence Functions to explain Black Box Deep Learning models
+    - [Influence Functions in Deep Learning Are Fragile](https://arxiv.org/abs/2006.14651)
+    - [Influence Functions for Machine Learning: Nonparametric Estimators for Entropies, Divergences and Mutual Informations](https://arxiv.org/abs/1411.4342)
+    - [Infuence functions in Machine Learning tasks](https://subendhurongali.netlify.app/files/689_report.pdf)
+    - [If Influence Functions are the Answer, Then What is the Question?](https://arxiv.org/abs/2209.05364)
+- Tools:
+    - [Influenciate](https://hal.science/hal-04284178/) from the [DEEL Influenciae](https://github.com/deel-ai/influenciae) project
+    - [pyDVL](https://pydvl.org/stable/) library for data valuation and influence function computation.
+
+#### LLMs
+1. [Studying Large Language Model Generalization with Influence Functions](https://arxiv.org/abs/2308.03296)
+2. [Do Influence Functions Work on Large Language Models?](https://arxiv.org/abs/2409.19998)
+3. [TextGrad](https://github.com/zou-group/textgrad) Automatic ''Differentiation'' via Text, [paper](https://arxiv.org/abs/2406.07496)
+
+
+
+#### XAI using Gradients and IFs
+1. [Axiomatic Attribution for Deep Networks](https://arxiv.org/abs/1703.01365) - integrated gradients for xai
+2. For others DEEL.ai' Xplique [code](https://deel-ai.github.io/xplique/latest/) [paper](https://arxiv.org/abs/2206.04394)
+
+### Data Debugging
+1. [Estimating Training Data Influence by Tracing Gradient Descent](https://arxiv.org/abs/2002.08484)
+2. [Leveraing Influence Functions for Dataset Exploration and Cleaning](https://hal.science/hal-03617649/file/Leveraging_Influence_Functions_for_Dataset_Exploration_and_Cleaning_finalV2.pdf)
+3. [Understanding Black-box Predictions via Influence Functions](https://arxiv.org/abs/1703.04730)
+4. [RelatIF: Identifying Explanatory Training Examples via Relative Influence](https://arxiv.org/abs/2003.11630)
+5. [On the Accuracy of Influence Functions for Measuring Group Effects](https://arxiv.org/abs/1905.13289)
+6. [Representer Point Selection for Explaining Deep Neural Networks](https://arxiv.org/abs/1811.09720)
+7. [Representer Point Selection via Local Jacobian Expansion for Post-hoc Classifier Explanation of Deep Neural Networks and Ensemble Models](https://proceedings.neurips.cc/paper/2021/file/c460dc0f18fc309ac07306a4a55d2fd6-Paper.pdf)
+8. [Understanding Influence Functions and Datamodels via Harmonic Analysis](https://arxiv.org/abs/2210.01072)
+9. [An Automatic Finite-Sample Robustness Metric: When Can Dropping a Little Data Make a Big Difference?](https://arxiv.org/abs/2011.14999)
+10. [LAVA: Data Valuation without Pre-Specified Learning Algorithms](https://arxiv.org/abs/2305.00054)
+
+#### OOD
+1. [Out-of-Distribution Generalization Analysis via Influence Function](https://arxiv.org/abs/2101.08521)
+2. [How Useful are Gradients for OOD Detection Really?](https://arxiv.org/abs/2205.10439) - a negative results on gradients
+3. [Gradient-Regularized Out-of-Distribution Detection](https://arxiv.org/abs/2404.12368)
+4. [GradOrth](https://proceedings.neurips.cc/paper_files/paper/2023/hash/77cf940349218069bbc230fc2c9c8a21-Abstract-Conference.html) A Simple yet Efficient Out-of-Distribution Detection with Orthogonal Projection of Gradients
+5. [oodeel](https://github.com/deel-ai/oodeel) - a toolbox for OOD detection
+
+#### Robustness
+1. [Interpreting Robust Optimization via Adversarial Influence Functions](https://arxiv.org/abs/2010.01247)
+2. [Robust inference: The approach based on influence functions](https://www.sciencedirect.com/science/article/abs/pii/S0169716197150052)
+3. [Robust inference by influence functions](https://www.sciencedirect.com/science/article/abs/pii/S0378375896000365)
+4. [Generalized Influence Functions and Robustness Analysis](https://ideas.repec.org/h/spr/sprchp/978-88-470-0704-8_15.html)
+
+## Notes
+
+
+::: {style="font-size: 80%;"}
+| Modality |  Aspect | Topics | Resources |
+| :- | :- | :------- | :------- |
+| Tabular | OOD |  x  | x |
+| Tabular | XAI |  x  | x |
+| Tabular | Bias |  x  | x |
+| Tabular | CP |  x  | x |
+| Tabular | Robustness |  x  | x |
+| Text | OOD |  x  | x |
+| Text | XAI |  x  | x |
+| Text | Bias |  x  | x |
+| Text | CP |  x  | x |
+| Text | Robustness |  x  | x |
+| Speech | OOD |  x  | x |
+| Speech | XAI |  x  | x |
+| Speech | Bias |  x  | x |
+| Speech | CP |  x  | x |
+| Speech | Robustness |  x  | x |
+| Image | OOD |  x  | x |
+| Image | XAI |  x  | x |
+| Image | Bias |  x  | x |
+| Image | CP |  x  | x |
+| Image | Robustness |  x  | x |
+| Video | OOD |  x  | x |
+| Video | XAI |  x  | x |
+| Video | Bias |  x  | x |
+| Video | CP |  x  | x |
+| Video | Robustness |  x  | x |
+: **Gradients is all you need** {.striped}
+:::

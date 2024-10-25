@@ -43,7 +43,7 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 &nbsp; |  |   Midterm | in-class |
 | 10 | 15-Oct <br> 18-Oct | **Edge Deployment, ML Platforms** <br> 1. Model Compression, Quantization   <br> 2. Distributed Systems, Solving ML Eng. issues with Keras and TensorFlow | [Talk](./talks/EdgeDeployment_SrinivasRana.pdf) by Dr. Srinivas <br> [Talk](./talks/MLOps_Kalyan.pdf) by Kalyan |
 &nbsp; |  |    |  |
-| 11 | 22-Oct <br> 25-Oct | **Causal ML, Robustness** <br> 1. DoWhy and DICE   <br> 2. Robust ML | Talk by Dr. Amit <br> TBD |
+| 11 | 22-Oct <br> 25-Oct | **Causal ML, Robustness** <br> 1. DoWhy and DICE   <br> 2. Gradients is all you need | [Talk](./talks/CausalML_dowhy_dice_Amit.pdf) by Dr. Amit <br> [W11-L02](./lectures/w11-l02.qmd)  |
 &nbsp; |  |    |  |
 | 12 | 29-Oct <br> 01-Nov | **Robustness** <br> 1. Securing ML  <br> 2. Holiday | Talk by Manoj Parmar <br> NA |
 &nbsp; |  |    |  |

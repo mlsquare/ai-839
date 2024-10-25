@@ -6,6 +6,7 @@ Hello Students of AI 839.
 See the [course](./course.qmd) page for recent information on Lectures, Homeworks, Projects, etc.. 
 
 ## Announcements  
+- [25-October-2024] Lecture page added to [W11-L02](/lectures/w11-l02.qmd)
 - [22-October-2024] Dr. Amit's Causal ML deck added to course page.
 - [22-October-2024] Guest lecture decks added.
 - [01-October-2024] Generic feedback on HWs is added to [homeworks](./homeworks.qmd) page.
