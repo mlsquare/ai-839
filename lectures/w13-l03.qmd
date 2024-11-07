@@ -1,0 +1,14 @@
+# 13C: Fullstack LLMs {.unnumbered}
+
+## Materials:
+Date: tbd
+
+### Pre-work:
+1. [LLM Intro](w13-l01.qmd)
+2. [LLM Ops](w13-l02.qmd)
+
+### In-Class
+tbd
+
+### Post-class
+tbd

@@ -1,0 +1,86 @@
+# 13A: LLMs Introduction {.unnumbered}
+
+## Materials:
+Date: Thursday, 07-Nov-2024, 11.30-1pm, IST.
+
+### Pre-work:
+1. LING571@UW [Deep Learning For NLP](https://www.shane.st/teaching/574/spr24/), Prof. [Shane](https://www.shane.st/) at UW, Spring'24.  [Introduction](https://www.shane.st/teaching/574/spr24/slides/1_Intro.pdf), [Word Vectors](https://www.shane.st/teaching/574/spr24/slides/2_GD_WV.pdf), [Language Modeling](https://www.shane.st/teaching/574/spr24/slides/3_word2vec.pdf)
+2. CIS7000@UPenn [LLMs](https://llm-class.github.io/schedule.html), by Prof. [Mayur Naik](https://www.cis.upenn.edu/~mhnaik/) at UPenn, Fall'24, [Background, Language Modeling](https://llm-class.github.io/slides/Lecture%202%20-%20Background.pdf) 
+3. AIL821@IIT-Delhi [LLMs: Introduction and Recent Advances](https://lcs2-iitd.github.io/ELL881-AIL821-2401/) ELL881/AIL821, LLMs: Introduction and Advances @ IIT-Delhi, Fall'24.
+4. Transformers
+    - [LLMs @ UPenn](https://llm-class.github.io/schedule.html) [Part-1](https://llm-class.github.io/slides/Lecture%205%20-%20The%20Transformer%20Architecture%20-%20Part%20I.pdf), [Part-2](https://llm-class.github.io/slides/Lecture%206%20-%20The%20Transformer%20Architecture%20-%20Part%20II.pdf)
+    - [LLMs: Introduction and Recent Advances @ IIT Delhi](https://lcs2-iitd.github.io/ELL881-AIL821-2401/) Module-5 on RNNs, Module-6 on Attention and Transformers
+
+### In-Class
+We will follow the "Follow the data" approach to organize the content.  
+
+1. Quick review of NLP and Deep Learning for NLP, pre- and post-GPT world. 
+    - Lecture 2 from AIL821 [Introduction to NLP](https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/2.pdf),
+    - Lecture 3.1 from AIL821 [Introduction to Language Models](https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/31.pdf) 
+2. LLM Flow: (Quality) Datasets, Model Training (Pre-training, Alignment, Fine-tuning), Prompt Optimization, Constrained Language Generation, Evaluation.
+3. Datasets and Tasks (to train LLMs)
+    - [Lecture 7 from AIL821](https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/71.pdf)
+    - [LIMA: less is more for alignment](https://arxiv.org/abs/2305.11206)
+    - [Instruction Tuning for Large Language Models: A Survey](https://arxiv.org/pdf/2308.10792)
+    - [OLMo @ Allen AI](https://allenai.org/olmo)
+4. Model Training
+    - Pre-training
+        - [Lecture 12.1 from AIL821](https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/121.pdf)
+        - [Improving Language Understanding by Generative Pre-Training](https://hayate-lab.com/wp-content/uploads/2023/05/43372bfa750340059ad87ac8e538c53b.pdf)
+    - Alignment
+        - [Lecture 12.2 from AIL821](https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/121.pdf)
+        - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](https://arxiv.org/abs/2305.18290)
+    - Fine-tuning
+        - Performance Efficient Fine-Tuning [collection](https://github.com/huggingface/peft)
+        - Lecture: [PEFT](https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/141.pdf)
+        - Lecture: : [Quantization and Pruning](https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/142.pdf)
+        - [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
+        - [QLoRA: Efficient Finetuning of Quantized LLMs](https://arxiv.org/abs/2305.14314)
+5. Prompt Optimization
+    - [The Prompt Report](https://trigaten.github.io/Prompt_Survey_Site/)
+    - [Chain-of-Thought](https://arxiv.org/abs/2201.11903)
+    - [Tree-of-Thought](https://arxiv.org/abs/2305.10601)
+    - [Self-Reflection](https://arxiv.org/abs/2405.06682)
+    - [Self-Contrast](https://arxiv.org/abs/2401.02009)
+    - [Think before you Speak](https://arxiv.org/abs/2311.07445)
+6. Constrained Language Generation
+    - [collection](https://github.com/Saibo-creator/Awesome-LLM-Constrained-Decoding)
+    - [Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation](https://arxiv.org/abs/2403.06988)
+7. Evaluation
+    - [Scaling Evaluation of LLMs](https://llm-class.github.io/slides/Yann_Dubois.pdf) Yann Bubois, CIS 7000 LLM Course
+8. Applications and Design Patterns
+    - Tools
+        - [Gorilla](https://gorilla.cs.berkeley.edu/)
+        - [Lecture 18.2 from AIL821] [LLMs and Tools: Function Calling](https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/172.pdf)
+    - Agents
+        - Lilian Wang's blog on [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/) 
+        - [Lecture 18.3 from AIL821] [LLMs and Tools: Agentic](https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/173.pdf)
+        - AutoGen [repo](https://github.com/microsoft/autogen)
+        - CrewAI [repo](https://github.com/crewAIInc/crewAI)
+        - LLM Agent papers collection [](https://github.com/AGI-Edgerunners/LLM-Agents-Papers)
+        - Survey: [The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)
+    - RAG
+        - Paper from NVidia [FACTS About Building Retrieval Augmented Generation-based Chatbots](https://arxiv.org/abs/2407.07858)
+        - [Retrieval-Augmented Generation for Large Language Models: A Survey](https://arxiv.org/abs/2312.10997) Mar'24
+        - [Searching for Best Practices in Retrieval-Augmented Generation](https://arxiv.org/abs/2407.01219) Jul'24
+9. LLMs can not reason & plan
+    - Lecture 19 from AIL821 [Reasoning in LLMs](https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/181.pdf)
+    - [LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks](https://arxiv.org/abs/2402.01817)
+    - [GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models](https://arxiv.org/abs/2410.05229v1)
+    - [Learning to reason with LLMs](https://openai.com/index/learning-to-reason-with-llms/)
+    - [Systems-2 Collection Repo](https://github.com/open-thought/system-2-research)
+
+### Post-class
+- Other modules in AIL821 [LLMs Course](https://lcs2-iitd.github.io/ELL881-AIL821-2401/) @ IIT-D 
+- Advanced topics in CIS 7000 [LLM Course](https://llm-class.github.io/)
+- Walk through the book [Building LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch)
+
+#### LLMs and Influence Functions
+1. [Studying Large Language Model Generalization with Influence Functions](https://arxiv.org/abs/2308.03296)
+2. [Do Influence Functions Work on Large Language Models?](https://arxiv.org/abs/2409.19998)
+3. [TextGrad](https://github.com/zou-group/textgrad) Automatic ''Differentiation'' via Text, [paper](https://arxiv.org/abs/2406.07496)
+
+#### Full Courses
+1. CIS7000 [LLM Course](https://llm-class.github.io/) @ UPenn by Prof. Mayur Naik. Covers many advanced topics
+2. AIL821 [LLMs Course](https://lcs2-iitd.github.io/ELL881-AIL821-2401/) @ IIT-D 
+3. [Deep Learning For NLP @ UW](https://www.shane.st/teaching/574/spr24/) LING 574, Deep Learning For NLP, Prof. Shane @ UW, Spring'24.

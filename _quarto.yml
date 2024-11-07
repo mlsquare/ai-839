@@ -52,6 +52,11 @@ book:
     - ./lectures/w08-l01.qmd
     - ./lectures/w09-l01.qmd
     - ./lectures/w11-l02.qmd
+  - part: LLMs-Ops
+    chapters:
+    - ./lectures/w13-l01.qmd
+    - ./lectures/w13-l02.qmd
+    - ./lectures/w13-l03.qmd
   - homeworks.qmd
   - projects.qmd
   - tutorials.qmd

@@ -1,0 +1,37 @@
+# 13B: LLMs Ops {.unnumbered}
+
+## Materials:
+Date: Thursday, 07-Nov-2024, 3-4.30pm, IST.
+
+### Pre-work:
+1. [LLM Intro](w13-l01.qmd)
+
+### In-Class
+1. Build
+    - Building LLMs from Scratch [repo](https://github.com/rasbt/LLMs-from-scratch)
+    - pre-training, fine-tuning, instruction fine-tuning
+2. Prompt Optimization
+    - [DSPy](https://dspy-docs.vercel.app/intro/), [Intro Notebook](https://colab.research.google.com/github/stanfordnlp/dspy/blob/main/intro.ipynb) 
+3. Structured outputs in LLMs 
+    - with [Instructor](https://python.useinstructor.com/)
+    - with [Outlines](https://github.com/dottxt-ai/outlines)
+    - [Blog](https://simmering.dev/blog/structured_output/) comparing many libraries from structured output generation.
+4. Evaluation
+    - with [DeepEval](https://github.com/confident-ai/deepeval)
+    - with [ragas](https://docs.ragas.io/en/stable/concepts/metrics/overview/)
+    - with [LangSmith](https://www.langchain.com/langsmith)
+5. Applications: RAGS
+    - Building RAG-based LLM Applications in Production [blog](https://www.anyscale.com/blog/a-comprehensive-guide-for-building-rag-based-llm-applications-part-1), [notebook](https://lnkd.in/g8ghFWm9) by Gokul Mohandas and Philip Moritz
+    - Agentic RAG with LangGraph [tutorial](https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_agentic_rag/)
+6. Applications: Agents
+    - with LangGraph [tutorials](https://langchain-ai.github.io/langgraph/tutorials/)
+    - [blog](https://medium.com/@lorevanoudenhove/how-to-build-ai-agents-with-langgraph-a-step-by-step-guide-5d84d9c7e832) explaining LangGraph
+
+
+
+### Post-class
+- Training with [Ray Train](https://docs.ray.io/en/latest/train/train.html )
+- Serving with [Ray Serve](https://docs.ray.io/en/latest/serve/index.html), [vLLM](https://docs.vllm.ai/en/latest/), [ollama](https://ollama.com/) for serving
+- RAGs with [Llamaindex](https://www.llamaindex.ai/), [cognita](https://www.truefoundry.com/cognita), [Langchain](https://www.langchain.com/)
+- Agens with [LangGraph](https://www.langchain.com/langgraph), [AutoGen](https://github.com/microsoft/autogen), [CrewAI](https://github.com/crewAIInc/crewAI), LangGraph IDE [blog](https://blog.langchain.dev/langgraph-studio-the-first-agent-ide/)
+        
