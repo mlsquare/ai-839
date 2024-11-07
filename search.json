@@ -223,7 +223,7 @@
     "href": "index.html#announcements",
     "title": "AI-839",
     "section": "Announcements",
-    "text": "Announcements\n\n[25-October-2024] Lecture page added to W11-L02\n[22-October-2024] Dr. Amit’s Causal ML deck added to course page.\n[22-October-2024] Guest lecture decks added.\n[01-October-2024] Generic feedback on HWs is added to homeworks page.\n[30-September-2024] Midterm Bonus Problem released. Due by 11.59pm, Oct 15, 2024 IST.\n[27-September-2024] Midterm at 11.15am, Tue, Sept, 2024 IST.\n[17-September-2024] HW-05 extended to 11.59pm, Tue, Sept, 2024 IST.\n[16-September-2024] Notes added to W08-L01. Updated course page with scheudle for the rest of the course (tentative).\n[12-September-2024] Notes added to W07-L01. W07-L02 is added.\n[05-September-2024] Homework, Minor and Major preoject details added. See HW-05, HW-06, Minor Project, Major Project for details. Course pages updated.\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
+    "text": "Announcements\n\n[07-November-2024] Lecture page added to W13-L01, W13-L02\n[25-October-2024] Lecture page added to W11-L02\n[22-October-2024] Dr. Amit’s Causal ML deck added to course page.\n[22-October-2024] Guest lecture decks added.\n[01-October-2024] Generic feedback on HWs is added to homeworks page.\n[30-September-2024] Midterm Bonus Problem released. Due by 11.59pm, Oct 15, 2024 IST.\n[27-September-2024] Midterm at 11.15am, Tue, Sept, 2024 IST.\n[17-September-2024] HW-05 extended to 11.59pm, Tue, Sept, 2024 IST.\n[16-September-2024] Notes added to W08-L01. Updated course page with scheudle for the rest of the course (tentative).\n[12-September-2024] Notes added to W07-L01. W07-L02 is added.\n[05-September-2024] Homework, Minor and Major preoject details added. See HW-05, HW-06, Minor Project, Major Project for details. Course pages updated.\n[05-September-2024] Lecture Page W05-L01, W05-L02, W06-L01, W06-L02 added. Course pages updated.\n[25-August-2024] Lecture Page W03-L02, W04-L01, W04-L02 added. Course pages updated.\n[23-August-2024] HW-03 and HW-04 added.\n[13-August-2024] Lecture Page W03-L01 added. Course pages updated.\n[09-August-2024] Lecture Page W02-L02 added. Course pages updated. HW-02 added\n[06-August-2024] Lecture Page W02-L01 added. Project Card, as a jupyter notebook is added.\n[01-August-2024] Course website up, Lecture Page W01-L01 added. HW-01 added.",
     "crumbs": [
       "Welcome"
     ]
@@ -703,6 +703,72 @@
     "crumbs": [
       "Lectures[ML Science]",
       "11B: Influence Functions"
+    ]
+  },
+  {
+    "objectID": "lectures/w13-l01.html",
+    "href": "lectures/w13-l01.html",
+    "title": "13A: LLMs Introduction",
+    "section": "",
+    "text": "Materials:\nDate: Thursday, 07-Nov-2024, 11.30-1pm, IST.",
+    "crumbs": [
+      "LLMs-Ops",
+      "13A: LLMs Introduction"
+    ]
+  },
+  {
+    "objectID": "lectures/w13-l01.html#materials",
+    "href": "lectures/w13-l01.html#materials",
+    "title": "13A: LLMs Introduction",
+    "section": "",
+    "text": "Pre-work:\n\nLING571@UW Deep Learning For NLP, Prof. Shane at UW, Spring’24. Introduction, Word Vectors, Language Modeling\nCIS7000@UPenn LLMs, by Prof. Mayur Naik at UPenn, Fall’24, Background, Language Modeling\nAIL821@IIT-Delhi LLMs: Introduction and Recent Advances ELL881/AIL821, LLMs: Introduction and Advances @ IIT-Delhi, Fall’24.\nTransformers\n\nLLMs @ UPenn Part-1, Part-2\nLLMs: Introduction and Recent Advances @ IIT Delhi Module-5 on RNNs, Module-6 on Attention and Transformers\n\n\n\n\nIn-Class\nWe will follow the “Follow the data” approach to organize the content.\n\nQuick review of NLP and Deep Learning for NLP, pre- and post-GPT world.\n\nLecture 2 from AIL821 Introduction to NLP,\nLecture 3.1 from AIL821 Introduction to Language Models\n\nLLM Flow: (Quality) Datasets, Model Training (Pre-training, Alignment, Fine-tuning), Prompt Optimization, Constrained Language Generation, Evaluation.\nDatasets and Tasks (to train LLMs)\n\nLecture 7 from AIL821\nLIMA: less is more for alignment\nInstruction Tuning for Large Language Models: A Survey\nOLMo @ Allen AI\n\nModel Training\n\nPre-training\n\nLecture 12.1 from AIL821\nImproving Language Understanding by Generative Pre-Training\n\nAlignment\n\nLecture 12.2 from AIL821\nDirect Preference Optimization: Your Language Model is Secretly a Reward Model\n\nFine-tuning\n\nPerformance Efficient Fine-Tuning collection\nLecture: PEFT\nLecture: : Quantization and Pruning\nLoRA: Low-Rank Adaptation of Large Language Models\nQLoRA: Efficient Finetuning of Quantized LLMs\n\n\nPrompt Optimization\n\nThe Prompt Report\nChain-of-Thought\nTree-of-Thought\nSelf-Reflection\nSelf-Contrast\nThink before you Speak\n\nConstrained Language Generation\n\ncollection\nGuiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation\n\nEvaluation\n\nScaling Evaluation of LLMs Yann Bubois, CIS 7000 LLM Course\n\nApplications and Design Patterns\n\nTools\n\nGorilla\n[Lecture 18.2 from AIL821] LLMs and Tools: Function Calling\n\nAgents\n\nLilian Wang’s blog on LLM Powered Autonomous Agents\n[Lecture 18.3 from AIL821] LLMs and Tools: Agentic\nAutoGen repo\nCrewAI repo\nLLM Agent papers collection \nSurvey: The Rise and Potential of Large Language Model Based Agents: A Survey\n\nRAG\n\nPaper from NVidia FACTS About Building Retrieval Augmented Generation-based Chatbots\nRetrieval-Augmented Generation for Large Language Models: A Survey Mar’24\nSearching for Best Practices in Retrieval-Augmented Generation Jul’24\n\n\nLLMs can not reason & plan\n\nLecture 19 from AIL821 Reasoning in LLMs\nLLMs Can’t Plan, But Can Help Planning in LLM-Modulo Frameworks\nGSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models\nLearning to reason with LLMs\nSystems-2 Collection Repo\n\n\n\n\nPost-class\n\nOther modules in AIL821 LLMs Course @ IIT-D\nAdvanced topics in CIS 7000 LLM Course\nWalk through the book Building LLMs from Scratch\n\n\nLLMs and Influence Functions\n\nStudying Large Language Model Generalization with Influence Functions\nDo Influence Functions Work on Large Language Models?\nTextGrad Automatic ‘’Differentiation’’ via Text, paper\n\n\n\nFull Courses\n\nCIS7000 LLM Course @ UPenn by Prof. Mayur Naik. Covers many advanced topics\nAIL821 LLMs Course @ IIT-D\nDeep Learning For NLP @ UW LING 574, Deep Learning For NLP, Prof. Shane @ UW, Spring’24.",
+    "crumbs": [
+      "LLMs-Ops",
+      "13A: LLMs Introduction"
+    ]
+  },
+  {
+    "objectID": "lectures/w13-l02.html",
+    "href": "lectures/w13-l02.html",
+    "title": "13B: LLMs Ops",
+    "section": "",
+    "text": "Materials:\nDate: Thursday, 07-Nov-2024, 3-4.30pm, IST.",
+    "crumbs": [
+      "LLMs-Ops",
+      "13B: LLMs Ops"
+    ]
+  },
+  {
+    "objectID": "lectures/w13-l02.html#materials",
+    "href": "lectures/w13-l02.html#materials",
+    "title": "13B: LLMs Ops",
+    "section": "",
+    "text": "Pre-work:\n\nLLM Intro\n\n\n\nIn-Class\n\nBuild\n\nBuilding LLMs from Scratch repo\npre-training, fine-tuning, instruction fine-tuning\n\nPrompt Optimization\n\nDSPy, Intro Notebook\n\nStructured outputs in LLMs\n\nwith Instructor\nwith Outlines\nBlog comparing many libraries from structured output generation.\n\nEvaluation\n\nwith DeepEval\nwith ragas\nwith LangSmith\n\nApplications: RAGS\n\nBuilding RAG-based LLM Applications in Production blog, notebook by Gokul Mohandas and Philip Moritz\nAgentic RAG with LangGraph tutorial\n\nApplications: Agents\n\nwith LangGraph tutorials\nblog explaining LangGraph\n\n\n\n\nPost-class\n\nTraining with Ray Train\nServing with Ray Serve, vLLM, ollama for serving\nRAGs with Llamaindex, cognita, Langchain\nAgens with LangGraph, AutoGen, CrewAI, LangGraph IDE blog",
+    "crumbs": [
+      "LLMs-Ops",
+      "13B: LLMs Ops"
+    ]
+  },
+  {
+    "objectID": "lectures/w13-l03.html",
+    "href": "lectures/w13-l03.html",
+    "title": "13C: Fullstack LLMs",
+    "section": "",
+    "text": "Materials:\nDate: tbd",
+    "crumbs": [
+      "LLMs-Ops",
+      "13C: Fullstack LLMs"
+    ]
+  },
+  {
+    "objectID": "lectures/w13-l03.html#materials",
+    "href": "lectures/w13-l03.html#materials",
+    "title": "13C: Fullstack LLMs",
+    "section": "",
+    "text": "Pre-work:\n\nLLM Intro\nLLM Ops\n\n\n\nIn-Class\ntbd\n\n\nPost-class\ntbd",
+    "crumbs": [
+      "LLMs-Ops",
+      "13C: Fullstack LLMs"
     ]
   },
   {

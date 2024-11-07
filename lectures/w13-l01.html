@@ -8,7 +8,7 @@
 
 <meta name="author" content="mlsquare">
 
-<title>11B: Influence Functions – AI-839</title>
+<title>13A: LLMs Introduction – AI-839</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lectures/w13-l01.html" rel="next">
-<link href="../lectures/w09-l01.html" rel="prev">
+<link href="../lectures/w13-l02.html" rel="next">
+<link href="../lectures/w11-l02.html" rel="prev">
 <link href="../crisp-ml-process.jpg" rel="icon" type="image/jpeg">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w11-l02.html">11B: Influence Functions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w13-l01.html">LLMs-Ops</a></li><li class="breadcrumb-item"><a href="../lectures/w13-l01.html">13A: LLMs Introduction</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -245,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w11-l02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lectures/w11-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">11B: Influence Functions</span></a>
   </div>
 </li>
@@ -262,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w13-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w13-l01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">13A: LLMs Introduction</span></a>
   </div>
 </li>
@@ -361,18 +361,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-work:</a></li>
   <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-Class</a></li>
   <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class</a></li>
-  <li><a href="#data-debugging" id="toc-data-debugging" class="nav-link" data-scroll-target="#data-debugging">Data Debugging</a></li>
   </ul></li>
-  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w11-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w13-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w07-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w11-l02.html">11B: Influence Functions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w13-l01.html">LLMs-Ops</a></li><li class="breadcrumb-item"><a href="../lectures/w13-l01.html">13A: LLMs Introduction</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">11B: Influence Functions</h1>
+<h1 class="title">13A: LLMs Introduction</h1>
 </div>
 
 
@@ -391,292 +389,135 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="materials" class="level2">
 <h2 class="anchored" data-anchor-id="materials">Materials:</h2>
-<p>Date: Friday, 25-Oct-2024</p>
+<p>Date: Thursday, 07-Nov-2024, 11.30-1pm, IST.</p>
 <section id="pre-work" class="level3">
 <h3 class="anchored" data-anchor-id="pre-work">Pre-work:</h3>
 <ol type="1">
-<li>[tools] <a href="https://github.com/deel-ai/puncc">DEEL-PUNCC</a> - a python toolbox for Conformal Prediction from <a href="https://www.deel.ai/">DEEL.ai</a> a project for Dependable, Certifiable, Explainable AI for Critical Systems. Checkout the sister projects from DEEl on Bias <a href="https://github.com/deel-ai/influenciae">DEEL INFLUENCIAE</a>, <a href="https://github.com/deel-ai/oodeel">oodeel</a> for OOD, <a href="https://github.com/deel-ai/xplique">xplique</a> for XAI,</li>
-<li><a href="https://arxiv.org/abs/2103.10529">White Paper - Machine Learning in Certified Systems</a></li>
+<li>LING571@UW <a href="https://www.shane.st/teaching/574/spr24/">Deep Learning For NLP</a>, Prof.&nbsp;<a href="https://www.shane.st/">Shane</a> at UW, Spring’24. <a href="https://www.shane.st/teaching/574/spr24/slides/1_Intro.pdf">Introduction</a>, <a href="https://www.shane.st/teaching/574/spr24/slides/2_GD_WV.pdf">Word Vectors</a>, <a href="https://www.shane.st/teaching/574/spr24/slides/3_word2vec.pdf">Language Modeling</a></li>
+<li>CIS7000@UPenn <a href="https://llm-class.github.io/schedule.html">LLMs</a>, by Prof.&nbsp;<a href="https://www.cis.upenn.edu/~mhnaik/">Mayur Naik</a> at UPenn, Fall’24, <a href="https://llm-class.github.io/slides/Lecture%202%20-%20Background.pdf">Background, Language Modeling</a></li>
+<li>AIL821@IIT-Delhi <a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/">LLMs: Introduction and Recent Advances</a> ELL881/AIL821, LLMs: Introduction and Advances @ IIT-Delhi, Fall’24.</li>
+<li>Transformers
+<ul>
+<li><a href="https://llm-class.github.io/schedule.html">LLMs @ UPenn</a> <a href="https://llm-class.github.io/slides/Lecture%205%20-%20The%20Transformer%20Architecture%20-%20Part%20I.pdf">Part-1</a>, <a href="https://llm-class.github.io/slides/Lecture%206%20-%20The%20Transformer%20Architecture%20-%20Part%20II.pdf">Part-2</a></li>
+<li><a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/">LLMs: Introduction and Recent Advances @ IIT Delhi</a> Module-5 on RNNs, Module-6 on Attention and Transformers</li>
+</ul></li>
 </ol>
 </section>
 <section id="in-class" class="level3">
 <h3 class="anchored" data-anchor-id="in-class">In-Class</h3>
-<p>Topic: Gradients &gt; IFs &gt; {Debugging, OOD, Robustness, XAI}</p>
-<p><strong>Discussion</strong>:</p>
+<p>We will follow the “Follow the data” approach to organize the content.</p>
 <ol type="1">
-<li><a href="https://s2.smu.edu/tfomby/eco5350/data/Influential%20Observations/Lecture_5.pdf">Cook’s Distance</a>
+<li>Quick review of NLP and Deep Learning for NLP, pre- and post-GPT world.
 <ul>
-<li>leverage</li>
-<li>outlier</li>
-<li>influence</li>
+<li>Lecture 2 from AIL821 <a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/2.pdf">Introduction to NLP</a>,</li>
+<li>Lecture 3.1 from AIL821 <a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/31.pdf">Introduction to Language Models</a></li>
 </ul></li>
-<li><a href="https://hal.science/hal-03617649/file/Leveraging_Influence_Functions_for_Dataset_Exploration_and_Cleaning_finalV2.pdf">Leveraing Influence Functions for Dataset Exploration and Cleaning</a></li>
-<li><a href="https://arxiv.org/abs/2010.01247">Interpreting Robust Optimization via Adversarial Influence Functions</a></li>
-<li>Data Debugging: <a href="https://arxiv.org/pdf/2002.08484">TraceIn</a> - Estimating Training Data Influence by Tracing Gradient Descent</li>
-<li><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/77cf940349218069bbc230fc2c9c8a21-Abstract-Conference.html">GradOrth</a> A Simple yet Efficient Out-of-Distribution Detection with Orthogonal Projection of Gradients</li>
-<li><a href="https://arxiv.org/abs/1703.01365">Axiomatic Attribution for Deep Networks</a> - integrated gradients for xai</li>
-<li><a href="https://arxiv.org/abs/1703.04730">Understanding Black-box Predictions via Influence Functions</a> - Perhaps, the first applications of Influence Functions to explain Black Box Deep Learning models</li>
-<li><a href="https://subendhurongali.netlify.app/files/689_report.pdf">Influence functions in Machine Learning tasks</a></li>
-</ol>
-<p><strong>Lab</strong></p>
-<ol type="1">
-<li><a href="https://pydvl.org/stable/influence/#construction">IF</a> from <a href="https://pydvl.org/stable/">pyDVL</a> library for data valuation and influence function computation.</li>
-<li>OOD: <a href="https://pydvl.org/stable/examples/influence_wine/">Notebook</a></li>
-<li>XAI in LLMs: <a href="https://pydvl.org/stable/examples/influence_sentiment_analysis/">Notebook</a> Use IFs for XIA on LLMs, <a href="https://transferlab.ai/pills/2023/llm-influences-with-ekfac/">Blog</a></li>
-<li>XAI with gradients <a href="https://deel-ai.github.io/xplique/latest/api/attributions/api_attributions/">xplique</a></li>
+<li>LLM Flow: (Quality) Datasets, Model Training (Pre-training, Alignment, Fine-tuning), Prompt Optimization, Constrained Language Generation, Evaluation.</li>
+<li>Datasets and Tasks (to train LLMs)
+<ul>
+<li><a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/71.pdf">Lecture 7 from AIL821</a></li>
+<li><a href="https://arxiv.org/abs/2305.11206">LIMA: less is more for alignment</a></li>
+<li><a href="https://arxiv.org/pdf/2308.10792">Instruction Tuning for Large Language Models: A Survey</a></li>
+<li><a href="https://allenai.org/olmo">OLMo @ Allen AI</a></li>
+</ul></li>
+<li>Model Training
+<ul>
+<li>Pre-training
+<ul>
+<li><a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/121.pdf">Lecture 12.1 from AIL821</a></li>
+<li><a href="https://hayate-lab.com/wp-content/uploads/2023/05/43372bfa750340059ad87ac8e538c53b.pdf">Improving Language Understanding by Generative Pre-Training</a></li>
+</ul></li>
+<li>Alignment
+<ul>
+<li><a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/121.pdf">Lecture 12.2 from AIL821</a></li>
+<li><a href="https://arxiv.org/abs/2305.18290">Direct Preference Optimization: Your Language Model is Secretly a Reward Model</a></li>
+</ul></li>
+<li>Fine-tuning
+<ul>
+<li>Performance Efficient Fine-Tuning <a href="https://github.com/huggingface/peft">collection</a></li>
+<li>Lecture: <a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/141.pdf">PEFT</a></li>
+<li>Lecture: : <a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/142.pdf">Quantization and Pruning</a></li>
+<li><a href="https://arxiv.org/abs/2106.09685">LoRA: Low-Rank Adaptation of Large Language Models</a></li>
+<li><a href="https://arxiv.org/abs/2305.14314">QLoRA: Efficient Finetuning of Quantized LLMs</a></li>
+</ul></li>
+</ul></li>
+<li>Prompt Optimization
+<ul>
+<li><a href="https://trigaten.github.io/Prompt_Survey_Site/">The Prompt Report</a></li>
+<li><a href="https://arxiv.org/abs/2201.11903">Chain-of-Thought</a></li>
+<li><a href="https://arxiv.org/abs/2305.10601">Tree-of-Thought</a></li>
+<li><a href="https://arxiv.org/abs/2405.06682">Self-Reflection</a></li>
+<li><a href="https://arxiv.org/abs/2401.02009">Self-Contrast</a></li>
+<li><a href="https://arxiv.org/abs/2311.07445">Think before you Speak</a></li>
+</ul></li>
+<li>Constrained Language Generation
+<ul>
+<li><a href="https://github.com/Saibo-creator/Awesome-LLM-Constrained-Decoding">collection</a></li>
+<li><a href="https://arxiv.org/abs/2403.06988">Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation</a></li>
+</ul></li>
+<li>Evaluation
+<ul>
+<li><a href="https://llm-class.github.io/slides/Yann_Dubois.pdf">Scaling Evaluation of LLMs</a> Yann Bubois, CIS 7000 LLM Course</li>
+</ul></li>
+<li>Applications and Design Patterns
+<ul>
+<li>Tools
+<ul>
+<li><a href="https://gorilla.cs.berkeley.edu/">Gorilla</a></li>
+<li>[Lecture 18.2 from AIL821] <a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/172.pdf">LLMs and Tools: Function Calling</a></li>
+</ul></li>
+<li>Agents
+<ul>
+<li>Lilian Wang’s blog on <a href="https://lilianweng.github.io/posts/2023-06-23-agent/">LLM Powered Autonomous Agents</a></li>
+<li>[Lecture 18.3 from AIL821] <a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/173.pdf">LLMs and Tools: Agentic</a></li>
+<li>AutoGen <a href="https://github.com/microsoft/autogen">repo</a></li>
+<li>CrewAI <a href="https://github.com/crewAIInc/crewAI">repo</a></li>
+<li>LLM Agent papers collection <a href="https://github.com/AGI-Edgerunners/LLM-Agents-Papers"></a></li>
+<li>Survey: <a href="https://arxiv.org/abs/2309.07864">The Rise and Potential of Large Language Model Based Agents: A Survey</a></li>
+</ul></li>
+<li>RAG
+<ul>
+<li>Paper from NVidia <a href="https://arxiv.org/abs/2407.07858">FACTS About Building Retrieval Augmented Generation-based Chatbots</a></li>
+<li><a href="https://arxiv.org/abs/2312.10997">Retrieval-Augmented Generation for Large Language Models: A Survey</a> Mar’24</li>
+<li><a href="https://arxiv.org/abs/2407.01219">Searching for Best Practices in Retrieval-Augmented Generation</a> Jul’24</li>
+</ul></li>
+</ul></li>
+<li>LLMs can not reason &amp; plan
+<ul>
+<li>Lecture 19 from AIL821 <a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/static_files/presentations/181.pdf">Reasoning in LLMs</a></li>
+<li><a href="https://arxiv.org/abs/2402.01817">LLMs Can’t Plan, But Can Help Planning in LLM-Modulo Frameworks</a></li>
+<li><a href="https://arxiv.org/abs/2410.05229v1">GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models</a></li>
+<li><a href="https://openai.com/index/learning-to-reason-with-llms/">Learning to reason with LLMs</a></li>
+<li><a href="https://github.com/open-thought/system-2-research">Systems-2 Collection Repo</a></li>
+</ul></li>
 </ol>
 </section>
 <section id="post-class" class="level3">
 <h3 class="anchored" data-anchor-id="post-class">Post-class</h3>
-<section id="influence-functions-ifs" class="level4">
-<h4 class="anchored" data-anchor-id="influence-functions-ifs">Influence Functions (IFs)</h4>
 <ul>
-<li>Theory:
-<ul>
-<li><a href="https://www.tandfonline.com/doi/abs/10.1080/01621459.1974.10482962">Hampel’s IF Seminal Paper</a> - The Influence Curve and its Role in Robust Estimation, from Frank R. Hampel, that started this work</li>
-</ul></li>
-<li>Computation:
-<ul>
-<li><a href="https://arxiv.org/abs/2112.03052">Scaling Up Influence Functions</a></li>
-<li><a href="https://arxiv.org/abs/2409.17357">Revisiting inverse Hessian vector products for calculating influence functions</a></li>
-<li><a href="https://arxiv.org/abs/2107.03356">M-FAC: Efficient Matrix-Free Approximations of Second-Order Information</a></li>
-<li><a href="https://aclanthology.org/2021.emnlp-main.808/">FastIF</a> FastIF: Scalable Influence Functions for Efficient Model Interpretation and Debugging, with some applications in NLP.</li>
-</ul></li>
-<li>(Early) Application in ML:
-<ul>
-<li><a href="https://arxiv.org/abs/1703.04730">Understanding Black-box Predictions via Influence Functions</a> - Perhaps, the first applications of Influence Functions to explain Black Box Deep Learning models</li>
-<li><a href="https://arxiv.org/abs/2006.14651">Influence Functions in Deep Learning Are Fragile</a></li>
-<li><a href="https://arxiv.org/abs/1411.4342">Influence Functions for Machine Learning: Nonparametric Estimators for Entropies, Divergences and Mutual Informations</a></li>
-<li><a href="https://subendhurongali.netlify.app/files/689_report.pdf">Infuence functions in Machine Learning tasks</a></li>
-<li><a href="https://arxiv.org/abs/2209.05364">If Influence Functions are the Answer, Then What is the Question?</a></li>
-</ul></li>
-<li>Tools:
-<ul>
-<li><a href="https://hal.science/hal-04284178/">Influenciate</a> from the <a href="https://github.com/deel-ai/influenciae">DEEL Influenciae</a> project</li>
-<li><a href="https://pydvl.org/stable/">pyDVL</a> library for data valuation and influence function computation.</li>
-</ul></li>
+<li>Other modules in AIL821 <a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/">LLMs Course</a> @ IIT-D</li>
+<li>Advanced topics in CIS 7000 <a href="https://llm-class.github.io/">LLM Course</a></li>
+<li>Walk through the book <a href="https://github.com/rasbt/LLMs-from-scratch">Building LLMs from Scratch</a></li>
 </ul>
-</section>
-<section id="llms" class="level4">
-<h4 class="anchored" data-anchor-id="llms">LLMs</h4>
+<section id="llms-and-influence-functions" class="level4">
+<h4 class="anchored" data-anchor-id="llms-and-influence-functions">LLMs and Influence Functions</h4>
 <ol type="1">
 <li><a href="https://arxiv.org/abs/2308.03296">Studying Large Language Model Generalization with Influence Functions</a></li>
 <li><a href="https://arxiv.org/abs/2409.19998">Do Influence Functions Work on Large Language Models?</a></li>
 <li><a href="https://github.com/zou-group/textgrad">TextGrad</a> Automatic ‘’Differentiation’’ via Text, <a href="https://arxiv.org/abs/2406.07496">paper</a></li>
 </ol>
 </section>
-<section id="xai-using-gradients-and-ifs" class="level4">
-<h4 class="anchored" data-anchor-id="xai-using-gradients-and-ifs">XAI using Gradients and IFs</h4>
+<section id="full-courses" class="level4">
+<h4 class="anchored" data-anchor-id="full-courses">Full Courses</h4>
 <ol type="1">
-<li><a href="https://arxiv.org/abs/1703.01365">Axiomatic Attribution for Deep Networks</a> - integrated gradients for xai</li>
-<li>For others DEEL.ai’ Xplique <a href="https://deel-ai.github.io/xplique/latest/">code</a> <a href="https://arxiv.org/abs/2206.04394">paper</a></li>
+<li>CIS7000 <a href="https://llm-class.github.io/">LLM Course</a> @ UPenn by Prof.&nbsp;Mayur Naik. Covers many advanced topics</li>
+<li>AIL821 <a href="https://lcs2-iitd.github.io/ELL881-AIL821-2401/">LLMs Course</a> @ IIT-D</li>
+<li><a href="https://www.shane.st/teaching/574/spr24/">Deep Learning For NLP @ UW</a> LING 574, Deep Learning For NLP, Prof.&nbsp;Shane @ UW, Spring’24.</li>
 </ol>
-</section>
-</section>
-<section id="data-debugging" class="level3">
-<h3 class="anchored" data-anchor-id="data-debugging">Data Debugging</h3>
-<ol type="1">
-<li><a href="https://arxiv.org/abs/2002.08484">Estimating Training Data Influence by Tracing Gradient Descent</a></li>
-<li><a href="https://hal.science/hal-03617649/file/Leveraging_Influence_Functions_for_Dataset_Exploration_and_Cleaning_finalV2.pdf">Leveraing Influence Functions for Dataset Exploration and Cleaning</a></li>
-<li><a href="https://arxiv.org/abs/1703.04730">Understanding Black-box Predictions via Influence Functions</a></li>
-<li><a href="https://arxiv.org/abs/2003.11630">RelatIF: Identifying Explanatory Training Examples via Relative Influence</a></li>
-<li><a href="https://arxiv.org/abs/1905.13289">On the Accuracy of Influence Functions for Measuring Group Effects</a></li>
-<li><a href="https://arxiv.org/abs/1811.09720">Representer Point Selection for Explaining Deep Neural Networks</a></li>
-<li><a href="https://proceedings.neurips.cc/paper/2021/file/c460dc0f18fc309ac07306a4a55d2fd6-Paper.pdf">Representer Point Selection via Local Jacobian Expansion for Post-hoc Classifier Explanation of Deep Neural Networks and Ensemble Models</a></li>
-<li><a href="https://arxiv.org/abs/2210.01072">Understanding Influence Functions and Datamodels via Harmonic Analysis</a></li>
-<li><a href="https://arxiv.org/abs/2011.14999">An Automatic Finite-Sample Robustness Metric: When Can Dropping a Little Data Make a Big Difference?</a></li>
-<li><a href="https://arxiv.org/abs/2305.00054">LAVA: Data Valuation without Pre-Specified Learning Algorithms</a></li>
-</ol>
-<section id="ood" class="level4">
-<h4 class="anchored" data-anchor-id="ood">OOD</h4>
-<ol type="1">
-<li><a href="https://arxiv.org/abs/2101.08521">Out-of-Distribution Generalization Analysis via Influence Function</a></li>
-<li><a href="https://arxiv.org/abs/2205.10439">How Useful are Gradients for OOD Detection Really?</a> - a negative results on gradients</li>
-<li><a href="https://arxiv.org/abs/2404.12368">Gradient-Regularized Out-of-Distribution Detection</a></li>
-<li><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/77cf940349218069bbc230fc2c9c8a21-Abstract-Conference.html">GradOrth</a> A Simple yet Efficient Out-of-Distribution Detection with Orthogonal Projection of Gradients</li>
-<li><a href="https://github.com/deel-ai/oodeel">oodeel</a> - a toolbox for OOD detection</li>
-</ol>
-</section>
-<section id="robustness" class="level4">
-<h4 class="anchored" data-anchor-id="robustness">Robustness</h4>
-<ol type="1">
-<li><a href="https://arxiv.org/abs/2010.01247">Interpreting Robust Optimization via Adversarial Influence Functions</a></li>
-<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0169716197150052">Robust inference: The approach based on influence functions</a></li>
-<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0378375896000365">Robust inference by influence functions</a></li>
-<li><a href="https://ideas.repec.org/h/spr/sprchp/978-88-470-0704-8_15.html">Generalized Influence Functions and Robustness Analysis</a></li>
-</ol>
-</section>
-</section>
-</section>
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
-<div style="font-size: 80%;">
-<table class="table-striped caption-top table">
-<caption><strong>Gradients is all you need</strong></caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Modality</th>
-<th style="text-align: left;">Aspect</th>
-<th style="text-align: left;">Topics</th>
-<th style="text-align: left;">Resources</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Tabular</td>
-<td style="text-align: left;">OOD</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Tabular</td>
-<td style="text-align: left;">XAI</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Tabular</td>
-<td style="text-align: left;">Bias</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Tabular</td>
-<td style="text-align: left;">CP</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Tabular</td>
-<td style="text-align: left;">Robustness</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Text</td>
-<td style="text-align: left;">OOD</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Text</td>
-<td style="text-align: left;">XAI</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Text</td>
-<td style="text-align: left;">Bias</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Text</td>
-<td style="text-align: left;">CP</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Text</td>
-<td style="text-align: left;">Robustness</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Speech</td>
-<td style="text-align: left;">OOD</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Speech</td>
-<td style="text-align: left;">XAI</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Speech</td>
-<td style="text-align: left;">Bias</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Speech</td>
-<td style="text-align: left;">CP</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Speech</td>
-<td style="text-align: left;">Robustness</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Image</td>
-<td style="text-align: left;">OOD</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Image</td>
-<td style="text-align: left;">XAI</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Image</td>
-<td style="text-align: left;">Bias</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Image</td>
-<td style="text-align: left;">CP</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Image</td>
-<td style="text-align: left;">Robustness</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Video</td>
-<td style="text-align: left;">OOD</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Video</td>
-<td style="text-align: left;">XAI</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Video</td>
-<td style="text-align: left;">Bias</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Video</td>
-<td style="text-align: left;">CP</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Video</td>
-<td style="text-align: left;">Robustness</td>
-<td style="text-align: left;">x</td>
-<td style="text-align: left;">x</td>
-</tr>
-</tbody>
-</table>
-</div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1102,13 +943,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lectures/w09-l01.html" class="pagination-link" aria-label="09A: Uncertainty Quantification">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">09A: Uncertainty Quantification</span>
+      <a href="../lectures/w11-l02.html" class="pagination-link" aria-label="11B: Influence Functions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">11B: Influence Functions</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lectures/w13-l01.html" class="pagination-link" aria-label="13A: LLMs Introduction">
-        <span class="nav-page-text">13A: LLMs Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lectures/w13-l02.html" class="pagination-link" aria-label="13B: LLMs Ops">
+        <span class="nav-page-text">13B: LLMs Ops</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1120,7 +961,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w11-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w13-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This course material was built with <a href="https://quarto.org/">Quarto</a> with <a href="https://github.com/hadley/r4ds">r4ds</a> theme.</p>
 </div>
