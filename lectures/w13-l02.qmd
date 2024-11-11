@@ -26,6 +26,8 @@ Date: Thursday, 07-Nov-2024, 3-4.30pm, IST.
 6. Applications: Agents
     - with LangGraph [tutorials](https://langchain-ai.github.io/langgraph/tutorials/)
     - [blog](https://medium.com/@lorevanoudenhove/how-to-build-ai-agents-with-langgraph-a-step-by-step-guide-5d84d9c7e832) explaining LangGraph
+    - [Magentic-One](https://github.com/microsoft/autogen/tree/main/python/packages/autogen-magentic-one)
+
 
 
 
@@ -33,5 +35,5 @@ Date: Thursday, 07-Nov-2024, 3-4.30pm, IST.
 - Training with [Ray Train](https://docs.ray.io/en/latest/train/train.html )
 - Serving with [Ray Serve](https://docs.ray.io/en/latest/serve/index.html), [vLLM](https://docs.vllm.ai/en/latest/), [ollama](https://ollama.com/) for serving
 - RAGs with [Llamaindex](https://www.llamaindex.ai/), [cognita](https://www.truefoundry.com/cognita), [Langchain](https://www.langchain.com/)
-- Agens with [LangGraph](https://www.langchain.com/langgraph), [AutoGen](https://github.com/microsoft/autogen), [CrewAI](https://github.com/crewAIInc/crewAI), LangGraph IDE [blog](https://blog.langchain.dev/langgraph-studio-the-first-agent-ide/)
+- Agents with [LangGraph](https://www.langchain.com/langgraph), [AutoGen](https://github.com/microsoft/autogen), [CrewAI](https://github.com/crewAIInc/crewAI), LangGraph IDE [blog](https://blog.langchain.dev/langgraph-studio-the-first-agent-ide/)
         

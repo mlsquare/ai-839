@@ -6,9 +6,37 @@ Date: tbd
 ### Pre-work:
 1. [LLM Intro](w13-l01.qmd)
 2. [LLM Ops](w13-l02.qmd)
+3. [XAI Tutorial](https://explainml-tutorial.github.io/) by Hima Lakkaraju, Julius Adebayo, Sameer Singh
+4. [UQ Tutorial](https://www.gatsby.ucl.ac.uk/~balaji/balaji-uncertainty-talk-cifar-dlrl.pdf) by Balaji Lakshminarayanan
 
-### In-Class
-tbd
 
-### Post-class
-tbd
+### ML Engineering
+
+- [LLaMA Stack](https://github.com/meta-llama/llama-stack) - a full stack LLaMA-centered APIs for inference, safety, agentic system, among others.
+- [MLFlow LLMs](https://mlflow.org/docs/latest/llms/index.html) - tool calling, agents, evaluation, RAGs, serving and more
+- [Ray LLMs](https://github.com/ray-project/ray-llm)
+- [MLFlow Tracing](https://mlflow.org/docs/latest/llms/tracing/index.html) observability for LLMs
+- Others popular stacks [LlamaIndex](https://www.llamaindex.ai/), [LangChain](https://www.langchain.com/)
+- [DeepEval](https://github.com/confident-ai/deepeval)
+
+XAI
+
+- XAI @ Harvard, Spring'23, [Explainable AI](https://interpretable-ml-class.github.io/) by Prof.Hima Lakkaraju
+- Publications by [Hima Lakkaraju](https://himalakkaraju.github.io/)
+- LLMs for XAI
+    - [Can Large Language Models Simplify Explainable AI](https://arxiv.org/abs/2401.13110)
+- XAI for LLMs
+    - [Studying Large Language Model Generalization with Influence Functions](https://arxiv.org/abs/2308.03296)
+    - [Do Influence Functions Work on Large Language Models?](https://arxiv.org/abs/2409.19998)
+
+UQ
+
+- [Quantifying Uncertainty in Natural Language Explanations of Large Language Models](https://arxiv.org/abs/2311.03533)
+- [Conformal Prediction with Large Language Models for Multi-Choice Question Answering](https://arxiv.org/abs/2305.18404) [code](https://github.com/bhaweshiitk/ConformalLLM)
+
+
+
+Security
+
+- [NeMO Gaurdrails](https://github.com/NVIDIA/NeMo-Guardrails)
+- [LlaMA Gaurd 7B Model](https://huggingface.co/meta-llama/LlamaGuard-7b), [paper](https://scontent.fblr22-2.fna.fbcdn.net/v/t39.2365-6/408725049_3688557441468029_8103913771964668529_n.pdf?_nc_cat=100&ccb=1-7&_nc_sid=3c67a6&_nc_ohc=FCqeAv0hri0Q7kNvgFYHvpX&_nc_zt=14&_nc_ht=scontent.fblr22-2.fna&_nc_gid=A4MmoE5aSgfdIsB-BvlJ69o&oh=00_AYClX5KL3QrofWqqqtzsC_Th2rnN9cuonSISLwKLZZZZcg&oe=6737E399)
