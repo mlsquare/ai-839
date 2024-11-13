@@ -1,5 +1,6 @@
 # Talks {.unnumbered}
 
-1. \[pdf\] [Ops, Strategy Planning for AI](./talks/Ops-Strategy-for-ML-DFL-23-Aug-24.pdf) by Soma S. Dhavala, given at [DFL](https://digitalfutureslab.in/)'s Responsible AI Impact Lab (RAIL) Fellowship program.
-2. \[pdf\] [Llama.LISP: AI First Compiler Framework](https://chsasank.com/assets/slides/llama.lisp_talk.pdf) by [Sasank Chilamkurthy](https://www.linkedin.com/in/sasank-chilamkurthy/), Founder & CEO [Von Neumann AI](https://von-neumann.ai/)
-3. [\pdf\] [Looper: An end-to-end ML platform for product decisions](https://arxiv.org/abs/2110.07554), Igor Markov [Talk](https://www.youtube.com/watch?v=UAZHJK9VWPY) at Stanford MLSys #60 
+1. [Ops, Strategy Planning for AI](./talks/Ops-Strategy-for-ML-DFL-23-Aug-24.pdf) by Soma S. Dhavala, given at [DFL](https://digitalfutureslab.in/)'s Responsible AI Impact Lab (RAIL) Fellowship program.
+2. [Model Quantization, Pruning, and Compression](/../talks/EdgeDeployment_SrinivasRana.pdf), Dr. Srinivas Rana
+3. [Causal ML](./../talks/CausalML_dowhy_dice_Amit.pdf)), Dr. Amit Sharma 
+4. [AI Security](./../talks/AI_Security_Manoj_29102024.pdf), Manojkumar Parmar, notebooks on [Text Attacks](./../talks/talks/Text_Atttacks_Manoj.ipynb), [Adversarial Attacks](talks/Adversarial_Sample_Using_ART_Manoj.ipynb)

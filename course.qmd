@@ -45,7 +45,7 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 &nbsp; |  |    |  |
 | 11 | 22-Oct <br> 25-Oct | **Causal ML, Robustness** <br> 1. DoWhy and DICE   <br> 2. Gradients is all you need | [Talk](./talks/CausalML_dowhy_dice_Amit.pdf) by Dr. Amit <br> [W11-L02](./lectures/w11-l02.qmd)  |
 &nbsp; |  |    |  |
-| 12 | 29-Oct <br> 01-Nov | **Robustness** <br> 1. Securing ML  <br> 2. Holiday | Talk by Manoj Parmar <br> NA |
+| 12 | 29-Oct <br> 01-Nov | **Robustness** <br> 1. Securing ML  <br> 2. Holiday | [Talk](./talks/AI_Security_Manoj_29102024.pdf) by Manoj Parmar <br> [Text Attacks](./talks/Text_Atttacks_Manoj.ipynb) <br> [Adversarial Attacks](./talks/Adversarial_Sample_Using_ART_Manoj.ipynb)  |
 &nbsp; |  |    |  |
 | 13 | 07-Nov <br> 08-Nov | **LLMs** <br> 1. LLMs Intro <br> 2. LLMOps  <br> 3. Fullstack LLMs | [W13-L01](./lectures/w13-l01.qmd) <br> [W13-L02](./lectures/w13-l01.qmd) <br> [W13-L03](./lectures/w13-l03.qmd) |
 &nbsp; |  |    |  |

@@ -6,6 +6,7 @@ Hello Students of AI 839.
 See the [course](./course.qmd) page for recent information on Lectures, Homeworks, Projects, etc.. 
 
 ## Announcements  
+- [13-November-2024] AI Security guest lecture deck added to course page
 - [07-November-2024] Lecture page added to [W13-L01](/lectures/w13-l01.qmd), [W13-L02](/lectures/w13-l02.qmd)
 - [25-October-2024] Lecture page added to [W11-L02](/lectures/w11-l02.qmd)
 - [22-October-2024] Dr. Amit's Causal ML deck added to course page.
