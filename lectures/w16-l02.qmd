@@ -1,0 +1,25 @@
+# 16B: Machine Unlearning {.unnumbered}
+
+## Materials:
+
+Date: 26th, Nov, 20224, 11.30am IST
+
+### Pre-work:
+
+1. [Influence Functions](w11-l02.qmd)
+2. [Sample Hardness](w07-l02.qmd)
+3. [Influenciae](https://github.com/deel-ai/influenciae)
+4. [Article 17](https://gdpr-info.eu/art-17-gdpr/) of GDPR, Right to be forgotten
+5. [HW06](./../homeworks.qmd#sec-hw-06), implement a simple strategy to implement "right to be forgotten" 
+
+### In-Class
+
+1. [Blog](https://ai.stanford.edu/~kzliu/blog/unlearning) Machine Unlearning, Ken Ziyu Liu.
+2. [Tutorial](https://arxiv.org/abs/2209.00939) An Introduction to Machine Unlearning
+
+### Post-Class
+
+1. [Collection](https://github.com/tamlhp/awesome-machine-unlearning) of Machine Unlearning resources
+2. Exact Algorithm: [SISA](https://arxiv.org/abs/1912.03817) Machine Unlearning with _Sharded, Isolated,
+Sliced, and Aggregated training_
+3. Approximate Algorithms: [Influence](https://arxiv.org/abs/1911.03030) Certified Data Removal from ML Models

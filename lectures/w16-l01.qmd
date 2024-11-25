@@ -1,0 +1,23 @@
+# 16A: Fairness & Bias {.unnumbered}
+
+## Materials:
+
+Date: 26th, Nov, 20224, 11.30am IST
+
+### Pre-work:
+
+### In-Class
+
+1. [AI Fairness 360](https://arxiv.org/abs/1810.01943) An Extensible Toolkit for Detecting, Understanding, and Mitigating Unwanted Algorithmic Bias
+2. [notebook](https://github.com/Trusted-AI/AIF360/blob/main/examples/tutorial_credit_scoring.ipynb) Detecting and mitigating age bias in credit decisions
+3. [paper](https://arxiv.org/abs/2207.09833) AI Fairness: from Principles to Practice
+
+### Post-Class
+
+1. [collection](https://github.com/datamllab/awesome-fairness-in-ai) on Fairness in AI
+2. [paper](https://arxiv.org/abs/2106.02498) Towards Fairness Certification in AI
+3. [paper](https://arxiv.org/abs/2304.09826) Fairness in AI and Its Long-Term Implications on Society
+4. [paper](https://arxiv.org/abs/2403.17333v1) The Pursuit of Fairness in Artificial Intelligence Models: A Survey
+5. [paper](https://arxiv.org/abs/2304.07683) Fairness And Bias in Artificial Intelligence: A Brief Survey of Sources, Impacts, And Mitigation Strategies
+6. [paper](https://arxiv.org/abs/2403.14636) AI Fairness in Practice
+7. [book](https://fairmlbook.org/) Fair ML Book
