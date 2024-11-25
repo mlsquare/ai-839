@@ -8,7 +8,7 @@
 
 <meta name="author" content="mlsquare">
 
-<title>04B: Monitor (Data) – AI-839</title>
+<title>16A: Fairness &amp; Bias – AI-839</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lectures/w05-l01.html" rel="next">
-<link href="../lectures/w04-l01.html" rel="prev">
+<link href="../lectures/w16-l02.html" rel="next">
+<link href="../lectures/w15-l01.html" rel="prev">
 <link href="../crisp-ml-process.jpg" rel="icon" type="image/jpeg">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures[ML Engg.]</a></li><li class="breadcrumb-item"><a href="../lectures/w04-l02.html">04B: Monitor (Data)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w15-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w16-l01.html">16A: Fairness &amp; Bias</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -180,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w04-l02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lectures/w04-l02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">04B: Monitor (Data)</span></a>
   </div>
 </li>
@@ -297,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lectures/w16-l01.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/w16-l01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">16A: Fairness &amp; Bias</span></a>
   </div>
 </li>
@@ -389,17 +389,17 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-work:</a></li>
   <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-Class</a></li>
-  <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-class:</a></li>
+  <li><a href="#post-class" id="toc-post-class" class="nav-link" data-scroll-target="#post-class">Post-Class</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w04-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w16-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w01-l01.html">Lectures[ML Engg.]</a></li><li class="breadcrumb-item"><a href="../lectures/w04-l02.html">04B: Monitor (Data)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/w15-l01.html">Lectures[ML Science]</a></li><li class="breadcrumb-item"><a href="../lectures/w16-l01.html">16A: Fairness &amp; Bias</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">04B: Monitor (Data)</h1>
+<h1 class="title">16A: Fairness &amp; Bias</h1>
 </div>
 
 
@@ -418,33 +418,28 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="materials" class="level2">
 <h2 class="anchored" data-anchor-id="materials">Materials:</h2>
-<p>Date: Friday, 23-Aug-2024.</p>
+<p>Date: 26th, Nov, 20224, 11.30am IST</p>
 <section id="pre-work" class="level3">
 <h3 class="anchored" data-anchor-id="pre-work">Pre-work:</h3>
-<ol type="1">
-<li><a href="https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/linear_model/tests/test_logistic.py">See</a> how <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">logistic regression</a> test cases were written in sklearn. In particular, see how the test was prepared which makes it possible to test the fitted coeffcients analytically.</li>
-<li><a href="https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/linear_model/tests/test_perceptron.py">See</a> how <a href="https://scikit-learn.org/0.15/modules/generated/sklearn.linear_model.Perceptron.html">Peceptron</a> test cases were written on Iris data.</li>
-</ol>
 </section>
 <section id="in-class" class="level3">
 <h3 class="anchored" data-anchor-id="in-class">In-Class</h3>
 <ol type="1">
-<li>QA for Data. It is all about asserting the statistical properties of the data.</li>
-<li>Discussion on extracting statistical quality features into a table for any modality (tabular, image, speech, text)</li>
-<li>Testing columnar data with <em>explicit</em> conditions. <a href="https://greatexpectations.io/expectations/">Great Expectations</a> defines them as <em>expectations</em> and validates them given a new data. For example, an <em>expectation</em> can be
-<ul>
-<li>a column can have at most 5% missing values</li>
-<li>the range of the columns can be between [-2,10]</li>
-</ul></li>
-<li>Testing columnar data with <em>implicit</em> conditions. One dataset will be compared against a reference dataset. <a href="https://docs.evidentlyai.com/">Evidently</a> comes with many tests for reporting, model comparison, data drift detection. For example, we can compare whether or not the label distribution is same between the Train set and the Test set. A question for all readers - how often have you “actually” ran any statistical test to see if the Train and Test set are actually similar in distribution. My guess, less than 10% would have done it. The remaining would have called sklearn’s <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html">train_test_split</a> function :)</li>
+<li><a href="https://arxiv.org/abs/1810.01943">AI Fairness 360</a> An Extensible Toolkit for Detecting, Understanding, and Mitigating Unwanted Algorithmic Bias</li>
+<li><a href="https://github.com/Trusted-AI/AIF360/blob/main/examples/tutorial_credit_scoring.ipynb">notebook</a> Detecting and mitigating age bias in credit decisions</li>
+<li><a href="https://arxiv.org/abs/2207.09833">paper</a> AI Fairness: from Principles to Practice</li>
 </ol>
 </section>
 <section id="post-class" class="level3">
-<h3 class="anchored" data-anchor-id="post-class">Post-class:</h3>
+<h3 class="anchored" data-anchor-id="post-class">Post-Class</h3>
 <ol type="1">
-<li>[Blog] <a href="https://medium.com/snowflake/how-to-ensure-data-quality-with-great-expectations-271e3ca8b4b9">ETL testing with Great Expectations</a></li>
-<li>[Docs] <a href="https://docs.greatexpectations.io/docs/core/introduction/gx_overview">Great Expectations Documentation</a>. Please note that with version 1.0 released, even the examples from its repo are not working. Read them to understand what are typical tests on columnar data look like.</li>
-<li>[Notebooks] <a href="https://github.com/evidentlyai/evidently/tree/main/examples/sample_notebooks">Evidently examples</a>. Browse through and run how Evidently automates many test cases. Also see community examples <a href="https://github.com/evidentlyai/community-examples">here</a></li>
+<li><a href="https://github.com/datamllab/awesome-fairness-in-ai">collection</a> on Fairness in AI</li>
+<li><a href="https://arxiv.org/abs/2106.02498">paper</a> Towards Fairness Certification in AI</li>
+<li><a href="https://arxiv.org/abs/2304.09826">paper</a> Fairness in AI and Its Long-Term Implications on Society</li>
+<li><a href="https://arxiv.org/abs/2403.17333v1">paper</a> The Pursuit of Fairness in Artificial Intelligence Models: A Survey</li>
+<li><a href="https://arxiv.org/abs/2304.07683">paper</a> Fairness And Bias in Artificial Intelligence: A Brief Survey of Sources, Impacts, And Mitigation Strategies</li>
+<li><a href="https://arxiv.org/abs/2403.14636">paper</a> AI Fairness in Practice</li>
+<li><a href="https://fairmlbook.org/">book</a> Fair ML Book</li>
 </ol>
 
 
@@ -874,13 +869,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lectures/w04-l01.html" class="pagination-link" aria-label="04A: Develop">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">04A: Develop</span>
+      <a href="../lectures/w15-l01.html" class="pagination-link" aria-label="15A: Meta Learning">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">15A: Meta Learning</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lectures/w05-l01.html" class="pagination-link" aria-label="05A: Monitor (Models)">
-        <span class="nav-page-text">05A: Monitor (Models)</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lectures/w16-l02.html" class="pagination-link" aria-label="16B: Machine Unlearning">
+        <span class="nav-page-text">16B: Machine Unlearning</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -892,7 +887,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w04-l02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mlsquare/ai-839/edit/main/lectures/w16-l01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mlsquare/ai-839/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This course material was built with <a href="https://quarto.org/">Quarto</a> with <a href="https://github.com/hadley/r4ds">r4ds</a> theme.</p>
 </div>

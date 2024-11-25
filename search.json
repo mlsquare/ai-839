@@ -772,6 +772,72 @@
     ]
   },
   {
+    "objectID": "lectures/w15-l01.html",
+    "href": "lectures/w15-l01.html",
+    "title": "15A: Meta Learning",
+    "section": "",
+    "text": "Materials:\nDate: 19th, Nov, 20224, 11.30am IST",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "15A: Meta Learning"
+    ]
+  },
+  {
+    "objectID": "lectures/w15-l01.html#materials",
+    "href": "lectures/w15-l01.html#materials",
+    "title": "15A: Meta Learning",
+    "section": "",
+    "text": "Pre-work:\n\n\nIn-Class\n\n\nPost-Class",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "15A: Meta Learning"
+    ]
+  },
+  {
+    "objectID": "lectures/w16-l01.html",
+    "href": "lectures/w16-l01.html",
+    "title": "16A: Fairness & Bias",
+    "section": "",
+    "text": "Materials:\nDate: 26th, Nov, 20224, 11.30am IST",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "16A: Fairness & Bias"
+    ]
+  },
+  {
+    "objectID": "lectures/w16-l01.html#materials",
+    "href": "lectures/w16-l01.html#materials",
+    "title": "16A: Fairness & Bias",
+    "section": "",
+    "text": "Pre-work:\n\n\nIn-Class\n\nAI Fairness 360 An Extensible Toolkit for Detecting, Understanding, and Mitigating Unwanted Algorithmic Bias\nnotebook Detecting and mitigating age bias in credit decisions\npaper AI Fairness: from Principles to Practice\n\n\n\nPost-Class\n\ncollection on Fairness in AI\npaper Towards Fairness Certification in AI\npaper Fairness in AI and Its Long-Term Implications on Society\npaper The Pursuit of Fairness in Artificial Intelligence Models: A Survey\npaper Fairness And Bias in Artificial Intelligence: A Brief Survey of Sources, Impacts, And Mitigation Strategies\npaper AI Fairness in Practice\nbook Fair ML Book",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "16A: Fairness & Bias"
+    ]
+  },
+  {
+    "objectID": "lectures/w16-l02.html",
+    "href": "lectures/w16-l02.html",
+    "title": "16B: Machine Unlearning",
+    "section": "",
+    "text": "Materials:\nDate: 26th, Nov, 20224, 11.30am IST",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "16B: Machine Unlearning"
+    ]
+  },
+  {
+    "objectID": "lectures/w16-l02.html#materials",
+    "href": "lectures/w16-l02.html#materials",
+    "title": "16B: Machine Unlearning",
+    "section": "",
+    "text": "Pre-work:\n\nInfluence Functions\nSample Hardness\nInfluenciae\nArticle 17 of GDPR, Right to be forgotten\nHW06, implement a simple strategy to implement “right to be forgotten”\n\n\n\nIn-Class\n\nBlog Machine Unlearning, Ken Ziyu Liu.\nTutorial An Introduction to Machine Unlearning\n\n\n\nPost-Class\n\nCollection of Machine Unlearning resources\nExact Algorithm: SISA Machine Unlearning with Sharded, Isolated, Sliced, and Aggregated training\nApproximate Algorithms: Influence Certified Data Removal from ML Models",
+    "crumbs": [
+      "Lectures[ML Science]",
+      "16B: Machine Unlearning"
+    ]
+  },
+  {
     "objectID": "homeworks.html",
     "href": "homeworks.html",
     "title": "Homeworks",
