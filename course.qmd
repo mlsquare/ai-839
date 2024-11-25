@@ -51,10 +51,10 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 &nbsp; |  |    |  |
 | 14 | 12-Nov <br> 15-Nov | **Talks** <br> 1. Lessons Learnt in Production  <br> 2. Building datasets  | [Talk](./talks/Venkata_ScribbleData_Nov_2024.pdf) by Dr. Venkata <br> [Talk](./talks/Puneet_DataLabeling.pdf) by Puneet |
 &nbsp; |  |    |  |
-| 15 | 19-Nov <br> 22-Nov | **Meta Learning** <br> No Class | TBD  |
+| 15 | 19-Nov <br> 22-Nov | **Meta Learning** <br> No Class | [W15-L01](./lectures/w15-l01.qmd)  |
 &nbsp; |  |    |  |
 | 16 | Last Week | **Student Presentations**  |  |
-&nbsp; | 26-Nov <br>  <br> 29-Nov <br> 30-Nov | Fairness & Bias <br> Machine Unlearning <br>  In-class final presentations-1 <br> In-class final presentations-2 |  |
+&nbsp; | 26-Nov <br>  <br> 29-Nov <br> 30-Nov | Fairness & Bias <br> Machine Unlearning <br>  In-class final presentations-1 <br> In-class final presentations-2 | [W16-L01](./lectures/w16-l01.qmd) <br>  [W16-L02](./lectures/w16-l02.qmd) |
 
 : **Part-2: Full Stack ML** {.striped}
 :::
