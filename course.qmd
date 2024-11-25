@@ -49,12 +49,12 @@ You will find below course syllabus and schedule for _AI-839: ML Production Engi
 &nbsp; |  |    |  |
 | 13 | 07-Nov <br> 08-Nov | **LLMs** <br> 1. LLMs Intro <br> 2. LLMOps  <br> 3. Fullstack LLMs | [W13-L01](./lectures/w13-l01.qmd) <br> [W13-L02](./lectures/w13-l01.qmd) <br> [W13-L03](./lectures/w13-l03.qmd) |
 &nbsp; |  |    |  |
-| 14 | 12-Nov <br> 15-Nov | **Talks** <br> 1. LLMs in Production  <br> 2. Building datasets (with LLMs)  | Talk by Dr. Venkata <br> Talk by Puneet |
+| 14 | 12-Nov <br> 15-Nov | **Talks** <br> 1. Lessons Learnt in Production  <br> 2. Building datasets  | [Talk](./talks/Venkata_ScribbleData_Nov_2024.pdf) by Dr. Venkata <br> [Talk](./talks/Puneet_DataLabeling.pdf) by Puneet |
 &nbsp; |  |    |  |
-| 15 | 19-Nov <br> 22-Nov | **Fairness & Unlearning** <br> 1. Fairness & Bias  <br> 2. Recent work on model unlearning | TBD <br> TBD |
+| 15 | 19-Nov <br> 22-Nov | **Meta Learning** <br> No Class | TBD  |
 &nbsp; |  |    |  |
-| 16 | Last Week | **Student Presentations**  | TBD |
-&nbsp; | 26-Nov <br> 29-Nov |  in-class final presentations  |  |
+| 16 | Last Week | **Student Presentations**  |  |
+&nbsp; | 26-Nov <br>  <br> 29-Nov <br> 30-Nov | Fairness & Bias <br> Machine Unlearning <br>  In-class final presentations-1 <br> In-class final presentations-1 |  |
 
 : **Part-2: Full Stack ML** {.striped}
 :::
