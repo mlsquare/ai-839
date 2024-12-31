@@ -6,6 +6,13 @@ Hello Students of AI 839.
 See the [course](./course.qmd) page for recent information on Lectures, Homeworks, Projects, etc.. 
 
 ## Announcements  
+- [30-November-2024] COURSE ENDS
+- [30-November-2024] Project Presentations
+- [29-November-2024] Project Presentations
+- [26-November-2024] Machine Unlearning [W16-L02](/lectures/w16-l02.qmd)  added to course page
+- [26-November-2024] Fairness and Bias [W16-L01](/lectures/w16-l01.qmd)  added to course page
+- [19-November-2024] Meta Learning lecture page [W15-L01](/lectures/w15-l01.qmd)  added to course page
+- [15-November-2024] Data Labelling guest lecture deck added to course page
 - [13-November-2024] AI Security guest lecture deck added to course page
 - [07-November-2024] Lecture page added to [W13-L01](/lectures/w13-l01.qmd), [W13-L02](/lectures/w13-l02.qmd)
 - [25-October-2024] Lecture page added to [W11-L02](/lectures/w11-l02.qmd)
@@ -55,7 +62,7 @@ See the [course](./course.qmd) page for recent information on Lectures, Homework
     - ensure that the ML pipeline is reproducible. 
     - incorporate principles from Responsible AI and build ML systems which can consist of many models and tools.    
 
-**Part-3: Intro to LLMOps & Application**
+**Part-3: Intro to LLM(Ops) & Application**
 
 - Topics
     - practice, cloud solutions
