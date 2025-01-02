@@ -314,7 +314,7 @@
     "href": "lectures/w01-l01.html#materials",
     "title": "01A: Grounding MLOps",
     "section": "",
-    "text": "Pre-work:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible here\n\n\n\nIn-Class\n\nWe will go over W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0. See this Figure\n\n\n\nPost-class:\n\nRead the motivation for MLOps from this blog.\nML Life Cycle CRISP-ML9(Q): blog, paper\nCh1-2 of AB, Ch1 of VT, Ch1 of CH1",
+    "text": "Pre-work:\n\nRefresh ML foundations.\nRead “The 100 page ML book” by Andiry Burkov. Chapters accessible here\n\n\n\nIn-Class\n\nWe will go over W01-L01-Deck based on this from Chip Huyen’s CS329S: ML System Design Fall’22 @ Stanford\nSoftware 1.0 vs Software 2.0.\n\n\n\nPost-class:\n\nRead the motivation for MLOps from this blog.\nML Life Cycle CRISP-ML9(Q): blog, paper\nCh1-2 of AB, Ch1 of VT, Ch1 of CH1",
     "crumbs": [
       "Lectures[ML Engg.]",
       "01A: Grounding MLOps"
